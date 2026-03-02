@@ -5,3 +5,7 @@ title: "Nostradamus Capacity Building"
 This is the Nostradamus capacity buliding website.
 
 \![logo Nostradamus\](images/NOSTRADAMUS_logo.png)
+
+\# Test image
+
+\![\](images/NOSTRADAMUS_logo.png)
