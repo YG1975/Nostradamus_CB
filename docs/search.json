@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Nostradamus Capacity Building",
+    "title": "Nostradamus_CB",
     "section": "",
-    "text": "This is the Nostradamus capacity buliding website.\n![logo Nostradamus](images/NOSTRADAMUS_logo.png)\n# Test image\n![](images/NOSTRADAMUS_logo.png)"
+    "text": "title: “Nostradamus Capacity Building”\n\nThis is the Nostradamus capacity buliding website.\n![logo Nostradamus](images/NOSTRADAMUS_logo.png)\n# Test image\n![](images/NOSTRADAMUS_logo.png)"
   },
   {
     "objectID": "about.html",
