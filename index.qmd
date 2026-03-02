@@ -3,3 +3,5 @@ title: "Nostradamus Capacity Building"
 ---
 
 This is the Nostradamus capacity buliding website.
+
+\![\](images/NOSTRADAMUS-logo-horizontal-1.png)
