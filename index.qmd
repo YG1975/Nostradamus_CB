@@ -4,4 +4,4 @@ title: "Nostradamus Capacity Building"
 
 This is the Nostradamus capacity buliding website.
 
-\![logo Nostradamus\](<https://yg1975.github.io/Nostradamus_CB/>images/NOSTRADAMUS_logo.png)
+\![logo Nostradamus\](NOSTRADAMUS_logo.png)
