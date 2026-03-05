@@ -4,7 +4,10 @@
     "href": "index.html",
     "title": "Nostradamus Capacity Building",
     "section": "",
-    "text": "This is the Nostradamus capacity buliding website."
+    "text": "This is the Nostradamus capacity buliding website.",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
     "objectID": "about.html",

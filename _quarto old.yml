@@ -5,10 +5,8 @@ project:
 
 website:
   title: "Nostradamus_CB"
-  sidebar:
-    style: "docked"
-    search: true
-    contents:
+  navbar:
+    left:
       - href: index.qmd
         text: Home
       - href: about.qmd
@@ -17,7 +15,9 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme:
+      - cosmo-book
+    
     css: styles.css
     toc: true
  
