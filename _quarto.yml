@@ -5,8 +5,11 @@ project:
 
 website:
   title: "Nostradamus_CB"
+  
+  
   sidebar:
     style: "docked"
+    logo: images/NOSTRADAMUS_logo.png 
     search: true
     contents:
       - href: index.qmd
