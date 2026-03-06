@@ -1,8 +1,7 @@
 project:
   type: website
   output-dir: docs
-  render: 
-    - "*.qmd" 
+ 
 
 website:
   title: "Nostradamus_CB"
@@ -17,6 +16,8 @@ website:
         text: Home
       - href: about.qmd
         text: About
+      - href: definitions.qmd
+        text: Definitions
         
 
 format:
