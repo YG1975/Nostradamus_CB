@@ -12,14 +12,17 @@ website:
     logo: images/NOSTRADAMUS_logo.png 
     search: true
     contents:
-      - href: index.qmd
-        text: Home
-      - href: about.qmd
-        text: About
-      - href: definitions.qmd
-        text: Definitions
-      - href: data_sources.qmd
-        text: Data sources
+      - text: Home
+        href: index.qmd
+      - text: About
+        href: about.qmd
+      - text: Definitions
+        href: definitions.qmd
+      - section: Data sources
+        href: data_sources.qmd
+        contents: 
+          - planetary_computer.qmd
+          - sentinel.qmd
       - href: concepts.qmd
         text: Concepts
       - href: nostradamus_datacube.qmd

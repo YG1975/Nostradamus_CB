@@ -40,13 +40,13 @@
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nostradamus Capacity Building",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2",
+    "text": "This is the Nostradamus capacity building website.",
     "crumbs": [
-      "About"
+      "Home"
     ]
   },
   {
@@ -80,13 +80,13 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Nostradamus Capacity Building",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "This is the Nostradamus capacity building website.",
+    "text": "About this site\n\n1 + 1\n\n[1] 2",
     "crumbs": [
-      "Home"
+      "About"
     ]
   },
   {
@@ -124,13 +124,21 @@
     "href": "planetary_computer.html",
     "title": "Planetary computer",
     "section": "",
-    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage. Accessit"
+    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage. Accessit",
+    "crumbs": [
+      "Data sources",
+      "Planetary computer"
+    ]
   },
   {
     "objectID": "planetary_computer.html#planetary-computer",
     "href": "planetary_computer.html#planetary-computer",
     "title": "Planetary computer",
     "section": "",
-    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage. Accessit"
+    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage. Accessit",
+    "crumbs": [
+      "Data sources",
+      "Planetary computer"
+    ]
   }
 ]
