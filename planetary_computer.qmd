@@ -1,0 +1,9 @@
+---
+title: "Planetary computer"
+---
+
+## Planetary computer
+
+It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage.
+[Accessit](https://planetarycomputer.microsoft.com/catalog)
+

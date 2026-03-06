@@ -18,6 +18,14 @@ website:
         text: About
       - href: definitions.qmd
         text: Definitions
+      - href: data_sources.qmd
+        text: Data sources
+      - href: concepts.qmd
+        text: Concepts
+      - href: nostradamus_datacube.qmd
+        text: Nostradamus datacube
+      - href: nostradamus_datacube_setup.qmd
+        text: Nostradamus datacube setup
         
 
 format:
