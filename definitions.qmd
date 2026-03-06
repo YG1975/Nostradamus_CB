@@ -2,8 +2,10 @@
 title: "Definitions"
 ---
 
-About this site
+Open data cube (ODC)
 
-```{r}
-1 + 1
-```
+free, open-source software package that simplifies the management and analysis of large amounts of satellite imagery and other Earth observation data
+
+allows users to easily access, process, and analyze decades of geographical data to track changes on Earth's surface over time
+
+[https://www.opendatacube.org](https://www.opendatacube.org/)
