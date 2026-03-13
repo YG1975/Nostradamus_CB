@@ -90,36 +90,6 @@
     ]
   },
   {
-    "objectID": "nostradamus_datacube_setup.html",
-    "href": "nostradamus_datacube_setup.html",
-    "title": "Definitions",
-    "section": "",
-    "text": "«Simple way to run an Open Data Cube»\nhttps://github.com/opendatacube/cube-in-a-box",
-    "crumbs": [
-      "Nostradamus datacube setup"
-    ]
-  },
-  {
-    "objectID": "nostradamus_datacube_setup.html#cube-in-a-box",
-    "href": "nostradamus_datacube_setup.html#cube-in-a-box",
-    "title": "Definitions",
-    "section": "",
-    "text": "«Simple way to run an Open Data Cube»\nhttps://github.com/opendatacube/cube-in-a-box",
-    "crumbs": [
-      "Nostradamus datacube setup"
-    ]
-  },
-  {
-    "objectID": "nostradamus_datacube_setup.html#open-data-cube-odc",
-    "href": "nostradamus_datacube_setup.html#open-data-cube-odc",
-    "title": "Definitions",
-    "section": "Open data cube (ODC)",
-    "text": "Open data cube (ODC)\n“free, open-source software package that simplifies the management and analysis of large amounts of satellite imagery and other Earth observation data”\n“allows users to easily access, process, and analyze decades of geographical data to track changes on Earth’s surface over time”\nhttps://www.opendatacube.org",
-    "crumbs": [
-      "Nostradamus datacube setup"
-    ]
-  },
-  {
     "objectID": "planetary_computer.html",
     "href": "planetary_computer.html",
     "title": "Planetary computer",
@@ -139,6 +109,39 @@
     "crumbs": [
       "Data sources",
       "Planetary computer"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_setup.html",
+    "href": "nostradamus_datacube_setup.html",
+    "title": "Definitions",
+    "section": "",
+    "text": "«Simple way to run an Open Data Cube»\nhttps://github.com/opendatacube/cube-in-a-box",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Definitions"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_setup.html#cube-in-a-box",
+    "href": "nostradamus_datacube_setup.html#cube-in-a-box",
+    "title": "Definitions",
+    "section": "",
+    "text": "«Simple way to run an Open Data Cube»\nhttps://github.com/opendatacube/cube-in-a-box",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Definitions"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_setup.html#open-data-cube-odc",
+    "href": "nostradamus_datacube_setup.html#open-data-cube-odc",
+    "title": "Definitions",
+    "section": "Open data cube (ODC)",
+    "text": "Open data cube (ODC)\n“free, open-source software package that simplifies the management and analysis of large amounts of satellite imagery and other Earth observation data”\n“allows users to easily access, process, and analyze decades of geographical data to track changes on Earth’s surface over time”\nhttps://www.opendatacube.org",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Definitions"
     ]
   }
 ]

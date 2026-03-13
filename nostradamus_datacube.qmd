@@ -1,12 +1,12 @@
 ---
 title: "Definitions"
 ---
+
 ## Cube in a Box
 
 «Simple way to run an Open Data Cube»
 
-[https://github.com/opendatacube/cube-in-a-box](https://github.com/opendatacube/cube-in-a-box)
-
+<https://github.com/opendatacube/cube-in-a-box>
 
 ## Open data cube (ODC)
 
@@ -15,6 +15,3 @@ title: "Definitions"
 "allows users to easily access, process, and analyze decades of geographical data to track changes on Earth's surface over time"
 
 [https://www.opendatacube.org](https://www.opendatacube.org/)
-
-
-

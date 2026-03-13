@@ -25,10 +25,11 @@ website:
           - sentinel.qmd
       - href: concepts.qmd
         text: Concepts
-      - href: nostradamus_datacube.qmd
-        text: Nostradamus datacube
-      - href: nostradamus_datacube_setup.qmd
-        text: Nostradamus datacube setup
+      - section: Nostradamus datacube
+        href: nostradamus_datacube.qmd
+        contents: 
+         - nostradamus_datacube_setup.qmd
+    
         
 
 format:
