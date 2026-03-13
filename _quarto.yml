@@ -21,8 +21,9 @@ website:
       - section: Data sources
         href: data_sources.qmd
         contents: 
-          - planetary_computer.qmd
           - sentinel.qmd
+          - planetary_computer.qmd
+          
       - href: concepts.qmd
         text: Concepts
       - section: Nostradamus datacube
