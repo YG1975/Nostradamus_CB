@@ -10,6 +10,48 @@
     ]
   },
   {
+    "objectID": "planetary_computer.html",
+    "href": "planetary_computer.html",
+    "title": "Planetary computer",
+    "section": "",
+    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage. Accessit",
+    "crumbs": [
+      "Data sources",
+      "Planetary computer"
+    ]
+  },
+  {
+    "objectID": "planetary_computer.html#planetary-computer",
+    "href": "planetary_computer.html#planetary-computer",
+    "title": "Planetary computer",
+    "section": "",
+    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage. Accessit",
+    "crumbs": [
+      "Data sources",
+      "Planetary computer"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2",
+    "crumbs": [
+      "About"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "UNIGE & UNEP/GRID-Geneva data cubes Capacity Building",
+    "section": "",
+    "text": "This website contains capacity building material related to data cubes developed by UNIGE and UNEP/GRID-Geneva for various projects.\nIt aims at improving the understanding of data cube concepts and their use in the projects mentioned, through detailed explanations and dedicated exercices.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
     "objectID": "definitions.html",
     "href": "definitions.html",
     "title": "Definitions",
@@ -37,78 +79,6 @@
     "text": "Open data cube (ODC)\n“free, open-source software package that simplifies the management and analysis of large amounts of satellite imagery and other Earth observation data”\n“allows users to easily access, process, and analyze decades of geographical data to track changes on Earth’s surface over time”\nhttps://www.opendatacube.org",
     "crumbs": [
       "Definitions"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Nostradamus Capacity Building",
-    "section": "",
-    "text": "This is the Nostradamus capacity building website.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "nostradamus_datacube.html",
-    "href": "nostradamus_datacube.html",
-    "title": "Definitions",
-    "section": "",
-    "text": "«Simple way to run an Open Data Cube»\nhttps://github.com/opendatacube/cube-in-a-box",
-    "crumbs": [
-      "Nostradamus datacube"
-    ]
-  },
-  {
-    "objectID": "nostradamus_datacube.html#cube-in-a-box",
-    "href": "nostradamus_datacube.html#cube-in-a-box",
-    "title": "Definitions",
-    "section": "",
-    "text": "«Simple way to run an Open Data Cube»\nhttps://github.com/opendatacube/cube-in-a-box",
-    "crumbs": [
-      "Nostradamus datacube"
-    ]
-  },
-  {
-    "objectID": "nostradamus_datacube.html#open-data-cube-odc",
-    "href": "nostradamus_datacube.html#open-data-cube-odc",
-    "title": "Definitions",
-    "section": "Open data cube (ODC)",
-    "text": "Open data cube (ODC)\n“free, open-source software package that simplifies the management and analysis of large amounts of satellite imagery and other Earth observation data”\n“allows users to easily access, process, and analyze decades of geographical data to track changes on Earth’s surface over time”\nhttps://www.opendatacube.org",
-    "crumbs": [
-      "Nostradamus datacube"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2",
-    "crumbs": [
-      "About"
-    ]
-  },
-  {
-    "objectID": "planetary_computer.html",
-    "href": "planetary_computer.html",
-    "title": "Planetary computer",
-    "section": "",
-    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage. Accessit",
-    "crumbs": [
-      "Data sources",
-      "Planetary computer"
-    ]
-  },
-  {
-    "objectID": "planetary_computer.html#planetary-computer",
-    "href": "planetary_computer.html#planetary-computer",
-    "title": "Planetary computer",
-    "section": "",
-    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage. Accessit",
-    "crumbs": [
-      "Data sources",
-      "Planetary computer"
     ]
   }
 ]
