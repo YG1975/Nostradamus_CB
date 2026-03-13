@@ -1,17 +1,5 @@
 ---
-title: "Definitions"
+title: "Nostradamus datacube"
 ---
 
-## Cube in a Box
-
-«Simple way to run an Open Data Cube»
-
-<https://github.com/opendatacube/cube-in-a-box>
-
-## Open data cube (ODC)
-
-"free, open-source software package that simplifies the management and analysis of large amounts of satellite imagery and other Earth observation data"
-
-"allows users to easily access, process, and analyze decades of geographical data to track changes on Earth's surface over time"
-
-[https://www.opendatacube.org](https://www.opendatacube.org/)
+## Nostradamus datacube

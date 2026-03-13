@@ -1,7 +1,9 @@
 ---
-title: "Nostradamus Capacity Building"
+title: "UNIGE & UNEP/GRID-Geneva data cubes Capacity Building"
 ---
 
-This is the Nostradamus capacity building website.
+This website contains capacity building material related to data cubes developed by UNIGE and UNEP/GRID-Geneva for various projects.
+
+It aims at improving the understanding of data cube concepts and their use in the projects mentioned, through detailed explanations and dedicated exercices.
 
 ![](images/NOSTRADAMUS_logo.png)
