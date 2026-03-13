@@ -1,0 +1,7 @@
+---
+title: "Nostradamus Frequently Asked Questions"
+---
+
+### I want to clone the the Nostradamus jupyter cube into my local Docker application (git clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git) but it says « fatal: destination path 'cube-in-a-box-jupyter' already exists and is not an empty directory »
+
+

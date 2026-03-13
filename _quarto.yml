@@ -15,10 +15,19 @@ website:
       - text: Home
         href: index.qmd
       - section: Data cubes
-        href: data_sources.qmd
+        href: data_cubes.qmd
         contents: 
-          - nostradamus_datacube.qmd
-          - monalisa_datacube.qmd
+          - section: "Nostradamus datacube"
+            href: nostradamus_datacube.qmd
+            contents:
+              - text:"datacube setup"
+              - href: nostradamus_datacube_setup.qmd
+              - text:"datacube use"
+              - href: nostradamus_datacube_setup.qmd
+          
+          
+          - section: "Monalisa datacube"
+            href: monalisa_datacube.qmd
          
       - text: About
         href: about.qmd

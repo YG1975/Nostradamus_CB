@@ -6,4 +6,4 @@ This website contains capacity building material related to data cubes developed
 
 It aims at improving the understanding of data cube concepts and their use in the projects mentioned, through detailed explanations and dedicated exercices.
 
-![](images/NOSTRADAMUS_logo.png)
+

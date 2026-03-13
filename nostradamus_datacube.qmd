@@ -2,4 +2,26 @@
 title: "Nostradamus datacube"
 ---
 
-## Nostradamus datacube
+A dedicated cube in a box has been deployed for the Nostradamus project:
+
+![](images/clipboard-3781916670.png)
+
+It is a modifed clone from the original cube in a box available here: ![](images/clipboard-448434912.png)
+
+The following modifications have been done on the original cube in a box to become the Nostradamus data cube:
+
+-   Default Jupyter notebook replaced by Jupyterlab
+
+-   "sign_url" function added to access data in «Planetary Computer»
+
+-   Default source for Sentinel-2 has been replaced by Planetary Computer as it was slow and unstable
+
+-   The default ESRI Land Cover source in Planetary Computer (<https://planetarycomputer.microsoft.com/dataset/io-lulc)> that is deprecated has been replaced by <https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02>
+
+-   Landsat Collection 2 Level 2 Science Products added (see slide 5) Jupyter notebook modified or created for each available Level2 science product (see slides 6 to 8)
+
+-   Datacube-explorer added and modified to access Planetary Computer data
+
+-   DATETIME added as make argument (allows to filter the time range of interest)
+
+![](images/NOSTRADAMUS_logo.png)

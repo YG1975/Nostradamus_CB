@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Setup – Nostradamus_CB</title>
+<title>Nostradamus datacube setup – Nostradamus_CB</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./nostradamus_datacube.html">Nostradamus datacube</a></li><li class="breadcrumb-item"><a href="./nostradamus_datacube_setup.html">Setup</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_cubes.html">Data cubes</a></li><li class="breadcrumb-item"><a href="./nostradamus_datacube.html">Nostradamus datacube</a></li><li class="breadcrumb-item"><a href="./nostradamus_datacube_setup.html">Nostradamus datacube setup</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -116,25 +116,46 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./data_sources.html" class="sidebar-item-text sidebar-link">
+            <a href="./data_cubes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data cubes</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./nostradamus_datacube.html" class="sidebar-item-text sidebar-link">
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./nostradamus_datacube.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nostradamus datacube</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+ <span class="menu-text">text:"datacube setup"</span>
+  </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./nostradamus_datacube_setup.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Nostradamus datacube setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
+ <span class="menu-text">text:"datacube use"</span>
+  </li>
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./monalisa_datacube.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Monalisa datacube</span></a>
+  <a href="./nostradamus_datacube_setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nostradamus datacube setup</span></a>
   </div>
 </li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">Monalisa datacube</span></span>
+  </li>
       </ul>
   </li>
         <li class="sidebar-item">
@@ -153,11 +174,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./data_sources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data sources</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sentinel.html" class="sidebar-item-text sidebar-link">
@@ -182,15 +203,15 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./nostradamus_datacube.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nostradamus datacube</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nostradamus_datacube_setup.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Setup</span></a>
+  <a href="./nostradamus_datacube_setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Nostradamus datacube setup</span></a>
   </div>
 </li>
       </ul>
@@ -200,21 +221,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#nostradamus-datacube-setup" id="toc-nostradamus-datacube-setup" class="nav-link active" data-scroll-target="#nostradamus-datacube-setup">Nostradamus datacube setup</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./nostradamus_datacube.html">Nostradamus datacube</a></li><li class="breadcrumb-item"><a href="./nostradamus_datacube_setup.html">Setup</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_cubes.html">Data cubes</a></li><li class="breadcrumb-item"><a href="./nostradamus_datacube.html">Nostradamus datacube</a></li><li class="breadcrumb-item"><a href="./nostradamus_datacube_setup.html">Nostradamus datacube setup</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Setup</h1>
+<h1 class="title">Nostradamus datacube setup</h1>
 </div>
 
 
@@ -231,11 +246,22 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="nostradamus-datacube-setup" class="level2">
-<h2 class="anchored" data-anchor-id="nostradamus-datacube-setup">Nostradamus datacube setup</h2>
+<ol type="1">
+<li><p>Install Docker desktop for your operating system from https://www.docker.com/products/docker-desktop and launch it</p></li>
+<li><p>To make sure all works fine, type the following commands in your Terminal (example on Mac OS):</p></li>
+</ol>
+<p>docker –-version docker compose version</p>
+<p>=&gt; if corresponding information is returned, it mean alls is working fine for your Docker session and you can proceed to the next steps</p>
+<ol start="3" type="1">
+<li>Clone the Nostradamus jupyter cube into your local Docker application by typing the following command: git clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git</li>
+</ol>
+<p>=&gt; This will create a cube-in-a-box-jupyter folder with all the necessary Docker files (in case the folder already exists, use the pull command, see in the FAQ at the end of the presentation)</p>
+<ol start="4" type="1">
+<li><p>Once the installation is finalized, go to the newly created folder by typing in your Terminal cd cube-in-a-box-jupyter</p></li>
+<li><p>Use then the make setup command to initiate the datacube before using it. You can either simply type make setup , which will deploy the datacube with all layers available, or you can filter a specific area of interest using the BBOX parameter (e.g.&nbsp;make setup BBOX=5.95,45.81,10.50,47.81) and the DATETIME parameter specifying a particular time range (e.g.&nbsp;make setup BBOX=5.95,45.81,10.50,47.81 DATETIME=2024-01-01/2024-12-31)</p></li>
+</ol>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
