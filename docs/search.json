@@ -30,88 +30,6 @@
     ]
   },
   {
-    "objectID": "planetary_computer.html",
-    "href": "planetary_computer.html",
-    "title": "Planetary computer",
-    "section": "",
-    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage. Accessit",
-    "crumbs": [
-      "Data sources",
-      "Planetary computer"
-    ]
-  },
-  {
-    "objectID": "planetary_computer.html#planetary-computer",
-    "href": "planetary_computer.html#planetary-computer",
-    "title": "Planetary computer",
-    "section": "",
-    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage. Accessit",
-    "crumbs": [
-      "Data sources",
-      "Planetary computer"
-    ]
-  },
-  {
-    "objectID": "nostradamus_datacube_setup.html",
-    "href": "nostradamus_datacube_setup.html",
-    "title": "Nostradamus datacube setup",
-    "section": "",
-    "text": "Install Docker desktop for your operating system from https://www.docker.com/products/docker-desktop and launch it\nTo make sure all works fine, type the following commands in your Terminal (example on Mac OS):\n\ndocker –-version docker compose version\n=&gt; if corresponding information is returned, it mean alls is working fine for your Docker session and you can proceed to the next steps\n\nClone the Nostradamus jupyter cube into your local Docker application by typing the following command: git clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git\n\n=&gt; This will create a cube-in-a-box-jupyter folder with all the necessary Docker files (in case the folder already exists, use the pull command, see in the FAQ at the end of the presentation)\n\nOnce the installation is finalized, go to the newly created folder by typing in your Terminal cd cube-in-a-box-jupyter\nUse then the make setup command to initiate the datacube before using it. You can either simply type make setup , which will deploy the datacube with all layers available, or you can filter a specific area of interest using the BBOX parameter (e.g. make setup BBOX=5.95,45.81,10.50,47.81) and the DATETIME parameter specifying a particular time range (e.g. make setup BBOX=5.95,45.81,10.50,47.81 DATETIME=2024-01-01/2024-12-31)",
-    "crumbs": [
-      "Data cubes",
-      "Nostradamus datacube",
-      "Nostradamus datacube setup"
-    ]
-  },
-  {
-    "objectID": "data_cubes.html",
-    "href": "data_cubes.html",
-    "title": "Data cubes",
-    "section": "",
-    "text": "Description of data cube concepts",
-    "crumbs": [
-      "Data cubes"
-    ]
-  },
-  {
-    "objectID": "nostradamus_faq.html",
-    "href": "nostradamus_faq.html",
-    "title": "Nostradamus Frequently Asked Questions",
-    "section": "",
-    "text": "I want to clone the the Nostradamus jupyter cube into my local Docker application (git clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git) but it says « fatal: destination path ‘cube-in-a-box-jupyter’ already exists and is not an empty directory »"
-  },
-  {
-    "objectID": "nostradamus_datacube.html",
-    "href": "nostradamus_datacube.html",
-    "title": "Nostradamus datacube",
-    "section": "",
-    "text": "A dedicated cube in a box has been deployed for the Nostradamus project:\n\nIt is a modifed clone from the original cube in a box available here: \nThe following modifications have been done on the original cube in a box to become the Nostradamus data cube:\n\nDefault Jupyter notebook replaced by Jupyterlab\n“sign_url” function added to access data in «Planetary Computer»\nDefault source for Sentinel-2 has been replaced by Planetary Computer as it was slow and unstable\nThe default ESRI Land Cover source in Planetary Computer (https://planetarycomputer.microsoft.com/dataset/io-lulc) that is deprecated has been replaced by https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02\nLandsat Collection 2 Level 2 Science Products added (see slide 5) Jupyter notebook modified or created for each available Level2 science product (see slides 6 to 8)\nDatacube-explorer added and modified to access Planetary Computer data\nDATETIME added as make argument (allows to filter the time range of interest)",
-    "crumbs": [
-      "Data cubes",
-      "Nostradamus datacube"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "UNIGE & UNEP/GRID-Geneva data cubes Capacity Building",
-    "section": "",
-    "text": "This website contains capacity building material related to data cubes developed by UNIGE and UNEP/GRID-Geneva for various projects.\nIt aims at improving the understanding of data cube concepts and their use in the projects mentioned, through detailed explanations and dedicated exercices.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2",
-    "crumbs": [
-      "About"
-    ]
-  },
-  {
     "objectID": "definitions.html",
     "href": "definitions.html",
     "title": "Definitions",
@@ -140,5 +58,152 @@
     "crumbs": [
       "Definitions"
     ]
+  },
+  {
+    "objectID": "links.html",
+    "href": "links.html",
+    "title": "Data sources",
+    "section": "",
+    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage: https://planetarycomputer.microsoft.com/catalog\nTo access data, there is a need to be registered. In order to automatize the process of login, a «sign_url» function has been developed and added into the Nostradamus customized cube in a box"
+  },
+  {
+    "objectID": "links.html#planetary-computer",
+    "href": "links.html#planetary-computer",
+    "title": "Data sources",
+    "section": "",
+    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage: https://planetarycomputer.microsoft.com/catalog\nTo access data, there is a need to be registered. In order to automatize the process of login, a «sign_url» function has been developed and added into the Nostradamus customized cube in a box"
+  },
+  {
+    "objectID": "links.html#sentinel",
+    "href": "links.html#sentinel",
+    "title": "Data sources",
+    "section": "Sentinel",
+    "text": "Sentinel"
+  },
+  {
+    "objectID": "nostradamus_faq.html",
+    "href": "nostradamus_faq.html",
+    "title": "Nostradamus Frequently Asked Questions",
+    "section": "",
+    "text": "I want to clone the the Nostradamus jupyter cube into my local Docker application (git clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git) but it says « fatal: destination path ‘cube-in-a-box-jupyter’ already exists and is not an empty directory »"
+  },
+  {
+    "objectID": "jupyter.html",
+    "href": "jupyter.html",
+    "title": "Jupyter ",
+    "section": "",
+    "text": "Jupyter is an open-source project that supports interactive data science and scientific computing across all programming languages. The Jupyter ecosystem is made of several subprojects that propose many different software.\nAmong them, Jupyter notebook, JupyterLab and JupyterHub are relevant for the use of the Nostradamus datacube.",
+    "crumbs": [
+      "Appendices",
+      "Jupyter"
+    ]
+  },
+  {
+    "objectID": "jupyter.html#jupyter-notebook",
+    "href": "jupyter.html#jupyter-notebook",
+    "title": "Jupyter ",
+    "section": "Jupyter notebook",
+    "text": "Jupyter notebook\nA Jupyter notebook is an interactive document with that is run in your web broswer and allows to have in a single .ipynb file:\n\nexecutable code (Python, R, …) that can be run cell by cell\nformatted text in MarkDown language\nvisualisations (graphs, maps, tables) that interactively display below the code",
+    "crumbs": [
+      "Appendices",
+      "Jupyter"
+    ]
+  },
+  {
+    "objectID": "jupyter.html#jupyterlab",
+    "href": "jupyter.html#jupyterlab",
+    "title": "Jupyter ",
+    "section": "Jupyterlab",
+    "text": "Jupyterlab",
+    "crumbs": [
+      "Appendices",
+      "Jupyter"
+    ]
+  },
+  {
+    "objectID": "jupyter.html#jupyterhub",
+    "href": "jupyter.html#jupyterhub",
+    "title": "Jupyter ",
+    "section": "JupyterHub",
+    "text": "JupyterHub",
+    "crumbs": [
+      "Appendices",
+      "Jupyter"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_overview.html",
+    "href": "nostradamus_datacube_overview.html",
+    "title": "Nostradamus datacube ",
+    "section": "",
+    "text": "A dedicated cube in a box has been deployed for the Nostradamus project. It is a modifed clone from the original cube in a box.\nThe following modifications have been done on the original cube in a box to become the Nostradamus data cube:\n\nDefault Jupyter notebook replaced by Jupyterlab\n“sign_url” function added to access data in «Planetary Computer»\nDefault source for Sentinel-2 has been replaced by Planetary Computer as it was slow and unstable\nThe default ESRI Land Cover source in Planetary Computer (https://planetarycomputer.microsoft.com/dataset/io-lulc) that is deprecated has been replaced by https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02\nLandsat Collection 2 Level 2 Science Products added (see slide\nJupyter notebook modified or created for each available Level2 science product (see slides 6 to 8)\nDatacube-explorer added and modified to access Planetary Computer data\nDATETIME added as make argument (allows to filter the time range of interest)",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "UNIGE & UNEP/GRID-Geneva data cubes Capacity Building",
+    "section": "",
+    "text": "This website contains capacity building material related to data cubes developed by UNIGE and UNEP/GRID-Geneva for various projects.\nIt aims at improving the understanding of data cube concepts and their use in the projects mentioned, through detailed explanations and dedicated exercices.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "data_cubes.html",
+    "href": "data_cubes.html",
+    "title": "Data cubes",
+    "section": "",
+    "text": "Description of data cube concepts"
+  },
+  {
+    "objectID": "nostradamus_datacube_setup.html",
+    "href": "nostradamus_datacube_setup.html",
+    "title": "Nostradamus datacube setup",
+    "section": "",
+    "text": "Install Docker desktop for your operating system from https://www.docker.com/products/docker-desktop and launch it\nTo make sure all works fine, type the following commands in your Terminal (example on Mac OS):\n\ndocker –-version docker compose version\n=&gt; if corresponding information is returned, it mean alls is working fine for your Docker session and you can proceed to the next steps\n\nClone the Nostradamus jupyter cube into your local Docker application by typing the following command: git clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git\n\n=&gt; This will create a cube-in-a-box-jupyter folder with all the necessary Docker files (in case the folder already exists, use the pull command, see in the FAQ at the end of the presentation)\n\nOnce the installation is finalized, go to the newly created folder by typing in your Terminal cd cube-in-a-box-jupyter\nUse then the make setup command to initiate the datacube before using it. You can either simply type make setup , which will deploy the datacube with all layers available, or you can filter a specific area of interest using the BBOX parameter (e.g. make setup BBOX=5.95,45.81,10.50,47.81) and the DATETIME parameter specifying a particular time range (e.g. make setup BBOX=5.95,45.81,10.50,47.81 DATETIME=2024-01-01/2024-12-31)",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Datacube install"
+    ]
+  },
+  {
+    "objectID": "planetary_computer.html",
+    "href": "planetary_computer.html",
+    "title": "Planetary computer",
+    "section": "",
+    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage. Accessit",
+    "crumbs": [
+      "Data sources",
+      "Planetary computer"
+    ]
+  },
+  {
+    "objectID": "planetary_computer.html#planetary-computer",
+    "href": "planetary_computer.html#planetary-computer",
+    "title": "Planetary computer",
+    "section": "",
+    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage. Accessit",
+    "crumbs": [
+      "Data sources",
+      "Planetary computer"
+    ]
+  },
+  {
+    "objectID": "notebooks/demo_notebook.html",
+    "href": "notebooks/demo_notebook.html",
+    "title": "Welcome to this Jupyter Notebook Demo",
+    "section": "",
+    "text": "This is a simple demonstration notebook to show you the basics of how Jupyter Notebooks work.\nYou will find Markdown cells (like this one) for text and explanations, and Code cells (like the one below) where you can write and execute Python code.\nClick on the code cell below and press Shift + Enter to run it.\n\nfrom datetime import datetime\n\n# Ask the user for their first name\nfirst_name = input(\"Please enter your first name: \")\n\n# Get the current date and time\nnow = datetime.now()\nformatted_date = now.strftime(\"%A, %B %d, %Y at %H:%M\")\n\n# Greet the user\nprint(f\"\\nWelcome, {first_name}!\")\nprint(f\"Today is {formatted_date}.\")\nprint(\"\\nHave a wonderful day! 😊\")\n\nPlease enter your first name:  Yaniss\n\n\n\nWelcome, Yaniss!\nToday is Friday, March 13, 2026 at 16:24.\n\nHave a wonderful day! 😊"
   }
 ]

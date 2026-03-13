@@ -4,33 +4,38 @@ project:
  
 
 website:
-  title: "Nostradamus_CB"
+  title: "UNIGE and UNEP/GRID-Geneva data cubes capacity building"
   
   
   sidebar:
     style: "docked"
-    logo: images/NOSTRADAMUS_logo.png 
+    #logo: images/NOSTRADAMUS_logo.png
     search: true
     contents:
       - text: Home
         href: index.qmd
-      - section: Data cubes
-        href: data_cubes.qmd
-        contents: 
-          - section: "Nostradamus datacube"
-            href: nostradamus_datacube.qmd
-            contents:
-              - text:"datacube setup"
-              - href: nostradamus_datacube_setup.qmd
-              - text:"datacube use"
-              - href: nostradamus_datacube_setup.qmd
+      - section: "Nostradamus datacube"
+        contents:
+          - text: Overview
+            href: nostradamus_datacube_overview.qmd
+          - text: Datacube install
+            href: nostradamus_datacube_setup.qmd
+          - text: Datacube use
+            href: nostradamus_datacube_setup.qmd
           
-          
-          - section: "Monalisa datacube"
+      - section: "Monalisa datacube"
+        contents:
+          - text: Overview
             href: monalisa_datacube.qmd
+          - text: Datacube install
+            href: monalisas_datacube_setup.qmd
+          - text: Datacube use
+            href: monalisa_datacube_setup.qmd
          
-      - text: About
-        href: about.qmd
+      - section: "Appendices"
+        contents:
+          - text: Jupyter
+            href: jupyter.qmd
       - text: Definitions
         href: definitions.qmd
       - section: Data sources

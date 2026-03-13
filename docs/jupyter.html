@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sentinel – UNIGE and UNEP/GRID-Geneva data cubes capacity building</title>
+<title>Jupyter  – UNIGE and UNEP/GRID-Geneva data cubes capacity building</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_sources.html">Data sources</a></li><li class="breadcrumb-item"><a href="./sentinel.html">Sentinel</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./jupyter.html">Appendices</a></li><li class="breadcrumb-item"><a href="./jupyter.html">Jupyter</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -182,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./jupyter.html" class="sidebar-item-text sidebar-link">
+  <a href="./jupyter.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Jupyter</span></a>
   </div>
 </li>
@@ -205,7 +205,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sentinel.html" class="sidebar-item-text sidebar-link active">
+  <a href="./sentinel.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Sentinel</span></a>
   </div>
 </li>
@@ -250,16 +250,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#sentinel" id="toc-sentinel" class="nav-link active" data-scroll-target="#sentinel">Sentinel</a></li>
+  <li><a href="#jupyter-notebook" id="toc-jupyter-notebook" class="nav-link active" data-scroll-target="#jupyter-notebook">Jupyter notebook</a></li>
+  <li><a href="#welcome-to-this-jupyter-notebook-demo" id="toc-welcome-to-this-jupyter-notebook-demo" class="nav-link" data-scroll-target="#welcome-to-this-jupyter-notebook-demo">Welcome to this Jupyter Notebook Demo</a></li>
+  <li><a href="#jupyterlab" id="toc-jupyterlab" class="nav-link" data-scroll-target="#jupyterlab">Jupyterlab</a></li>
+  <li><a href="#jupyterhub" id="toc-jupyterhub" class="nav-link" data-scroll-target="#jupyterhub">JupyterHub</a></li>
   </ul>
-</nav>
+<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/demo_notebook-preview.html"><i class="bi bi-journal-code"></i>Welcome to this Jupyter Notebook Demo</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_sources.html">Data sources</a></li><li class="breadcrumb-item"><a href="./sentinel.html">Sentinel</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./jupyter.html">Appendices</a></li><li class="breadcrumb-item"><a href="./jupyter.html">Jupyter</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Sentinel</h1>
+<h1 class="title">Jupyter <img src="images/Jupyter_logo.png" class="img-fluid" style="vertical-align:middle; margin-left:10px;" width="70"></h1>
 </div>
 
 
@@ -276,8 +279,40 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="sentinel" class="level2">
-<h2 class="anchored" data-anchor-id="sentinel">Sentinel</h2>
+<p><a href="https://jupyter.org/" target="_blank">Jupyter</a> is an open-source project that supports interactive data science and scientific computing across all programming languages. The Jupyter ecosystem is made of several <a href="https://docs.jupyter.org/en/latest/#sub-project-documentation" target="_blank">subprojects</a> that propose many different software.</p>
+<p>Among them, <a href="https://jupyter-notebook.readthedocs.io/en/latest/" target="_blank">Jupyter notebook</a>, <a href="https://github.com/jupyterlab/jupyterlab" target="_blank">JupyterLab</a> and <a href="https://jupyterhub.readthedocs.io/en/latest/" target="_blank">JupyterHub</a> are relevant for the use of the Nostradamus datacube.</p>
+<section id="jupyter-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="jupyter-notebook">Jupyter notebook</h2>
+<p>A <a href="https://jupyter-notebook.readthedocs.io/en/latest/" target="_blank">Jupyter notebook</a> is an interactive document with that is run in your web broswer and allows to have in a single <strong>.ipynb</strong> file:</p>
+<ul>
+<li>executable <strong>code</strong> (Python, R, …) that can be run cell by cell</li>
+<li>formatted <strong>text</strong> in MarkDown language</li>
+<li><strong>visualisations</strong> (graphs, maps, tables) that interactively display below the code</li>
+</ul>
+</section>
+<section id="welcome-to-this-jupyter-notebook-demo" class="level1 quarto-embed-nb-cell">
+<h1>Welcome to this Jupyter Notebook Demo</h1>
+<p>This is a simple demonstration notebook to show you the basics of how Jupyter Notebooks work.</p>
+<p>You will find <strong>Markdown cells</strong> (like this one) for text and explanations, and <strong>Code cells</strong> (like the one below) where you can write and execute Python code.</p>
+<p>Click on the code cell below and press <strong>Shift + Enter</strong> to run it.</p>
+<div id="f5219fbf" class="cell" data-execution_count="1">
+<div class="cell-output cell-output-stdin">
+<pre><code>Please enter your first name:  Yaniss</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Welcome, Yaniss!
+Today is Friday, March 13, 2026 at 16:24.
+
+Have a wonderful day! 😊</code></pre>
+</div>
+</div>
+<a class="quarto-notebook-link" id="nblink-1" href="notebooks/demo_notebook-preview.html#319ea32c">Source: Welcome to this Jupyter Notebook Demo</a></section>
+<section id="jupyterlab" class="level2">
+<h2 class="anchored" data-anchor-id="jupyterlab">Jupyterlab</h2>
+</section>
+<section id="jupyterhub" class="level2">
+<h2 class="anchored" data-anchor-id="jupyterhub">JupyterHub</h2>
 
 
 </section>

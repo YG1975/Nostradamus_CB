@@ -1,0 +1,22 @@
+---
+title: "Jupyter ![](images/Jupyter_logo.png){width=70px style='vertical-align:middle; margin-left:10px;'}"
+jupyter: python3
+---
+
+[Jupyter](https://jupyter.org/){target="_blank"} is an open-source project that supports interactive data science and scientific computing across all programming languages. The Jupyter ecosystem is made of several [subprojects](https://docs.jupyter.org/en/latest/#sub-project-documentation){target="_blank"} that propose many different software.
+
+Among them, [Jupyter notebook](https://jupyter-notebook.readthedocs.io/en/latest/){target="_blank"}, [JupyterLab](https://github.com/jupyterlab/jupyterlab){target="_blank"} and [JupyterHub](https://jupyterhub.readthedocs.io/en/latest/){target="_blank"} are relevant for the use of the Nostradamus datacube.
+
+## Jupyter notebook
+
+A [Jupyter notebook](https://jupyter-notebook.readthedocs.io/en/latest/){target="_blank"} is an interactive document with that is run in your web broswer and allows to have in a single **.ipynb** file:
+
+-   executable **code** (Python, R, ...) that can be run cell by cell
+-   formatted **text** in MarkDown language
+-   **visualisations** (graphs, maps, tables) that interactively display below the code
+
+{{< embed notebooks/demo_notebook.ipynb >}}
+
+## Jupyterlab
+
+## JupyterHub
