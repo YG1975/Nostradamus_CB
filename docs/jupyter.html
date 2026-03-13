@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -115,13 +150,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Nostradamus datacube</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./nostradamus_datacube_overview.html" class="sidebar-item-text sidebar-link">
@@ -142,31 +177,31 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./definitions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Definitions</span></a>
+  </div>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Monalisa datacube</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <a href="./data_sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data sources</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./monalisa_datacube.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Overview</span></a>
+  <a href="./sentinel.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sentinel</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./monalisas_datacube_setup.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Datacube install</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./monalisa_datacube_setup.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Datacube use</span></a>
+  <a href="./planetary_computer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Planetary computer</span></a>
   </div>
 </li>
       </ul>
@@ -188,58 +223,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./definitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Definitions</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./data_sources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data sources</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./sentinel.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sentinel</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./planetary_computer.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Planetary computer</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./concepts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Concepts</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./nostradamus_datacube.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Nostradamus datacube</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./nostradamus_datacube_setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Nostradamus datacube setup</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
     </ul>
     </div>
 </nav>
@@ -251,11 +234,10 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#jupyter-notebook" id="toc-jupyter-notebook" class="nav-link active" data-scroll-target="#jupyter-notebook">Jupyter notebook</a></li>
-  <li><a href="#welcome-to-this-jupyter-notebook-demo" id="toc-welcome-to-this-jupyter-notebook-demo" class="nav-link" data-scroll-target="#welcome-to-this-jupyter-notebook-demo">Welcome to this Jupyter Notebook Demo</a></li>
   <li><a href="#jupyterlab" id="toc-jupyterlab" class="nav-link" data-scroll-target="#jupyterlab">Jupyterlab</a></li>
   <li><a href="#jupyterhub" id="toc-jupyterhub" class="nav-link" data-scroll-target="#jupyterhub">JupyterHub</a></li>
   </ul>
-<div class="quarto-alternate-notebooks"><h2>Notebooks</h2><ul><li><a href="notebooks/demo_notebook-preview.html"><i class="bi bi-journal-code"></i>Welcome to this Jupyter Notebook Demo</a></li></ul></div></nav>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -281,6 +263,7 @@ ul.task-list li input[type="checkbox"] {
 
 <p><a href="https://jupyter.org/" target="_blank">Jupyter</a> is an open-source project that supports interactive data science and scientific computing across all programming languages. The Jupyter ecosystem is made of several <a href="https://docs.jupyter.org/en/latest/#sub-project-documentation" target="_blank">subprojects</a> that propose many different software.</p>
 <p>Among them, <a href="https://jupyter-notebook.readthedocs.io/en/latest/" target="_blank">Jupyter notebook</a>, <a href="https://github.com/jupyterlab/jupyterlab" target="_blank">JupyterLab</a> and <a href="https://jupyterhub.readthedocs.io/en/latest/" target="_blank">JupyterHub</a> are relevant for the use of the Nostradamus datacube.</p>
+<p><img src="images/clipboard-229328674.png" class="img-fluid"></p>
 <section id="jupyter-notebook" class="level2">
 <h2 class="anchored" data-anchor-id="jupyter-notebook">Jupyter notebook</h2>
 <p>A <a href="https://jupyter-notebook.readthedocs.io/en/latest/" target="_blank">Jupyter notebook</a> is an interactive document with that is run in your web broswer and allows to have in a single <strong>.ipynb</strong> file:</p>
@@ -289,32 +272,101 @@ ul.task-list li input[type="checkbox"] {
 <li>formatted <strong>text</strong> in MarkDown language</li>
 <li><strong>visualisations</strong> (graphs, maps, tables) that interactively display below the code</li>
 </ul>
+<p><img src="images/Jupyter_notebook_example.png" class="img-fluid"></p>
+<section id="how-to-install-it-on-my-machine" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-install-it-on-my-machine"><strong>How to install it on my machine?</strong></h4>
+<p>Type the following command in your Terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install notebook</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Note: in some cases you might need to write</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pip3 install notebook</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
-<section id="welcome-to-this-jupyter-notebook-demo" class="level1 quarto-embed-nb-cell">
-<h1>Welcome to this Jupyter Notebook Demo</h1>
-<p>This is a simple demonstration notebook to show you the basics of how Jupyter Notebooks work.</p>
-<p>You will find <strong>Markdown cells</strong> (like this one) for text and explanations, and <strong>Code cells</strong> (like the one below) where you can write and execute Python code.</p>
-<p>Click on the code cell below and press <strong>Shift + Enter</strong> to run it.</p>
-<div id="f5219fbf" class="cell" data-execution_count="1">
-<div class="cell-output cell-output-stdin">
-<pre><code>Please enter your first name:  Yaniss</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Welcome, Yaniss!
-Today is Friday, March 13, 2026 at 16:24.
-
-Have a wonderful day! 😊</code></pre>
-</div>
-</div>
-<a class="quarto-notebook-link" id="nblink-1" href="notebooks/demo_notebook-preview.html#319ea32c">Source: Welcome to this Jupyter Notebook Demo</a></section>
+<section id="how-to-know-if-it-is-installed-on-my-machine" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-know-if-it-is-installed-on-my-machine"><strong>How to know if it is installed on my machine?</strong></h4>
+<p>Type the following command in your Terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>jupyter --version</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If it is installed, you should see its version</p>
+<p>If it is not installed, you will see a message like “command not found”.</p>
+</section>
+<section id="how-to-launch-it" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-launch-it"><strong>How to launch it?</strong></h4>
+<p>Type the following command in your Terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>jupyter notebook</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This should open you navigator at http://localhost:8888.</p>
+</section>
+<section id="how-to-use-it" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-use-it"><strong>How to use it?</strong></h4>
+<p>Once you navigator is open at http://localhost:8888, use the top menus to either create new .ipynb file or open an existing one.</p>
+<p><img src="images/clipboard-948493949.png" class="img-fluid"></p>
+</section>
+</section>
 <section id="jupyterlab" class="level2">
 <h2 class="anchored" data-anchor-id="jupyterlab">Jupyterlab</h2>
+<p><img src="images/jupyterlab_logo.png" class="img-fluid" width="70"></p>
+<p><a href="https://github.com/jupyterlab/jupyterlab" target="_blank">JupyterLab</a> is the modern version of Jupyter notebooks. It is a full environment that contains more features than Jupyter notebooks. Here are some additional elements compared to Jupyter notebooks:</p>
+<ul>
+<li>multi-tabs</li>
+<li>Integrated file explorer</li>
+<li>Text and code editor</li>
+<li>Integrated terminal</li>
+<li>Extensions</li>
+</ul>
+<section id="how-to-install-it-on-my-machine-1" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-install-it-on-my-machine-1"><strong>How to install it on my machine?</strong></h4>
+<p>There are 2 main options to have Jupyterlab on your machine: (A) either as a desktop application or (B) using your web browser</p>
+<p><strong>(A) Installation of Jupyterlab Desktop</strong></p>
+<p>Go to <a href="https://github.com/jupyterlab/jupyterlab-desktop" target="_blank">https://github.com/jupyterlab/jupyterlab-desktop</a> and download the application corresponding to your operating system</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Since August 2025, Jupyter desktop is not actively maintained and does not receive security bug fixes</p>
+</div>
+</div>
+<p><strong>(B) Installation of Jupyterlab</strong></p>
+<p>Type the following command in your Terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>pip install jupyterlab</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Note: in some cases you might need to write</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>pip3 install jupyterlab</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="how-to-know-if-it-is-installed-on-my-machine-1" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-know-if-it-is-installed-on-my-machine-1"><strong>How to know if it is installed on my machine?</strong></h4>
+<p>Type the following command in your Terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>jupyter lab --version</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If it is installed, you should see its version</p>
+</section>
+<section id="how-to-launch-it-1" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-launch-it-1"><strong>How to launch it?</strong></h4>
+<p>Type the following command in your Terminal:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>jupyter lab</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This should open the Jupyterlab environment in your broswer at <a href="http://localhost:8888/lab" class="uri">http://localhost:8888/lab</a></p>
+<p><img src="images/clipboard-3873626420.png" class="img-fluid"></p>
+</section>
+<section id="how-to-use-it-1" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-use-it-1"><strong>How to use it?</strong></h4>
+<p>Once you navigator is open at http://localhost:8888/lab, use the various menus to navigate through your files and folders and to create new ones.</p>
+</section>
 </section>
 <section id="jupyterhub" class="level2">
 <h2 class="anchored" data-anchor-id="jupyterhub">JupyterHub</h2>
+<p><img src="images/jupyterhub_logo.png" class="img-fluid" width="70"></p>
+<p><a href="https://jupyterhub.readthedocs.io/en/latest/" target="_blank">JupyterHub</a> is a <strong>multi-users server</strong>, allowing each member of a team to access his/her own JupyterLab environment</p>
+<section id="how-to-access-a-jupyterhub-instance" class="level4">
+<h4 class="anchored" data-anchor-id="how-to-access-a-jupyterhub-instance"><strong>How to access a JupyterHub instance?</strong></h4>
+<p>There should normally be 2 options:</p>
+<ul>
+<li>Either your sysadmin has installed JupyterHub on a server and you can access it through a url and login</li>
+<li>or a self-hosted JupyterHub Docker image has been created and each user can use it as an isolated environment</li>
+</ul>
+<p>This <strong>Docker solution</strong> is what has been chosen for the <strong>Nostradamus JupyterHub</strong>.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

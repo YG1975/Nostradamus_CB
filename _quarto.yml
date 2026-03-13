@@ -9,6 +9,7 @@ website:
   
   sidebar:
     style: "docked"
+    collapse-level: 1
     #logo: images/NOSTRADAMUS_logo.png
     search: true
     contents:
@@ -23,33 +24,30 @@ website:
           - text: Datacube use
             href: nostradamus_datacube_setup.qmd
           
-      - section: "Monalisa datacube"
-        contents:
-          - text: Overview
-            href: monalisa_datacube.qmd
-          - text: Datacube install
-            href: monalisas_datacube_setup.qmd
-          - text: Datacube use
-            href: monalisa_datacube_setup.qmd
-         
-      - section: "Appendices"
-        contents:
-          - text: Jupyter
-            href: jupyter.qmd
+     # - section: "Monalisa datacube"
+       # contents:
+       #   - text: Overview
+        #    href: monalisa_datacube.qmd
+        #  - text: Datacube install
+       #     href: monalisas_datacube_setup.qmd
+       #   - text: Datacube use
+        #    href: monalisa_datacube_setup.qmd
       - text: Definitions
         href: definitions.qmd
       - section: Data sources
         href: data_sources.qmd
         contents: 
           - sentinel.qmd
-          - planetary_computer.qmd
+          - planetary_computer.qmd    
+     
+      - section: "Appendices"
+        contents:
+          - text: Jupyter
+            href: jupyter.qmd
+     
           
-      - href: concepts.qmd
-        text: Concepts
-      - section: Nostradamus datacube
-        href: nostradamus_datacube.qmd
-        contents: 
-         - nostradamus_datacube_setup.qmd
+     # - href: concepts.qmd
+     #   text: Concepts
     
         
 

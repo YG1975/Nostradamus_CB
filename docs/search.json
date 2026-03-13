@@ -103,7 +103,7 @@
     "href": "jupyter.html#jupyter-notebook",
     "title": "Jupyter ",
     "section": "Jupyter notebook",
-    "text": "Jupyter notebook\nA Jupyter notebook is an interactive document with that is run in your web broswer and allows to have in a single .ipynb file:\n\nexecutable code (Python, R, …) that can be run cell by cell\nformatted text in MarkDown language\nvisualisations (graphs, maps, tables) that interactively display below the code",
+    "text": "Jupyter notebook\nA Jupyter notebook is an interactive document with that is run in your web broswer and allows to have in a single .ipynb file:\n\nexecutable code (Python, R, …) that can be run cell by cell\nformatted text in MarkDown language\nvisualisations (graphs, maps, tables) that interactively display below the code\n\n\n\nHow to install it on my machine?\nType the following command in your Terminal:\npip install notebook\nNote: in some cases you might need to write\npip3 install notebook\n\n\nHow to know if it is installed on my machine?\nType the following command in your Terminal:\njupyter --version\nIf it is installed, you should see its version\nIf it is not installed, you will see a message like “command not found”.\n\n\nHow to launch it?\nType the following command in your Terminal:\njupyter notebook\nThis should open you navigator at http://localhost:8888.\n\n\nHow to use it?\nOnce you navigator is open at http://localhost:8888, use the top menus to either create new .ipynb file or open an existing one.",
     "crumbs": [
       "Appendices",
       "Jupyter"
@@ -114,7 +114,7 @@
     "href": "jupyter.html#jupyterlab",
     "title": "Jupyter ",
     "section": "Jupyterlab",
-    "text": "Jupyterlab",
+    "text": "Jupyterlab\n\nJupyterLab is the modern version of Jupyter notebooks. It is a full environment that contains more features than Jupyter notebooks. Here are some additional elements compared to Jupyter notebooks:\n\nmulti-tabs\nIntegrated file explorer\nText and code editor\nIntegrated terminal\nExtensions\n\n\nHow to install it on my machine?\nThere are 2 main options to have Jupyterlab on your machine: (A) either as a desktop application or (B) using your web browser\n(A) Installation of Jupyterlab Desktop\nGo to https://github.com/jupyterlab/jupyterlab-desktop and download the application corresponding to your operating system\n\n\n\n\n\n\nCaution\n\n\n\nSince August 2025, Jupyter desktop is not actively maintained and does not receive security bug fixes\n\n\n(B) Installation of Jupyterlab\nType the following command in your Terminal:\npip install jupyterlab\nNote: in some cases you might need to write\npip3 install jupyterlab\n\n\nHow to know if it is installed on my machine?\nType the following command in your Terminal:\njupyter lab --version\nIf it is installed, you should see its version\n\n\nHow to launch it?\nType the following command in your Terminal:\njupyter lab\nThis should open the Jupyterlab environment in your broswer at http://localhost:8888/lab\n\n\n\nHow to use it?\nOnce you navigator is open at http://localhost:8888/lab, use the various menus to navigate through your files and folders and to create new ones.",
     "crumbs": [
       "Appendices",
       "Jupyter"
@@ -125,7 +125,7 @@
     "href": "jupyter.html#jupyterhub",
     "title": "Jupyter ",
     "section": "JupyterHub",
-    "text": "JupyterHub",
+    "text": "JupyterHub\n\nJupyterHub is a multi-users server, allowing each member of a team to access his/her own JupyterLab environment\n\nHow to access a JupyterHub instance?\nThere should normally be 2 options:\n\nEither your sysadmin has installed JupyterHub on a server and you can access it through a url and login\nor a self-hosted JupyterHub Docker image has been created and each user can use it as an isolated environment\n\nThis Docker solution is what has been chosen for the Nostradamus JupyterHub.",
     "crumbs": [
       "Appendices",
       "Jupyter"
