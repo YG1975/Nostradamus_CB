@@ -4,6 +4,8 @@ title: "Data sources"
 
 The Nostradamus datacube contains analysis ready datasets that allow to perform analyses through [6 distinct notebooks](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products) that use different data sources:
 
+![](images/Nostradamus_notebooks.png)
+
 -   [esa_worldcover.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/esa_worldcover.odc-product.yaml):
 
 -   [io_lulc_annual_v02.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/io_lulc_annual_v02.odc-product.yaml "io_lulc_annual_v02.odc-product.yaml")

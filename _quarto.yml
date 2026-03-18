@@ -41,6 +41,8 @@ website:
           - sentinel.qmd
           - planetary_computer.qmd    
      
+      - text: FAQ
+        href: faq.qmd
       - section: "Appendices"
         contents:
           - text: Jupyter

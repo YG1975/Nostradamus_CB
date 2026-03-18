@@ -6,17 +6,17 @@ A [**dedicated cube in a box**](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-bo
 
 The following **modifications** have been done on the original cube in a box to become the Nostradamus data cube:
 
--   Default **Jupyter notebook** replaced by **Jupyterlab**
+-   Default [**Jupyter notebook**](jupyter.qmd#jupyter-notebook){#jupyter-notebook}{target="\_blank"} replaced by [**Jupyterlab**](jupyter.html#jupyterlab){#jupyterlab}{target="\_blank"}
 
 -   "**sign_url"** function added to access data in «Planetary Computer»
 
--   Default **source for Sentinel-2** has been replaced by **Planetary Computer** as it was slow and unstable
+-   Default source for [**Sentinel-2**](sentinel.qmd){target="_blank"} has been replaced by [**Planetary Computer**](planetary_computer.qmd){target="_blank"} as it was slow and unstable
 
 -   The default **ESRI Land Cover source** in Planetary Computer (<https://planetarycomputer.microsoft.com/dataset/io-lulc)> that is deprecated has been replaced by <https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02>
 
--   **Landsat Collection 2 Level 2 Science Products** added (see slide
+-   [**Landsat Collection 2 Level 2 Science Products**](landsat.qmd){target="_blank"} added
 
--   **Jupyter notebook** **modified or created** for each available Level2 science product (see slides 6 to 8)
+-   **Jupyter notebook** **modified or created** for each available Level2 science product (see [details](data_sources.qmd){target="_blank"})
 
 -   **Datacube-explorer** added and modified to access Planetary Computer data
 

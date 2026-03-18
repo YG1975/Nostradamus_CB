@@ -4,7 +4,7 @@
     "href": "data_sources.html",
     "title": "Data sources",
     "section": "",
-    "text": "The Nostradamus datacube contains analysis ready datasets that allow to perform analyses through 6 distinct notebooks that use different data sources:\n\nesa_worldcover.odc-product.yaml:\nio_lulc_annual_v02.odc-product.yaml\nlsX_c2l2_sp.odc-product.yaml: more information about Landsat product here\nnasadem.odc-product.yaml\ns1_rtc.odc-product.yaml\ns2_l2a.odc-product.yaml",
+    "text": "The Nostradamus datacube contains analysis ready datasets that allow to perform analyses through 6 distinct notebooks that use different data sources:\n\n\nesa_worldcover.odc-product.yaml:\nio_lulc_annual_v02.odc-product.yaml\nlsX_c2l2_sp.odc-product.yaml: more information about Landsat product here\nnasadem.odc-product.yaml\ns1_rtc.odc-product.yaml\ns2_l2a.odc-product.yaml",
     "crumbs": [
       "Data sources"
     ]
@@ -61,65 +61,20 @@
     "text": "Sentinel"
   },
   {
-    "objectID": "nostradamus_faq.html",
-    "href": "nostradamus_faq.html",
-    "title": "Nostradamus Frequently Asked Questions",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "I want to clone the the Nostradamus jupyter cube into my local Docker application (git clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git) but it says « fatal: destination path ‘cube-in-a-box-jupyter’ already exists and is not an empty directory »"
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "landsat.html",
-    "href": "landsat.html",
-    "title": "Landsat",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "UNIGE & UNEP/GRID-Geneva data cubes Capacity Building",
     "section": "",
-    "text": "Landsat is an Earth observation satellite programme that operates dedicated satellites continuously since 1972 through 9 Landsat programmes.\n\n\n\nCredit: NASA’s Scientific Visualization Studio",
+    "text": "This website contains capacity building material related to data cubes developed by UNIGE and UNEP/GRID-Geneva for various projects.\nIt aims at improving the understanding of data cube concepts and their use in the projects mentioned, through detailed explanations and dedicated exercices.",
     "crumbs": [
-      "Data sources",
-      "Landsat"
-    ]
-  },
-  {
-    "objectID": "landsat.html#landsat-images",
-    "href": "landsat.html#landsat-images",
-    "title": "Landsat",
-    "section": "",
-    "text": "Landsat is an Earth observation satellite programme that operates dedicated satellites continuously since 1972 through 9 Landsat programmes.\n\n\n\nCredit: NASA’s Scientific Visualization Studio",
-    "crumbs": [
-      "Data sources",
-      "Landsat"
-    ]
-  },
-  {
-    "objectID": "landsat.html#landsat-collections",
-    "href": "landsat.html#landsat-collections",
-    "title": "Landsat",
-    "section": "Landsat collections",
-    "text": "Landsat collections\nThe Landsat archive of raw and processed data since 1972 is organized into 3 collections:\n\nPre-collection (before 2016): old on-demand processing system, no longer available\nCollection 1 (2016-2022): tiered collection management structure, ensuring that all Landsat Level-1 products provide a consistent archive of known data quality to support time-series analyses and data “stacking”. No longer available\nCollection 2 (2022-present): reprocessing of the Collection 1 archive resulting in several product improvements that harness recent advancements in data processing, algorithm development, and data access and distribution capabilities: alignment of the pixels, sensors value coherence, metadata quality, etc to have a more accurate product",
-    "crumbs": [
-      "Data sources",
-      "Landsat"
-    ]
-  },
-  {
-    "objectID": "landsat.html#landsat-levels",
-    "href": "landsat.html#landsat-levels",
-    "title": "Landsat",
-    "section": "Landsat levels",
-    "text": "Landsat levels\nEach collection organises data into levels of processing:\n\nLevel1 (L1): raw data corrected for geometry and topography\nLevel2 (L2): L1 images are taken as the basis, on which physical values of the atmosphere (aerosols, ozone, water vapor, …) are corrected =&gt; ready data for certain analyses (indices calculation, multi-temporal series, etc.) that could not be done with L1 images\nLevel3 (L3): analytical derived products from L2, that are automatically generated\n\nAmong the various products available in the Nostradamus datacube, the one called “lsX_c2l2_sp.odc-product.yaml“ is the Landsat one, made of USGS Landsat 8 and 9 Collection 2 Level-2 Science Products, consisting of atmospherically corrected surface reflectance and surface temperature image data.",
-    "crumbs": [
-      "Data sources",
-      "Landsat"
-    ]
-  },
-  {
-    "objectID": "nostradamus_datacube_overview.html",
-    "href": "nostradamus_datacube_overview.html",
-    "title": "Nostradamus datacube ",
-    "section": "",
-    "text": "A dedicated cube in a box has been deployed for the Nostradamus project. It is a modifed clone from the original cube in a box.\nThe following modifications have been done on the original cube in a box to become the Nostradamus data cube:\n\nDefault Jupyter notebook replaced by Jupyterlab\n“sign_url” function added to access data in «Planetary Computer»\nDefault source for Sentinel-2 has been replaced by Planetary Computer as it was slow and unstable\nThe default ESRI Land Cover source in Planetary Computer (https://planetarycomputer.microsoft.com/dataset/io-lulc) that is deprecated has been replaced by https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02\nLandsat Collection 2 Level 2 Science Products added (see slide\nJupyter notebook modified or created for each available Level2 science product (see slides 6 to 8)\nDatacube-explorer added and modified to access Planetary Computer data\nDATETIME added as make argument (allows to filter the time range of interest)",
-    "crumbs": [
-      "Nostradamus datacube",
-      "Overview"
+      "Home"
     ]
   },
   {
@@ -167,21 +122,66 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "UNIGE & UNEP/GRID-Geneva data cubes Capacity Building",
+    "objectID": "nostradamus_datacube_overview.html",
+    "href": "nostradamus_datacube_overview.html",
+    "title": "Nostradamus datacube ",
     "section": "",
-    "text": "This website contains capacity building material related to data cubes developed by UNIGE and UNEP/GRID-Geneva for various projects.\nIt aims at improving the understanding of data cube concepts and their use in the projects mentioned, through detailed explanations and dedicated exercices.",
+    "text": "A dedicated cube in a box has been deployed for the Nostradamus project. It is a modifed clone from the original cube in a box.\nThe following modifications have been done on the original cube in a box to become the Nostradamus data cube:\n\nDefault Jupyter notebook{target=“_blank”} replaced by Jupyterlab{target=“_blank”}\n“sign_url” function added to access data in «Planetary Computer»\nDefault source for Sentinel-2 has been replaced by Planetary Computer as it was slow and unstable\nThe default ESRI Land Cover source in Planetary Computer (https://planetarycomputer.microsoft.com/dataset/io-lulc) that is deprecated has been replaced by https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02\nLandsat Collection 2 Level 2 Science Products added\nJupyter notebook modified or created for each available Level2 science product (see details)\nDatacube-explorer added and modified to access Planetary Computer data\nDATETIME added as make argument (allows to filter the time range of interest)",
     "crumbs": [
-      "Home"
+      "Nostradamus datacube",
+      "Overview"
     ]
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "landsat.html",
+    "href": "landsat.html",
+    "title": "Landsat",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Landsat is an Earth observation satellite programme that operates dedicated satellites continuously since 1972 through 9 Landsat programmes.\n\n\n\nCredit: NASA’s Scientific Visualization Studio",
+    "crumbs": [
+      "Data sources",
+      "Landsat"
+    ]
+  },
+  {
+    "objectID": "landsat.html#landsat-images",
+    "href": "landsat.html#landsat-images",
+    "title": "Landsat",
+    "section": "",
+    "text": "Landsat is an Earth observation satellite programme that operates dedicated satellites continuously since 1972 through 9 Landsat programmes.\n\n\n\nCredit: NASA’s Scientific Visualization Studio",
+    "crumbs": [
+      "Data sources",
+      "Landsat"
+    ]
+  },
+  {
+    "objectID": "landsat.html#landsat-collections",
+    "href": "landsat.html#landsat-collections",
+    "title": "Landsat",
+    "section": "Landsat collections",
+    "text": "Landsat collections\nThe Landsat archive of raw and processed data since 1972 is organized into 3 collections:\n\nPre-collection (before 2016): old on-demand processing system, no longer available\nCollection 1 (2016-2022): tiered collection management structure, ensuring that all Landsat Level-1 products provide a consistent archive of known data quality to support time-series analyses and data “stacking”. No longer available\nCollection 2 (2022-present): reprocessing of the Collection 1 archive resulting in several product improvements that harness recent advancements in data processing, algorithm development, and data access and distribution capabilities: alignment of the pixels, sensors value coherence, metadata quality, etc to have a more accurate product",
+    "crumbs": [
+      "Data sources",
+      "Landsat"
+    ]
+  },
+  {
+    "objectID": "landsat.html#landsat-levels",
+    "href": "landsat.html#landsat-levels",
+    "title": "Landsat",
+    "section": "Landsat levels",
+    "text": "Landsat levels\nEach collection organises data into levels of processing:\n\nLevel1 (L1): raw data corrected for geometry and topography\nLevel2 (L2): L1 images are taken as the basis, on which physical values of the atmosphere (aerosols, ozone, water vapor, …) are corrected =&gt; ready data for certain analyses (indices calculation, multi-temporal series, etc.) that could not be done with L1 images\nLevel3 (L3): analytical derived products from L2, that are automatically generated\n\nAmong the various products available in the Nostradamus datacube, the one called “lsX_c2l2_sp.odc-product.yaml“ is the Landsat one, made of USGS Landsat 8 and 9 Collection 2 Level-2 Science Products, consisting of atmospherically corrected surface reflectance and surface temperature image data.",
+    "crumbs": [
+      "Data sources",
+      "Landsat"
+    ]
+  },
+  {
+    "objectID": "nostradamus_faq.html",
+    "href": "nostradamus_faq.html",
+    "title": "Nostradamus Frequently Asked Questions",
+    "section": "",
+    "text": "I want to clone the the Nostradamus jupyter cube into my local Docker application (git clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git) but it says « fatal: destination path ‘cube-in-a-box-jupyter’ already exists and is not an empty directory »"
   },
   {
     "objectID": "data_cubes.html",
@@ -193,9 +193,9 @@
   {
     "objectID": "nostradamus_datacube_setup.html",
     "href": "nostradamus_datacube_setup.html",
-    "title": "Nostradamus datacube setup",
+    "title": "Nostradamus datacube installation",
     "section": "",
-    "text": "Install Docker desktop for your operating system from https://www.docker.com/products/docker-desktop and launch it\nTo make sure all works fine, type the following commands in your Terminal (example on Mac OS):\n\ndocker –-version docker compose version\n=&gt; if corresponding information is returned, it mean alls is working fine for your Docker session and you can proceed to the next steps\n\nClone the Nostradamus jupyter cube into your local Docker application by typing the following command: git clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git\n\n=&gt; This will create a cube-in-a-box-jupyter folder with all the necessary Docker files (in case the folder already exists, use the pull command, see in the FAQ at the end of the presentation)\n\nOnce the installation is finalized, go to the newly created folder by typing in your Terminal cd cube-in-a-box-jupyter\nUse then the make setup command to initiate the datacube before using it. You can either simply type make setup , which will deploy the datacube with all layers available, or you can filter a specific area of interest using the BBOX parameter (e.g. make setup BBOX=5.95,45.81,10.50,47.81) and the DATETIME parameter specifying a particular time range (e.g. make setup BBOX=5.95,45.81,10.50,47.81 DATETIME=2024-01-01/2024-12-31)",
+    "text": "Note\n\n\n\nA detailed installation procedure and other admin and user tutorials exist. The steps below consist in additional help to the links mentioned for a Docker install of the Nostradamus data cube\n\n\n\nInstall Docker desktop for your operating system and launch it\nTo make sure all works fine, type the following commands in your Terminal (example on Mac OS):\n\ndocker –-version \nand\ndocker compose version\nIf corresponding information is returned, it means all is working fine for your Docker session and you can proceed to the next steps\n\nClone the Nostradamus jupyter cube into your local Docker application by typing the following command:\n\ngit clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git\nThis will create a cube-in-a-box-jupyter folder with all the necessary Docker files. In case the folder already exists, use the pull command (more info in the FAQ page)\n\nOnce the installation is finalized, go to the newly created folder by typing in your Terminal\n\ncd cube-in-a-box-jupyter\n\nUse then the make setup command to initiate the datacube before using it. You can either simply type make setup, which will deploy the datacube with all layers available, or you can filter a specific area of interest using the BBOX parameter (e.g. make setup BBOX=5.95,45.81,10.50,47.81) and the DATETIME parameter specifying a particular time range (e.g. make setup BBOX=5.95,45.81,10.50,47.81 DATETIME=2024-01-01/2024-12-31)",
     "crumbs": [
       "Nostradamus datacube",
       "Datacube install"
