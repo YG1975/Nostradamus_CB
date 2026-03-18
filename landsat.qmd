@@ -8,6 +8,8 @@ Landsat is an Earth observation satellite programme that operates dedicated sate
 
 ![Credit: NASA's Scientific Visualization Studio](images/Landsat_timeline.jpg)
 
+## Landsat collections
+
 The Landsat archive of raw and processed data since 1972 is organized into 3 collections:
 
 -   **Pre-collection** (before 2016): old on-demand processing system, no longer available
@@ -15,6 +17,8 @@ The Landsat archive of raw and processed data since 1972 is organized into 3 col
 -   **Collection 1** (2016-2022): tiered collection management structure, ensuring that all Landsat Level-1 products provide a consistent archive of known data quality to support time-series analyses and data "stacking". No longer available
 
 -   **Collection 2** (2022-present): reprocessing of the Collection 1 archive resulting in several product improvements that harness recent advancements in data processing, algorithm development, and data access and distribution capabilities: alignment of the pixels, sensors value coherence, metadata quality, etc to have a more accurate product
+
+## Landsat levels
 
 **Each collection** organises data into **levels** **of processing**:
 
