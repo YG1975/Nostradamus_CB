@@ -88,6 +88,31 @@
     "text": "I want to clone the the Nostradamus jupyter cube into my local Docker application (git clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git) but it says « fatal: destination path ‘cube-in-a-box-jupyter’ already exists and is not an empty directory »"
   },
   {
+    "objectID": "landsat.html",
+    "href": "landsat.html",
+    "title": "Landsat",
+    "section": "",
+    "text": "Landsat is an Earth observation satellite programme that operates dedicated satellites continuously since 1972 through 9 Landsat programmes.\n\n\n\nCredit: NASA’s Scientific Visualization Studio\n\n\nThe Landsat archive of raw and processed data since 1972 is organized into 3 collections:\n\nPre-collection (before 2016): old on-demand processing system, no longer available\nCollection 1 (2016-2022): tiered collection management structure, ensuring that all Landsat Level-1 products provide a consistent archive of known data quality to support time-series analyses and data “stacking”. No longer available\nCollection 2 (2022-present): reprocessing of the Collection 1 archive resulting in several product improvements that harness recent advancements in data processing, algorithm development, and data access and distribution capabilities: alignment of the pixels, sensors value coherence, metadata quality, etc to have a more accurate product\n\nEach collection organises data into levels of processing:\n\nLevel1 (L1): raw data corrected for geometry and topography\nLevel2 (L2): L1 images are taken as the basis, on which physical values of the atmosphere (aerosols, ozone, water vapor, …) are corrected =&gt; ready data for certain analyses (indices calculation, multi-temporal series, etc.) that could not be done with L1 images\nLevel3 (L3): analytical derived products from L2, that are automatically generated\n\nAmong the various products available in the Nostradamus datacube, the one called “lsX_c2l2_sp.odc-product.yaml“ is the Landsat one, made of USGS Landsat 8 and 9 Collection 2 Level-2 Science Products, consisting of atmospherically corrected surface reflectance and surface temperature image data."
+  },
+  {
+    "objectID": "landsat.html#landsat-images",
+    "href": "landsat.html#landsat-images",
+    "title": "Landsat",
+    "section": "",
+    "text": "Landsat is an Earth observation satellite programme that operates dedicated satellites continuously since 1972 through 9 Landsat programmes.\n\n\n\nCredit: NASA’s Scientific Visualization Studio\n\n\nThe Landsat archive of raw and processed data since 1972 is organized into 3 collections:\n\nPre-collection (before 2016): old on-demand processing system, no longer available\nCollection 1 (2016-2022): tiered collection management structure, ensuring that all Landsat Level-1 products provide a consistent archive of known data quality to support time-series analyses and data “stacking”. No longer available\nCollection 2 (2022-present): reprocessing of the Collection 1 archive resulting in several product improvements that harness recent advancements in data processing, algorithm development, and data access and distribution capabilities: alignment of the pixels, sensors value coherence, metadata quality, etc to have a more accurate product\n\nEach collection organises data into levels of processing:\n\nLevel1 (L1): raw data corrected for geometry and topography\nLevel2 (L2): L1 images are taken as the basis, on which physical values of the atmosphere (aerosols, ozone, water vapor, …) are corrected =&gt; ready data for certain analyses (indices calculation, multi-temporal series, etc.) that could not be done with L1 images\nLevel3 (L3): analytical derived products from L2, that are automatically generated\n\nAmong the various products available in the Nostradamus datacube, the one called “lsX_c2l2_sp.odc-product.yaml“ is the Landsat one, made of USGS Landsat 8 and 9 Collection 2 Level-2 Science Products, consisting of atmospherically corrected surface reflectance and surface temperature image data."
+  },
+  {
+    "objectID": "nostradamus_datacube_overview.html",
+    "href": "nostradamus_datacube_overview.html",
+    "title": "Nostradamus datacube ",
+    "section": "",
+    "text": "A dedicated cube in a box has been deployed for the Nostradamus project. It is a modifed clone from the original cube in a box.\nThe following modifications have been done on the original cube in a box to become the Nostradamus data cube:\n\nDefault Jupyter notebook replaced by Jupyterlab\n“sign_url” function added to access data in «Planetary Computer»\nDefault source for Sentinel-2 has been replaced by Planetary Computer as it was slow and unstable\nThe default ESRI Land Cover source in Planetary Computer (https://planetarycomputer.microsoft.com/dataset/io-lulc) that is deprecated has been replaced by https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02\nLandsat Collection 2 Level 2 Science Products added (see slide\nJupyter notebook modified or created for each available Level2 science product (see slides 6 to 8)\nDatacube-explorer added and modified to access Planetary Computer data\nDATETIME added as make argument (allows to filter the time range of interest)",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Overview"
+    ]
+  },
+  {
     "objectID": "jupyter.html",
     "href": "jupyter.html",
     "title": "Jupyter ",
@@ -129,17 +154,6 @@
     "crumbs": [
       "Appendices",
       "Jupyter"
-    ]
-  },
-  {
-    "objectID": "nostradamus_datacube_overview.html",
-    "href": "nostradamus_datacube_overview.html",
-    "title": "Nostradamus datacube ",
-    "section": "",
-    "text": "A dedicated cube in a box has been deployed for the Nostradamus project. It is a modifed clone from the original cube in a box.\nThe following modifications have been done on the original cube in a box to become the Nostradamus data cube:\n\nDefault Jupyter notebook replaced by Jupyterlab\n“sign_url” function added to access data in «Planetary Computer»\nDefault source for Sentinel-2 has been replaced by Planetary Computer as it was slow and unstable\nThe default ESRI Land Cover source in Planetary Computer (https://planetarycomputer.microsoft.com/dataset/io-lulc) that is deprecated has been replaced by https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02\nLandsat Collection 2 Level 2 Science Products added (see slide\nJupyter notebook modified or created for each available Level2 science product (see slides 6 to 8)\nDatacube-explorer added and modified to access Planetary Computer data\nDATETIME added as make argument (allows to filter the time range of interest)",
-    "crumbs": [
-      "Nostradamus datacube",
-      "Overview"
     ]
   },
   {
