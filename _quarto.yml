@@ -37,6 +37,7 @@ website:
       - section: Data sources
         href: data_sources.qmd
         contents: 
+          - landsat.qmd
           - sentinel.qmd
           - planetary_computer.qmd    
      
