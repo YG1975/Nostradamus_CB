@@ -199,15 +199,8 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#planetary-computer" id="toc-planetary-computer" class="nav-link active" data-scroll-target="#planetary-computer">Planetary computer</a></li>
-  <li><a href="#sentinel" id="toc-sentinel" class="nav-link" data-scroll-target="#sentinel">Sentinel</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -231,16 +224,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="planetary-computer" class="level2">
-<h2 class="anchored" data-anchor-id="planetary-computer">Planetary computer</h2>
-<p>It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage: https://planetarycomputer.microsoft.com/catalog</p>
-<p>To access data, there is a need to be registered. In order to automatize the process of login, a «sign_url» function has been developed and added into the Nostradamus customized cube in a box</p>
-</section>
-<section id="sentinel" class="level2">
-<h2 class="anchored" data-anchor-id="sentinel">Sentinel</h2>
+<p>The Nostradamus datacube contains analysis ready datasets that allow to perform analyses through <a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products">6 distinct notebooks</a> that use different data sources:</p>
+<ul>
+<li><p><a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/esa_worldcover.odc-product.yaml">esa_worldcover.odc-product.yaml</a>:</p></li>
+<li><p><a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/io_lulc_annual_v02.odc-product.yaml" title="io_lulc_annual_v02.odc-product.yaml">io_lulc_annual_v02.odc-product.yaml</a></p></li>
+<li><p><a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/lsX_c2l2_sp.odc-product.yaml">lsX_c2l2_sp.odc-product.yaml</a>: more information about Landsat product <a href="./landsat.html">here</a></p></li>
+<li><p><a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/nasadem.odc-product.yaml">nasadem.odc-product.yaml</a></p></li>
+<li><p><a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/s1_rtc.odc-product.yaml">s1_rtc.odc-product.yaml</a></p></li>
+<li><p><a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/s2_l2a.odc-product.yaml">s2_l2a.odc-product.yaml</a></p></li>
+</ul>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -4,27 +4,7 @@
     "href": "data_sources.html",
     "title": "Data sources",
     "section": "",
-    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage: https://planetarycomputer.microsoft.com/catalog\nTo access data, there is a need to be registered. In order to automatize the process of login, a «sign_url» function has been developed and added into the Nostradamus customized cube in a box",
-    "crumbs": [
-      "Data sources"
-    ]
-  },
-  {
-    "objectID": "data_sources.html#planetary-computer",
-    "href": "data_sources.html#planetary-computer",
-    "title": "Data sources",
-    "section": "",
-    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage: https://planetarycomputer.microsoft.com/catalog\nTo access data, there is a need to be registered. In order to automatize the process of login, a «sign_url» function has been developed and added into the Nostradamus customized cube in a box",
-    "crumbs": [
-      "Data sources"
-    ]
-  },
-  {
-    "objectID": "data_sources.html#sentinel",
-    "href": "data_sources.html#sentinel",
-    "title": "Data sources",
-    "section": "Sentinel",
-    "text": "Sentinel",
+    "text": "The Nostradamus datacube contains analysis ready datasets that allow to perform analyses through 6 distinct notebooks that use different data sources:\n\nesa_worldcover.odc-product.yaml:\nio_lulc_annual_v02.odc-product.yaml\nlsX_c2l2_sp.odc-product.yaml: more information about Landsat product here\nnasadem.odc-product.yaml\ns1_rtc.odc-product.yaml\ns2_l2a.odc-product.yaml",
     "crumbs": [
       "Data sources"
     ]

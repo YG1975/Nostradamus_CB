@@ -2,16 +2,16 @@
 title: "Data sources"
 ---
 
-## Planetary computer
+The Nostradamus datacube contains analysis ready datasets that allow to perform analyses through [6 distinct notebooks](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products) that use different data sources:
 
-It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage: https://planetarycomputer.microsoft.com/catalog 
+-   [esa_worldcover.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/esa_worldcover.odc-product.yaml):
 
-To access data, there is a need to be registered. In order to automatize the process of login, a «sign_url» function has been developed and added into the Nostradamus customized cube in a box 
+-   [io_lulc_annual_v02.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/io_lulc_annual_v02.odc-product.yaml "io_lulc_annual_v02.odc-product.yaml")
 
+-   [lsX_c2l2_sp.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/lsX_c2l2_sp.odc-product.yaml): more information about Landsat product [here](landsat.qmd)
 
+-   [nasadem.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/nasadem.odc-product.yaml)
 
+-   [s1_rtc.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/s1_rtc.odc-product.yaml)
 
-
-## Sentinel
-
-
+-   [s2_l2a.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/s2_l2a.odc-product.yaml)
