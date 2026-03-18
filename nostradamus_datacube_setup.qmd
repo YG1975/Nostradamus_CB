@@ -36,4 +36,4 @@ cd cube-in-a-box-jupyter
 ```
 
 
-5)  Use then the make setup command to initiate the datacube before using it. You can either simply type make setup, which will deploy the datacube with all layers available, or you can filter a specific area of interest using the BBOX parameter (e.g. make setup BBOX=5.95,45.81,10.50,47.81) and the DATETIME parameter specifying a particular time range (e.g. make setup BBOX=5.95,45.81,10.50,47.81 DATETIME=2024-01-01/2024-12-31)
+5)  Use then the `make setup` command to initiate the datacube before using it. You can either simply type `make setup`, which will deploy the datacube with all layers available, or you can filter a specific area of interest using the BBOX parameter (e.g. `make setup BBOX=5.95,45.81,10.50,47.81`) and the DATETIME parameter specifying a particular time range (e.g. `make setup BBOX=5.95,45.81,10.50,47.81 DATETIME=2024-01-01/2024-12-31`)
