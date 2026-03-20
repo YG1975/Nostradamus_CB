@@ -23,6 +23,7 @@ website:
             href: nostradamus_datacube_setup.qmd
           - text: Datacube use
             href: nostradamus_datacube_use.qmd
+    
           
      # - section: "Monalisa datacube"
        # contents:
@@ -34,6 +35,12 @@ website:
         #    href: monalisa_datacube_setup.qmd
       # - text: Definitions
        # href: definitions.qmd
+      - section: Exercices
+        href: exercices.qmd
+        contents: 
+          - exercice1.qmd
+          - exercice2.qmd
+          - exercice3.qmd    
       - section: Data sources
         href: data_sources.qmd
         contents: 

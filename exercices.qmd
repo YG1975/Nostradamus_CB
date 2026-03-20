@@ -1,0 +1,5 @@
+---
+title: "Exercices"
+---
+
+This section contains dedicated exercices to become familiar with the use of Nostradamus datacube.

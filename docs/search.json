@@ -103,6 +103,28 @@
     ]
   },
   {
+    "objectID": "exercice2.html",
+    "href": "exercice2.html",
+    "title": "Exercice2",
+    "section": "",
+    "text": "Exercice2",
+    "crumbs": [
+      "Exercices",
+      "Exercice2"
+    ]
+  },
+  {
+    "objectID": "exercice1.html",
+    "href": "exercice1.html",
+    "title": "Exercice1",
+    "section": "",
+    "text": "Exercice1",
+    "crumbs": [
+      "Exercices",
+      "Exercice1"
+    ]
+  },
+  {
     "objectID": "nostradamus_datacube_overview.html",
     "href": "nostradamus_datacube_overview.html",
     "title": "Nostradamus datacube ",
@@ -155,6 +177,27 @@
     "crumbs": [
       "Appendices",
       "Jupyter"
+    ]
+  },
+  {
+    "objectID": "exercices.html",
+    "href": "exercices.html",
+    "title": "Exercices",
+    "section": "",
+    "text": "This section contains dedicated exercices to become familiar with the use of Nostradamus datacube.",
+    "crumbs": [
+      "Exercices"
+    ]
+  },
+  {
+    "objectID": "exercice3.html",
+    "href": "exercice3.html",
+    "title": "Exercice3",
+    "section": "",
+    "text": "Exercice3",
+    "crumbs": [
+      "Exercices",
+      "Exercice3"
     ]
   },
   {
