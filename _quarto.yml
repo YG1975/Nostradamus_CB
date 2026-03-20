@@ -4,13 +4,13 @@ project:
  
 
 website:
-  title: "UNIGE and UNEP/GRID-Geneva data cubes capacity building"
+  #title: "UNIGE and UNEP/GRID-Geneva data cubes capacity building"
   
   
   sidebar:
     style: "docked"
     collapse-level: 1
-    #logo: images/NOSTRADAMUS_logo.png
+    logo: images/NOSTRADAMUS_logo.png
     search: true
     contents:
       - text: Home
@@ -22,7 +22,7 @@ website:
           - text: Datacube install
             href: nostradamus_datacube_setup.qmd
           - text: Datacube use
-            href: nostradamus_datacube_setup.qmd
+            href: nostradamus_datacube_use.qmd
           
      # - section: "Monalisa datacube"
        # contents:
@@ -32,8 +32,8 @@ website:
        #     href: monalisas_datacube_setup.qmd
        #   - text: Datacube use
         #    href: monalisa_datacube_setup.qmd
-      - text: Definitions
-        href: definitions.qmd
+      # - text: Definitions
+       # href: definitions.qmd
       - section: Data sources
         href: data_sources.qmd
         contents: 

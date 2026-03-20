@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Frequently Asked Questions – UNIGE and UNEP/GRID-Geneva data cubes capacity building</title>
+<title>Frequently Asked Questions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,9 +96,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">UNIGE and UNEP/GRID-Geneva data cubes capacity building</a> 
-    </div>
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/NOSTRADAMUS_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./images/NOSTRADAMUS_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -136,18 +137,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nostradamus_datacube_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="./nostradamus_datacube_use.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datacube use</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./definitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Definitions</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./data_sources.html" class="sidebar-item-text sidebar-link">
@@ -210,7 +205,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
+  <li><a href="#when-i-have-installed-docker-and-clicked-on-make-setupi-have-a-404-page-not-found-in-the-browser-at-localhostlab" id="toc-when-i-have-installed-docker-and-clicked-on-make-setupi-have-a-404-page-not-found-in-the-browser-at-localhostlab" class="nav-link active" data-scroll-target="#when-i-have-installed-docker-and-clicked-on-make-setupi-have-a-404-page-not-found-in-the-browser-at-localhostlab">When I have installed Docker and clicked on <code>make setup</code>I have a “404 page not found” in the browser at localhost/lab</a></li>
+  <li><a href="#when-launching-the-make-setup-command-at-the-end-of-the-installation-process-i-have-message-saying-error-.env-file-not-found" id="toc-when-launching-the-make-setup-command-at-the-end-of-the-installation-process-i-have-message-saying-error-.env-file-not-found" class="nav-link" data-scroll-target="#when-launching-the-make-setup-command-at-the-end-of-the-installation-process-i-have-message-saying-error-.env-file-not-found">When launching the “make setup” command at the end of the installation process, I have message saying “Error: .env file not found!”</a></li>
   </ul>
 </nav>
     </div>
@@ -236,8 +232,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
+<section id="when-i-have-installed-docker-and-clicked-on-make-setupi-have-a-404-page-not-found-in-the-browser-at-localhostlab" class="level3">
+<h3 class="anchored" data-anchor-id="when-i-have-installed-docker-and-clicked-on-make-setupi-have-a-404-page-not-found-in-the-browser-at-localhostlab">When I have installed Docker and clicked on <code>make setup</code>I have a “404 page not found” in the browser at localhost/lab</h3>
+</section>
+<section id="when-launching-the-make-setup-command-at-the-end-of-the-installation-process-i-have-message-saying-error-.env-file-not-found" class="level3">
+<h3 class="anchored" data-anchor-id="when-launching-the-make-setup-command-at-the-end-of-the-installation-process-i-have-message-saying-error-.env-file-not-found">When launching the “make setup” command at the end of the installation process, I have message saying “Error: .env file not found!”</h3>
+<p>The first time you want to use the datacube after the installation, there is a need to set up a personnal .env file that contains the environment variables. To do so, you need to copy the existing default .env file and modify it for your own environment. Follow the procedure of the <a href="./nostradamus_datacube_setup.html">Nostradamus datacube installation</a> page starting from point 5.</p>
 
 
 </section>

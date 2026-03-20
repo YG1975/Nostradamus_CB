@@ -1,0 +1,25 @@
+---
+title: "STAC datastore"
+---
+
+## STAC datastore
+
+[STAC](https://www.ogc.org/standards/stac/){target="_blank"} stands for "SpatioTemporal Asset Catalog". It is an [OGC open standard](https://www.ogc.org/standards/stac/){target="_blank"} for organizing and facilitating discoverability and access to geospatial and remote sensing data through a standardized metadata structure and query.
+
+A **“spatiotemporal asset”** is any file that represents information about the Earth (satellite image, LiDAR data, meteorological data, ...) at a certain place and time.
+
+Among other advantages, a STAC datastore allows to:
+
+-   **Discover** data without downloading a dataset
+
+-   **Filter** by geographic zone, data range, cloud cover, ...
+
+-   **Interoperate** between different platforms (AWS, Google Earth Engine, Copernicus,...)
+
+-   **Access** the files directly (Cloud-Optimized GeoTIFF, COG, ...)
+
+Specific tools have been developed to interact with STAC datastore, such as:
+
+-   [**pystac**](https://pystac.readthedocs.io/en/stable/){target="_blank"}: Python library to manipulate STAC catalogues
+
+-   [**QGIS STAC**](https://stacspec.org/en/tutorials/2-intro-to-stac-api-browser-qgis-plugin/){target="_blank"} **plugin**: allows to navigate in STAC catalogs from QGIS

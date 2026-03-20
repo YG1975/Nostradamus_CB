@@ -2,22 +2,28 @@
 title: "Nostradamus datacube ![](images/NOSTRADAMUS_logo.png){width=150px style='vertical-align:middle; margin-left:10px;'}" 
 ---
 
-A [**dedicated cube in a box**](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter){target="_blank"} has been deployed for the **Nostradamus** project. It is a **modifed clone** from the [original cube in a box](https://github.com/opendatacube/cube-in-a-box){target="_blank"}.
+A dedicated [**cube in a box**](https://github.com/LivingEarthLab/cube-in-a-box){target="_blank"} has been deployed for the **Nostradamus** project. It is a **modifed clone** from the [original cube in a box](https://github.com/opendatacube/cube-in-a-box){target="_blank"}.
 
-The following **modifications** have been done on the original cube in a box to become the Nostradamus data cube:
+The following **modifications** have been done on the original cube in a box to become the [Nostradamus data cube](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter){target="_blank"}:
 
--   Default [**Jupyter notebook**](jupyter.qmd#jupyter-notebook){#jupyter-notebook}{target="\_blank"} replaced by [**Jupyterlab**](jupyter.html#jupyterlab){#jupyterlab}{target="\_blank"}
+-   the default [**Jupyter notebook**](jupyter.qmd#jupyter-notebook){target="_blank"} has been replaced by a multi-user [**JupyterHub**](jupyter.html#jupyterhub){target="_blank"}
 
--   "**sign_url"** function added to access data in «Planetary Computer»
+-   the **JupyterHub** instance contains shared folders for collaborative work
 
--   Default source for [**Sentinel-2**](sentinel.qmd){target="_blank"} has been replaced by [**Planetary Computer**](planetary_computer.qmd){target="_blank"} as it was slow and unstable
+-   the [**Planetary computer**](planetary_computer.qmd){target="_blank"} data catalog has been included as a [STAC datastore](stac_datastore.qmd){target="_blank"} instead of the previous default [**Sentinel-2**](sentinel.qmd){target="_blank"} source that was slow and unstable
 
--   The default **ESRI Land Cover source** in Planetary Computer (<https://planetarycomputer.microsoft.com/dataset/io-lulc)> that is deprecated has been replaced by <https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02>
+-   an **Open Datacube explorer** has been added and modified to access Planetary Computer data
 
--   [**Landsat Collection 2 Level 2 Science Products**](landsat.qmd){target="_blank"} added
+-   a [**Traefik**](https://traefik.io/traefik){target="_blank"} reverse proxy has been added as a unique entry point of the infrastructure that dispatches the requests to the different services
 
--   **Jupyter notebook** **modified or created** for each available Level2 science product (see [details](data_sources.qmd){target="_blank"})
+-   a **multi-architecture support** for AMD64 and ARM64 has been added
 
--   **Datacube-explorer** added and modified to access Planetary Computer data
+-   a [**Dask**](https://www.dask.org/){target="_blank"} python library has been added for performing parallel and distributed processing, which is necessary for large data processing
 
--   **DATETIME** added as make argument (allows to filter the time range of interest)
+-   The default **ESRI Land Cover source** in Planetary Computer (<https://planetarycomputer.microsoft.com/dataset/io-lulc)>{target="_blank"} that is deprecated has been replaced by <https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02>{target="_blank"}
+
+-   the [**Landsat Collection 2 Level 2 Science Products**](landsat.qmd){target="_blank"} have been added
+
+-   a **Jupyter notebook** has been **modified** or **created** for each available Level2 science product (see [details](data_sources.qmd){target="_blank"})
+
+-   Documentation has been created for [administrators](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/admin/Living-Earth-Cube-in-a-Box---Admin-Guide.pdf){target="_blank"} and [users](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/user/Living-Earth-Cube-in-a-Box---User-Guide.pdf){target="_blank"}

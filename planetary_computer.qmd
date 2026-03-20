@@ -2,8 +2,6 @@
 title: "Planetary computer"
 ---
 
-## Planetary computer
-
 It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage. [Access it from here](https://planetarycomputer.microsoft.com/catalog) .
 
 Data layers are categorized into 18 categories to facilitiate their discoverability.

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Nostradamus datacube installation – UNIGE and UNEP/GRID-Geneva data cubes capacity building</title>
+<title>Nostradamus datacube installation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -131,9 +131,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">UNIGE and UNEP/GRID-Geneva data cubes capacity building</a> 
-    </div>
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/NOSTRADAMUS_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./images/NOSTRADAMUS_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -171,18 +172,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nostradamus_datacube_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="./nostradamus_datacube_use.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datacube use</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./definitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Definitions</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./data_sources.html" class="sidebar-item-text sidebar-link">
@@ -240,8 +235,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#docker" id="toc-docker" class="nav-link active" data-scroll-target="#docker"><strong>Docker</strong></a></li>
+  <li><a href="#terminal" id="toc-terminal" class="nav-link" data-scroll-target="#terminal"><strong>Terminal</strong></a></li>
+  <li><a href="#web-browser" id="toc-web-browser" class="nav-link" data-scroll-target="#web-browser"><strong>Web browser</strong></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -275,9 +278,11 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>A <a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main#readme" target="_blank">detailed installation procedure</a> and other <a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/docs" target="_blank">admin and user tutorials</a> exist. The steps below consist in additional help to the links mentioned for a Docker install of the Nostradamus data cube</p>
+<p>A <a href="https://github.com/LivingEarthLab/cube-in-a-box" target="_blank">detailed installation procedure</a> and other <a href="https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/admin/Living-Earth-Cube-in-a-Box---Admin-Guide.pdf" target="_blank">admin</a> and <a href="https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/user/Living-Earth-Cube-in-a-Box---User-Guide.pdf" target="_blank">user</a> tutorials exist. The steps below consist in additional help to the links mentioned for a Docker install of the Nostradamus data cube</p>
 </div>
 </div>
+<section id="docker" class="level1">
+<h1><strong>Docker</strong></h1>
 <ol type="1">
 <li><p>Install <a href="https://www.docker.com/products/docker-desktop" target="_blank">Docker desktop</a> for your operating system and launch it</p></li>
 <li><p>To make sure all works fine, type the following commands in your Terminal (example on Mac OS):</p></li>
@@ -286,6 +291,22 @@ Note
 <p>and</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>docker compose version</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If corresponding information is returned, it means all is working fine for your Docker session and you can proceed to the next steps</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>At this stage, don’t start yet any Docker container</p>
+</div>
+</div>
+</section>
+<section id="terminal" class="level1">
+<h1><strong>Terminal</strong></h1>
 <ol start="3" type="1">
 <li>Clone the Nostradamus jupyter cube into your local Docker application by typing the following command:</li>
 </ol>
@@ -296,10 +317,56 @@ Note
 </ol>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>cd cube-in-a-box-jupyter</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ol start="5" type="1">
+<li>After a first install, you need to setup the environment variables (in the .env file). To do so, you need first to copy the existing default .env file by typing</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>cp .env.default .env</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="6" type="1">
+<li><p>As both the original .env.default and copied .env files are hidden files, you need to activate the hidden files display in your system (e.g.&nbsp;Cmd + Shift + . in Mac finder)</p></li>
+<li><p>Open then the .env file you copied (for example in a text editor) and add a user (for example your first name) with an admin role in the line JUPYTERHUB_ADMINS, adding a comma after “admin”</p></li>
+</ol>
+<p><img src="images/env_file_admin.png" class="img-fluid" width="300"></p>
+<ol start="8" type="1">
+<li>Restart JupyterHub to take these changes into account</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>docker-compose restart jupyterhub</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<!-- -->
+<ol start="9" type="1">
 <li>Use then the <code>make setup</code> command to initiate the datacube before using it. You can either simply type <code>make setup</code>, which will deploy the datacube with all layers available, or you can filter a specific area of interest using the BBOX parameter (e.g.&nbsp;<code>make setup BBOX=5.95,45.81,10.50,47.81</code>) and the DATETIME parameter specifying a particular time range (e.g.&nbsp;<code>make setup BBOX=5.95,45.81,10.50,47.81 DATETIME=2024-01-01/2024-12-31</code>)</li>
 </ol>
+<p>Your Terminal should be showing activity</p>
+</section>
+<section id="web-browser" class="level1">
+<h1><strong>Web browser</strong></h1>
+<ol start="10" type="1">
+<li>Go to <a href="http://localhost/explorer/products" target="_blank">http://localhost/explorer/products</a> to check if all is working fine. If it is the case, you should see an image like the one below</li>
+</ol>
+<p><img src="images/ODC_products.png" class="img-fluid"></p>
+<ol start="11" type="1">
+<li>Go to <a href="http://localhost/jupyter" target="_blank">http://localhost/jupyter</a> and click on signup to create a new user corresponding to the one you have attributed the admin role in point 7.</li>
+</ol>
+<p><img src="images/Jupyter_signup.png" class="img-fluid" width="212"></p>
+<ol start="12" type="1">
+<li><p>In the next screen, enter this user and give a password. If all works fine, you should see a confirmation message saying that the signup was successful.</p></li>
+<li><p>On this same screen, click on the <a href="http://localhost/jupyter/hub/login" target="_blank">login</a> link and log in with the credentials you just created. If all works fine, you should reach in your browser the homepage of the JupyterHub interface of the Nostradamus datacube.</p></li>
+</ol>
+<p><img src="images/Jupyter_nostradamus_homepage.png" class="img-fluid"></p>
+<p>If you check your Docker desktop instance, a container with a name containing “cube-in-a-box” should be running.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>the url to reach your the homepage of the JupyterHub interface of the Nostradamus datacube should be localhost/jupyter/user/[username]/lab</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

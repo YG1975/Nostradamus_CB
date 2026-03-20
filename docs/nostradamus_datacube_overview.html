@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Nostradamus datacube  – UNIGE and UNEP/GRID-Geneva data cubes capacity building</title>
+<title>Nostradamus datacube </title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,9 +96,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">UNIGE and UNEP/GRID-Geneva data cubes capacity building</a> 
-    </div>
+      <a href="./index.html" class="sidebar-logo-link">
+      <img src="./images/NOSTRADAMUS_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./images/NOSTRADAMUS_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
@@ -136,18 +137,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nostradamus_datacube_setup.html" class="sidebar-item-text sidebar-link">
+  <a href="./nostradamus_datacube_use.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datacube use</span></a>
   </div>
 </li>
       </ul>
   </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./definitions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Definitions</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./data_sources.html" class="sidebar-item-text sidebar-link">
@@ -230,17 +225,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>A <a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter" target="_blank"><strong>dedicated cube in a box</strong></a> has been deployed for the <strong>Nostradamus</strong> project. It is a <strong>modifed clone</strong> from the <a href="https://github.com/opendatacube/cube-in-a-box" target="_blank">original cube in a box</a>.</p>
-<p>The following <strong>modifications</strong> have been done on the original cube in a box to become the Nostradamus data cube:</p>
+<p>A dedicated <a href="https://github.com/LivingEarthLab/cube-in-a-box" target="_blank"><strong>cube in a box</strong></a> has been deployed for the <strong>Nostradamus</strong> project. It is a <strong>modifed clone</strong> from the <a href="https://github.com/opendatacube/cube-in-a-box" target="_blank">original cube in a box</a>.</p>
+<p>The following <strong>modifications</strong> have been done on the original cube in a box to become the <a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter" target="_blank">Nostradamus data cube</a>:</p>
 <ul>
-<li><p>Default <a href="./jupyter.html#jupyter-notebook" id="jupyter-notebook"><strong>Jupyter notebook</strong></a>{target=“_blank”} replaced by <a href="jupyter.html#jupyterlab" id="jupyterlab"><strong>Jupyterlab</strong></a>{target=“_blank”}</p></li>
-<li><p>“<strong>sign_url”</strong> function added to access data in «Planetary Computer»</p></li>
-<li><p>Default source for <a href="./sentinel.html" target="_blank"><strong>Sentinel-2</strong></a> has been replaced by <a href="./planetary_computer.html" target="_blank"><strong>Planetary Computer</strong></a> as it was slow and unstable</p></li>
-<li><p>The default <strong>ESRI Land Cover source</strong> in Planetary Computer (<a href="https://planetarycomputer.microsoft.com/dataset/io-lulc)" class="uri">https://planetarycomputer.microsoft.com/dataset/io-lulc)</a> that is deprecated has been replaced by <a href="https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02" class="uri">https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02</a></p></li>
-<li><p><a href="./landsat.html" target="_blank"><strong>Landsat Collection 2 Level 2 Science Products</strong></a>&nbsp;added</p></li>
-<li><p><strong>Jupyter notebook</strong> <strong>modified or created</strong> for each available Level2 science product (see <a href="./data_sources.html" target="_blank">details</a>)</p></li>
-<li><p><strong>Datacube-explorer</strong> added and modified to access Planetary Computer data</p></li>
-<li><p><strong>DATETIME</strong> added as make argument (allows to filter the time range of interest)</p></li>
+<li><p>the default <a href="./jupyter.html#jupyter-notebook" target="_blank"><strong>Jupyter notebook</strong></a> has been replaced by a multi-user <a href="jupyter.html#jupyterhub" target="_blank"><strong>JupyterHub</strong></a></p></li>
+<li><p>the <strong>JupyterHub</strong> instance contains shared folders for collaborative work</p></li>
+<li><p>the <a href="./planetary_computer.html" target="_blank"><strong>Planetary computer</strong></a> data catalog has been included as a <a href="./stac_datastore.html" target="_blank">STAC datastore</a> instead of the previous default <a href="./sentinel.html" target="_blank"><strong>Sentinel-2</strong></a> source that was slow and unstable</p></li>
+<li><p>an <strong>Open Datacube explorer</strong> has been added and modified to access Planetary Computer data</p></li>
+<li><p>a <a href="https://traefik.io/traefik" target="_blank"><strong>Traefik</strong></a> reverse proxy has been added as a unique entry point of the infrastructure that dispatches the requests to the different services</p></li>
+<li><p>a <strong>multi-architecture support</strong> for AMD64 and ARM64 has been added</p></li>
+<li><p>a <a href="https://www.dask.org/" target="_blank"><strong>Dask</strong></a> python library has been added for performing parallel and distributed processing, which is necessary for large data processing</p></li>
+<li><p>The default <strong>ESRI Land Cover source</strong> in Planetary Computer (<a href="https://planetarycomputer.microsoft.com/dataset/io-lulc)" target="_blank">https://planetarycomputer.microsoft.com/dataset/io-lulc)</a> that is deprecated has been replaced by <a href="https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02" target="_blank">https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02</a></p></li>
+<li><p>the <a href="./landsat.html" target="_blank"><strong>Landsat Collection 2 Level 2 Science Products</strong></a> have been added</p></li>
+<li><p>a <strong>Jupyter notebook</strong> has been <strong>modified</strong> or <strong>created</strong> for each available Level2 science product (see <a href="./data_sources.html" target="_blank">details</a>)</p></li>
+<li><p>Documentation has been created for <a href="https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/admin/Living-Earth-Cube-in-a-Box---Admin-Guide.pdf" target="_blank">administrators</a> and <a href="https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/user/Living-Earth-Cube-in-a-Box---User-Guide.pdf" target="_blank">users</a></p></li>
 </ul>
 
 
