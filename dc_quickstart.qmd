@@ -1,5 +1,5 @@
 ---
-title: "Data cubes"
+title: "Data cubes quickstart"
 ---
 
 Description of data cube concepts

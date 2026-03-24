@@ -19,9 +19,9 @@ website:
         href: dc_introduction.qmd
         contents:
           - text: Installation
-          - href: dc_installation.qmd
+            href: dc_installation.qmd
           - text: Quick Start
-          - href: dc_quickstart.qmd
+            href: dc_quickstart.qmd
       - section: "Nostradamus datacube"
         contents:
           - text: Overview
@@ -45,9 +45,17 @@ website:
       - section: Tutorials
         href: tutorials.qmd
         contents: 
-          - tutorial1.qmd
-          - tutorial2.qmd
-          - tutorial3.qmd    
+          - text: How to index new data into a DC?
+            href: 1_new_data_into_dc.qmd
+          - text: How to retrieve data using the Python API?
+            href: 2_retrieve_data_python_api.qmd
+          #- text:
+         #   href: tutorial3.qmd    
+      - section: Vector datacubes
+        href: vector_dc_overview.qmd
+        contents: 
+           - text: Installation
+             href: vector_dc_installation.qmd
       - section: Data sources
         href: data_sources.qmd
         contents: 

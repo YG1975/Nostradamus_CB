@@ -12,76 +12,48 @@
   {
     "objectID": "dc_installation.html",
     "href": "dc_installation.html",
-    "title": "Data cubes",
+    "title": "Data cubes installation",
     "section": "",
     "text": "Description of data cube concepts",
     "crumbs": [
       "Introduction to datacubes",
-      "Data cubes"
+      "Installation"
     ]
   },
   {
-    "objectID": "definitions.html",
-    "href": "definitions.html",
-    "title": "Definitions",
+    "objectID": "stac_datastore.html",
+    "href": "stac_datastore.html",
+    "title": "STAC datastore",
     "section": "",
-    "text": "«Simple way to run an Open Data Cube»\nhttps://github.com/opendatacube/cube-in-a-box"
+    "text": "STAC stands for “SpatioTemporal Asset Catalog”. It is an OGC open standard for organizing and facilitating discoverability and access to geospatial and remote sensing data through a standardized metadata structure and query.\nA “spatiotemporal asset” is any file that represents information about the Earth (satellite image, LiDAR data, meteorological data, …) at a certain place and time.\nAmong other advantages, a STAC datastore allows to:\n\nDiscover data without downloading a dataset\nFilter by geographic zone, data range, cloud cover, …\nInteroperate between different platforms (AWS, Google Earth Engine, Copernicus,…)\nAccess the files directly (Cloud-Optimized GeoTIFF, COG, …)\n\nSpecific tools have been developed to interact with STAC datastore, such as:\n\npystac: Python library to manipulate STAC catalogues\nQGIS STAC plugin: allows to navigate in STAC catalogs from QGIS"
   },
   {
-    "objectID": "definitions.html#cube-in-a-box",
-    "href": "definitions.html#cube-in-a-box",
-    "title": "Definitions",
+    "objectID": "stac_datastore.html#stac-datastore",
+    "href": "stac_datastore.html#stac-datastore",
+    "title": "STAC datastore",
     "section": "",
-    "text": "«Simple way to run an Open Data Cube»\nhttps://github.com/opendatacube/cube-in-a-box"
+    "text": "STAC stands for “SpatioTemporal Asset Catalog”. It is an OGC open standard for organizing and facilitating discoverability and access to geospatial and remote sensing data through a standardized metadata structure and query.\nA “spatiotemporal asset” is any file that represents information about the Earth (satellite image, LiDAR data, meteorological data, …) at a certain place and time.\nAmong other advantages, a STAC datastore allows to:\n\nDiscover data without downloading a dataset\nFilter by geographic zone, data range, cloud cover, …\nInteroperate between different platforms (AWS, Google Earth Engine, Copernicus,…)\nAccess the files directly (Cloud-Optimized GeoTIFF, COG, …)\n\nSpecific tools have been developed to interact with STAC datastore, such as:\n\npystac: Python library to manipulate STAC catalogues\nQGIS STAC plugin: allows to navigate in STAC catalogs from QGIS"
   },
   {
-    "objectID": "definitions.html#open-data-cube-odc",
-    "href": "definitions.html#open-data-cube-odc",
-    "title": "Definitions",
-    "section": "Open data cube (ODC)",
-    "text": "Open data cube (ODC)\n“free, open-source software package that simplifies the management and analysis of large amounts of satellite imagery and other Earth observation data”\n“allows users to easily access, process, and analyze decades of geographical data to track changes on Earth’s surface over time”\nhttps://www.opendatacube.org"
-  },
-  {
-    "objectID": "dc_introduction.html",
-    "href": "dc_introduction.html",
-    "title": "Data cubes",
+    "objectID": "tutorials.html",
+    "href": "tutorials.html",
+    "title": "Exercices",
     "section": "",
-    "text": "Description of data cube concepts",
+    "text": "This section contains dedicated exercices to become familiar with the use of Nostradamus datacube.",
     "crumbs": [
-      "Introduction to datacubes"
+      "Tutorials"
     ]
   },
   {
-    "objectID": "tutorial3.html",
-    "href": "tutorial3.html",
-    "title": "Exercice3",
+    "objectID": "nostradamus_datacube_setup.html",
+    "href": "nostradamus_datacube_setup.html",
+    "title": "Nostradamus datacube installation",
     "section": "",
-    "text": "Exercice3",
+    "text": "Note\n\n\n\nA detailed installation procedure and other admin and user tutorials exist. The steps below consist in additional help to the links mentioned for a Docker install of the Nostradamus data cube\n\n\n\nDocker\n\nInstall Docker desktop for your operating system and launch it\nTo make sure all works fine, type the following commands in your Terminal (example on Mac OS):\n\ndocker –-version \nand\ndocker compose version\nIf corresponding information is returned, it means all is working fine for your Docker session and you can proceed to the next steps\n\n\n\n\n\n\nCaution\n\n\n\nAt this stage, don’t start yet any Docker container\n\n\n\n\nTerminal\n\nClone the Nostradamus jupyter cube into your local Docker application by typing the following command:\n\ngit clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git\nThis will create a cube-in-a-box-jupyter folder with all the necessary Docker files. In case the folder already exists, use the pull command (more info in the FAQ page)\n\nOnce the installation is finalized, go to the newly created folder by typing in your Terminal\n\ncd cube-in-a-box-jupyter\n\nAfter a first install, you need to setup the environment variables (in the .env file). To do so, you need first to copy the existing default .env file by typing\n\ncp .env.default .env\n\nAs both the original .env.default and copied .env files are hidden files, you need to activate the hidden files display in your system (e.g. Cmd + Shift + . in Mac finder)\nOpen then the .env file you copied (for example in a text editor) and add a user (for example your first name) with an admin role in the line JUPYTERHUB_ADMINS, adding a comma after “admin”\n\n\n\nRestart JupyterHub to take these changes into account\n\ndocker-compose restart jupyterhub\n\n\nUse then the make setup command to initiate the datacube before using it. You can either simply type make setup, which will deploy the datacube with all layers available, or you can filter a specific area of interest using the BBOX parameter (e.g. make setup BBOX=5.95,45.81,10.50,47.81) and the DATETIME parameter specifying a particular time range (e.g. make setup BBOX=5.95,45.81,10.50,47.81 DATETIME=2024-01-01/2024-12-31)\n\nYour Terminal should be showing activity\n\n\nWeb browser\n\nGo to http://localhost/explorer/products to check if all is working fine. If it is the case, you should see an image like the one below\n\n\n\nGo to http://localhost/jupyter and click on signup to create a new user corresponding to the one you have attributed the admin role in point 7.\n\n\n\nIn the next screen, enter this user and give a password. If all works fine, you should see a confirmation message saying that the signup was successful.\nOn this same screen, click on the login link and log in with the credentials you just created. If all works fine, you should reach in your browser the homepage of the JupyterHub interface of the Nostradamus datacube.\n\n\nIf you check your Docker desktop instance, a container with a name containing “cube-in-a-box” should be running.\n\n\n\n\n\n\nTip\n\n\n\nthe url to reach your the homepage of the JupyterHub interface of the Nostradamus datacube should be localhost/jupyter/user/[username]/lab",
     "crumbs": [
-      "Tutorials",
-      "Exercice3"
+      "Nostradamus datacube",
+      "Datacube install"
     ]
-  },
-  {
-    "objectID": "links.html",
-    "href": "links.html",
-    "title": "Data sources",
-    "section": "",
-    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage: https://planetarycomputer.microsoft.com/catalog\nTo access data, there is a need to be registered. In order to automatize the process of login, a «sign_url» function has been developed and added into the Nostradamus customized cube in a box"
-  },
-  {
-    "objectID": "links.html#planetary-computer",
-    "href": "links.html#planetary-computer",
-    "title": "Data sources",
-    "section": "",
-    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage: https://planetarycomputer.microsoft.com/catalog\nTo access data, there is a need to be registered. In order to automatize the process of login, a «sign_url» function has been developed and added into the Nostradamus customized cube in a box"
-  },
-  {
-    "objectID": "links.html#sentinel",
-    "href": "links.html#sentinel",
-    "title": "Data sources",
-    "section": "Sentinel",
-    "text": "Sentinel"
   },
   {
     "objectID": "faq.html",
@@ -94,11 +66,11 @@
     ]
   },
   {
-    "objectID": "tutorial2_retrieve_data_python_API.html",
-    "href": "tutorial2_retrieve_data_python_API.html",
-    "title": "Exercice2",
+    "objectID": "nostradamus_faq.html",
+    "href": "nostradamus_faq.html",
+    "title": "Nostradamus Frequently Asked Questions",
     "section": "",
-    "text": "Exercice2"
+    "text": "I want to clone the the Nostradamus jupyter cube into my local Docker application (git clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git) but it says « fatal: destination path ‘cube-in-a-box-jupyter’ already exists and is not an empty directory »"
   },
   {
     "objectID": "index.html",
@@ -108,6 +80,61 @@
     "text": "This website contains capacity building material related to data cubes developed by UNIGE and UNEP/GRID-Geneva for various projects.\nIt aims at improving the understanding of data cube concepts and their use in the projects mentioned, through detailed explanations and dedicated exercices.",
     "crumbs": [
       "Home"
+    ]
+  },
+  {
+    "objectID": "1_new_data_into_dc.html",
+    "href": "1_new_data_into_dc.html",
+    "title": "Exercice1",
+    "section": "",
+    "text": "Exercice1",
+    "crumbs": [
+      "Tutorials",
+      "How to index new data into a DC?"
+    ]
+  },
+  {
+    "objectID": "landsat.html",
+    "href": "landsat.html",
+    "title": "Landsat",
+    "section": "",
+    "text": "Landsat is an Earth observation satellite programme that operates dedicated satellites continuously since 1972 through 9 Landsat programmes.\n\n\n\nCredit: NASA’s Scientific Visualization Studio",
+    "crumbs": [
+      "Data sources",
+      "Landsat"
+    ]
+  },
+  {
+    "objectID": "landsat.html#landsat-images",
+    "href": "landsat.html#landsat-images",
+    "title": "Landsat",
+    "section": "",
+    "text": "Landsat is an Earth observation satellite programme that operates dedicated satellites continuously since 1972 through 9 Landsat programmes.\n\n\n\nCredit: NASA’s Scientific Visualization Studio",
+    "crumbs": [
+      "Data sources",
+      "Landsat"
+    ]
+  },
+  {
+    "objectID": "landsat.html#landsat-collections",
+    "href": "landsat.html#landsat-collections",
+    "title": "Landsat",
+    "section": "Landsat collections",
+    "text": "Landsat collections\nThe Landsat archive of raw and processed data since 1972 is organized into 3 collections:\n\nPre-collection (before 2016): old on-demand processing system, no longer available\nCollection 1 (2016-2022): tiered collection management structure, ensuring that all Landsat Level-1 products provide a consistent archive of known data quality to support time-series analyses and data “stacking”. No longer available\nCollection 2 (2022-present): reprocessing of the Collection 1 archive resulting in several product improvements that harness recent advancements in data processing, algorithm development, and data access and distribution capabilities: alignment of the pixels, sensors value coherence, metadata quality, etc to have a more accurate product",
+    "crumbs": [
+      "Data sources",
+      "Landsat"
+    ]
+  },
+  {
+    "objectID": "landsat.html#landsat-levels",
+    "href": "landsat.html#landsat-levels",
+    "title": "Landsat",
+    "section": "Landsat levels",
+    "text": "Landsat levels\nEach collection organises data into levels of processing:\n\nLevel1 (L1): raw data corrected for geometry and topography\nLevel2 (L2): L1 images are taken as the basis, on which physical values of the atmosphere (aerosols, ozone, water vapor, …) are corrected =&gt; ready data for certain analyses (indices calculation, multi-temporal series, etc.) that could not be done with L1 images\nLevel3 (L3): analytical derived products from L2, that are automatically generated\n\nAmong the various products available in the Nostradamus datacube, the one called “lsX_c2l2_sp.odc-product.yaml“ is the Landsat one, made of USGS Landsat 8 and 9 Collection 2 Level-2 Science Products, consisting of atmospherically corrected surface reflectance and surface temperature image data.",
+    "crumbs": [
+      "Data sources",
+      "Landsat"
     ]
   },
   {
@@ -208,64 +235,34 @@
   {
     "objectID": "dc_quickstart.html",
     "href": "dc_quickstart.html",
-    "title": "Data cubes",
+    "title": "Data cubes quickstart",
     "section": "",
     "text": "Description of data cube concepts",
     "crumbs": [
       "Introduction to datacubes",
-      "Data cubes"
+      "Quick Start"
     ]
   },
   {
-    "objectID": "landsat.html",
-    "href": "landsat.html",
-    "title": "Landsat",
+    "objectID": "vector_dc_overview.html",
+    "href": "vector_dc_overview.html",
+    "title": "Vector datacubes",
     "section": "",
-    "text": "Landsat is an Earth observation satellite programme that operates dedicated satellites continuously since 1972 through 9 Landsat programmes.\n\n\n\nCredit: NASA’s Scientific Visualization Studio",
+    "text": "This section is dedicated to vector datacubes material.",
     "crumbs": [
-      "Data sources",
-      "Landsat"
+      "Vector datacubes"
     ]
   },
   {
-    "objectID": "landsat.html#landsat-images",
-    "href": "landsat.html#landsat-images",
-    "title": "Landsat",
+    "objectID": "vector_dc_installation.html",
+    "href": "vector_dc_installation.html",
+    "title": "Data cubes installation",
     "section": "",
-    "text": "Landsat is an Earth observation satellite programme that operates dedicated satellites continuously since 1972 through 9 Landsat programmes.\n\n\n\nCredit: NASA’s Scientific Visualization Studio",
+    "text": "Description of data cube concepts",
     "crumbs": [
-      "Data sources",
-      "Landsat"
+      "Vector datacubes",
+      "Installation"
     ]
-  },
-  {
-    "objectID": "landsat.html#landsat-collections",
-    "href": "landsat.html#landsat-collections",
-    "title": "Landsat",
-    "section": "Landsat collections",
-    "text": "Landsat collections\nThe Landsat archive of raw and processed data since 1972 is organized into 3 collections:\n\nPre-collection (before 2016): old on-demand processing system, no longer available\nCollection 1 (2016-2022): tiered collection management structure, ensuring that all Landsat Level-1 products provide a consistent archive of known data quality to support time-series analyses and data “stacking”. No longer available\nCollection 2 (2022-present): reprocessing of the Collection 1 archive resulting in several product improvements that harness recent advancements in data processing, algorithm development, and data access and distribution capabilities: alignment of the pixels, sensors value coherence, metadata quality, etc to have a more accurate product",
-    "crumbs": [
-      "Data sources",
-      "Landsat"
-    ]
-  },
-  {
-    "objectID": "landsat.html#landsat-levels",
-    "href": "landsat.html#landsat-levels",
-    "title": "Landsat",
-    "section": "Landsat levels",
-    "text": "Landsat levels\nEach collection organises data into levels of processing:\n\nLevel1 (L1): raw data corrected for geometry and topography\nLevel2 (L2): L1 images are taken as the basis, on which physical values of the atmosphere (aerosols, ozone, water vapor, …) are corrected =&gt; ready data for certain analyses (indices calculation, multi-temporal series, etc.) that could not be done with L1 images\nLevel3 (L3): analytical derived products from L2, that are automatically generated\n\nAmong the various products available in the Nostradamus datacube, the one called “lsX_c2l2_sp.odc-product.yaml“ is the Landsat one, made of USGS Landsat 8 and 9 Collection 2 Level-2 Science Products, consisting of atmospherically corrected surface reflectance and surface temperature image data.",
-    "crumbs": [
-      "Data sources",
-      "Landsat"
-    ]
-  },
-  {
-    "objectID": "nostradamus_faq.html",
-    "href": "nostradamus_faq.html",
-    "title": "Nostradamus Frequently Asked Questions",
-    "section": "",
-    "text": "I want to clone the the Nostradamus jupyter cube into my local Docker application (git clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git) but it says « fatal: destination path ‘cube-in-a-box-jupyter’ already exists and is not an empty directory »"
   },
   {
     "objectID": "about.html",
@@ -275,46 +272,74 @@
     "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "tutorial1_new_data_into_DC.html",
-    "href": "tutorial1_new_data_into_DC.html",
-    "title": "Exercice1",
+    "objectID": "links.html",
+    "href": "links.html",
+    "title": "Data sources",
     "section": "",
-    "text": "Exercice1"
+    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage: https://planetarycomputer.microsoft.com/catalog\nTo access data, there is a need to be registered. In order to automatize the process of login, a «sign_url» function has been developed and added into the Nostradamus customized cube in a box"
   },
   {
-    "objectID": "nostradamus_datacube_setup.html",
-    "href": "nostradamus_datacube_setup.html",
-    "title": "Nostradamus datacube installation",
+    "objectID": "links.html#planetary-computer",
+    "href": "links.html#planetary-computer",
+    "title": "Data sources",
     "section": "",
-    "text": "Note\n\n\n\nA detailed installation procedure and other admin and user tutorials exist. The steps below consist in additional help to the links mentioned for a Docker install of the Nostradamus data cube\n\n\n\nDocker\n\nInstall Docker desktop for your operating system and launch it\nTo make sure all works fine, type the following commands in your Terminal (example on Mac OS):\n\ndocker –-version \nand\ndocker compose version\nIf corresponding information is returned, it means all is working fine for your Docker session and you can proceed to the next steps\n\n\n\n\n\n\nCaution\n\n\n\nAt this stage, don’t start yet any Docker container\n\n\n\n\nTerminal\n\nClone the Nostradamus jupyter cube into your local Docker application by typing the following command:\n\ngit clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git\nThis will create a cube-in-a-box-jupyter folder with all the necessary Docker files. In case the folder already exists, use the pull command (more info in the FAQ page)\n\nOnce the installation is finalized, go to the newly created folder by typing in your Terminal\n\ncd cube-in-a-box-jupyter\n\nAfter a first install, you need to setup the environment variables (in the .env file). To do so, you need first to copy the existing default .env file by typing\n\ncp .env.default .env\n\nAs both the original .env.default and copied .env files are hidden files, you need to activate the hidden files display in your system (e.g. Cmd + Shift + . in Mac finder)\nOpen then the .env file you copied (for example in a text editor) and add a user (for example your first name) with an admin role in the line JUPYTERHUB_ADMINS, adding a comma after “admin”\n\n\n\nRestart JupyterHub to take these changes into account\n\ndocker-compose restart jupyterhub\n\n\nUse then the make setup command to initiate the datacube before using it. You can either simply type make setup, which will deploy the datacube with all layers available, or you can filter a specific area of interest using the BBOX parameter (e.g. make setup BBOX=5.95,45.81,10.50,47.81) and the DATETIME parameter specifying a particular time range (e.g. make setup BBOX=5.95,45.81,10.50,47.81 DATETIME=2024-01-01/2024-12-31)\n\nYour Terminal should be showing activity\n\n\nWeb browser\n\nGo to http://localhost/explorer/products to check if all is working fine. If it is the case, you should see an image like the one below\n\n\n\nGo to http://localhost/jupyter and click on signup to create a new user corresponding to the one you have attributed the admin role in point 7.\n\n\n\nIn the next screen, enter this user and give a password. If all works fine, you should see a confirmation message saying that the signup was successful.\nOn this same screen, click on the login link and log in with the credentials you just created. If all works fine, you should reach in your browser the homepage of the JupyterHub interface of the Nostradamus datacube.\n\n\nIf you check your Docker desktop instance, a container with a name containing “cube-in-a-box” should be running.\n\n\n\n\n\n\nTip\n\n\n\nthe url to reach your the homepage of the JupyterHub interface of the Nostradamus datacube should be localhost/jupyter/user/[username]/lab",
+    "text": "It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage: https://planetarycomputer.microsoft.com/catalog\nTo access data, there is a need to be registered. In order to automatize the process of login, a «sign_url» function has been developed and added into the Nostradamus customized cube in a box"
+  },
+  {
+    "objectID": "links.html#sentinel",
+    "href": "links.html#sentinel",
+    "title": "Data sources",
+    "section": "Sentinel",
+    "text": "Sentinel"
+  },
+  {
+    "objectID": "tutorial3.html",
+    "href": "tutorial3.html",
+    "title": "Exercice3",
+    "section": "",
+    "text": "Exercice3"
+  },
+  {
+    "objectID": "dc_introduction.html",
+    "href": "dc_introduction.html",
+    "title": "Data cubes introduction",
+    "section": "",
+    "text": "Description of data cube concepts",
     "crumbs": [
-      "Nostradamus datacube",
-      "Datacube install"
+      "Introduction to datacubes"
     ]
   },
   {
-    "objectID": "tutorials.html",
-    "href": "tutorials.html",
-    "title": "Exercices",
+    "objectID": "definitions.html",
+    "href": "definitions.html",
+    "title": "Definitions",
     "section": "",
-    "text": "This section contains dedicated exercices to become familiar with the use of Nostradamus datacube.",
+    "text": "«Simple way to run an Open Data Cube»\nhttps://github.com/opendatacube/cube-in-a-box"
+  },
+  {
+    "objectID": "definitions.html#cube-in-a-box",
+    "href": "definitions.html#cube-in-a-box",
+    "title": "Definitions",
+    "section": "",
+    "text": "«Simple way to run an Open Data Cube»\nhttps://github.com/opendatacube/cube-in-a-box"
+  },
+  {
+    "objectID": "definitions.html#open-data-cube-odc",
+    "href": "definitions.html#open-data-cube-odc",
+    "title": "Definitions",
+    "section": "Open data cube (ODC)",
+    "text": "Open data cube (ODC)\n“free, open-source software package that simplifies the management and analysis of large amounts of satellite imagery and other Earth observation data”\n“allows users to easily access, process, and analyze decades of geographical data to track changes on Earth’s surface over time”\nhttps://www.opendatacube.org"
+  },
+  {
+    "objectID": "2_retrieve_data_python_api.html",
+    "href": "2_retrieve_data_python_api.html",
+    "title": "Exercice2",
+    "section": "",
+    "text": "Exercice2",
     "crumbs": [
-      "Tutorials"
+      "Tutorials",
+      "How to retrieve data using the Python API?"
     ]
-  },
-  {
-    "objectID": "stac_datastore.html",
-    "href": "stac_datastore.html",
-    "title": "STAC datastore",
-    "section": "",
-    "text": "STAC stands for “SpatioTemporal Asset Catalog”. It is an OGC open standard for organizing and facilitating discoverability and access to geospatial and remote sensing data through a standardized metadata structure and query.\nA “spatiotemporal asset” is any file that represents information about the Earth (satellite image, LiDAR data, meteorological data, …) at a certain place and time.\nAmong other advantages, a STAC datastore allows to:\n\nDiscover data without downloading a dataset\nFilter by geographic zone, data range, cloud cover, …\nInteroperate between different platforms (AWS, Google Earth Engine, Copernicus,…)\nAccess the files directly (Cloud-Optimized GeoTIFF, COG, …)\n\nSpecific tools have been developed to interact with STAC datastore, such as:\n\npystac: Python library to manipulate STAC catalogues\nQGIS STAC plugin: allows to navigate in STAC catalogs from QGIS"
-  },
-  {
-    "objectID": "stac_datastore.html#stac-datastore",
-    "href": "stac_datastore.html#stac-datastore",
-    "title": "STAC datastore",
-    "section": "",
-    "text": "STAC stands for “SpatioTemporal Asset Catalog”. It is an OGC open standard for organizing and facilitating discoverability and access to geospatial and remote sensing data through a standardized metadata structure and query.\nA “spatiotemporal asset” is any file that represents information about the Earth (satellite image, LiDAR data, meteorological data, …) at a certain place and time.\nAmong other advantages, a STAC datastore allows to:\n\nDiscover data without downloading a dataset\nFilter by geographic zone, data range, cloud cover, …\nInteroperate between different platforms (AWS, Google Earth Engine, Copernicus,…)\nAccess the files directly (Cloud-Optimized GeoTIFF, COG, …)\n\nSpecific tools have been developed to interact with STAC datastore, such as:\n\npystac: Python library to manipulate STAC catalogues\nQGIS STAC plugin: allows to navigate in STAC catalogs from QGIS"
   },
   {
     "objectID": "planetary_computer.html",
