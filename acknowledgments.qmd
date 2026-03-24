@@ -1,0 +1,15 @@
+---
+title: "Acknowledgments"
+---
+
+## Funding sources
+
+List of funding sources that supported the work.
+
+## Contributions
+
+Description of the contributions that help building this instance: Nostradamus, MonaLisa, ...
+
+## Publications
+
+List of publications linked to the data cubes presented in this capacity building instance

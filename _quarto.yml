@@ -15,6 +15,13 @@ website:
     contents:
       - text: Home
         href: index.qmd
+      - section: "Introduction to datacubes"  
+        href: dc_introduction.qmd
+        contents:
+          - text: Installation
+          - href: dc_installation.qmd
+          - text: Quick Start
+          - href: dc_quickstart.qmd
       - section: "Nostradamus datacube"
         contents:
           - text: Overview
@@ -35,12 +42,12 @@ website:
         #    href: monalisa_datacube_setup.qmd
       # - text: Definitions
        # href: definitions.qmd
-      - section: Exercices
-        href: exercices.qmd
+      - section: Tutorials
+        href: tutorials.qmd
         contents: 
-          - exercice1.qmd
-          - exercice2.qmd
-          - exercice3.qmd    
+          - tutorial1.qmd
+          - tutorial2.qmd
+          - tutorial3.qmd    
       - section: Data sources
         href: data_sources.qmd
         contents: 
@@ -48,6 +55,8 @@ website:
           - sentinel.qmd
           - planetary_computer.qmd    
      
+      - text: Acknowledgments
+        href: acknowledgments.qmd
       - text: FAQ
         href: faq.qmd
       - section: "Appendices"
