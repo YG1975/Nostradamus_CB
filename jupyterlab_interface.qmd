@@ -1,0 +1,27 @@
+---
+title: "JupyterLab interface"
+---
+
+![](images/jupyter/Jupyter_nostradamus_homepage.png)
+
+The [JupyterLab interface](https://jupyterlab.readthedocs.io/en/stable/user/interface.html) is made of several elements:
+
+## Collapsible left and right sidebars
+
+![](images/clipboard-1839719207.png)
+
+![](images/clipboard-1173183269.png)
+
+## Left sidebar elements
+
+![](images/clipboard-1766125966.png)
+
+![](images/clipboard-2407679786.png)
+
+## Right sidebar elements
+
+![](images/clipboard-104235443.png)
+
+## Top menu bar
+
+![](images/clipboard-3803124547.png)

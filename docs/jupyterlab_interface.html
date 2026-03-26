@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Nostradamus datacube use</title>
+<title>JupyterLab interface</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./nostradamus_datacube_overview.html">Nostradamus datacube</a></li><li class="breadcrumb-item"><a href="./nostradamus_datacube_use.html">Datacube use</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">JupyterLab interface</li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -139,13 +139,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Nostradamus datacube</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./nostradamus_datacube_overview.html" class="sidebar-item-text sidebar-link">
@@ -160,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./nostradamus_datacube_use.html" class="sidebar-item-text sidebar-link active">
+  <a href="./nostradamus_datacube_use.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Datacube use</span></a>
   </div>
 </li>
@@ -269,15 +269,24 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#collapsible-left-and-right-sidebars" id="toc-collapsible-left-and-right-sidebars" class="nav-link active" data-scroll-target="#collapsible-left-and-right-sidebars">Collapsible left and right sidebars</a></li>
+  <li><a href="#left-sidebar-elements" id="toc-left-sidebar-elements" class="nav-link" data-scroll-target="#left-sidebar-elements">Left sidebar elements</a></li>
+  <li><a href="#right-sidebar-elements" id="toc-right-sidebar-elements" class="nav-link" data-scroll-target="#right-sidebar-elements">Right sidebar elements</a></li>
+  <li><a href="#top-menu-bar" id="toc-top-menu-bar" class="nav-link" data-scroll-target="#top-menu-bar">Top menu bar</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./nostradamus_datacube_overview.html">Nostradamus datacube</a></li><li class="breadcrumb-item"><a href="./nostradamus_datacube_use.html">Datacube use</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Nostradamus datacube use</h1>
+<h1 class="title">JupyterLab interface</h1>
 </div>
 
 
@@ -294,70 +303,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<ol type="1">
-<li>Launch Docker Desktop and verify that the containers “cube-in-a-box” and “cube-in-a-box-jupyter” have started (this should be automatic at the launch of Docker Desktop)</li>
-</ol>
-<p><img src="images/Docker_Desktop_containers_launched.png" class="img-fluid"></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You can also check in your Terminal that both Docker a Docker compose are running, using the following commands:</p>
-<p>docker –version</p>
-<p>docker compose version</p>
-</div>
-</div>
-<ol start="2" type="1">
-<li>Go to <a href="http://localhost/jupyter/" class="uri">http://localhost/jupyter/</a> and sign in with you credentials =&gt; Jupyter server will begin to spawn and the homepage should be ready after a few seconds</li>
-</ol>
-<p><img src="images/Jupyter_nostradamus_homepage.png" class="img-fluid"></p>
-<ol start="3" type="1">
-<li>By default, this homepage shows in the left sidebar your own folder. If it is the first time you are using the datacube, your folder should be empty (you can double-click on it to check). On the other hand, if you navigate to <em>/shared/<strong>notebooks_demo</strong></em> (by clicking on the tree at the top of the left sidebar) you will see the available demo jupyter notebooks.</li>
-</ol>
-<p><img src="images/jupyter/Jupyter_demo_notebooks.png" class="img-fluid"></p>
-<ol start="4" type="1">
-<li>Double-clicking on a notebook will open it (in read only) and give you the following information:</li>
-</ol>
-<ul>
-<li><p><strong>Objective</strong> of the notebook</p></li>
-<li><p><strong>Products</strong> used</p></li>
-<li><p><strong>Data source</strong></p></li>
-<li><p><strong>Background</strong></p></li>
-<li><p><strong>Description</strong></p></li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>You can edit and execute .ipynb files directly in the ./shared/notebooks_demo directory, but not save any changes.</li>
-<li>To save any changes, copy the notebook and any potential dependent files to your root directory first (or shared personal directory).</li>
-<li>The content of the root directory is not visible by others while the one of your your folder is, but only you can edit it.</li>
-</ul>
-</div>
-</div>
-<ol start="5" type="1">
-<li>In order to use these demo notebooks and make changes, you need to copy them into the Jupyter root directory. To do so, right clik on the notebook of interest in the “notebooks_demo” folder and paste it at the root directory. It should then appear at the same level as the “shared” folder.</li>
-</ol>
-<p><img src="images/jupyter/Jupyter_notebook_copy_paste.png" class="img-fluid"></p>
-<ol start="6" type="1">
-<li>In order to run a notebook, you have pasted in the root directory, double-click on it, which will open a new tab in teh JupyterLab session with specific tools in the menu bar of the tab. The blue bar on the left shows which cell is selected to be run. In order to process the cell in question, click on the play arrow (titled “run this cell and advance”) or click on shift+enter of your keyboard.</li>
-</ol>
-<p><img src="images/jupyter/Jupyter_notebook_interface.png" class="img-fluid"></p>
+<p><img src="images/jupyter/Jupyter_nostradamus_homepage.png" class="img-fluid"></p>
+<p>The <a href="https://jupyterlab.readthedocs.io/en/stable/user/interface.html">JupyterLab interface</a> is made of several elements:</p>
+<section id="collapsible-left-and-right-sidebars" class="level2">
+<h2 class="anchored" data-anchor-id="collapsible-left-and-right-sidebars">Collapsible left and right sidebars</h2>
+<p><img src="images/clipboard-1839719207.png" class="img-fluid"></p>
+<p><img src="images/clipboard-1173183269.png" class="img-fluid"></p>
+</section>
+<section id="left-sidebar-elements" class="level2">
+<h2 class="anchored" data-anchor-id="left-sidebar-elements">Left sidebar elements</h2>
+<p><img src="images/clipboard-1766125966.png" class="img-fluid"></p>
+<p><img src="images/clipboard-2407679786.png" class="img-fluid"></p>
+</section>
+<section id="right-sidebar-elements" class="level2">
+<h2 class="anchored" data-anchor-id="right-sidebar-elements">Right sidebar elements</h2>
+<p><img src="images/clipboard-104235443.png" class="img-fluid"></p>
+</section>
+<section id="top-menu-bar" class="level2">
+<h2 class="anchored" data-anchor-id="top-menu-bar">Top menu bar</h2>
+<p><img src="images/clipboard-3803124547.png" class="img-fluid"></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

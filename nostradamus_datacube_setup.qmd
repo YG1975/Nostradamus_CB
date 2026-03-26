@@ -80,13 +80,16 @@ Your Terminal should be showing activity
 
 12. In the next screen, enter this user and give a password. If all works fine, you should see a confirmation message saying that the signup was successful.
 
+::: callout-note
+Do not forget to write down your username and password as these will be needed for later login for using the data cube
+:::
+
 13. On this same screen, click on the [login](http://localhost/jupyter/hub/login){target="_blank"} link and log in with the credentials you just created. If all works fine, you should reach in your browser the homepage of the JupyterHub interface of the Nostradamus datacube.
 
 ![](images/Jupyter_nostradamus_homepage.png)
 
 If you check your Docker desktop instance, a container with a name containing "cube-in-a-box" should be running.
 
-:::{.callout-tip}
-the url to reach your the homepage of the JupyterHub interface of the Nostradamus datacube should be localhost/jupyter/user/[username]/lab
+::: callout-tip
+the url to reach your the homepage of the JupyterHub interface of the Nostradamus datacube should be localhost/jupyter/user/\[username\]/lab
 :::
-

@@ -3,3 +3,5 @@ title: "Data cubes introduction"
 ---
 
 Description of data cube concepts
+
+Regarder matériel à <https://www.swissdatacube.org/index.php/download/bringing-open-data-cube-into-practice/>
