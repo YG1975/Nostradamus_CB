@@ -1,0 +1,7 @@
+---
+title: "Workshop Nostradamus Task 6.3"
+---
+
+In the frame of the Nostradamus 6.3, it is planned to co-design and implement comprehensive (online) training activities and materials tailored to different target groups to foster the knowledge, skills and capacity of key stakeholders.
+
+This section contains all the Nostradamus related datacube available to this task.

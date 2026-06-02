@@ -30,8 +30,6 @@ website:
             href: nostradamus_datacube_setup.qmd
           - text: Datacube use
             href: nostradamus_datacube_use.qmd
-    
-          
      # - section: "Monalisa datacube"
        # contents:
        #   - text: Overview
@@ -51,6 +49,11 @@ website:
             href: 2_retrieve_data_python_api.qmd
           #- text:
          #   href: tutorial3.qmd    
+      - section: Workshops
+        href: workshops.qmd
+        contents: 
+          - text: Nostradamus T6.3
+            href: workshop_T6.3.qmd
       - section: Vector datacubes
         href: vector_dc_overview.qmd
         contents: 
