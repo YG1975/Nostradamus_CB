@@ -1,5 +1,6 @@
 ---
 title: "JupyterLab interface"
+jupyter: python3
 ---
 
 ![](images/jupyter/Jupyter_nostradamus_homepage.png)

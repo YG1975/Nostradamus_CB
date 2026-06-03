@@ -1,12 +1,46 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "UNIGE & UNEP/GRID-Geneva data cubes Capacity Building",
+    "objectID": "jupyter.html",
+    "href": "jupyter.html",
+    "title": "Jupyter ",
     "section": "",
-    "text": "This website contains capacity building material related to data cubes developed by UNIGE and UNEP/GRID-Geneva for various projects.\nIt aims at improving the understanding of data cube concepts and their use in the projects mentioned, through detailed explanations and dedicated exercices.",
+    "text": "Jupyter is an open-source project that supports interactive data science and scientific computing across all programming languages. The Jupyter ecosystem is made of several subprojects that propose many different software.\nAmong them, Jupyter notebook, JupyterLab and JupyterHub are relevant for the use of the Nostradamus datacube.",
     "crumbs": [
-      "Home"
+      "Tools",
+      "Jupyter"
+    ]
+  },
+  {
+    "objectID": "jupyter.html#jupyter-notebook",
+    "href": "jupyter.html#jupyter-notebook",
+    "title": "Jupyter ",
+    "section": "Jupyter notebook",
+    "text": "Jupyter notebook\nA Jupyter notebook is an interactive document with that is run in your web broswer and allows to have in a single .ipynb file:\n\nexecutable code (Python, R, …) that can be run cell by cell\nformatted text in MarkDown language\nvisualisations (graphs, maps, tables) that interactively display below the code\n\n\n\nHow to install it on my machine?\nType the following command in your Terminal:\npip install notebook\nNote: in some cases you might need to write\npip3 install notebook\n\n\nHow to know if it is installed on my machine?\nType the following command in your Terminal:\njupyter --version\nIf it is installed, you should see its version\nIf it is not installed, you will see a message like “command not found”.\n\n\nHow to launch it?\nType the following command in your Terminal:\njupyter notebook\nThis should open you navigator at http://localhost:8888.\n\n\nHow to use it?\nOnce you navigator is open at http://localhost:8888, use the top menus to either create new .ipynb file or open an existing one.",
+    "crumbs": [
+      "Tools",
+      "Jupyter"
+    ]
+  },
+  {
+    "objectID": "jupyter.html#jupyterlab",
+    "href": "jupyter.html#jupyterlab",
+    "title": "Jupyter ",
+    "section": "Jupyterlab",
+    "text": "Jupyterlab\n\nJupyterLab is the modern version of Jupyter notebooks. It is a full environment that contains more features than Jupyter notebooks. Here are some additional elements compared to Jupyter notebooks:\n\nmulti-tabs\nIntegrated file explorer\nText and code editor\nIntegrated terminal\nExtensions\n\n\nHow to install it on my machine?\nThere are 2 main options to have Jupyterlab on your machine: (A) either as a desktop application or (B) using your web browser\n(A) Installation of Jupyterlab Desktop\nGo to https://github.com/jupyterlab/jupyterlab-desktop and download the application corresponding to your operating system\n\n\n\n\n\n\nCaution\n\n\n\nSince August 2025, Jupyter desktop is not actively maintained and does not receive security bug fixes\n\n\n(B) Installation of Jupyterlab\nType the following command in your Terminal:\npip install jupyterlab\nNote: in some cases you might need to write\npip3 install jupyterlab\n\n\nHow to know if it is installed on my machine?\nType the following command in your Terminal:\njupyter lab --version\nIf it is installed, you should see its version\n\n\nHow to launch it?\nType the following command in your Terminal:\njupyter lab\nThis should open the Jupyterlab environment in your broswer at http://localhost:8888/lab\n\n\n\nHow to use it?\nOnce you navigator is open at http://localhost:8888/lab, use the various menus to navigate through your files and folders and to create new ones.",
+    "crumbs": [
+      "Tools",
+      "Jupyter"
+    ]
+  },
+  {
+    "objectID": "jupyter.html#jupyterhub",
+    "href": "jupyter.html#jupyterhub",
+    "title": "Jupyter ",
+    "section": "JupyterHub",
+    "text": "JupyterHub\n\nJupyterHub is a multi-users server, allowing each member of a team to access his/her own JupyterLab environment\n\nHow to access a JupyterHub instance?\nThere should normally be 2 options:\n\nEither your sysadmin has installed JupyterHub on a server and you can access it through a url and login\nor a self-hosted JupyterHub Docker image has been created and each user can use it as an isolated environment\n\nThis Docker solution is what has been chosen for the Nostradamus JupyterHub.",
+    "crumbs": [
+      "Tools",
+      "Jupyter"
     ]
   },
   {
@@ -101,6 +135,77 @@
     ]
   },
   {
+    "objectID": "workshops.html",
+    "href": "workshops.html",
+    "title": "Workshops",
+    "section": "",
+    "text": "This section contains material for all the Nostradamus workshops.",
+    "crumbs": [
+      "Workshops"
+    ]
+  },
+  {
+    "objectID": "vector_dc_overview.html",
+    "href": "vector_dc_overview.html",
+    "title": "Vector datacubes",
+    "section": "",
+    "text": "This section is dedicated to vector datacubes material.",
+    "crumbs": [
+      "Vector datacubes"
+    ]
+  },
+  {
+    "objectID": "dc_quickstart.html",
+    "href": "dc_quickstart.html",
+    "title": "Data cubes quickstart",
+    "section": "",
+    "text": "Description of data cube concepts",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "acknowledgments.html",
+    "href": "acknowledgments.html",
+    "title": "Acknowledgments",
+    "section": "",
+    "text": "List of funding sources that supported the work.",
+    "crumbs": [
+      "Acknowledgments"
+    ]
+  },
+  {
+    "objectID": "acknowledgments.html#funding-sources",
+    "href": "acknowledgments.html#funding-sources",
+    "title": "Acknowledgments",
+    "section": "",
+    "text": "List of funding sources that supported the work.",
+    "crumbs": [
+      "Acknowledgments"
+    ]
+  },
+  {
+    "objectID": "acknowledgments.html#contributions",
+    "href": "acknowledgments.html#contributions",
+    "title": "Acknowledgments",
+    "section": "Contributions",
+    "text": "Contributions\nDescription of the contributions that help building this instance: Nostradamus, MonaLisa, …",
+    "crumbs": [
+      "Acknowledgments"
+    ]
+  },
+  {
+    "objectID": "acknowledgments.html#publications",
+    "href": "acknowledgments.html#publications",
+    "title": "Acknowledgments",
+    "section": "Publications",
+    "text": "Publications\nList of publications linked to the data cubes presented in this capacity building instance",
+    "crumbs": [
+      "Acknowledgments"
+    ]
+  },
+  {
     "objectID": "landsat.html",
     "href": "landsat.html",
     "title": "Landsat",
@@ -145,118 +250,14 @@
     ]
   },
   {
-    "objectID": "acknowledgments.html",
-    "href": "acknowledgments.html",
-    "title": "Acknowledgments",
+    "objectID": "LivingEarth.html",
+    "href": "LivingEarth.html",
+    "title": "LivingEarth}",
     "section": "",
-    "text": "List of funding sources that supported the work.",
+    "text": "LivingEarth is …\nSee https://livingearthlab.github.io/ for more details",
     "crumbs": [
-      "Acknowledgments"
-    ]
-  },
-  {
-    "objectID": "acknowledgments.html#funding-sources",
-    "href": "acknowledgments.html#funding-sources",
-    "title": "Acknowledgments",
-    "section": "",
-    "text": "List of funding sources that supported the work.",
-    "crumbs": [
-      "Acknowledgments"
-    ]
-  },
-  {
-    "objectID": "acknowledgments.html#contributions",
-    "href": "acknowledgments.html#contributions",
-    "title": "Acknowledgments",
-    "section": "Contributions",
-    "text": "Contributions\nDescription of the contributions that help building this instance: Nostradamus, MonaLisa, …",
-    "crumbs": [
-      "Acknowledgments"
-    ]
-  },
-  {
-    "objectID": "acknowledgments.html#publications",
-    "href": "acknowledgments.html#publications",
-    "title": "Acknowledgments",
-    "section": "Publications",
-    "text": "Publications\nList of publications linked to the data cubes presented in this capacity building instance",
-    "crumbs": [
-      "Acknowledgments"
-    ]
-  },
-  {
-    "objectID": "jupyter.html",
-    "href": "jupyter.html",
-    "title": "Jupyter ",
-    "section": "",
-    "text": "Jupyter is an open-source project that supports interactive data science and scientific computing across all programming languages. The Jupyter ecosystem is made of several subprojects that propose many different software.\nAmong them, Jupyter notebook, JupyterLab and JupyterHub are relevant for the use of the Nostradamus datacube.",
-    "crumbs": [
-      "Appendices",
-      "Jupyter"
-    ]
-  },
-  {
-    "objectID": "jupyter.html#jupyter-notebook",
-    "href": "jupyter.html#jupyter-notebook",
-    "title": "Jupyter ",
-    "section": "Jupyter notebook",
-    "text": "Jupyter notebook\nA Jupyter notebook is an interactive document with that is run in your web broswer and allows to have in a single .ipynb file:\n\nexecutable code (Python, R, …) that can be run cell by cell\nformatted text in MarkDown language\nvisualisations (graphs, maps, tables) that interactively display below the code\n\n\n\nHow to install it on my machine?\nType the following command in your Terminal:\npip install notebook\nNote: in some cases you might need to write\npip3 install notebook\n\n\nHow to know if it is installed on my machine?\nType the following command in your Terminal:\njupyter --version\nIf it is installed, you should see its version\nIf it is not installed, you will see a message like “command not found”.\n\n\nHow to launch it?\nType the following command in your Terminal:\njupyter notebook\nThis should open you navigator at http://localhost:8888.\n\n\nHow to use it?\nOnce you navigator is open at http://localhost:8888, use the top menus to either create new .ipynb file or open an existing one.",
-    "crumbs": [
-      "Appendices",
-      "Jupyter"
-    ]
-  },
-  {
-    "objectID": "jupyter.html#jupyterlab",
-    "href": "jupyter.html#jupyterlab",
-    "title": "Jupyter ",
-    "section": "Jupyterlab",
-    "text": "Jupyterlab\n\nJupyterLab is the modern version of Jupyter notebooks. It is a full environment that contains more features than Jupyter notebooks. Here are some additional elements compared to Jupyter notebooks:\n\nmulti-tabs\nIntegrated file explorer\nText and code editor\nIntegrated terminal\nExtensions\n\n\nHow to install it on my machine?\nThere are 2 main options to have Jupyterlab on your machine: (A) either as a desktop application or (B) using your web browser\n(A) Installation of Jupyterlab Desktop\nGo to https://github.com/jupyterlab/jupyterlab-desktop and download the application corresponding to your operating system\n\n\n\n\n\n\nCaution\n\n\n\nSince August 2025, Jupyter desktop is not actively maintained and does not receive security bug fixes\n\n\n(B) Installation of Jupyterlab\nType the following command in your Terminal:\npip install jupyterlab\nNote: in some cases you might need to write\npip3 install jupyterlab\n\n\nHow to know if it is installed on my machine?\nType the following command in your Terminal:\njupyter lab --version\nIf it is installed, you should see its version\n\n\nHow to launch it?\nType the following command in your Terminal:\njupyter lab\nThis should open the Jupyterlab environment in your broswer at http://localhost:8888/lab\n\n\n\nHow to use it?\nOnce you navigator is open at http://localhost:8888/lab, use the various menus to navigate through your files and folders and to create new ones.",
-    "crumbs": [
-      "Appendices",
-      "Jupyter"
-    ]
-  },
-  {
-    "objectID": "jupyter.html#jupyterhub",
-    "href": "jupyter.html#jupyterhub",
-    "title": "Jupyter ",
-    "section": "JupyterHub",
-    "text": "JupyterHub\n\nJupyterHub is a multi-users server, allowing each member of a team to access his/her own JupyterLab environment\n\nHow to access a JupyterHub instance?\nThere should normally be 2 options:\n\nEither your sysadmin has installed JupyterHub on a server and you can access it through a url and login\nor a self-hosted JupyterHub Docker image has been created and each user can use it as an isolated environment\n\nThis Docker solution is what has been chosen for the Nostradamus JupyterHub.",
-    "crumbs": [
-      "Appendices",
-      "Jupyter"
-    ]
-  },
-  {
-    "objectID": "dc_quickstart.html",
-    "href": "dc_quickstart.html",
-    "title": "Data cubes quickstart",
-    "section": "",
-    "text": "Description of data cube concepts",
-    "crumbs": [
-      "Introduction to datacubes",
-      "Quick Start"
-    ]
-  },
-  {
-    "objectID": "vector_dc_overview.html",
-    "href": "vector_dc_overview.html",
-    "title": "Vector datacubes",
-    "section": "",
-    "text": "This section is dedicated to vector datacubes material.",
-    "crumbs": [
-      "Vector datacubes"
-    ]
-  },
-  {
-    "objectID": "workshops.html",
-    "href": "workshops.html",
-    "title": "Workshops",
-    "section": "",
-    "text": "This section contains material for all the Nostradamus workshops.",
-    "crumbs": [
-      "Workshops"
+      "Tools",
+      "LivingEarth"
     ]
   },
   {
@@ -414,5 +415,15 @@
     "title": "Welcome to this Jupyter Notebook Demo",
     "section": "",
     "text": "This is a simple demonstration notebook to show you the basics of how Jupyter Notebooks work.\nYou will find Markdown cells (like this one) for text and explanations, and Code cells (like the one below) where you can write and execute Python code.\nClick on the code cell below and press Shift + Enter to run it.\n\nfrom datetime import datetime\n\n# Ask the user for their first name\nfirst_name = input(\"Please enter your first name: \")\n\n# Get the current date and time\nnow = datetime.now()\nformatted_date = now.strftime(\"%A, %B %d, %Y at %H:%M\")\n\n# Greet the user\nprint(f\"\\nWelcome, {first_name}!\")\nprint(f\"Today is {formatted_date}.\")\nprint(\"\\nHave a wonderful day! 😊\")\n\nPlease enter your first name:  Yaniss\n\n\n\nWelcome, Yaniss!\nToday is Friday, March 13, 2026 at 16:24.\n\nHave a wonderful day! 😊"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "UNIGE & UNEP/GRID-Geneva data cubes Capacity Building",
+    "section": "",
+    "text": "This website contains capacity building material related to data cubes developed by UNIGE and UNEP/GRID-Geneva for various projects.\nIt aims at improving the understanding of data cube concepts and their use in the projects mentioned, through detailed explanations and dedicated exercices.",
+    "crumbs": [
+      "Home"
+    ]
   }
 ]

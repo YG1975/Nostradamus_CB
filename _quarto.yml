@@ -65,15 +65,18 @@ website:
           - landsat.qmd
           - sentinel.qmd
           - planetary_computer.qmd    
+      - section: "Tools"
+        contents:
+          - text: Jupyter
+            href: jupyter.qmd
+          - text: LivingEarth
+            href: LivingEarth.qmd
      
       - text: Acknowledgments
         href: acknowledgments.qmd
       - text: FAQ
         href: faq.qmd
-      - section: "Appendices"
-        contents:
-          - text: Jupyter
-            href: jupyter.qmd
+      
      
           
      # - href: concepts.qmd
