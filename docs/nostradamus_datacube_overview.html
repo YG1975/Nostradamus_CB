@@ -97,8 +97,8 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./images/NOSTRADAMUS_logo.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
-      <img src="./images/NOSTRADAMUS_logo.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
+      <img src="./images/logo_OpenDataCube.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none">
+      <img src="./images/logo_OpenDataCube.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none">
       </a>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -317,6 +317,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<p>This work is part of <strong>Work Package 5 (WP5) – Development &amp; Implementation of Data Cubes</strong> of the <strong>Nostradamus</strong> project, led by the University of Geneva. WP5 aims to provide guidance for producing rasterized data from sources such as satellite imagery and existing geospatial databases for effective ingestion into Data Cubes, to develop a dedicated Data Cube for each participating country’s agricultural case study area, and to implement an exploitation platform built on these Data Cubes. It integrates satellite sensor, in-situ, and ancillary data, defining entry points for real-time streams, environmental datasets, and spatiotemporal data cubes, building on synergies with related initiatives such as the <strong>LandShift</strong> project to share infrastructure and mutualize development efforts. The resulting platform provides <a href="./jupyter.html" target="_blank"><strong>demo notebooks</strong></a> by default, lets users download new data and index scenes using <a href="./stac_datastore.html" target="_blank"><strong>STAC</strong></a>, and makes newly ingested data immediately visible for exploration in the Data Cube explorer.</p>
 <p>A dedicated <a href="https://github.com/LivingEarthLab/cube-in-a-box" target="_blank"><strong>cube in a box</strong></a> has been deployed for the <strong>Nostradamus</strong> project. It is a <strong>modifed clone</strong> from the <a href="https://github.com/opendatacube/cube-in-a-box" target="_blank">original cube in a box</a>.</p>
 <p>The following <strong>modifications</strong> have been done on the original cube in a box to become the <a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter" target="_blank">Nostradamus data cube</a>:</p>
 <ul>
@@ -327,7 +328,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>a <a href="https://traefik.io/traefik" target="_blank"><strong>Traefik</strong></a> reverse proxy has been added as a unique entry point of the infrastructure that dispatches the requests to the different services</p></li>
 <li><p>a <strong>multi-architecture support</strong> for AMD64 and ARM64 has been added</p></li>
 <li><p>a <a href="https://www.dask.org/" target="_blank"><strong>Dask</strong></a> python library has been added for performing parallel and distributed processing, which is necessary for large data processing</p></li>
-<li><p>The default <strong>ESRI Land Cover source</strong> in Planetary Computer (<a href="https://planetarycomputer.microsoft.com/dataset/io-lulc)" target="_blank">https://planetarycomputer.microsoft.com/dataset/io-lulc)</a> that is deprecated has been replaced by <a href="https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02" target="_blank">https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02</a></p></li>
+<li><p>The default <strong>ESRI Land Cover source</strong> in Planetary Computer (<a href="https://planetarycomputer.microsoft.com/dataset/io-lulc">https://planetarycomputer.microsoft.com/dataset/io-lulc)</a>){target=“_blank”} that is deprecated has been replaced by <a href="https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02" target="_blank">https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02</a></p></li>
 <li><p>the <a href="./landsat.html" target="_blank"><strong>Landsat Collection 2 Level 2 Science Products</strong></a> have been added</p></li>
 <li><p>a <strong>Jupyter notebook</strong> has been <strong>modified</strong> or <strong>created</strong> for each available Level2 science product (see <a href="./data_sources.html" target="_blank">details</a>)</p></li>
 <li><p>Documentation has been created for <a href="https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/admin/Living-Earth-Cube-in-a-Box---Admin-Guide.pdf" target="_blank">administrators</a> and <a href="https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/user/Living-Earth-Cube-in-a-Box---User-Guide.pdf" target="_blank">users</a></p></li>

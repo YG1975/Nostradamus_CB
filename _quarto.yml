@@ -10,7 +10,7 @@ website:
   sidebar:
     style: "docked"
     collapse-level: 1
-    logo: images/NOSTRADAMUS_logo.png
+    logo: images/logo_OpenDataCube.png
     search: true
     contents:
       - text: Home

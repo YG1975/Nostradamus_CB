@@ -1,5 +1,5 @@
 ---
-title: "Jupyter ![](images/Jupyter_logo.png){width=70px style='vertical-align:middle; margin-left:10px;'}"
+title: "Jupyter ![](images/logo_OpenDataCube.png){width=70px style='vertical-align:middle; margin-left:10px;'}"
 jupyter: python3
 ---
 
@@ -13,9 +13,9 @@ Among them, [Jupyter notebook](https://jupyter-notebook.readthedocs.io/en/latest
 
 A [Jupyter notebook](https://jupyter-notebook.readthedocs.io/en/latest/){target="_blank"} is an interactive document with that is run in your web broswer and allows to have in a single **.ipynb** file:
 
--   executable **code** (Python, R, ...) that can be run cell by cell
--   formatted **text** in MarkDown language
--   **visualisations** (graphs, maps, tables) that interactively display below the code
+- executable **code** (Python, R, ...) that can be run cell by cell
+- formatted **text** in MarkDown language
+- **visualisations** (graphs, maps, tables) that interactively display below the code
 
 ![](images/Jupyter_notebook_example.png)
 
@@ -67,11 +67,11 @@ Once you navigator is open at http://localhost:8888, use the top menus to either
 
 [JupyterLab](https://github.com/jupyterlab/jupyterlab){target="_blank"} is the modern version of Jupyter notebooks. It is a full environment that contains more features than Jupyter notebooks. Here are some additional elements compared to Jupyter notebooks:
 
--   multi-tabs
--   Integrated file explorer
--   Text and code editor
--   Integrated terminal
--   Extensions
+- multi-tabs
+- Integrated file explorer
+- Text and code editor
+- Integrated terminal
+- Extensions
 
 #### **How to install it on my machine?**
 
@@ -135,7 +135,7 @@ Once you navigator is open at http://localhost:8888/lab, use the various menus t
 
 There should normally be 2 options:
 
--   Either your sysadmin has installed JupyterHub on a server and you can access it through a url and login
--   or a self-hosted JupyterHub Docker image has been created and each user can use it as an isolated environment
+- Either your sysadmin has installed JupyterHub on a server and you can access it through a url and login
+- or a self-hosted JupyterHub Docker image has been created and each user can use it as an isolated environment
 
 This **Docker solution** is what has been chosen for the **Nostradamus JupyterHub**.
