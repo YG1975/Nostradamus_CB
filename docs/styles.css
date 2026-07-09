@@ -1,1 +1,87 @@
 /* css styles */
+
+/* Floating "Export PDF" button (triggers the browser's print/save-as-PDF dialog) */
+#pdf-export-btn {
+  position: fixed;
+  top: 70px;
+  right: 24px;
+  z-index: 1050;
+  padding: 6px 14px;
+  background-color: #2780e3;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+#pdf-export-btn:hover {
+  background-color: #1f66b8;
+}
+
+/* "Download the full site as PDF" button on the homepage */
+#export-all-pdf-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 18px;
+  background-color: #2780e3;
+  color: #ffffff !important;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+#export-all-pdf-btn:hover {
+  background-color: #1f66b8;
+}
+
+/* "Download full site (PDF)" sidebar entry, styled as a distinct button */
+#quarto-sidebar a[href*="full_site.pdf"],
+.sidebar-navigation a[href*="full_site.pdf"],
+.sidebar a[href*="full_site.pdf"] {
+  display: inline-block !important;
+  margin: 14px 10px 6px 10px !important;
+  padding: 6px 14px !important;
+  background-color: #2780e3 !important;
+  color: #ffffff !important;
+  border-radius: 6px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+#quarto-sidebar a[href*="full_site.pdf"] .menu-text,
+.sidebar-navigation a[href*="full_site.pdf"] .menu-text,
+.sidebar a[href*="full_site.pdf"] .menu-text {
+  color: #ffffff !important;
+}
+
+#quarto-sidebar a[href*="full_site.pdf"]:hover,
+.sidebar-navigation a[href*="full_site.pdf"]:hover,
+.sidebar a[href*="full_site.pdf"]:hover {
+  background-color: #1f66b8 !important;
+}
+
+/* Print rules: hide site chrome and the button itself, let content take the full page */
+@media print {
+  #pdf-export-btn,
+  #quarto-sidebar,
+  .sidebar-navigation,
+  #quarto-margin-sidebar,
+  #TOC,
+  .page-navigation,
+  #quarto-search {
+    display: none !important;
+  }
+
+  #quarto-content,
+  main.content {
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+}

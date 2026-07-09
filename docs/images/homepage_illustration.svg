@@ -1,0 +1,80 @@
+<svg viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" role="img" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <title>Data cube fed by Earth observation satellites, supporting capacity building</title>
+  <desc>An isometric data cube built from stacked time layers, an orbiting Earth observation satellite feeding data into it, and a capacity-building group of trainees using the resulting knowledge.</desc>
+
+  <rect width="900" height="380" fill="#ffffff"/>
+
+  <!-- Earth + satellite (top area) -->
+  <circle cx="470" cy="80" r="42" fill="#eef1f4" stroke="#c9d2db"/>
+  <path d="M440,60 q15,-10 30,0 q15,10 30,0" fill="none" stroke="#2780e3" stroke-width="2" opacity="0.6"/>
+  <path d="M432,85 q20,14 38,0 q18,-14 38,0" fill="none" stroke="#2780e3" stroke-width="2" opacity="0.6"/>
+  <path d="M440,105 q15,10 30,0 q15,-10 30,0" fill="none" stroke="#2780e3" stroke-width="2" opacity="0.6"/>
+
+  <!-- satellite -->
+  <g transform="translate(560,20) rotate(20)">
+    <rect x="-10" y="-6" width="20" height="14" rx="2" fill="#212529"/>
+    <rect x="-32" y="-2" width="20" height="7" fill="#2780e3"/>
+    <rect x="12" y="-2" width="20" height="7" fill="#2780e3"/>
+    <line x1="0" y1="-6" x2="0" y2="-16" stroke="#212529" stroke-width="2"/>
+  </g>
+
+  <!-- dashed line satellite -> earth -->
+  <path d="M540,35 Q500,55 480,60" fill="none" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="3,3"/>
+
+  <defs>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#adb5bd"/>
+    </marker>
+  </defs>
+
+  <!-- dashed arrow earth -> cube (data flowing down) -->
+  <path d="M440,110 Q330,170 245,190" fill="none" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow2)"/>
+
+  <!-- Isometric data cube -->
+  <g transform="translate(245,260)">
+    <!-- front-left face -->
+    <polygon points="0,0 -104,-60 -104,-160 0,-100" fill="#f8f9fa" stroke="#c9d2db"/>
+    <!-- front-right face -->
+    <polygon points="0,0 104,-60 104,-160 0,-100" fill="#eef1f4" stroke="#c9d2db"/>
+    <!-- top face -->
+    <polygon points="0,-100 -104,-160 0,-220 104,-160" fill="#2780e3" opacity="0.85" stroke="#c9d2db"/>
+    <!-- layer division lines (time slices) on left face -->
+    <line x1="-26" y1="-15" x2="-104" y2="-75" stroke="#dee2e6" stroke-width="1"/>
+    <line x1="-52" y1="-30" x2="-104" y2="-90" stroke="#dee2e6" stroke-width="1"/>
+    <line x1="-78" y1="-45" x2="-104" y2="-105" stroke="#dee2e6" stroke-width="1"/>
+    <!-- layer division lines on right face -->
+    <line x1="26" y1="-15" x2="104" y2="-75" stroke="#dee2e6" stroke-width="1"/>
+    <line x1="52" y1="-30" x2="104" y2="-90" stroke="#dee2e6" stroke-width="1"/>
+    <line x1="78" y1="-45" x2="104" y2="-105" stroke="#dee2e6" stroke-width="1"/>
+    <!-- grid on top face -->
+    <line x1="-52" y1="-130" x2="52" y2="-190" stroke="#ffffff" stroke-width="1"/>
+    <line x1="-26" y1="-115" x2="26" y2="-205" stroke="#ffffff" stroke-width="1"/>
+    <line x1="-78" y1="-145" x2="26" y2="-205" stroke="#ffffff" stroke-width="1"/>
+    <line x1="-52" y1="-130" x2="78" y2="-175" stroke="#ffffff" stroke-width="1"/>
+  </g>
+
+  <!-- dashed arrow cube -> capacity building -->
+  <path d="M330,200 Q460,240 560,270" fill="none" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow2)"/>
+
+  <!-- Capacity building cluster -->
+  <g transform="translate(660,270)">
+    <!-- screen -->
+    <rect x="-40" y="-20" width="80" height="52" rx="4" fill="#f8f9fa" stroke="#c9d2db"/>
+    <rect x="-32" y="-12" width="64" height="36" fill="#eef1f4"/>
+    <rect x="-14" y="32" width="28" height="8" fill="#c9d2db"/>
+    <!-- three people -->
+    <g fill="#2780e3">
+      <circle cx="-70" cy="10" r="10"/>
+      <path d="M-84,44 q14,-18 28,0 z"/>
+      <circle cx="0" cy="-46" r="10"/>
+      <path d="M-14,-14 q14,-18 28,0 z"/>
+      <circle cx="70" cy="10" r="10"/>
+      <path d="M56,44 q14,-18 28,0 z"/>
+    </g>
+  </g>
+
+  <!-- Labels -->
+  <text x="470" y="140" font-size="13" font-weight="700" fill="#6c757d" text-anchor="middle">Earth observation data</text>
+  <text x="245" y="30" font-size="13" font-weight="700" fill="#6c757d" text-anchor="middle">Data cube</text>
+  <text x="660" y="335" font-size="13" font-weight="700" fill="#6c757d" text-anchor="middle">Capacity building</text>
+</svg>

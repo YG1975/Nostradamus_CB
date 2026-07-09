@@ -1,5 +1,49 @@
 ---
-title: "Exercice1"
+title: "How to index new data into a DC?"
 ---
 
-Exercice1
+Once a datacube is deployed, the Earth observation archive keeps growing: new satellite scenes become available over time and need to be added to the existing index so they can be queried and analysed alongside the rest of the archive. Since the Nostradamus datacube uses a [**STAC datastore**](stac_datastore.qmd){target="_blank"} (the Planetary Computer catalog) as its data source, new scenes do not need to be prepared or described by hand: they can be indexed directly from the STAC catalog into an existing product.
+
+In short, the procedure consists of searching the STAC catalog for new scenes matching a product, an area of interest, and a date range, then registering the matching STAC items into the corresponding [**ODC product**](landsat.qmd){target="_blank"} already configured in the cube. This is done with the `stac-to-dc` command-line tool (part of [**odc-apps-dc-tools**](https://github.com/opendatacube/odc-tools/tree/develop/apps/dc_tools){target="_blank"}), which is already installed in the Nostradamus JupyterHub environment. Once indexed, the new scenes are immediately visible in the ODC Explorer and loadable through the Python API, exactly like the rest of the archive.
+
+The steps below index new Landsat Collection 2 Level-2 scenes into the existing `lsX_c2l2_sp` product (see the [**Landsat**](landsat.qmd){target="_blank"} page) as a concrete example.
+
+1.  Open a **Terminal** in the Nostradamus JupyterHub (File \> New \> Terminal), where `datacube` and `stac-to-dc` are already available.
+
+2.  Check that the target product is already registered in the cube:
+
+    ``` markdown
+    datacube product list | grep lsX_c2l2_sp
+    ```
+
+3.  Search the Planetary Computer STAC catalog for new scenes and index them directly into that product, specifying the collection, an area of interest (bounding box), and a date range:
+
+    ``` markdown
+    stac-to-dc \
+      --catalog-href="https://planetarycomputer.microsoft.com/api/stac/v1/" \
+      --collections="landsat-c2-l2" \
+      --bbox="5.95,45.81,10.50,47.81" \
+      --datetime="2026-01-01/2026-06-30" \
+      --rename-product="lsX_c2l2_sp" \
+      --update-if-exists
+    ```
+
+    `--rename-product` maps the STAC collection (`landsat-c2-l2`) to the existing ODC product name (`lsX_c2l2_sp`), and `--bbox`/`--datetime` restrict the search to the area and period you need (adjust them to your own area of interest).
+
+::: callout-note
+Planetary Computer assets are served through short-lived signed URLs. If loading newly indexed scenes later fails with an access error, see the [**STAC datastore**](stac_datastore.qmd){target="_blank"} page for how signing is handled, or re-run the indexing step to refresh the references.
+:::
+
+4.  Check the command's output: it reports how many datasets were **added**, **failed**, and **skipped** (already-indexed scenes are skipped, not duplicated).
+
+5.  Confirm the new scenes are indexed by checking the product's extent in the ODC Explorer, at [localhost/explorer/products/lsX_c2l2\_sp](http://localhost/explorer/products/lsX_c2l2_sp){target="_blank"}: the temporal coverage should now include your new date range.
+
+6.  Alternatively, confirm it directly from a notebook using the Python API:
+
+    ``` python
+    from datacube import Datacube
+
+    dc = Datacube(app="check-new-data")
+    data = dc.load(product="lsX_c2l2_sp", time=("2026-01-01", "2026-06-30"))
+    print(data.time.values)
+    ```

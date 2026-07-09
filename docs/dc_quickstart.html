@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dc_introduction.html">Introduction to datacubes</a></li><li class="breadcrumb-item"><a href="./dc_quickstart.html">Quick Start</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dc_overview.html">Introduction to datacubes</a></li><li class="breadcrumb-item"><a href="./dc_quickstart.html">Quick Start</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -116,13 +116,19 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./dc_introduction.html" class="sidebar-item-text sidebar-link">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Introduction to datacubes</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dc_overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dc_installation.html" class="sidebar-item-text sidebar-link">
@@ -287,6 +293,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">FAQ</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./full_site.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⬇ Download full site (PDF)</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -298,7 +310,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dc_introduction.html">Introduction to datacubes</a></li><li class="breadcrumb-item"><a href="./dc_quickstart.html">Quick Start</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dc_overview.html">Introduction to datacubes</a></li><li class="breadcrumb-item"><a href="./dc_quickstart.html">Quick Start</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Data cubes quickstart</h1>
 </div>
@@ -317,11 +329,25 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Description of data cube concepts</p>
+<p>Here are the step-by-step instructions for deploying a datacube:</p>
+<ol type="1">
+<li>Install the required system libraries (GDAL, HDF5, netCDF) and Python 3.10+, following the guide for your OS: <a href="https://opendatacube.readthedocs.io/en/latest/installation/setup/ubuntu.html" target="_blank"><strong>Ubuntu</strong></a>, <a href="https://opendatacube.readthedocs.io/en/latest/installation/setup/macosx.html" target="_blank"><strong>macOS</strong></a>, or <a href="https://opendatacube.readthedocs.io/en/latest/installation/setup/windows.html" target="_blank"><strong>Windows</strong></a>.</li>
+<li>Create an isolated Python environment (conda/mamba recommended) and install the <code>datacube-core</code> package from the <a href="https://github.com/opendatacube/datacube-core" target="_blank"><strong>ODC repository</strong></a>. Isolating the environment keeps ODC’s dependencies (GDAL bindings, database drivers, etc.) separate from other Python projects or system packages, avoiding version conflicts and keeping the setup reproducible across deployments.</li>
+<li>Install PostgreSQL with the PostGIS extension, and create a dedicated database and user for the cube’s index.</li>
+<li>Configure the ODC to connect to this database — see the <a href="https://opendatacube.readthedocs.io/en/latest/installation/database/setup.html" target="_blank"><strong>Database Setup</strong></a> and <a href="https://opendatacube.readthedocs.io/en/latest/installation/database/configuration.html" target="_blank"><strong>ODC Configuration</strong></a> guides.</li>
+<li>Initialise the index (<code>datacube system init</code>) and confirm the installation works as expected.</li>
+<li>Define <strong>metadata types</strong> and write <a href="https://opendatacube.readthedocs.io/en/latest/installation/product-definitions.html" target="_blank"><strong>Product Definitions</strong></a> (YAML) describing each type of data to be indexed.</li>
+<li>Prepare <a href="https://opendatacube.readthedocs.io/en/latest/installation/dataset-documents.html" target="_blank"><strong>Dataset Documents</strong></a> for the data to be added, either supplied by the data provider or generated with a preparation script.</li>
+<li>Load the products and index the data with the <code>datacube</code> command line tool, following the <a href="https://opendatacube.readthedocs.io/en/latest/installation/indexing-data/step-guide.html" target="_blank"><strong>step-by-step indexing guide</strong></a> (<code>datacube product add</code>, then <code>datacube dataset add</code>).</li>
+<li>Verify the data is available through the ODC Explorer, the Python API, or a Jupyter notebook.</li>
+</ol>
 
 
 
 </main> <!-- /main -->
+<button id="pdf-export-btn" onclick="window.print()" title="Export this page as PDF" aria-label="Export this page as PDF">
+  ⬇ Export page (PDF)
+</button>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

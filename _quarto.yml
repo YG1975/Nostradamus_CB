@@ -15,9 +15,10 @@ website:
     contents:
       - text: Home
         href: index.qmd
-      - section: "Introduction to datacubes"  
-        href: dc_introduction.qmd
+      - section: "Introduction to datacubes"
         contents:
+          - text: Overview
+            href: dc_overview.qmd
           - text: Installation
             href: dc_installation.qmd
           - text: Quick Start
@@ -76,6 +77,8 @@ website:
         href: acknowledgments.qmd
       - text: FAQ
         href: faq.qmd
+      - text: "⬇ Download full site (PDF)"
+        href: full_site.pdf
       
      
           
@@ -89,6 +92,7 @@ format:
     theme: cosmo
     css: styles.css
     toc: true
+    include-after-body: _includes/pdf_button.html
  
 
 editor: visual

@@ -116,13 +116,19 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./dc_introduction.html" class="sidebar-item-text sidebar-link">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Introduction to datacubes</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dc_overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dc_installation.html" class="sidebar-item-text sidebar-link">
@@ -287,6 +293,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">FAQ</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./full_site.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⬇ Download full site (PDF)</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -317,12 +329,17 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This website contains capacity building material related to data cubes developed by UNIGE and UNEP/GRID-Geneva for various projects.</p>
-<p>It aims at improving the understanding of data cube concepts and their use in the projects mentioned, through detailed explanations and dedicated exercices.</p>
+<p><img src="images/homepage_illustration.svg" class="img-fluid"></p>
+<p>This site is a capacity-building resource on data cubes and Earth observation, developed by UNIGE and UNEP/GRID-Geneva. It introduces the core concepts behind data cubes — what problem they solve, how they organise satellite and geospatial data, and the main steps involved in setting one up — before walking through a concrete, hands-on implementation.</p>
+<p>At its core is the Nostradamus datacube, a modified Open Data Cube deployment with a multi-user JupyterHub, an integrated STAC datastore, and ready-to-use notebooks. The site documents how to install and use it, complemented by step-by-step tutorials, recorded workshops, and a parallel section on vector datacubes for non-raster geospatial data.</p>
+<p>Beyond the datacube itself, the site catalogues the underlying data sources (Landsat, Sentinel, the Planetary Computer STAC catalog) and the tools used to work with them (Jupyter, LivingEarth), along with acknowledgments and a FAQ for troubleshooting. Use the sidebar to navigate by topic, or start with the <a href="./dc_overview.html" target="_blank"><strong>Introduction to datacubes</strong></a> for a general overview before diving into the Nostradamus-specific material.</p>
 
 
 
 </main> <!-- /main -->
+<button id="pdf-export-btn" onclick="window.print()" title="Export this page as PDF" aria-label="Export this page as PDF">
+  ⬇ Export page (PDF)
+</button>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dc_introduction.html">Introduction to datacubes</a></li><li class="breadcrumb-item"><a href="./dc_installation.html">Installation</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dc_overview.html">Introduction to datacubes</a></li><li class="breadcrumb-item"><a href="./dc_installation.html">Installation</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -116,13 +116,19 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./dc_introduction.html" class="sidebar-item-text sidebar-link">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
  <span class="menu-text">Introduction to datacubes</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dc_overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dc_installation.html" class="sidebar-item-text sidebar-link active">
@@ -287,6 +293,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">FAQ</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./full_site.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⬇ Download full site (PDF)</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -298,7 +310,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dc_introduction.html">Introduction to datacubes</a></li><li class="breadcrumb-item"><a href="./dc_installation.html">Installation</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dc_overview.html">Introduction to datacubes</a></li><li class="breadcrumb-item"><a href="./dc_installation.html">Installation</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Data cubes installation</h1>
 </div>
@@ -317,11 +329,18 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Description of data cube concepts</p>
+<p>Installing a data cube involves two main phases. The first is setting up the underlying software and infrastructure on the machine that will host the cube, typically a server (on-premises or cloud-based) or, for testing and development, a local computer or virtual machine: installing system libraries for handling geospatial formats (GDAL, HDF5, netCDF), a Python environment with the <a href="https://opendatacube.readthedocs.io/en/latest/installation/index.html" target="_blank"><strong>Open Data Cube (ODC)</strong></a> package, and a PostgreSQL/PostGIS database that will hold the index of all available data.</p>
+<p>Once the software stack is running and connected to its database, the second phase consists of populating the cube: describing the data to be added through <strong>product definitions</strong> and <strong>dataset documents</strong>, then indexing it so it becomes searchable and accessible through the ODC API and tools. Indexing only records metadata about the data; it does not copy, move, or transform the underlying files, making the process fast and safe to repeat.</p>
+<p>For the Nostradamus project, this installation is simplified through a pre-packaged Docker deployment (see <a href="./nostradamus_datacube_setup.html" target="_blank"><strong>Nostradamus datacube install</strong></a>), which already covers these steps automatically.</p>
+<p>The diagram below summarises this workflow; see the <a href="./dc_quickstart.html" target="_blank"><strong>Quick Start</strong></a> page for the detailed step-by-step instructions.</p>
+<p><img src="images/dc_installation_steps.svg" class="img-fluid"></p>
 
 
 
 </main> <!-- /main -->
+<button id="pdf-export-btn" onclick="window.print()" title="Export this page as PDF" aria-label="Export this page as PDF">
+  ⬇ Export page (PDF)
+</button>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

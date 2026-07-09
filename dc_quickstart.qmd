@@ -2,4 +2,14 @@
 title: "Data cubes quickstart"
 ---
 
-Description of data cube concepts
+Here are the step-by-step instructions for deploying a datacube:
+
+1.  Install the required system libraries (GDAL, HDF5, netCDF) and Python 3.10+, following the guide for your OS: [**Ubuntu**](https://opendatacube.readthedocs.io/en/latest/installation/setup/ubuntu.html){target="_blank"}, [**macOS**](https://opendatacube.readthedocs.io/en/latest/installation/setup/macosx.html){target="_blank"}, or [**Windows**](https://opendatacube.readthedocs.io/en/latest/installation/setup/windows.html){target="_blank"}.
+2.  Create an isolated Python environment (conda/mamba recommended) and install the `datacube-core` package from the [**ODC repository**](https://github.com/opendatacube/datacube-core){target="_blank"}. Isolating the environment keeps ODC's dependencies (GDAL bindings, database drivers, etc.) separate from other Python projects or system packages, avoiding version conflicts and keeping the setup reproducible across deployments.
+3.  Install PostgreSQL with the PostGIS extension, and create a dedicated database and user for the cube's index.
+4.  Configure the ODC to connect to this database — see the [**Database Setup**](https://opendatacube.readthedocs.io/en/latest/installation/database/setup.html){target="_blank"} and [**ODC Configuration**](https://opendatacube.readthedocs.io/en/latest/installation/database/configuration.html){target="_blank"} guides.
+5.  Initialise the index (`datacube system init`) and confirm the installation works as expected.
+6.  Define **metadata types** and write [**Product Definitions**](https://opendatacube.readthedocs.io/en/latest/installation/product-definitions.html){target="_blank"} (YAML) describing each type of data to be indexed.
+7.  Prepare [**Dataset Documents**](https://opendatacube.readthedocs.io/en/latest/installation/dataset-documents.html){target="_blank"} for the data to be added, either supplied by the data provider or generated with a preparation script.
+8.  Load the products and index the data with the `datacube` command line tool, following the [**step-by-step indexing guide**](https://opendatacube.readthedocs.io/en/latest/installation/indexing-data/step-guide.html){target="_blank"} (`datacube product add`, then `datacube dataset add`).
+9.  Verify the data is available through the ODC Explorer, the Python API, or a Jupyter notebook.

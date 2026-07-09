@@ -1,5 +1,5 @@
 ---
-title: "LivingEarth}"
+title: "LivingEarth"
 ---
 
 LivingEarth is ...

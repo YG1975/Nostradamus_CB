@@ -1,0 +1,103 @@
+<svg viewBox="0 0 640 820" xmlns="http://www.w3.org/2000/svg" role="img" font-family="-apple-system, Helvetica, Arial, sans-serif">
+  <title>Typical data cube installation workflow</title>
+  <desc>Two-phase workflow: setting up software and infrastructure (5 steps), then populating and indexing data (4 steps).</desc>
+
+  <rect width="640" height="820" fill="#ffffff"/>
+
+  <!-- Phase 1 background -->
+  <rect x="20" y="50" width="600" height="400" rx="10" fill="#f8f9fa" stroke="#dee2e6"/>
+  <text x="40" y="40" font-size="15" font-weight="700" fill="#2780e3">Phase 1 — Software &amp; infrastructure</text>
+
+  <!-- Phase 2 background -->
+  <rect x="20" y="480" width="600" height="316" rx="10" fill="#f8f9fa" stroke="#dee2e6"/>
+  <text x="40" y="470" font-size="15" font-weight="700" fill="#2780e3">Phase 2 — Populate &amp; index data</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#adb5bd"/>
+    </marker>
+  </defs>
+
+  <!-- connector column x=70 -->
+  <line x1="70" y1="130" x2="70" y2="146" stroke="#adb5bd" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="70" y1="206" x2="70" y2="222" stroke="#adb5bd" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="70" y1="282" x2="70" y2="298" stroke="#adb5bd" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="70" y1="358" x2="70" y2="374" stroke="#adb5bd" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="70" y1="434" x2="70" y2="490" stroke="#adb5bd" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="70" y1="550" x2="70" y2="566" stroke="#adb5bd" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="70" y1="626" x2="70" y2="642" stroke="#adb5bd" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="70" y1="702" x2="70" y2="718" stroke="#adb5bd" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 1 -->
+  <g>
+    <rect x="40" y="70" width="560" height="60" rx="8" fill="#eef1f4" stroke="#c9d2db"/>
+    <circle cx="70" cy="100" r="18" fill="#2780e3"/>
+    <text x="70" y="105" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+    <text x="110" y="97" font-size="14" font-weight="700" fill="#212529">Install system libraries</text>
+    <text x="110" y="116" font-size="12" fill="#6c757d">GDAL, HDF5, netCDF, Python</text>
+  </g>
+  <!-- Step 2 -->
+  <g>
+    <rect x="40" y="146" width="560" height="60" rx="8" fill="#eef1f4" stroke="#c9d2db"/>
+    <circle cx="70" cy="176" r="18" fill="#2780e3"/>
+    <text x="70" y="181" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+    <text x="110" y="173" font-size="14" font-weight="700" fill="#212529">Create isolated Python env</text>
+    <text x="110" y="192" font-size="12" fill="#6c757d">conda/mamba + datacube-core</text>
+  </g>
+  <!-- Step 3 -->
+  <g>
+    <rect x="40" y="222" width="560" height="60" rx="8" fill="#eef1f4" stroke="#c9d2db"/>
+    <circle cx="70" cy="252" r="18" fill="#2780e3"/>
+    <text x="70" y="257" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+    <text x="110" y="249" font-size="14" font-weight="700" fill="#212529">Install PostgreSQL + PostGIS</text>
+    <text x="110" y="268" font-size="12" fill="#6c757d">dedicated database and user</text>
+  </g>
+  <!-- Step 4 -->
+  <g>
+    <rect x="40" y="298" width="560" height="60" rx="8" fill="#eef1f4" stroke="#c9d2db"/>
+    <circle cx="70" cy="328" r="18" fill="#2780e3"/>
+    <text x="70" y="333" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+    <text x="110" y="325" font-size="14" font-weight="700" fill="#212529">Configure database connection</text>
+    <text x="110" y="344" font-size="12" fill="#6c757d">ODC ↔ PostgreSQL/PostGIS</text>
+  </g>
+  <!-- Step 5 -->
+  <g>
+    <rect x="40" y="374" width="560" height="60" rx="8" fill="#eef1f4" stroke="#c9d2db"/>
+    <circle cx="70" cy="404" r="18" fill="#2780e3"/>
+    <text x="70" y="409" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+    <text x="110" y="401" font-size="14" font-weight="700" fill="#212529">Initialise the index</text>
+    <text x="110" y="420" font-size="12" fill="#6c757d">datacube system init</text>
+  </g>
+  <!-- Step 6 -->
+  <g>
+    <rect x="40" y="490" width="560" height="60" rx="8" fill="#eef1f4" stroke="#c9d2db"/>
+    <circle cx="70" cy="520" r="18" fill="#2780e3"/>
+    <text x="70" y="525" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+    <text x="110" y="517" font-size="14" font-weight="700" fill="#212529">Define product definitions</text>
+    <text x="110" y="536" font-size="12" fill="#6c757d">metadata types, YAML products</text>
+  </g>
+  <!-- Step 7 -->
+  <g>
+    <rect x="40" y="566" width="560" height="60" rx="8" fill="#eef1f4" stroke="#c9d2db"/>
+    <circle cx="70" cy="596" r="18" fill="#2780e3"/>
+    <text x="70" y="601" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">7</text>
+    <text x="110" y="593" font-size="14" font-weight="700" fill="#212529">Prepare dataset documents</text>
+    <text x="110" y="612" font-size="12" fill="#6c757d">metadata for each dataset</text>
+  </g>
+  <!-- Step 8 -->
+  <g>
+    <rect x="40" y="642" width="560" height="60" rx="8" fill="#eef1f4" stroke="#c9d2db"/>
+    <circle cx="70" cy="672" r="18" fill="#2780e3"/>
+    <text x="70" y="677" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">8</text>
+    <text x="110" y="669" font-size="14" font-weight="700" fill="#212529">Index the data</text>
+    <text x="110" y="688" font-size="12" fill="#6c757d">datacube product/dataset add</text>
+  </g>
+  <!-- Step 9 -->
+  <g>
+    <rect x="40" y="718" width="560" height="60" rx="8" fill="#eef1f4" stroke="#c9d2db"/>
+    <circle cx="70" cy="748" r="18" fill="#2780e3"/>
+    <text x="70" y="753" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">9</text>
+    <text x="110" y="745" font-size="14" font-weight="700" fill="#212529">Verify the deployment</text>
+    <text x="110" y="764" font-size="12" fill="#6c757d">Explorer, API, or notebook</text>
+  </g>
+</svg>

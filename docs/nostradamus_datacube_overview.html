@@ -116,13 +116,19 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./dc_introduction.html" class="sidebar-item-text sidebar-link">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Introduction to datacubes</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dc_overview.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Overview</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dc_installation.html" class="sidebar-item-text sidebar-link">
@@ -287,6 +293,12 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">FAQ</span></a>
   </div>
 </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./full_site.pdf" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">⬇ Download full site (PDF)</span></a>
+  </div>
+</li>
     </ul>
     </div>
 </nav>
@@ -337,6 +349,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 </main> <!-- /main -->
+<button id="pdf-export-btn" onclick="window.print()" title="Export this page as PDF" aria-label="Export this page as PDF">
+  ⬇ Export page (PDF)
+</button>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
