@@ -514,5 +514,15 @@
     "title": "Nostradamus datacube — Full site export",
     "section": "Publications",
     "text": "Publications\nList of publications linked to the data cubes presented in this capacity building instance"
+  },
+  {
+    "objectID": "acknowledgments.html#ai-assistance",
+    "href": "acknowledgments.html#ai-assistance",
+    "title": "Acknowledgments",
+    "section": "AI assistance",
+    "text": "AI assistance\nDuring the preparation of this site, the authors used AI-based tools (large language models) to help draft and edit some sections of the documentation, including language editing and improving clarity. All AI-assisted content was reviewed, verified, and edited by the authors, who take full responsibility for the accuracy and content of this site. The technical implementation, data cube design, and content structure were directed and validated solely by the authors.",
+    "crumbs": [
+      "Acknowledgments"
+    ]
   }
 ]
