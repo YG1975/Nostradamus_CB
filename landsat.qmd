@@ -28,4 +28,16 @@ The Landsat archive of raw and processed data since 1972 is organized into 3 col
 
 -   **Level3 (L3)**: analytical derived products from L2, that are automatically generated
 
-Among the various products available in the Nostradamus datacube, the one called "[**lsX_c2l2_sp.odc-product.yaml**](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/lsX_c2l2_sp.odc-product.yaml)**"** is the Landsat one, made of USGS Landsat 8 and 9 Collection 2 Level-2 Science Products, consisting of atmospherically corrected surface reflectance and surface temperature image data.
+## Default Open Data Cube products
+
+The official [Open Data Cube dataset configuration repository](https://github.com/opendatacube/datacube-dataset-config/tree/main/products) provides several ready-to-use Landsat product definitions:
+
+-   **landsat_8_c2l2**: Landsat 8 Collection 2 Level-2 Science Products
+
+-   **lsX_c2l2_sr**: a generic Landsat Collection 2 Level-2 surface reflectance product, covering multiple Landsat sensor generations
+
+-   **ls_usgs_level1_scene** / **ls_usgs_sr_scene**: legacy Landsat Collection 1-style product definitions (Level-1 and surface-reflectance scenes)
+
+::: callout-note
+[Nostradamus datacube](nostradamus_datacube_overview.qmd) users: see the [Data sources used in the Nostradamus datacube](nostradamus_datacube_data_sources.qmd) page for how this default catalog was adapted (Landsat products split by sensor generation) for this project.
+:::

@@ -2,4 +2,26 @@
 title: "Sentinel"
 ---
 
-## Sentinel
+## The Sentinel missions
+
+**Sentinel** is the family of Earth observation satellites operated by the European Union's Copernicus programme. Two of these missions are the most commonly used sources in data cube deployments:
+
+-   **Sentinel-1**: a radar (SAR, Synthetic Aperture Radar) mission, which measures the Earth's surface independently of daylight and cloud cover. It is well suited to monitoring soil moisture, flooding, and surface deformation.
+
+-   **Sentinel-2**: an optical, multispectral mission (13 bands), providing imagery well suited to vegetation monitoring, land cover mapping, and agricultural applications, but — unlike Sentinel-1 — affected by cloud cover.
+
+Both missions provide free, openly accessible data with a revisit time of a few days, and are frequently used, alone or in combination, to derive higher-level products (such as [ESA WorldCover](esa_worldcover.qmd) or the [CLC+ Backbone](clms_clcplus.qmd)) rather than being used only as raw imagery.
+
+## Default Open Data Cube products
+
+The official [Open Data Cube dataset configuration repository](https://github.com/opendatacube/datacube-dataset-config/tree/main/products) provides the following Sentinel product definitions:
+
+-   **s1_rtc**: Sentinel-1 Radiometrically Terrain Corrected (RTC) imagery
+
+-   **s2_l2a**: Sentinel-2 imagery processed to Level-2A (surface reflectance), converted to Cloud-Optimized GeoTIFFs
+
+-   **s2_granules**: Sentinel-2 data organised by native satellite granules/tiles
+
+::: callout-note
+[Nostradamus datacube](nostradamus_datacube_overview.qmd) users: see the [Data sources used in the Nostradamus datacube](nostradamus_datacube_data_sources.qmd) page for how these default products were renamed for this project (e.g. `s1_rtc` → `sentinel_1_rtc`).
+:::

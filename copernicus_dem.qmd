@@ -1,0 +1,17 @@
+---
+title: "Copernicus DEM"
+---
+
+## Copernicus DEM
+
+The **Copernicus DEM** is a global digital elevation model produced for the European Union's Copernicus programme, derived from radar data acquired by the TanDEM-X mission. It is available at different resolutions, offering a European/global alternative to [NASADEM](nasadem.qmd), generally with higher accuracy in areas of complex terrain.
+
+## Default Open Data Cube products
+
+The official [Open Data Cube dataset configuration repository](https://github.com/opendatacube/datacube-dataset-config/tree/main/products) provides three related product definitions, at different resolutions:
+
+-   **cop_dem_glo_30** / **dem_cop_30**: global coverage at 30 m resolution
+
+-   **dem_cop_90**: global coverage at 90 m resolution
+
+[https://spacedata.copernicus.eu/collections/copernicus-digital-elevation-model](https://spacedata.copernicus.eu/collections/copernicus-digital-elevation-model)

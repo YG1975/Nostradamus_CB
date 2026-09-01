@@ -2,6 +2,8 @@
 title: "Nostradamus datacube use"
 ---
 
+## Launching Docker and accessing Jupyter
+
 1)  Launch Docker Desktop and verify that the containers "cube-in-a-box" and "cube-in-a-box-jupyter" have started (this should be automatic at the launch of Docker Desktop)
 
 ![](images/Docker_Desktop_containers_launched.png)
@@ -17,6 +19,8 @@ docker compose version
 2.  Go to <http://localhost/jupyter/> and sign in with you credentials =\> Jupyter server will begin to spawn and the homepage should be ready after a few seconds
 
 ![](images/Jupyter_nostradamus_homepage.png)
+
+## Exploring the demo notebooks
 
 3.  By default, this homepage shows in the left sidebar your own folder. If it is the first time you are using the datacube, your folder should be empty (you can double-click on it to check). On the other hand, if you navigate to */shared/**notebooks_demo*** (by clicking on the tree at the top of the left sidebar) you will see the available demo jupyter notebooks.
 
@@ -40,6 +44,8 @@ docker compose version
 -   To save any changes, copy the notebook and any potential dependent files to your root directory first (or shared personal directory).
 - The content of the root directory is not visible by others while the one of your your folder is, but only you can edit it. 
 :::
+
+## Editing and running a notebook
 
 5.  In order to use these demo notebooks and make changes, you need to copy them into the Jupyter root directory. To do so, right clik on the notebook of interest and its dependencies (folders documentation, figures, utils) in the "notebooks_demo" folder and paste it at the root directory. It should then appear at the same level as the "shared" folder. Alternatively, you can also copy the whole "notebooks_demo" folder to the root directory.
 

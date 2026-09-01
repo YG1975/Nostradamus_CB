@@ -1,0 +1,17 @@
+---
+title: "Impact Observatory Land Cover"
+---
+
+## Impact Observatory / Esri Land Use Land Cover
+
+This dataset, produced by **Impact Observatory** in partnership with Esri and Microsoft, provides a global land use / land cover (LULC) classification derived from Sentinel-2 imagery using a deep-learning model, generated on an annual basis (rather than a single static reference year, unlike products such as ESA WorldCover). It classifies the land surface into 9 broad classes (e.g., water, trees, crops, built area, bare ground).
+
+Because it is updated yearly, this product is particularly useful for tracking land use change year over year — for example monitoring the conversion of cropland to built-up area, or the expansion/contraction of cultivated land across a growing season sequence.
+
+## Default Open Data Cube products
+
+The official [Open Data Cube dataset configuration repository](https://github.com/opendatacube/datacube-dataset-config/tree/main/products) provides two related product definitions: **io_lulc** and **io_lulc_9_class**, both sourced from Microsoft's [Planetary Computer](planetary_computer.qmd) STAC catalog.
+
+::: callout-note
+[Nostradamus datacube](nostradamus_datacube_overview.qmd) users: see the [Data sources used in the Nostradamus datacube](nostradamus_datacube_data_sources.qmd) page — this project uses a newer annual version of this product (`io_lulc_annual_v02`) not yet present in the default catalog.
+:::

@@ -1,0 +1,25 @@
+---
+title: "Nostradamus datacube"
+---
+
+## The Nostradamus datacube, an Open Data Cube implementation
+
+The **Nostradamus datacube** is the implementation of the Open Data Cube approach developed within the [Nostradamus project](https://cordis.europa.eu/project/id/101135941){target="_blank"}, adapted to the project's agricultural demonstration sites. It is deployed as a customised [**Cube-in-a-Box (CiaB)**](glossary.qmd#cube-in-a-box){target="_blank"}, one instance per demonstration site.
+
+## Deployed instances
+
+As of August 2026, five datacube instances have been deployed within the Nostradamus project:
+
+- [Cyprus](https://cyprus-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+
+- [Germany](https://germany-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+
+- [Slovenia](https://slovenia-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+
+- [Serbia](https://serbia-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+
+- [Switzerland](https://switzerland-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+
+## Where to find the details
+
+This page only gives a general overview. For installation instructions, usage guides, and the full list of data sources used in the Nostradamus datacube (and how they relate to the default Open Data Cube catalog), see the dedicated [**Nostradamus datacube**](nostradamus_datacube_overview.qmd) section and its sub-pages.

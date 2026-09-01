@@ -1,0 +1,15 @@
+---
+title: "CLMS CLC+ Backbone"
+---
+
+## Copernicus Land Monitoring Service — CLC+ Backbone
+
+**CLC+ Backbone** is a land cover product from the Copernicus Land Monitoring Service (CLMS), providing a high-resolution (10 m) classification of Europe's land surface, produced from Sentinel-1 and Sentinel-2 imagery. It complements the long-running CORINE Land Cover (CLC) inventory — which has a coarser resolution and a slower update cycle — by offering a more frequently refreshed, more spatially detailed backbone layer that CLC and other derived Copernicus land products build upon.
+
+Being Europe-specific and higher resolution than global products like ESA WorldCover, CLC+ Backbone is well suited to regional or national-scale agricultural and land-management analyses within the EU, including several of the Nostradamus demonstration sites.
+
+## Use in the Nostradamus datacube
+
+In the Nostradamus datacube, this dataset is indexed as the product **clms_clcplus_europe_100m**.
+
+[https://land.copernicus.eu/en/products/clc-backbone](https://land.copernicus.eu/en/products/clc-backbone)

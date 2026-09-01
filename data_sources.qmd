@@ -2,18 +2,26 @@
 title: "Data sources"
 ---
 
-The Nostradamus datacube contains analysis ready datasets that allow to perform analyses through [6 distinct notebooks](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products) that use different data sources:
+## Available datasets
+
+This section documents the data sources behind the ready-to-use product definitions maintained in the official Open Data Cube [datacube-dataset-config](https://github.com/opendatacube/datacube-dataset-config/tree/main/products) repository — the default catalog available to any Open Data Cube deployment. Each data source has its own dedicated page below.
 
 ![](images/Nostradamus_notebooks.png)
 
--   [esa_worldcover.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/esa_worldcover.odc-product.yaml):
+-   [Landsat](landsat.qmd) — Collection 2 Level-2 Science Products
 
--   [io_lulc_annual_v02.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/io_lulc_annual_v02.odc-product.yaml "io_lulc_annual_v02.odc-product.yaml")
+-   [Sentinel](sentinel.qmd) — Sentinel-1 (radar) and Sentinel-2 (optical) missions
 
--   [lsX_c2l2_sp.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/lsX_c2l2_sp.odc-product.yaml): more information about Landsat product [here](landsat.qmd)
+-   [Planetary Computer](planetary_computer.qmd) — STAC catalog used to access several of these sources
 
--   [nasadem.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/nasadem.odc-product.yaml)
+-   [NASADEM](nasadem.qmd) — global elevation model
 
--   [s1_rtc.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/s1_rtc.odc-product.yaml)
+-   [Copernicus DEM](copernicus_dem.qmd) — European/global elevation model, alternative to NASADEM
 
--   [s2_l2a.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/s2_l2a.odc-product.yaml)
+-   [ESA WorldCover](esa_worldcover.qmd) — global land cover at 10 m
+
+-   [Impact Observatory Land Cover](io_lulc.qmd) — annual global land use/land cover
+
+::: callout-note
+The [Nostradamus datacube](nostradamus_datacube_overview.qmd) uses most of these default products, but under different, project-specific names, and adds a couple of sources that are not part of the default catalog. See [Data sources used in the Nostradamus datacube](nostradamus_datacube_data_sources.qmd) for the mapping.
+:::

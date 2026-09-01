@@ -1,0 +1,15 @@
+---
+title: "ESA WorldCover"
+---
+
+## ESA WorldCover
+
+**ESA WorldCover** is a global land cover map produced by the European Space Agency at 10-meter resolution, derived from a combination of Sentinel-1 (radar) and Sentinel-2 (optical) imagery for the reference years 2020 and 2021. It classifies the land surface into 11 categories (e.g., tree cover, cropland, built-up, water bodies, wetlands) using a machine-learning classification pipeline trained and validated with reference data collected worldwide.
+
+Land cover products such as this one are commonly used as a baseline to mask or stratify analyses — for instance restricting an agricultural indicator to cropland pixels, or monitoring land cover change over time when combined with more recent classifications.
+
+## Use in the Nostradamus datacube
+
+In the Nostradamus datacube, ESA WorldCover is indexed as the product **[esa_worldcover.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/esa_worldcover.odc-product.yaml)**.
+
+[https://esa-worldcover.org](https://esa-worldcover.org)

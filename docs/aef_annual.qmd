@@ -1,0 +1,15 @@
+---
+title: "AlphaEarth Foundations embeddings"
+---
+
+## AlphaEarth Foundations (AEF) annual satellite embeddings
+
+**AlphaEarth Foundations** is a geospatial AI model developed by Google DeepMind, released in 2025, that produces annual "satellite embeddings": for each 10 m pixel on Earth's surface, it condenses information from multiple satellite and geospatial data sources (optical, radar, elevation, climate, and more) into a compact numerical vector. Unlike a conventional dataset that stores a physical measurement (a reflectance value, a temperature), an embedding stores a learned representation designed to be reused across many different downstream mapping and classification tasks (e.g., land cover, ecosystem mapping, change detection) without having to reprocess the original raw sources each time.
+
+This is a substantially different kind of "data source" compared to the other products in this list — it is not a physical measurement but a machine-learning representation, distributed as Cloud-Optimized GeoTIFFs and mirrored on Source Cooperative.
+
+## Use in the Nostradamus datacube
+
+In the Nostradamus datacube, this dataset is indexed as the product **aef_annual**.
+
+[https://deepmind.google/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/](https://deepmind.google/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/)

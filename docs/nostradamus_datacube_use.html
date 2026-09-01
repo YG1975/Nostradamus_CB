@@ -116,7 +116,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+            <a href="./dc_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction to datacubes</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -143,6 +143,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
       </ul>
   </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
@@ -170,8 +171,27 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Datacube use</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./nostradamus_datacube_data_sources.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Data sources used</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./clms_clcplus.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CLMS CLC+ Backbone</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./aef_annual.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">AlphaEarth Foundations</span></a>
+  </div>
+</li>
       </ul>
   </li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./tutorials.html" class="sidebar-item-text sidebar-link">
@@ -256,6 +276,30 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Planetary computer</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./nasadem.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">NASADEM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./copernicus_dem.qmd" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Copernicus DEM</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./esa_worldcover.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">ESA WorldCover</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./io_lulc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Impact Observatory Land Cover</span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -289,6 +333,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./glossary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Glossary</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./faq.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FAQ</span></a>
   </div>
@@ -304,8 +354,16 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#launching-docker-and-accessing-jupyter" id="toc-launching-docker-and-accessing-jupyter" class="nav-link active" data-scroll-target="#launching-docker-and-accessing-jupyter">Launching Docker and accessing Jupyter</a></li>
+  <li><a href="#exploring-the-demo-notebooks" id="toc-exploring-the-demo-notebooks" class="nav-link" data-scroll-target="#exploring-the-demo-notebooks">Exploring the demo notebooks</a></li>
+  <li><a href="#editing-and-running-a-notebook" id="toc-editing-and-running-a-notebook" class="nav-link" data-scroll-target="#editing-and-running-a-notebook">Editing and running a notebook</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -329,6 +387,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="launching-docker-and-accessing-jupyter" class="level2">
+<h2 class="anchored" data-anchor-id="launching-docker-and-accessing-jupyter">Launching Docker and accessing Jupyter</h2>
 <ol type="1">
 <li>Launch Docker Desktop and verify that the containers “cube-in-a-box” and “cube-in-a-box-jupyter” have started (this should be automatic at the launch of Docker Desktop)</li>
 </ol>
@@ -352,6 +412,9 @@ Note
 <li>Go to <a href="http://localhost/jupyter/" class="uri">http://localhost/jupyter/</a> and sign in with you credentials =&gt; Jupyter server will begin to spawn and the homepage should be ready after a few seconds</li>
 </ol>
 <p><img src="images/Jupyter_nostradamus_homepage.png" class="img-fluid"></p>
+</section>
+<section id="exploring-the-demo-notebooks" class="level2">
+<h2 class="anchored" data-anchor-id="exploring-the-demo-notebooks">Exploring the demo notebooks</h2>
 <ol start="3" type="1">
 <li>By default, this homepage shows in the left sidebar your own folder. If it is the first time you are using the datacube, your folder should be empty (you can double-click on it to check). On the other hand, if you navigate to <em>/shared/<strong>notebooks_demo</strong></em> (by clicking on the tree at the top of the left sidebar) you will see the available demo jupyter notebooks.</li>
 </ol>
@@ -383,6 +446,9 @@ Note
 </ul>
 </div>
 </div>
+</section>
+<section id="editing-and-running-a-notebook" class="level2">
+<h2 class="anchored" data-anchor-id="editing-and-running-a-notebook">Editing and running a notebook</h2>
 <ol start="5" type="1">
 <li>In order to use these demo notebooks and make changes, you need to copy them into the Jupyter root directory. To do so, right clik on the notebook of interest and its dependencies (folders documentation, figures, utils) in the “notebooks_demo” folder and paste it at the root directory. It should then appear at the same level as the “shared” folder. Alternatively, you can also copy the whole “notebooks_demo” folder to the root directory.</li>
 </ol>
@@ -393,6 +459,7 @@ Note
 <p><img src="images/jupyter/Jupyter_notebook_interface.png" class="img-fluid"></p>
 
 
+</section>
 
 </main> <!-- /main -->
 <button id="pdf-export-btn" onclick="window.print()" title="Export this page as PDF" aria-label="Export this page as PDF">

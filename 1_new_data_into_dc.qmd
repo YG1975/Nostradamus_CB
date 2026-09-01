@@ -2,11 +2,15 @@
 title: "How to index new data into a DC?"
 ---
 
+## Overview
+
 Once a datacube is deployed, the Earth observation archive keeps growing: new satellite scenes become available over time and need to be added to the existing index so they can be queried and analysed alongside the rest of the archive. Since the Nostradamus datacube uses a [**STAC datastore**](stac_datastore.qmd){target="_blank"} (the Planetary Computer catalog) as its data source, new scenes do not need to be prepared or described by hand: they can be indexed directly from the STAC catalog into an existing product.
 
 In short, the procedure consists of searching the STAC catalog for new scenes matching a product, an area of interest, and a date range, then registering the matching STAC items into the corresponding [**ODC product**](landsat.qmd){target="_blank"} already configured in the cube. This is done with the `stac-to-dc` command-line tool (part of [**odc-apps-dc-tools**](https://github.com/opendatacube/odc-tools/tree/develop/apps/dc_tools){target="_blank"}), which is already installed in the Nostradamus JupyterHub environment. Once indexed, the new scenes are immediately visible in the ODC Explorer and loadable through the Python API, exactly like the rest of the archive.
 
 The steps below index new Landsat Collection 2 Level-2 scenes into the existing `lsX_c2l2_sp` product (see the [**Landsat**](landsat.qmd){target="_blank"} page) as a concrete example.
+
+## Indexing new Landsat scenes: step-by-step
 
 1.  Open a **Terminal** in the Nostradamus JupyterHub (File \> New \> Terminal), where `datacube` and `stac-to-dc` are already available.
 

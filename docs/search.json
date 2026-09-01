@@ -4,7 +4,7 @@
     "href": "data_sources.html",
     "title": "Data sources",
     "section": "",
-    "text": "The Nostradamus datacube contains analysis ready datasets that allow to perform analyses through 6 distinct notebooks that use different data sources:\n\n\nesa_worldcover.odc-product.yaml:\nio_lulc_annual_v02.odc-product.yaml\nlsX_c2l2_sp.odc-product.yaml: more information about Landsat product here\nnasadem.odc-product.yaml\ns1_rtc.odc-product.yaml\ns2_l2a.odc-product.yaml",
+    "text": "This section documents the data sources behind the ready-to-use product definitions maintained in the official Open Data Cube datacube-dataset-config repository — the default catalog available to any Open Data Cube deployment. Each data source has its own dedicated page below.\n\n\nLandsat — Collection 2 Level-2 Science Products\nSentinel — Sentinel-1 (radar) and Sentinel-2 (optical) missions\nPlanetary Computer — STAC catalog used to access several of these sources\nNASADEM — global elevation model\nCopernicus DEM — European/global elevation model, alternative to NASADEM\nESA WorldCover — global land cover at 10 m\nImpact Observatory Land Cover — annual global land use/land cover\n\n\n\n\n\n\n\nNote\n\n\n\nThe Nostradamus datacube uses most of these default products, but under different, project-specific names, and adds a couple of sources that are not part of the default catalog. See Data sources used in the Nostradamus datacube for the mapping.",
     "crumbs": [
       "Data sources"
     ]
@@ -14,21 +14,21 @@
     "href": "dc_installation.html",
     "title": "Data cubes installation",
     "section": "",
-    "text": "Installing a data cube involves two main phases. The first is setting up the underlying software and infrastructure on the machine that will host the cube, typically a server (on-premises or cloud-based) or, for testing and development, a local computer or virtual machine: installing system libraries for handling geospatial formats (GDAL, HDF5, netCDF), a Python environment with the Open Data Cube (ODC) package, and a PostgreSQL/PostGIS database that will hold the index of all available data.\nOnce the software stack is running and connected to its database, the second phase consists of populating the cube: describing the data to be added through product definitions and dataset documents, then indexing it so it becomes searchable and accessible through the ODC API and tools. Indexing only records metadata about the data; it does not copy, move, or transform the underlying files, making the process fast and safe to repeat.\nFor the Nostradamus project, this installation is simplified through a pre-packaged Docker deployment (see Nostradamus datacube install), which already covers these steps automatically.\nThe diagram below summarises this workflow; see the Quick Start page for the detailed step-by-step instructions.",
+    "text": "Installing a data cube involves two main phases. The first is setting up the underlying software and infrastructure on the machine that will host the cube, typically a server (on-premises or cloud-based) or, for testing and development, a local computer or virtual machine: installing system libraries for handling geospatial formats (GDAL, HDF5, netCDF), a Python environment with the Open Data Cube (ODC) package, and a PostgreSQL/PostGIS database that will hold the index of all available data.",
     "crumbs": [
       "Introduction to datacubes",
+      "Open Data Cube (ODC)",
       "Installation"
     ]
   },
   {
     "objectID": "dc_overview.html",
     "href": "dc_overview.html",
-    "title": "Introduction to datacubes",
+    "title": "What is a data cube?",
     "section": "",
-    "text": "Earth observation missions such as Landsat, Sentinel, and MODIS now provide multi-decade, continuously growing archives of satellite imagery, but this data has traditionally been organised and distributed scene by scene, requiring heavy preprocessing before it can be compared or combined across dates and sensors. A data cube addresses this bottleneck: it provides a common framework to catalogue, access, and analyse large volumes of gridded Earth observation data so that routine, reliable, and reproducible analyses, rather than one-off scene processing, can support evidence-based decisions in areas such as environmental monitoring, agriculture, and land management.\nTechnically, a data cube is an open-source geospatial data management and analysis platform (the Open Data Cube (ODC) being the most widely adopted implementation) that organises satellite imagery and other gridded data (elevation models, geophysical grids, model outputs) along space, time, and spectral dimensions. Unlike traditional scene-based approaches, every observation is preserved individually, enabling a shift from scene-based to pixel-based analysis. It exposes this data through a Python API, a catalogue of indexed products, and complementary tools such as the Open Data Cube Explorer, Jupyter notebooks, and OGC web services.\nSetting up a data cube typically follows a few main steps: selecting and deploying the underlying infrastructure (local, HPC, or cloud) and installing the ODC software stack; defining the interfaces and standards used to describe the data, such as STAC and OGC web services; preparing and indexing the data (usually Analysis Ready Data (ARD)) as datasets and products with standardised metadata; and building a catalogue for discovery, along with the tools (explorer, notebooks, APIs) needed to query, process, and exploit the cube.\nSeveral operational data cubes now build on this open-source foundation at different scales, including the Swiss Data Cube, jointly operated by the University of Geneva, UN Environment/GRID-Geneva, the University of Zurich, and the WSL; Digital Earth Africa, delivering continental-scale Earth observation services across Africa; and Digital Earth Australia, run by Geoscience Australia to track more than 30 years of landscape change. The Nostradamus datacube presented in this site follows the same approach, adapted to the project’s agricultural case studies.",
+    "text": "Earth observation missions such as Landsat, Sentinel, and MODIS now provide multi-decade, continuously growing archives of satellite imagery, but this data has traditionally been organised and distributed scene by scene, requiring heavy preprocessing before it can be compared or combined across dates and sensors. A data cube addresses this bottleneck: it provides a common framework to catalogue, access, and analyse large volumes of gridded Earth observation data so that routine, reliable, and reproducible analyses, rather than one-off scene processing, can support evidence-based decisions in areas such as environmental monitoring, agriculture, and land management.",
     "crumbs": [
-      "Introduction to datacubes",
-      "Overview"
+      "Introduction to datacubes"
     ]
   },
   {
@@ -92,7 +92,7 @@
     "href": "index.html",
     "title": "UNIGE & UNEP/GRID-Geneva data cubes Capacity Building",
     "section": "",
-    "text": "This site is a capacity-building resource on data cubes and Earth observation, developed by UNIGE and UNEP/GRID-Geneva. It introduces the core concepts behind data cubes — what problem they solve, how they organise satellite and geospatial data, and the main steps involved in setting one up — before walking through a concrete, hands-on implementation.\nAt its core is the Nostradamus datacube, a modified Open Data Cube deployment with a multi-user JupyterHub, an integrated STAC datastore, and ready-to-use notebooks. The site documents how to install and use it, complemented by step-by-step tutorials, recorded workshops, and a parallel section on vector datacubes for non-raster geospatial data.\nBeyond the datacube itself, the site catalogues the underlying data sources (Landsat, Sentinel, the Planetary Computer STAC catalog) and the tools used to work with them (Jupyter, LivingEarth), along with acknowledgments and a FAQ for troubleshooting. Use the sidebar to navigate by topic, or start with the Introduction to datacubes for a general overview before diving into the Nostradamus-specific material.",
+    "text": "This site is a capacity-building resource on data cubes and Earth observation, developed by UNIGE and UNEP/GRID-Geneva. It introduces the core concepts behind data cubes: which problems they help to solve, how they organise satellite and geospatial data, and the main steps involved in setting them up. It also allows to walk through concrete, hands-on implementations.\nAt its core is the Nostradamus datacube, a modified Open Data Cube deployment with a multi-user JupyterHub, an integrated STAC datastore, and ready-to-use notebooks. The site documents how to install and use it, complemented by step-by-step tutorials, recorded workshops, and a parallel section on vector datacubes for non-raster geospatial data.\nBeyond the datacube itself, the site catalogues the underlying data sources (Landsat, Sentinel, the Planetary Computer STAC catalog) and the tools used to work with them (Jupyter, LivingEarth), along with acknowledgments and a FAQ for troubleshooting. Use the sidebar to navigate by topic, or start with the Introduction to datacubes for a general overview before diving into the Nostradamus-specific material.",
     "crumbs": [
       "Home"
     ]
@@ -122,9 +122,10 @@
     "href": "dc_quickstart.html",
     "title": "Data cubes quickstart",
     "section": "",
-    "text": "Here are the step-by-step instructions for deploying a datacube:\n\nInstall the required system libraries (GDAL, HDF5, netCDF) and Python 3.10+, following the guide for your OS: Ubuntu, macOS, or Windows.\nCreate an isolated Python environment (conda/mamba recommended) and install the datacube-core package from the ODC repository. Isolating the environment keeps ODC’s dependencies (GDAL bindings, database drivers, etc.) separate from other Python projects or system packages, avoiding version conflicts and keeping the setup reproducible across deployments.\nInstall PostgreSQL with the PostGIS extension, and create a dedicated database and user for the cube’s index.\nConfigure the ODC to connect to this database — see the Database Setup and ODC Configuration guides.\nInitialise the index (datacube system init) and confirm the installation works as expected.\nDefine metadata types and write Product Definitions (YAML) describing each type of data to be indexed.\nPrepare Dataset Documents for the data to be added, either supplied by the data provider or generated with a preparation script.\nLoad the products and index the data with the datacube command line tool, following the step-by-step indexing guide (datacube product add, then datacube dataset add).\nVerify the data is available through the ODC Explorer, the Python API, or a Jupyter notebook.",
+    "text": "Here are the step-by-step instructions for deploying a datacube:",
     "crumbs": [
       "Introduction to datacubes",
+      "Open Data Cube (ODC)",
       "Quick Start"
     ]
   },
@@ -133,7 +134,7 @@
     "href": "nostradamus_datacube_overview.html",
     "title": "Nostradamus datacube ",
     "section": "",
-    "text": "This work is part of Work Package 5 (WP5) – Development & Implementation of Data Cubes of the Nostradamus project, led by the University of Geneva. WP5 aims to provide guidance for producing rasterized data from sources such as satellite imagery and existing geospatial databases for effective ingestion into Data Cubes, to develop a dedicated Data Cube for each participating country’s agricultural case study area, and to implement an exploitation platform built on these Data Cubes. It integrates satellite sensor, in-situ, and ancillary data, defining entry points for real-time streams, environmental datasets, and spatiotemporal data cubes, building on synergies with related initiatives such as the LandShift project to share infrastructure and mutualize development efforts. The resulting platform provides demo notebooks by default, lets users download new data and index scenes using STAC, and makes newly ingested data immediately visible for exploration in the Data Cube explorer.\nA dedicated cube in a box has been deployed for the Nostradamus project. It is a modifed clone from the original cube in a box.\nThe following modifications have been done on the original cube in a box to become the Nostradamus data cube:\n\nthe default Jupyter notebook has been replaced by a multi-user JupyterHub\nthe JupyterHub instance contains shared folders for collaborative work\nthe Planetary computer data catalog has been included as a STAC datastore instead of the previous default Sentinel-2 source that was slow and unstable\nan Open Datacube explorer has been added and modified to access Planetary Computer data\na Traefik reverse proxy has been added as a unique entry point of the infrastructure that dispatches the requests to the different services\na multi-architecture support for AMD64 and ARM64 has been added\na Dask python library has been added for performing parallel and distributed processing, which is necessary for large data processing\nThe default ESRI Land Cover source in Planetary Computer (https://planetarycomputer.microsoft.com/dataset/io-lulc)){target=“_blank”} that is deprecated has been replaced by https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02\nthe Landsat Collection 2 Level 2 Science Products have been added\na Jupyter notebook has been modified or created for each available Level2 science product (see details)\nDocumentation has been created for administrators and users",
+    "text": "This work is part of Work Package 5 (WP5) – Development & Implementation of Data Cubes of the Nostradamus project, led by the University of Geneva. WP5 aims to provide guidance for producing rasterized data from sources such as satellite imagery and existing geospatial databases for effective ingestion into Data Cubes, to develop a dedicated Data Cube for each participating country’s agricultural case study area, and to implement an exploitation platform built on these Data Cubes. It integrates satellite sensor, in-situ, and ancillary data, defining entry points for real-time streams, environmental datasets, and spatiotemporal data cubes, building on synergies with related initiatives such as the LandShift project to share infrastructure and mutualize development efforts. The resulting platform provides demo notebooks by default, lets users download new data and index scenes using STAC, and makes newly ingested data immediately visible for exploration in the Data Cube explorer.",
     "crumbs": [
       "Nostradamus datacube",
       "Overview"
@@ -261,7 +262,7 @@
     "href": "landsat.html#landsat-levels",
     "title": "Landsat",
     "section": "Landsat levels",
-    "text": "Landsat levels\nEach collection organises data into levels of processing:\n\nLevel1 (L1): raw data corrected for geometry and topography\nLevel2 (L2): L1 images are taken as the basis, on which physical values of the atmosphere (aerosols, ozone, water vapor, …) are corrected =&gt; ready data for certain analyses (indices calculation, multi-temporal series, etc.) that could not be done with L1 images\nLevel3 (L3): analytical derived products from L2, that are automatically generated\n\nAmong the various products available in the Nostradamus datacube, the one called “lsX_c2l2_sp.odc-product.yaml“ is the Landsat one, made of USGS Landsat 8 and 9 Collection 2 Level-2 Science Products, consisting of atmospherically corrected surface reflectance and surface temperature image data.",
+    "text": "Landsat levels\nEach collection organises data into levels of processing:\n\nLevel1 (L1): raw data corrected for geometry and topography\nLevel2 (L2): L1 images are taken as the basis, on which physical values of the atmosphere (aerosols, ozone, water vapor, …) are corrected =&gt; ready data for certain analyses (indices calculation, multi-temporal series, etc.) that could not be done with L1 images\nLevel3 (L3): analytical derived products from L2, that are automatically generated",
     "crumbs": [
       "Data sources",
       "Landsat"
@@ -283,7 +284,7 @@
     "href": "1_new_data_into_dc.html",
     "title": "How to index new data into a DC?",
     "section": "",
-    "text": "Once a datacube is deployed, the Earth observation archive keeps growing: new satellite scenes become available over time and need to be added to the existing index so they can be queried and analysed alongside the rest of the archive. Since the Nostradamus datacube uses a STAC datastore (the Planetary Computer catalog) as its data source, new scenes do not need to be prepared or described by hand: they can be indexed directly from the STAC catalog into an existing product.\nIn short, the procedure consists of searching the STAC catalog for new scenes matching a product, an area of interest, and a date range, then registering the matching STAC items into the corresponding ODC product already configured in the cube. This is done with the stac-to-dc command-line tool (part of odc-apps-dc-tools), which is already installed in the Nostradamus JupyterHub environment. Once indexed, the new scenes are immediately visible in the ODC Explorer and loadable through the Python API, exactly like the rest of the archive.\nThe steps below index new Landsat Collection 2 Level-2 scenes into the existing lsX_c2l2_sp product (see the Landsat page) as a concrete example.\n\nOpen a Terminal in the Nostradamus JupyterHub (File &gt; New &gt; Terminal), where datacube and stac-to-dc are already available.\nCheck that the target product is already registered in the cube:\ndatacube product list | grep lsX_c2l2_sp\nSearch the Planetary Computer STAC catalog for new scenes and index them directly into that product, specifying the collection, an area of interest (bounding box), and a date range:\nstac-to-dc \\\n  --catalog-href=\"https://planetarycomputer.microsoft.com/api/stac/v1/\" \\\n  --collections=\"landsat-c2-l2\" \\\n  --bbox=\"5.95,45.81,10.50,47.81\" \\\n  --datetime=\"2026-01-01/2026-06-30\" \\\n  --rename-product=\"lsX_c2l2_sp\" \\\n  --update-if-exists\n--rename-product maps the STAC collection (landsat-c2-l2) to the existing ODC product name (lsX_c2l2_sp), and --bbox/--datetime restrict the search to the area and period you need (adjust them to your own area of interest).\n\n\n\n\n\n\n\nNote\n\n\n\nPlanetary Computer assets are served through short-lived signed URLs. If loading newly indexed scenes later fails with an access error, see the STAC datastore page for how signing is handled, or re-run the indexing step to refresh the references.\n\n\n\nCheck the command’s output: it reports how many datasets were added, failed, and skipped (already-indexed scenes are skipped, not duplicated).\nConfirm the new scenes are indexed by checking the product’s extent in the ODC Explorer, at localhost/explorer/products/lsX_c2l2_sp: the temporal coverage should now include your new date range.\nAlternatively, confirm it directly from a notebook using the Python API:\nfrom datacube import Datacube\n\ndc = Datacube(app=\"check-new-data\")\ndata = dc.load(product=\"lsX_c2l2_sp\", time=(\"2026-01-01\", \"2026-06-30\"))\nprint(data.time.values)",
+    "text": "Once a datacube is deployed, the Earth observation archive keeps growing: new satellite scenes become available over time and need to be added to the existing index so they can be queried and analysed alongside the rest of the archive. Since the Nostradamus datacube uses a STAC datastore (the Planetary Computer catalog) as its data source, new scenes do not need to be prepared or described by hand: they can be indexed directly from the STAC catalog into an existing product.\nIn short, the procedure consists of searching the STAC catalog for new scenes matching a product, an area of interest, and a date range, then registering the matching STAC items into the corresponding ODC product already configured in the cube. This is done with the stac-to-dc command-line tool (part of odc-apps-dc-tools), which is already installed in the Nostradamus JupyterHub environment. Once indexed, the new scenes are immediately visible in the ODC Explorer and loadable through the Python API, exactly like the rest of the archive.\nThe steps below index new Landsat Collection 2 Level-2 scenes into the existing lsX_c2l2_sp product (see the Landsat page) as a concrete example.",
     "crumbs": [
       "Tutorials",
       "How to index new data into a DC?"
@@ -294,7 +295,7 @@
     "href": "nostradamus_datacube_use.html",
     "title": "Nostradamus datacube use",
     "section": "",
-    "text": "Launch Docker Desktop and verify that the containers “cube-in-a-box” and “cube-in-a-box-jupyter” have started (this should be automatic at the launch of Docker Desktop)\n\n\n\n\n\n\n\n\nNote\n\n\n\nYou can also check in your Terminal that both Docker a Docker compose are running, using the following commands:\ndocker –version\ndocker compose version\n\n\n\nGo to http://localhost/jupyter/ and sign in with you credentials =&gt; Jupyter server will begin to spawn and the homepage should be ready after a few seconds\n\n\n\nBy default, this homepage shows in the left sidebar your own folder. If it is the first time you are using the datacube, your folder should be empty (you can double-click on it to check). On the other hand, if you navigate to /shared/notebooks_demo (by clicking on the tree at the top of the left sidebar) you will see the available demo jupyter notebooks.\n\n\n\nDouble-clicking on a notebook will open it (in read only) and give you the following information:\n\n\nObjective of the notebook\nProducts used\nData source\nBackground\nDescription\n\n\n\n\n\n\n\nNote\n\n\n\n\nYou can edit and execute .ipynb files directly in the ./shared/notebooks_demo directory, but not save any changes.\nTo save any changes, copy the notebook and any potential dependent files to your root directory first (or shared personal directory).\nThe content of the root directory is not visible by others while the one of your your folder is, but only you can edit it.\n\n\n\n\nIn order to use these demo notebooks and make changes, you need to copy them into the Jupyter root directory. To do so, right clik on the notebook of interest and its dependencies (folders documentation, figures, utils) in the “notebooks_demo” folder and paste it at the root directory. It should then appear at the same level as the “shared” folder. Alternatively, you can also copy the whole “notebooks_demo” folder to the root directory.\n\n\n\nIn order to run a notebook, you have pasted in the root directory, double-click on it, which will open a new tab in teh JupyterLab session with specific tools in the menu bar of the tab. The blue bar on the left shows which cell is selected to be run. In order to process the cell in question, click on the play arrow (titled “run this cell and advance”) or click on shift+enter of your keyboard.",
+    "text": "Launch Docker Desktop and verify that the containers “cube-in-a-box” and “cube-in-a-box-jupyter” have started (this should be automatic at the launch of Docker Desktop)\n\n\n\n\n\n\n\n\nNote\n\n\n\nYou can also check in your Terminal that both Docker a Docker compose are running, using the following commands:\ndocker –version\ndocker compose version\n\n\n\nGo to http://localhost/jupyter/ and sign in with you credentials =&gt; Jupyter server will begin to spawn and the homepage should be ready after a few seconds",
     "crumbs": [
       "Nostradamus datacube",
       "Datacube use"
@@ -523,6 +524,711 @@
     "text": "AI assistance\nDuring the preparation of this site, the authors used AI-based tools (large language models) to help draft and edit some sections of the documentation, including language editing and improving clarity. All AI-assisted content was reviewed, verified, and edited by the authors, who take full responsibility for the accuracy and content of this site. The technical implementation, data cube design, and content structure were directed and validated solely by the authors.",
     "crumbs": [
       "Acknowledgments"
+    ]
+  },
+  {
+    "objectID": "full_site.html#ai-assistance",
+    "href": "full_site.html#ai-assistance",
+    "title": "Nostradamus datacube — Full site export",
+    "section": "AI assistance",
+    "text": "AI assistance\nDuring the preparation of this site, the authors used AI-based tools (large language models) to help draft and edit some sections of the documentation, including language editing and improving clarity. All AI-assisted content was reviewed, verified, and edited by the authors, who take full responsibility for the accuracy and content of this site. The technical implementation, data cube design, and content structure were directed and validated solely by the authors."
+  },
+  {
+    "objectID": "glossary.html",
+    "href": "glossary.html",
+    "title": "Glossary",
+    "section": "",
+    "text": "A free, open-source software package that simplifies the management and analysis of large amounts of satellite imagery and other Earth observation data. It allows users to easily access, process, and analyze decades of geographical data to track changes on Earth’s surface over time.\nhttps://www.opendatacube.org",
+    "crumbs": [
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "glossary.html#stac",
+    "href": "glossary.html#stac",
+    "title": "Glossary",
+    "section": "STAC",
+    "text": "STAC\nSpatioTemporal Asset Catalog (STAC) is a common specification for describing geospatial data (satellite imagery, aerial imagery, and other Earth observation data) in a way that makes it easily searchable and interoperable across catalogues, tools, and platforms. A STAC catalogue organizes data into Items (individual assets with spatial/temporal metadata) grouped into Collections, all described using a standardized JSON schema.\nhttps://stacspec.org",
+    "crumbs": [
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "glossary.html#cloud-optimized-geotiff",
+    "href": "glossary.html#cloud-optimized-geotiff",
+    "title": "Glossary",
+    "section": "Cloud Optimized GeoTIFF",
+    "text": "Cloud Optimized GeoTIFF\nCloud Optimized GeoTIFF (COG) is a regular GeoTIFF file, aimed at being hosted on a cloud storage service (e.g., object storage such as AWS S3 or Azure Blob Storage), whose internal organization (tiling, overviews) enables efficient partial reads via HTTP range requests. This means clients can access only the portion of the image they need without downloading the entire file, which is essential for scalable, on-demand access to large Earth Observation datasets.\nhttps://www.cogeo.org",
+    "crumbs": [
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "glossary.html#analysis-ready-data",
+    "href": "glossary.html#analysis-ready-data",
+    "title": "Glossary",
+    "section": "Analysis Ready Data",
+    "text": "Analysis Ready Data\n\nAnalysis Ready Data (ARD) refers to satellite (or other remote sensing) data that has been processed to a minimum set of requirements — such as geometric correction, atmospheric correction, and consistent formatting — so that it can be used directly for analysis with minimal additional preprocessing. ARD reduces the technical burden on end users and improves comparability and interoperability across datasets, sensors, and time periods.",
+    "crumbs": [
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "glossary.html#common-workflow-language",
+    "href": "glossary.html#common-workflow-language",
+    "title": "Glossary",
+    "section": "Common Workflow Language",
+    "text": "Common Workflow Language\nCommon Workflow Language (CWL) is an open standard for describing analysis workflows and tools in a way that makes them portable and scalable across different software and hardware environments (e.g., workstations, clusters, cloud platforms). CWL is commonly used to package and execute Earth Observation processing pipelines in a reproducible, containerized manner.\nhttps://www.commonwl.org",
+    "crumbs": [
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "glossary.html#rest",
+    "href": "glossary.html#rest",
+    "title": "Glossary",
+    "section": "REST",
+    "text": "REST\nRepresentational State Transfer (REST) is an architectural style for designing networked, web-based APIs. A REST API exposes resources (e.g., datasets, catalogue entries, processing results) through standard HTTP methods (GET, POST, PUT, DELETE) and uniform, predictable URLs, typically exchanging data in formats such as JSON. REST APIs are widely used to enable interoperable, machine-readable access to data and services, including within data cube and STAC-based infrastructures.",
+    "crumbs": [
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "data_sources.html#available-datasets",
+    "href": "data_sources.html#available-datasets",
+    "title": "Data sources",
+    "section": "",
+    "text": "This section documents the data sources behind the ready-to-use product definitions maintained in the official Open Data Cube datacube-dataset-config repository — the default catalog available to any Open Data Cube deployment. Each data source has its own dedicated page below.\n\n\nLandsat — Collection 2 Level-2 Science Products\nSentinel — Sentinel-1 (radar) and Sentinel-2 (optical) missions\nPlanetary Computer — STAC catalog used to access several of these sources\nNASADEM — global elevation model\nCopernicus DEM — European/global elevation model, alternative to NASADEM\nESA WorldCover — global land cover at 10 m\nImpact Observatory Land Cover — annual global land use/land cover\n\n\n\n\n\n\n\nNote\n\n\n\nThe Nostradamus datacube uses most of these default products, but under different, project-specific names, and adds a couple of sources that are not part of the default catalog. See Data sources used in the Nostradamus datacube for the mapping.",
+    "crumbs": [
+      "Data sources"
+    ]
+  },
+  {
+    "objectID": "dc_overview.html#the-problem-data-cubes-solve",
+    "href": "dc_overview.html#the-problem-data-cubes-solve",
+    "title": "What is a data cube?",
+    "section": "",
+    "text": "Earth observation missions such as Landsat, Sentinel, and MODIS now provide multi-decade, continuously growing archives of satellite imagery, but this data has traditionally been organised and distributed scene by scene, requiring heavy preprocessing before it can be compared or combined across dates and sensors. A data cube addresses this bottleneck: it provides a common framework to catalogue, access, and analyse large volumes of gridded Earth observation data so that routine, reliable, and reproducible analyses, rather than one-off scene processing, can support evidence-based decisions in areas such as environmental monitoring, agriculture, and land management.",
+    "crumbs": [
+      "Introduction to datacubes"
+    ]
+  },
+  {
+    "objectID": "dc_overview.html#what-a-data-cube-is",
+    "href": "dc_overview.html#what-a-data-cube-is",
+    "title": "What is a data cube?",
+    "section": "What a data cube is",
+    "text": "What a data cube is\nTechnically, a data cube is an open-source geospatial data management and analysis platform (the Open Data Cube (ODC) being the most widely adopted implementation) that organises satellite imagery and other gridded data (elevation models, geophysical grids, model outputs) along space, time, and spectral dimensions. Unlike traditional scene-based approaches, every observation is preserved individually, enabling a shift from scene-based to pixel-based analysis. It exposes this data through a Python API, a catalogue of indexed products, and complementary tools such as the Open Data Cube Explorer, Jupyter notebooks, and OGC web services.",
+    "crumbs": [
+      "Introduction to datacubes"
+    ]
+  },
+  {
+    "objectID": "dc_overview.html#setting-up-a-data-cube",
+    "href": "dc_overview.html#setting-up-a-data-cube",
+    "title": "What is a data cube?",
+    "section": "Setting up a data cube",
+    "text": "Setting up a data cube\nSetting up a data cube typically follows a few main steps: selecting and deploying the underlying infrastructure (local, HPC, or cloud) and installing the ODC software stack; defining the interfaces and standards used to describe the data, such as STAC and OGC web services; preparing and indexing the data (usually Analysis Ready Data (ARD)) as datasets and products with standardised metadata; and building a catalogue for discovery, along with the tools (explorer, notebooks, APIs) needed to query, process, and exploit the cube.",
+    "crumbs": [
+      "Introduction to datacubes"
+    ]
+  },
+  {
+    "objectID": "dc_overview.html#existing-data-cube-deployments",
+    "href": "dc_overview.html#existing-data-cube-deployments",
+    "title": "What is a data cube?",
+    "section": "Existing data cube deployments",
+    "text": "Existing data cube deployments\nSeveral operational data cubes now build on this open-source foundation at different scales, including the Swiss Data Cube, jointly operated by the University of Geneva, UNEP/GRID-Geneva, the University of Zurich, and the WSL; Digital Earth Africa, delivering continental-scale Earth observation services across Africa; and Digital Earth Australia, run by Geoscience Australia to track more than 30 years of landscape change. The Nostradamus datacube presented in this site follows the same approach, adapted to the project’s agricultural case studies.\nBeyond the Open Data Cube itself, other platforms exist for managing and analysing large volumes of Earth observation data (see Other datacube platforms for an overview).",
+    "crumbs": [
+      "Introduction to datacubes"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_overview.html#project-context",
+    "href": "nostradamus_datacube_overview.html#project-context",
+    "title": "Nostradamus datacube ",
+    "section": "",
+    "text": "This work is part of Work Package 5 (WP5) – Development & Implementation of Data Cubes of the Nostradamus project, led by the University of Geneva. WP5 aims to provide guidance for producing rasterized data from sources such as satellite imagery and existing geospatial databases for effective ingestion into Data Cubes, to develop a dedicated Data Cube for each participating country’s agricultural case study area, and to implement an exploitation platform built on these Data Cubes. It integrates satellite sensor, in-situ, and ancillary data, defining entry points for real-time streams, environmental datasets, and spatiotemporal data cubes, building on synergies with related initiatives such as the LandShift project to share infrastructure and mutualize development efforts. The resulting platform provides demo notebooks by default, lets users download new data and index scenes using STAC, and makes newly ingested data immediately visible for exploration in the Data Cube explorer.",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_overview.html#modifications-from-the-original-cube-in-a-box",
+    "href": "nostradamus_datacube_overview.html#modifications-from-the-original-cube-in-a-box",
+    "title": "Nostradamus datacube ",
+    "section": "Modifications from the original Cube-in-a-Box",
+    "text": "Modifications from the original Cube-in-a-Box\nA dedicated cube in a box has been deployed for the Nostradamus project. It is a modifed clone from the original cube in a box.\nThe following modifications have been done on the original cube in a box to become the Nostradamus data cube:\n\nthe default Jupyter notebook has been replaced by a multi-user JupyterHub\nthe JupyterHub instance contains shared folders for collaborative work\nthe Planetary computer data catalog has been included as a STAC datastore instead of the previous default Sentinel-2 source that was slow and unstable\nan Open Datacube explorer has been added and modified to access Planetary Computer data\na Traefik reverse proxy has been added as a unique entry point of the infrastructure that dispatches the requests to the different services\na multi-architecture support for AMD64 and ARM64 has been added\na Dask python library has been added for performing parallel and distributed processing, which is necessary for large data processing\nThe default ESRI Land Cover source in Planetary Computer (https://planetarycomputer.microsoft.com/dataset/io-lulc)){target=“_blank”} that is deprecated has been replaced by https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02\nthe Landsat Collection 2 Level 2 Science Products have been added\na Jupyter notebook has been modified or created for each available Level2 science product (see details)\nDocumentation has been created for administrators and users",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "dc_installation.html#setting-up-the-software-and-infrastructure",
+    "href": "dc_installation.html#setting-up-the-software-and-infrastructure",
+    "title": "Data cubes installation",
+    "section": "",
+    "text": "Installing a data cube involves two main phases. The first is setting up the underlying software and infrastructure on the machine that will host the cube, typically a server (on-premises or cloud-based) or, for testing and development, a local computer or virtual machine: installing system libraries for handling geospatial formats (GDAL, HDF5, netCDF), a Python environment with the Open Data Cube (ODC) package, and a PostgreSQL/PostGIS database that will hold the index of all available data.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Open Data Cube (ODC)",
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "dc_installation.html#populating-the-cube",
+    "href": "dc_installation.html#populating-the-cube",
+    "title": "Data cubes installation",
+    "section": "Populating the cube",
+    "text": "Populating the cube\nOnce the software stack is running and connected to its database, the second phase consists of populating the cube: describing the data to be added through product definitions and dataset documents, then indexing it so it becomes searchable and accessible through the ODC API and tools. Indexing only records metadata about the data; it does not copy, move, or transform the underlying files, making the process fast and safe to repeat.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Open Data Cube (ODC)",
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "dc_installation.html#nostradamus-installation",
+    "href": "dc_installation.html#nostradamus-installation",
+    "title": "Data cubes installation",
+    "section": "Nostradamus installation",
+    "text": "Nostradamus installation\nFor the Nostradamus project, this installation is simplified through a pre-packaged Docker deployment (see Nostradamus datacube install), which already covers these steps automatically.\nThe diagram below summarises this workflow; see the Quick Start page for the detailed step-by-step instructions.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Open Data Cube (ODC)",
+      "Installation"
+    ]
+  },
+  {
+    "objectID": "dc_quickstart.html#system-and-environment-setup",
+    "href": "dc_quickstart.html#system-and-environment-setup",
+    "title": "Data cubes quickstart",
+    "section": "System and environment setup",
+    "text": "System and environment setup\n\nInstall the required system libraries (GDAL, HDF5, netCDF) and Python 3.10+, following the guide for your OS: Ubuntu, macOS, or Windows.\nCreate an isolated Python environment (conda/mamba recommended) and install the datacube-core package from the ODC repository. Isolating the environment keeps ODC’s dependencies (GDAL bindings, database drivers, etc.) separate from other Python projects or system packages, avoiding version conflicts and keeping the setup reproducible across deployments.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Open Data Cube (ODC)",
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "dc_quickstart.html#database-setup",
+    "href": "dc_quickstart.html#database-setup",
+    "title": "Data cubes quickstart",
+    "section": "Database setup",
+    "text": "Database setup\n\nInstall PostgreSQL with the PostGIS extension, and create a dedicated database and user for the cube’s index.\nConfigure the ODC to connect to this database — see the Database Setup and ODC Configuration guides.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Open Data Cube (ODC)",
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "dc_quickstart.html#describing-and-indexing-data",
+    "href": "dc_quickstart.html#describing-and-indexing-data",
+    "title": "Data cubes quickstart",
+    "section": "Describing and indexing data",
+    "text": "Describing and indexing data\n\nInitialise the index (datacube system init) and confirm the installation works as expected.\nDefine metadata types and write Product Definitions (YAML) describing each type of data to be indexed.\nPrepare Dataset Documents for the data to be added, either supplied by the data provider or generated with a preparation script.\nLoad the products and index the data with the datacube command line tool, following the step-by-step indexing guide (datacube product add, then datacube dataset add).",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Open Data Cube (ODC)",
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "dc_quickstart.html#verification",
+    "href": "dc_quickstart.html#verification",
+    "title": "Data cubes quickstart",
+    "section": "Verification",
+    "text": "Verification\n\nVerify the data is available through the ODC Explorer, the Python API, or a Jupyter notebook.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Open Data Cube (ODC)",
+      "Quick Start"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_use.html#launching-docker-and-accessing-jupyter",
+    "href": "nostradamus_datacube_use.html#launching-docker-and-accessing-jupyter",
+    "title": "Nostradamus datacube use",
+    "section": "",
+    "text": "Launch Docker Desktop and verify that the containers “cube-in-a-box” and “cube-in-a-box-jupyter” have started (this should be automatic at the launch of Docker Desktop)\n\n\n\n\n\n\n\n\nNote\n\n\n\nYou can also check in your Terminal that both Docker a Docker compose are running, using the following commands:\ndocker –version\ndocker compose version\n\n\n\nGo to http://localhost/jupyter/ and sign in with you credentials =&gt; Jupyter server will begin to spawn and the homepage should be ready after a few seconds",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Datacube use"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_use.html#exploring-the-demo-notebooks",
+    "href": "nostradamus_datacube_use.html#exploring-the-demo-notebooks",
+    "title": "Nostradamus datacube use",
+    "section": "Exploring the demo notebooks",
+    "text": "Exploring the demo notebooks\n\nBy default, this homepage shows in the left sidebar your own folder. If it is the first time you are using the datacube, your folder should be empty (you can double-click on it to check). On the other hand, if you navigate to /shared/notebooks_demo (by clicking on the tree at the top of the left sidebar) you will see the available demo jupyter notebooks.\n\n\n\nDouble-clicking on a notebook will open it (in read only) and give you the following information:\n\n\nObjective of the notebook\nProducts used\nData source\nBackground\nDescription\n\n\n\n\n\n\n\nNote\n\n\n\n\nYou can edit and execute .ipynb files directly in the ./shared/notebooks_demo directory, but not save any changes.\nTo save any changes, copy the notebook and any potential dependent files to your root directory first (or shared personal directory).\nThe content of the root directory is not visible by others while the one of your your folder is, but only you can edit it.",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Datacube use"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_use.html#editing-and-running-a-notebook",
+    "href": "nostradamus_datacube_use.html#editing-and-running-a-notebook",
+    "title": "Nostradamus datacube use",
+    "section": "Editing and running a notebook",
+    "text": "Editing and running a notebook\n\nIn order to use these demo notebooks and make changes, you need to copy them into the Jupyter root directory. To do so, right clik on the notebook of interest and its dependencies (folders documentation, figures, utils) in the “notebooks_demo” folder and paste it at the root directory. It should then appear at the same level as the “shared” folder. Alternatively, you can also copy the whole “notebooks_demo” folder to the root directory.\n\n\n\nIn order to run a notebook, you have pasted in the root directory, double-click on it, which will open a new tab in teh JupyterLab session with specific tools in the menu bar of the tab. The blue bar on the left shows which cell is selected to be run. In order to process the cell in question, click on the play arrow (titled “run this cell and advance”) or click on shift+enter of your keyboard.",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Datacube use"
+    ]
+  },
+  {
+    "objectID": "clms_clcplus.html",
+    "href": "clms_clcplus.html",
+    "title": "CLMS CLC+ Backbone",
+    "section": "",
+    "text": "CLC+ Backbone is a land cover product from the Copernicus Land Monitoring Service (CLMS), providing a high-resolution (10 m) classification of Europe’s land surface, produced from Sentinel-1 and Sentinel-2 imagery. It complements the long-running CORINE Land Cover (CLC) inventory — which has a coarser resolution and a slower update cycle — by offering a more frequently refreshed, more spatially detailed backbone layer that CLC and other derived Copernicus land products build upon.\nBeing Europe-specific and higher resolution than global products like ESA WorldCover, CLC+ Backbone is well suited to regional or national-scale agricultural and land-management analyses within the EU, including several of the Nostradamus demonstration sites.",
+    "crumbs": [
+      "Nostradamus datacube",
+      "CLMS CLC+ Backbone"
+    ]
+  },
+  {
+    "objectID": "clms_clcplus.html#copernicus-land-monitoring-service-clc-backbone",
+    "href": "clms_clcplus.html#copernicus-land-monitoring-service-clc-backbone",
+    "title": "CLMS CLC+ Backbone",
+    "section": "",
+    "text": "CLC+ Backbone is a land cover product from the Copernicus Land Monitoring Service (CLMS), providing a high-resolution (10 m) classification of Europe’s land surface, produced from Sentinel-1 and Sentinel-2 imagery. It complements the long-running CORINE Land Cover (CLC) inventory — which has a coarser resolution and a slower update cycle — by offering a more frequently refreshed, more spatially detailed backbone layer that CLC and other derived Copernicus land products build upon.\nBeing Europe-specific and higher resolution than global products like ESA WorldCover, CLC+ Backbone is well suited to regional or national-scale agricultural and land-management analyses within the EU, including several of the Nostradamus demonstration sites.",
+    "crumbs": [
+      "Nostradamus datacube",
+      "CLMS CLC+ Backbone"
+    ]
+  },
+  {
+    "objectID": "clms_clcplus.html#use-in-the-nostradamus-datacube",
+    "href": "clms_clcplus.html#use-in-the-nostradamus-datacube",
+    "title": "CLMS CLC+ Backbone",
+    "section": "Use in the Nostradamus datacube",
+    "text": "Use in the Nostradamus datacube\nIn the Nostradamus datacube, this dataset is indexed as the product clms_clcplus_europe_100m.\nhttps://land.copernicus.eu/en/products/clc-backbone",
+    "crumbs": [
+      "Nostradamus datacube",
+      "CLMS CLC+ Backbone"
+    ]
+  },
+  {
+    "objectID": "aef_annual.html",
+    "href": "aef_annual.html",
+    "title": "AlphaEarth Foundations embeddings",
+    "section": "",
+    "text": "AlphaEarth Foundations is a geospatial AI model developed by Google DeepMind, released in 2025, that produces annual “satellite embeddings”: for each 10 m pixel on Earth’s surface, it condenses information from multiple satellite and geospatial data sources (optical, radar, elevation, climate, and more) into a compact numerical vector. Unlike a conventional dataset that stores a physical measurement (a reflectance value, a temperature), an embedding stores a learned representation designed to be reused across many different downstream mapping and classification tasks (e.g., land cover, ecosystem mapping, change detection) without having to reprocess the original raw sources each time.\nThis is a substantially different kind of “data source” compared to the other products in this list — it is not a physical measurement but a machine-learning representation, distributed as Cloud-Optimized GeoTIFFs and mirrored on Source Cooperative.",
+    "crumbs": [
+      "Nostradamus datacube",
+      "AlphaEarth Foundations"
+    ]
+  },
+  {
+    "objectID": "aef_annual.html#alphaearth-foundations-aef-annual-satellite-embeddings",
+    "href": "aef_annual.html#alphaearth-foundations-aef-annual-satellite-embeddings",
+    "title": "AlphaEarth Foundations embeddings",
+    "section": "",
+    "text": "AlphaEarth Foundations is a geospatial AI model developed by Google DeepMind, released in 2025, that produces annual “satellite embeddings”: for each 10 m pixel on Earth’s surface, it condenses information from multiple satellite and geospatial data sources (optical, radar, elevation, climate, and more) into a compact numerical vector. Unlike a conventional dataset that stores a physical measurement (a reflectance value, a temperature), an embedding stores a learned representation designed to be reused across many different downstream mapping and classification tasks (e.g., land cover, ecosystem mapping, change detection) without having to reprocess the original raw sources each time.\nThis is a substantially different kind of “data source” compared to the other products in this list — it is not a physical measurement but a machine-learning representation, distributed as Cloud-Optimized GeoTIFFs and mirrored on Source Cooperative.",
+    "crumbs": [
+      "Nostradamus datacube",
+      "AlphaEarth Foundations"
+    ]
+  },
+  {
+    "objectID": "aef_annual.html#use-in-the-nostradamus-datacube",
+    "href": "aef_annual.html#use-in-the-nostradamus-datacube",
+    "title": "AlphaEarth Foundations embeddings",
+    "section": "Use in the Nostradamus datacube",
+    "text": "Use in the Nostradamus datacube\nIn the Nostradamus datacube, this dataset is indexed as the product aef_annual.\nhttps://deepmind.google/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/",
+    "crumbs": [
+      "Nostradamus datacube",
+      "AlphaEarth Foundations"
+    ]
+  },
+  {
+    "objectID": "glossary.html#open-data-cube-odc",
+    "href": "glossary.html#open-data-cube-odc",
+    "title": "Glossary",
+    "section": "",
+    "text": "A free, open-source software package that simplifies the management and analysis of large amounts of satellite imagery and other Earth observation data. It allows users to easily access, process, and analyze decades of geographical data to track changes on Earth’s surface over time.\nhttps://www.opendatacube.org",
+    "crumbs": [
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "glossary.html#cube-in-a-box",
+    "href": "glossary.html#cube-in-a-box",
+    "title": "Glossary",
+    "section": "Cube in a Box",
+    "text": "Cube in a Box\nA simple way to run an Open Data Cube, packaged as a ready-to-deploy environment (typically via Docker) that bundles the ODC software stack, a database, and example notebooks so users can get a working data cube up and running quickly, without a full manual installation.\nhttps://github.com/opendatacube/cube-in-a-box",
+    "crumbs": [
+      "Glossary"
+    ]
+  },
+  {
+    "objectID": "copernicus_dem.html",
+    "href": "copernicus_dem.html",
+    "title": "Copernicus DEM",
+    "section": "",
+    "text": "The Copernicus DEM is a global digital elevation model produced for the European Union’s Copernicus programme, derived from radar data acquired by the TanDEM-X mission. It is available at different resolutions, offering a European/global alternative to NASADEM, generally with higher accuracy in areas of complex terrain.",
+    "crumbs": [
+      "Data sources",
+      "Copernicus DEM"
+    ]
+  },
+  {
+    "objectID": "copernicus_dem.html#copernicus-dem",
+    "href": "copernicus_dem.html#copernicus-dem",
+    "title": "Copernicus DEM",
+    "section": "",
+    "text": "The Copernicus DEM is a global digital elevation model produced for the European Union’s Copernicus programme, derived from radar data acquired by the TanDEM-X mission. It is available at different resolutions, offering a European/global alternative to NASADEM, generally with higher accuracy in areas of complex terrain.",
+    "crumbs": [
+      "Data sources",
+      "Copernicus DEM"
+    ]
+  },
+  {
+    "objectID": "copernicus_dem.html#default-open-data-cube-products",
+    "href": "copernicus_dem.html#default-open-data-cube-products",
+    "title": "Copernicus DEM",
+    "section": "Default Open Data Cube products",
+    "text": "Default Open Data Cube products\nThe official Open Data Cube dataset configuration repository provides three related product definitions, at different resolutions:\n\ncop_dem_glo_30 / dem_cop_30: global coverage at 30 m resolution\ndem_cop_90: global coverage at 90 m resolution\n\nhttps://spacedata.copernicus.eu/collections/copernicus-digital-elevation-model",
+    "crumbs": [
+      "Data sources",
+      "Copernicus DEM"
+    ]
+  },
+  {
+    "objectID": "sentinel.html",
+    "href": "sentinel.html",
+    "title": "Sentinel",
+    "section": "",
+    "text": "Sentinel is the family of Earth observation satellites operated by the European Union’s Copernicus programme. Two of these missions are the most commonly used sources in data cube deployments:\n\nSentinel-1: a radar (SAR, Synthetic Aperture Radar) mission, which measures the Earth’s surface independently of daylight and cloud cover. It is well suited to monitoring soil moisture, flooding, and surface deformation.\nSentinel-2: an optical, multispectral mission (13 bands), providing imagery well suited to vegetation monitoring, land cover mapping, and agricultural applications, but — unlike Sentinel-1 — affected by cloud cover.\n\nBoth missions provide free, openly accessible data with a revisit time of a few days, and are frequently used, alone or in combination, to derive higher-level products (such as ESA WorldCover or the CLC+ Backbone) rather than being used only as raw imagery.",
+    "crumbs": [
+      "Data sources",
+      "Sentinel"
+    ]
+  },
+  {
+    "objectID": "sentinel.html#the-sentinel-missions",
+    "href": "sentinel.html#the-sentinel-missions",
+    "title": "Sentinel",
+    "section": "",
+    "text": "Sentinel is the family of Earth observation satellites operated by the European Union’s Copernicus programme. Two of these missions are the most commonly used sources in data cube deployments:\n\nSentinel-1: a radar (SAR, Synthetic Aperture Radar) mission, which measures the Earth’s surface independently of daylight and cloud cover. It is well suited to monitoring soil moisture, flooding, and surface deformation.\nSentinel-2: an optical, multispectral mission (13 bands), providing imagery well suited to vegetation monitoring, land cover mapping, and agricultural applications, but — unlike Sentinel-1 — affected by cloud cover.\n\nBoth missions provide free, openly accessible data with a revisit time of a few days, and are frequently used, alone or in combination, to derive higher-level products (such as ESA WorldCover or the CLC+ Backbone) rather than being used only as raw imagery.",
+    "crumbs": [
+      "Data sources",
+      "Sentinel"
+    ]
+  },
+  {
+    "objectID": "sentinel.html#default-open-data-cube-products",
+    "href": "sentinel.html#default-open-data-cube-products",
+    "title": "Sentinel",
+    "section": "Default Open Data Cube products",
+    "text": "Default Open Data Cube products\nThe official Open Data Cube dataset configuration repository provides the following Sentinel product definitions:\n\ns1_rtc: Sentinel-1 Radiometrically Terrain Corrected (RTC) imagery\ns2_l2a: Sentinel-2 imagery processed to Level-2A (surface reflectance), converted to Cloud-Optimized GeoTIFFs\ns2_granules: Sentinel-2 data organised by native satellite granules/tiles\n\n\n\n\n\n\n\nNote\n\n\n\nNostradamus datacube users: see the Data sources used in the Nostradamus datacube page for how these default products were renamed for this project (e.g. s1_rtc → sentinel_1_rtc).",
+    "crumbs": [
+      "Data sources",
+      "Sentinel"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_intro.html",
+    "href": "nostradamus_datacube_intro.html",
+    "title": "Nostradamus datacube",
+    "section": "",
+    "text": "The Nostradamus datacube is the implementation of the Open Data Cube approach developed within the Nostradamus project, adapted to the project’s agricultural demonstration sites. It is deployed as a customised Cube-in-a-Box (CiaB), one instance per demonstration site.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Nostradamus datacube"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_intro.html#the-nostradamus-datacube-an-open-data-cube-implementation",
+    "href": "nostradamus_datacube_intro.html#the-nostradamus-datacube-an-open-data-cube-implementation",
+    "title": "Nostradamus datacube",
+    "section": "",
+    "text": "The Nostradamus datacube is the implementation of the Open Data Cube approach developed within the Nostradamus project, adapted to the project’s agricultural demonstration sites. It is deployed as a customised Cube-in-a-Box (CiaB), one instance per demonstration site.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Nostradamus datacube"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_intro.html#deployed-instances",
+    "href": "nostradamus_datacube_intro.html#deployed-instances",
+    "title": "Nostradamus datacube",
+    "section": "Deployed instances",
+    "text": "Deployed instances\nAs of August 2026, five datacube instances have been deployed within the Nostradamus project:\n\nCyprus\nGermany\nSlovenia\nSerbia\nSwitzerland",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Nostradamus datacube"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_intro.html#where-to-find-the-details",
+    "href": "nostradamus_datacube_intro.html#where-to-find-the-details",
+    "title": "Nostradamus datacube",
+    "section": "Where to find the details",
+    "text": "Where to find the details\nThis page only gives a general overview. For installation instructions, usage guides, and the full list of data sources used in the Nostradamus datacube (and how they relate to the default Open Data Cube catalog), see the dedicated Nostradamus datacube section and its sub-pages.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Nostradamus datacube"
+    ]
+  },
+  {
+    "objectID": "1_new_data_into_dc.html#overview",
+    "href": "1_new_data_into_dc.html#overview",
+    "title": "How to index new data into a DC?",
+    "section": "",
+    "text": "Once a datacube is deployed, the Earth observation archive keeps growing: new satellite scenes become available over time and need to be added to the existing index so they can be queried and analysed alongside the rest of the archive. Since the Nostradamus datacube uses a STAC datastore (the Planetary Computer catalog) as its data source, new scenes do not need to be prepared or described by hand: they can be indexed directly from the STAC catalog into an existing product.\nIn short, the procedure consists of searching the STAC catalog for new scenes matching a product, an area of interest, and a date range, then registering the matching STAC items into the corresponding ODC product already configured in the cube. This is done with the stac-to-dc command-line tool (part of odc-apps-dc-tools), which is already installed in the Nostradamus JupyterHub environment. Once indexed, the new scenes are immediately visible in the ODC Explorer and loadable through the Python API, exactly like the rest of the archive.\nThe steps below index new Landsat Collection 2 Level-2 scenes into the existing lsX_c2l2_sp product (see the Landsat page) as a concrete example.",
+    "crumbs": [
+      "Tutorials",
+      "How to index new data into a DC?"
+    ]
+  },
+  {
+    "objectID": "1_new_data_into_dc.html#indexing-new-landsat-scenes-step-by-step",
+    "href": "1_new_data_into_dc.html#indexing-new-landsat-scenes-step-by-step",
+    "title": "How to index new data into a DC?",
+    "section": "Indexing new Landsat scenes: step-by-step",
+    "text": "Indexing new Landsat scenes: step-by-step\n\nOpen a Terminal in the Nostradamus JupyterHub (File &gt; New &gt; Terminal), where datacube and stac-to-dc are already available.\nCheck that the target product is already registered in the cube:\ndatacube product list | grep lsX_c2l2_sp\nSearch the Planetary Computer STAC catalog for new scenes and index them directly into that product, specifying the collection, an area of interest (bounding box), and a date range:\nstac-to-dc \\\n  --catalog-href=\"https://planetarycomputer.microsoft.com/api/stac/v1/\" \\\n  --collections=\"landsat-c2-l2\" \\\n  --bbox=\"5.95,45.81,10.50,47.81\" \\\n  --datetime=\"2026-01-01/2026-06-30\" \\\n  --rename-product=\"lsX_c2l2_sp\" \\\n  --update-if-exists\n--rename-product maps the STAC collection (landsat-c2-l2) to the existing ODC product name (lsX_c2l2_sp), and --bbox/--datetime restrict the search to the area and period you need (adjust them to your own area of interest).\n\n\n\n\n\n\n\nNote\n\n\n\nPlanetary Computer assets are served through short-lived signed URLs. If loading newly indexed scenes later fails with an access error, see the STAC datastore page for how signing is handled, or re-run the indexing step to refresh the references.\n\n\n\nCheck the command’s output: it reports how many datasets were added, failed, and skipped (already-indexed scenes are skipped, not duplicated).\nConfirm the new scenes are indexed by checking the product’s extent in the ODC Explorer, at localhost/explorer/products/lsX_c2l2_sp: the temporal coverage should now include your new date range.\nAlternatively, confirm it directly from a notebook using the Python API:\nfrom datacube import Datacube\n\ndc = Datacube(app=\"check-new-data\")\ndata = dc.load(product=\"lsX_c2l2_sp\", time=(\"2026-01-01\", \"2026-06-30\"))\nprint(data.time.values)",
+    "crumbs": [
+      "Tutorials",
+      "How to index new data into a DC?"
+    ]
+  },
+  {
+    "objectID": "io_lulc.html",
+    "href": "io_lulc.html",
+    "title": "Impact Observatory Land Cover",
+    "section": "",
+    "text": "This dataset, produced by Impact Observatory in partnership with Esri and Microsoft, provides a global land use / land cover (LULC) classification derived from Sentinel-2 imagery using a deep-learning model, generated on an annual basis (rather than a single static reference year, unlike products such as ESA WorldCover). It classifies the land surface into 9 broad classes (e.g., water, trees, crops, built area, bare ground).\nBecause it is updated yearly, this product is particularly useful for tracking land use change year over year — for example monitoring the conversion of cropland to built-up area, or the expansion/contraction of cultivated land across a growing season sequence.",
+    "crumbs": [
+      "Data sources",
+      "Impact Observatory Land Cover"
+    ]
+  },
+  {
+    "objectID": "io_lulc.html#impact-observatory-esri-land-use-land-cover",
+    "href": "io_lulc.html#impact-observatory-esri-land-use-land-cover",
+    "title": "Impact Observatory Land Cover",
+    "section": "",
+    "text": "This dataset, produced by Impact Observatory in partnership with Esri and Microsoft, provides a global land use / land cover (LULC) classification derived from Sentinel-2 imagery using a deep-learning model, generated on an annual basis (rather than a single static reference year, unlike products such as ESA WorldCover). It classifies the land surface into 9 broad classes (e.g., water, trees, crops, built area, bare ground).\nBecause it is updated yearly, this product is particularly useful for tracking land use change year over year — for example monitoring the conversion of cropland to built-up area, or the expansion/contraction of cultivated land across a growing season sequence.",
+    "crumbs": [
+      "Data sources",
+      "Impact Observatory Land Cover"
+    ]
+  },
+  {
+    "objectID": "io_lulc.html#default-open-data-cube-products",
+    "href": "io_lulc.html#default-open-data-cube-products",
+    "title": "Impact Observatory Land Cover",
+    "section": "Default Open Data Cube products",
+    "text": "Default Open Data Cube products\nThe official Open Data Cube dataset configuration repository provides two related product definitions: io_lulc and io_lulc_9_class, both sourced from Microsoft’s Planetary Computer STAC catalog.\n\n\n\n\n\n\nNote\n\n\n\nNostradamus datacube users: see the Data sources used in the Nostradamus datacube page — this project uses a newer annual version of this product (io_lulc_annual_v02) not yet present in the default catalog.",
+    "crumbs": [
+      "Data sources",
+      "Impact Observatory Land Cover"
+    ]
+  },
+  {
+    "objectID": "esa_worldcover.html",
+    "href": "esa_worldcover.html",
+    "title": "ESA WorldCover",
+    "section": "",
+    "text": "ESA WorldCover is a global land cover map produced by the European Space Agency at 10-meter resolution, derived from a combination of Sentinel-1 (radar) and Sentinel-2 (optical) imagery for the reference years 2020 and 2021. It classifies the land surface into 11 categories (e.g., tree cover, cropland, built-up, water bodies, wetlands) using a machine-learning classification pipeline trained and validated with reference data collected worldwide.\nLand cover products such as this one are commonly used as a baseline to mask or stratify analyses — for instance restricting an agricultural indicator to cropland pixels, or monitoring land cover change over time when combined with more recent classifications.",
+    "crumbs": [
+      "Data sources",
+      "ESA WorldCover"
+    ]
+  },
+  {
+    "objectID": "esa_worldcover.html#esa-worldcover",
+    "href": "esa_worldcover.html#esa-worldcover",
+    "title": "ESA WorldCover",
+    "section": "",
+    "text": "ESA WorldCover is a global land cover map produced by the European Space Agency at 10-meter resolution, derived from a combination of Sentinel-1 (radar) and Sentinel-2 (optical) imagery for the reference years 2020 and 2021. It classifies the land surface into 11 categories (e.g., tree cover, cropland, built-up, water bodies, wetlands) using a machine-learning classification pipeline trained and validated with reference data collected worldwide.\nLand cover products such as this one are commonly used as a baseline to mask or stratify analyses — for instance restricting an agricultural indicator to cropland pixels, or monitoring land cover change over time when combined with more recent classifications.",
+    "crumbs": [
+      "Data sources",
+      "ESA WorldCover"
+    ]
+  },
+  {
+    "objectID": "esa_worldcover.html#default-open-data-cube-products",
+    "href": "esa_worldcover.html#default-open-data-cube-products",
+    "title": "ESA WorldCover",
+    "section": "Default Open Data Cube products",
+    "text": "Default Open Data Cube products\nThe official Open Data Cube dataset configuration repository provides three related product definitions: a general esa_worldcover product, plus two single-reference-year variants, esa_worldcover_2020 and esa_worldcover_2021.\nhttps://esa-worldcover.org",
+    "crumbs": [
+      "Data sources",
+      "ESA WorldCover"
+    ]
+  },
+  {
+    "objectID": "landsat.html#default-open-data-cube-products",
+    "href": "landsat.html#default-open-data-cube-products",
+    "title": "Landsat",
+    "section": "Default Open Data Cube products",
+    "text": "Default Open Data Cube products\nThe official Open Data Cube dataset configuration repository provides several ready-to-use Landsat product definitions:\n\nlandsat_8_c2l2: Landsat 8 Collection 2 Level-2 Science Products\nlsX_c2l2_sr: a generic Landsat Collection 2 Level-2 surface reflectance product, covering multiple Landsat sensor generations\nls_usgs_level1_scene / ls_usgs_sr_scene: legacy Landsat Collection 1-style product definitions (Level-1 and surface-reflectance scenes)\n\n\n\n\n\n\n\nNote\n\n\n\nNostradamus datacube users: see the Data sources used in the Nostradamus datacube page for how this default catalog was adapted (Landsat products split by sensor generation) for this project.",
+    "crumbs": [
+      "Data sources",
+      "Landsat"
+    ]
+  },
+  {
+    "objectID": "nasadem.html",
+    "href": "nasadem.html",
+    "title": "NASADEM",
+    "section": "",
+    "text": "NASADEM is a global digital elevation model (DEM) produced by NASA through a reprocessing of the original Shuttle Radar Topography Mission (SRTM) data, using improved algorithms and auxiliary elevation datasets (including ASTER GDEM and ICESat GLAS) to fill voids and reduce noise compared to earlier SRTM releases. It provides elevation values at roughly 30-meter resolution over most of the Earth’s land surface.\nElevation data of this kind underpins many derived analyses in agricultural and environmental monitoring — for example computing slope and terrain aspect, delineating watersheds and drainage networks, or correcting satellite-derived indices for topographic effects.",
+    "crumbs": [
+      "Data sources",
+      "NASADEM"
+    ]
+  },
+  {
+    "objectID": "nasadem.html#nasadem-elevation-model",
+    "href": "nasadem.html#nasadem-elevation-model",
+    "title": "NASADEM",
+    "section": "",
+    "text": "NASADEM is a global digital elevation model (DEM) produced by NASA through a reprocessing of the original Shuttle Radar Topography Mission (SRTM) data, using improved algorithms and auxiliary elevation datasets (including ASTER GDEM and ICESat GLAS) to fill voids and reduce noise compared to earlier SRTM releases. It provides elevation values at roughly 30-meter resolution over most of the Earth’s land surface.\nElevation data of this kind underpins many derived analyses in agricultural and environmental monitoring — for example computing slope and terrain aspect, delineating watersheds and drainage networks, or correcting satellite-derived indices for topographic effects.",
+    "crumbs": [
+      "Data sources",
+      "NASADEM"
+    ]
+  },
+  {
+    "objectID": "nasadem.html#default-open-data-cube-product",
+    "href": "nasadem.html#default-open-data-cube-product",
+    "title": "NASADEM",
+    "section": "Default Open Data Cube product",
+    "text": "Default Open Data Cube product\nNASADEM is one of the ready-to-use product definitions available in the official Open Data Cube dataset configuration repository (nasadem), commonly sourced from Microsoft’s Planetary Computer STAC catalog.\nFor a higher-resolution European alternative, see also the Copernicus DEM products.",
+    "crumbs": [
+      "Data sources",
+      "NASADEM"
+    ]
+  },
+  {
+    "objectID": "other_datacube_platforms.html",
+    "href": "other_datacube_platforms.html",
+    "title": "Other datacube platforms",
+    "section": "",
+    "text": "The Open Data Cube (ODC) is the most widely adopted open-source implementation of the data cube approach, and the one this site focuses on, but it is not the only platform for managing and analysing large volumes of Earth observation data. Depending on needs (self-hosted vs. cloud, open-source vs. commercial, raster-focused vs. general array data), several alternatives exist:\n\nGoogle Earth Engine (GEE): a cloud-based, commercial platform with hundreds of datasets pre-integrated and a free tier for research/non-commercial use. Unlike the ODC, it is a closed, hosted service but it requires no infrastructure setup.\nSentinel Hub: a commercial web service for accessing and processing Copernicus (Sentinel) and other satellite imagery on demand, widely used for quick visualisation and lightweight processing without managing an archive.\nrasdaman (and the related EarthServer initiative): an open-source array database management system, following OGC standards, that manages multidimensional data more generally (not only Earth observation imagery).\nxcube: an open-source, Python/xarray-based toolkit (developed by Brockmann Consult) for building and analysing spatiotemporal data cubes, with a strong focus on Earth system science and Zarr-based cloud storage.\nSEPAL: a cloud platform developed by the FAO for satellite data access, processing, and analysis, oriented towards land monitoring and forestry applications.\nopenEO: not a platform in itself, but a standardised API that exposes a common “virtual data cube” interface across several of the backends above, allowing the same analysis code to run on different providers.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Other datacube platforms"
+    ]
+  },
+  {
+    "objectID": "other_datacube_platforms.html#beyond-the-open-data-cube",
+    "href": "other_datacube_platforms.html#beyond-the-open-data-cube",
+    "title": "Other datacube platforms",
+    "section": "",
+    "text": "The Open Data Cube (ODC) is the most widely adopted open-source implementation of the data cube approach, and the one this site focuses on, but it is not the only platform for managing and analysing large volumes of Earth observation data. Depending on needs (self-hosted vs. cloud, open-source vs. commercial, raster-focused vs. general array data), several alternatives exist:\n\nGoogle Earth Engine (GEE): a cloud-based, commercial platform with hundreds of datasets pre-integrated and a free tier for research/non-commercial use. Unlike the ODC, it is a closed, hosted service but it requires no infrastructure setup.\nSentinel Hub: a commercial web service for accessing and processing Copernicus (Sentinel) and other satellite imagery on demand, widely used for quick visualisation and lightweight processing without managing an archive.\nrasdaman (and the related EarthServer initiative): an open-source array database management system, following OGC standards, that manages multidimensional data more generally (not only Earth observation imagery).\nxcube: an open-source, Python/xarray-based toolkit (developed by Brockmann Consult) for building and analysing spatiotemporal data cubes, with a strong focus on Earth system science and Zarr-based cloud storage.\nSEPAL: a cloud platform developed by the FAO for satellite data access, processing, and analysis, oriented towards land monitoring and forestry applications.\nopenEO: not a platform in itself, but a standardised API that exposes a common “virtual data cube” interface across several of the backends above, allowing the same analysis code to run on different providers.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Other datacube platforms"
+    ]
+  },
+  {
+    "objectID": "other_datacube_platforms.html#odc-based-deployments-vs.-alternative-platforms",
+    "href": "other_datacube_platforms.html#odc-based-deployments-vs.-alternative-platforms",
+    "title": "Other datacube platforms",
+    "section": "ODC-based deployments vs. alternative platforms",
+    "text": "ODC-based deployments vs. alternative platforms\nIt is worth distinguishing platforms that compete with the ODC approach (listed above) from projects that are themselves built on the Open Data Cube, like the Nostradamus datacube presented on this site. Other examples of ODC-based deployments include Digital Earth Africa, Digital Earth Australia, the Swiss Data Cube, and the Brazil Data Cube.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Other datacube platforms"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_data_sources.html",
+    "href": "nostradamus_datacube_data_sources.html",
+    "title": "Data sources used in the Nostradamus datacube",
+    "section": "",
+    "text": "The generic Data sources section of this site documents the official, default Open Data Cube product definitions, as maintained in the datacube-dataset-config repository. The Nostradamus datacube (checked against the live Serbia demonstration site on 24/08/2026) uses several of these default products, but under different, project-specific product names:\n\n\n\n\n\n\n\nDefault ODC product\nProduct used in the Nostradamus datacube\n\n\n\n\nesa_worldcover\nesa_worldcover (unchanged)\n\n\nnasadem\nnasadem (unchanged)\n\n\ns2_l2a\ns2_l2a (unchanged)\n\n\ns1_rtc\nsentinel_1_rtc\n\n\nlsX_c2l2_sr (generic, multi-sensor)\nsplit into ls45_c2l2_sp, ls7_c2l2_sp, ls89_c2l2_sp (one per Landsat sensor generation)\n\n\nio_lulc / io_lulc_9_class\nio_lulc_annual_v02 (newer annual version)",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Data sources used"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_data_sources.html#from-the-default-open-data-cube-catalog",
+    "href": "nostradamus_datacube_data_sources.html#from-the-default-open-data-cube-catalog",
+    "title": "Data sources used in the Nostradamus datacube",
+    "section": "",
+    "text": "The generic Data sources section of this site documents the official, default Open Data Cube product definitions, as maintained in the datacube-dataset-config repository. The Nostradamus datacube (checked against the live Serbia demonstration site on 24/08/2026) uses several of these default products, but under different, project-specific product names:\n\n\n\n\n\n\n\nDefault ODC product\nProduct used in the Nostradamus datacube\n\n\n\n\nesa_worldcover\nesa_worldcover (unchanged)\n\n\nnasadem\nnasadem (unchanged)\n\n\ns2_l2a\ns2_l2a (unchanged)\n\n\ns1_rtc\nsentinel_1_rtc\n\n\nlsX_c2l2_sr (generic, multi-sensor)\nsplit into ls45_c2l2_sp, ls7_c2l2_sp, ls89_c2l2_sp (one per Landsat sensor generation)\n\n\nio_lulc / io_lulc_9_class\nio_lulc_annual_v02 (newer annual version)",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Data sources used"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_data_sources.html#additional-sources-not-in-the-default-catalog",
+    "href": "nostradamus_datacube_data_sources.html#additional-sources-not-in-the-default-catalog",
+    "title": "Data sources used in the Nostradamus datacube",
+    "section": "Additional sources not in the default catalog",
+    "text": "Additional sources not in the default catalog\nTwo data sources indexed in the Nostradamus datacube do not have an equivalent in the default Open Data Cube catalog — they were added specifically for this project:\n\nCLMS CLC+ Backbone (clms_clcplus_europe_100m): high-resolution European land cover from the Copernicus Land Monitoring Service\nAlphaEarth Foundations (aef_annual): annual AI-derived satellite embeddings from Google DeepMind",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Data sources used"
+    ]
+  },
+  {
+    "objectID": "odc_overview.html",
+    "href": "odc_overview.html",
+    "title": "Open Data Cube (ODC) — Overview",
+    "section": "",
+    "text": "The Open Data Cube (ODC) is an open-source software project that provides the core framework used to build data cubes: it turns collections of individual satellite scenes and other gridded data into an analysis-ready, queryable archive organised along space, time, and spectral dimensions. ODC is not a single hosted service, it is a set of libraries and tools that anyone can deploy on their own infrastructure, which is why it underpins many independent deployments worldwide, from national platforms such as Digital Earth Australia and Digital Earth Africa to project-specific instances such as the Nostradamus datacube.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Open Data Cube (ODC)"
+    ]
+  },
+  {
+    "objectID": "odc_overview.html#what-is-the-open-data-cube",
+    "href": "odc_overview.html#what-is-the-open-data-cube",
+    "title": "Open Data Cube (ODC) — Overview",
+    "section": "",
+    "text": "The Open Data Cube (ODC) is an open-source software project that provides the core framework used to build data cubes: it turns collections of individual satellite scenes and other gridded data into an analysis-ready, queryable archive organised along space, time, and spectral dimensions. ODC is not a single hosted service, it is a set of libraries and tools that anyone can deploy on their own infrastructure, which is why it underpins many independent deployments worldwide, from national platforms such as Digital Earth Australia and Digital Earth Africa to project-specific instances such as the Nostradamus datacube.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Open Data Cube (ODC)"
+    ]
+  },
+  {
+    "objectID": "odc_overview.html#core-components",
+    "href": "odc_overview.html#core-components",
+    "title": "Open Data Cube (ODC) — Overview",
+    "section": "Core components",
+    "text": "Core components\n\ndatacube-core : the Python library and command-line tool at the heart of ODC. It manages the index (what data is available and where), handles product and dataset definitions, and provides the Python API used to load and analyse data.\nPostgreSQL/PostGIS index: the database that stores metadata about every indexed dataset (spatial extent, time, format, location of the underlying files). Indexing only records this metadata; the original data files are never copied or moved.\nProduct definitions and dataset documents: YAML/JSON documents that describe, respectively, a type of data (e.g. a Landsat surface reflectance product) and each individual dataset to be indexed (its extent, time, measurements, and file paths).\nODC Explorer: a web application for browsing what has been indexed: available products, spatial/temporal coverage, and dataset-level metadata.\nComplementary tools: including datacube-ows (OGC WMS/WMTS/WCS web services), datacube-stats (large-scale statistical summaries), and STAC-related tooling for interoperability with the wider Earth observation ecosystem.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Open Data Cube (ODC)"
+    ]
+  },
+  {
+    "objectID": "odc_overview.html#how-the-pieces-fit-together",
+    "href": "odc_overview.html#how-the-pieces-fit-together",
+    "title": "Open Data Cube (ODC) — Overview",
+    "section": "How the pieces fit together",
+    "text": "How the pieces fit together\nA running ODC deployment is essentially the datacube-core software connected to a PostgreSQL/PostGIS database, with data indexed into it via product definitions and dataset documents. Once populated, the cube can be queried through the Python API, browsed through the Explorer, or served via OGC web services, all reading from the same underlying index. The Installation and Quick Start pages walk through setting this up step by step.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Open Data Cube (ODC)"
+    ]
+  },
+  {
+    "objectID": "odc_overview.html#project-and-community",
+    "href": "odc_overview.html#project-and-community",
+    "title": "Open Data Cube (ODC) — Overview",
+    "section": "Project and community",
+    "text": "Project and community\nODC is maintained as a community open-source project, with its source code, issue tracker, and documentation hosted on GitHub and Read the Docs. It is governed openly, with contributions from the agencies and research groups that operate the deployments listed above.",
+    "crumbs": [
+      "Introduction to datacubes",
+      "Open Data Cube (ODC)"
     ]
   }
 ]

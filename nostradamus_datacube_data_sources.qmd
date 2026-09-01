@@ -1,0 +1,24 @@
+---
+title: "Data sources used in the Nostradamus datacube"
+---
+
+## From the default Open Data Cube catalog
+
+The generic [Data sources](data_sources.qmd) section of this site documents the official, default Open Data Cube product definitions, as maintained in the [datacube-dataset-config](https://github.com/opendatacube/datacube-dataset-config/tree/main/products) repository. The Nostradamus datacube (checked against the live [Serbia demonstration site](https://serbia-dc.nostradamus-platform.eu/explorer/products) on 24/08/2026) uses several of these default products, but under different, project-specific product names:
+
+| Default ODC product | Product used in the Nostradamus datacube |
+|---|---|
+| `esa_worldcover` | `esa_worldcover` (unchanged) |
+| `nasadem` | `nasadem` (unchanged) |
+| `s2_l2a` | `s2_l2a` (unchanged) |
+| `s1_rtc` | `sentinel_1_rtc` |
+| `lsX_c2l2_sr` (generic, multi-sensor) | split into `ls45_c2l2_sp`, `ls7_c2l2_sp`, `ls89_c2l2_sp` (one per Landsat sensor generation) |
+| `io_lulc` / `io_lulc_9_class` | `io_lulc_annual_v02` (newer annual version) |
+
+## Additional sources not in the default catalog
+
+Two data sources indexed in the Nostradamus datacube do not have an equivalent in the default Open Data Cube catalog — they were added specifically for this project:
+
+-   **[CLMS CLC+ Backbone](clms_clcplus.qmd)** (`clms_clcplus_europe_100m`): high-resolution European land cover from the Copernicus Land Monitoring Service
+
+-   **[AlphaEarth Foundations](aef_annual.qmd)** (`aef_annual`): annual AI-derived satellite embeddings from Google DeepMind

@@ -1,0 +1,15 @@
+---
+title: "NASADEM"
+---
+
+## NASADEM elevation model
+
+**NASADEM** is a global digital elevation model (DEM) produced by NASA through a reprocessing of the original Shuttle Radar Topography Mission (SRTM) data, using improved algorithms and auxiliary elevation datasets (including ASTER GDEM and ICESat GLAS) to fill voids and reduce noise compared to earlier SRTM releases. It provides elevation values at roughly 30-meter resolution over most of the Earth's land surface.
+
+Elevation data of this kind underpins many derived analyses in agricultural and environmental monitoring — for example computing slope and terrain aspect, delineating watersheds and drainage networks, or correcting satellite-derived indices for topographic effects.
+
+## Default Open Data Cube product
+
+NASADEM is one of the ready-to-use product definitions available in the official [Open Data Cube dataset configuration repository](https://github.com/opendatacube/datacube-dataset-config/blob/main/products/nasadem.odc-product.yaml) (**nasadem**), commonly sourced from Microsoft's [Planetary Computer](planetary_computer.qmd) STAC catalog.
+
+For a higher-resolution European alternative, see also the [Copernicus DEM](copernicus_dem.qmd) products.

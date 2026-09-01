@@ -16,13 +16,24 @@ website:
       - text: Home
         href: index.qmd
       - section: "Introduction to datacubes"
+        href: dc_overview.qmd
         contents:
-          - text: Overview
+          - text: What is a data cube?
             href: dc_overview.qmd
-          - text: Installation
-            href: dc_installation.qmd
-          - text: Quick Start
-            href: dc_quickstart.qmd
+          - section: "Open Data Cube (ODC)"
+            href: odc_overview.qmd
+            contents:
+              - text: Overview
+                href: odc_overview.qmd
+              - text: Installation
+                href: dc_installation.qmd
+              - text: Quick Start
+                href: dc_quickstart.qmd
+          - text: Other datacube platforms
+            href: other_datacube_platforms.qmd
+          - text: Nostradamus datacube
+            href: nostradamus_datacube_intro.qmd
+      - text: "---"
       - section: "Nostradamus datacube"
         contents:
           - text: Overview
@@ -31,6 +42,12 @@ website:
             href: nostradamus_datacube_setup.qmd
           - text: Datacube use
             href: nostradamus_datacube_use.qmd
+          - text: Data sources used
+            href: nostradamus_datacube_data_sources.qmd
+          - text: CLMS CLC+ Backbone
+            href: clms_clcplus.qmd
+          - text: AlphaEarth Foundations
+            href: aef_annual.qmd
      # - section: "Monalisa datacube"
        # contents:
        #   - text: Overview
@@ -39,8 +56,7 @@ website:
        #     href: monalisas_datacube_setup.qmd
        #   - text: Datacube use
         #    href: monalisa_datacube_setup.qmd
-      # - text: Definitions
-       # href: definitions.qmd
+      - text: "---"
       - section: Tutorials
         href: tutorials.qmd
         contents: 
@@ -62,10 +78,18 @@ website:
              href: vector_dc_installation.qmd
       - section: Data sources
         href: data_sources.qmd
-        contents: 
+        contents:
           - landsat.qmd
           - sentinel.qmd
-          - planetary_computer.qmd    
+          - planetary_computer.qmd
+          - text: NASADEM
+            href: nasadem.qmd
+          - text: Copernicus DEM
+            href: copernicus_dem.qmd
+          - text: ESA WorldCover
+            href: esa_worldcover.qmd
+          - text: Impact Observatory Land Cover
+            href: io_lulc.qmd
       - section: "Tools"
         contents:
           - text: Jupyter
@@ -75,6 +99,8 @@ website:
      
       - text: Acknowledgments
         href: acknowledgments.qmd
+      - text: Glossary
+        href: glossary.qmd
       - text: FAQ
         href: faq.qmd
       - text: "⬇ Download full site (PDF)"
@@ -96,4 +122,3 @@ format:
  
 
 editor: visual
-
