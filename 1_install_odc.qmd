@@ -1,0 +1,14 @@
+---
+title: "How to install an Open Data Cube?"
+---
+
+## Overview
+
+Installing a data cube involves a number of steps, described in detail on the [**Installation**](dc_installation.qmd){target="_blank"} page.
+
+Within the Nostradamus project, a step-by-step installation procedure for the datacube has been documented and can be used as a reference: see the [**Nostradamus datacube install**](nostradamus_datacube_setup.qmd){target="_blank"} page.
+
+In addition, a general Cube-in-a-Box installation procedure and an administrator guide are also available:
+
+- [**Cube-in-a-Box repository**](https://github.com/LivingEarthLab/cube-in-a-box){target="_blank"}
+- [**Living Earth Cube-in-a-Box — Admin Guide (PDF)**](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/admin/Living-Earth-Cube-in-a-Box---Admin-Guide.pdf){target="_blank"}

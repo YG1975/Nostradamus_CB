@@ -1,0 +1,7 @@
+---
+title: "How to use an Open Data Cube?"
+---
+
+## Overview
+
+The use of a data cube has been documented for the **Nostradamus datacube**, which serves as a worked example: see the [**Nostradamus datacube use**](nostradamus_datacube_use.qmd){target="_blank"} page.

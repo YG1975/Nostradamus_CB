@@ -14,11 +14,13 @@ The [**Open Data Cube (ODC)**](https://www.opendatacube.org/){target="_blank"} i
 - **ODC Explorer**: a web application for browsing what has been indexed: available products, spatial/temporal coverage, and dataset-level metadata.
 - **Complementary tools**: including `datacube-ows` (OGC WMS/WMTS/WCS web services), `datacube-stats` (large-scale statistical summaries), and STAC-related tooling for interoperability with the wider Earth observation ecosystem.
 
-![](images/DataCube_concept.png){width="700"}
-
 ## How the pieces fit together
 
-A running ODC deployment is essentially the `datacube-core` software connected to a PostgreSQL/PostGIS database, with data indexed into it via product definitions and dataset documents. Once populated, the cube can be queried through the Python API, browsed through the Explorer, or served via OGC web services, all reading from the same underlying index. The [**Installation**](dc_installation.qmd){target="_blank"} and [**Quick Start**](dc_quickstart.qmd){target="_blank"} pages walk through setting this up step by step.
+A running ODC deployment is essentially the `datacube-core` software connected to a PostgreSQL/PostGIS database, with data indexed into it via product definitions and dataset documents. Once populated, the cube can be queried through the Python API, browsed through the Explorer, or served via OGC web services, all reading from the same underlying index.
+
+![](images/odc_architecture.svg){width="600"}
+
+The [**Installation**](dc_installation.qmd){target="_blank"} and [**Quick Start**](dc_quickstart.qmd){target="_blank"} pages walk through setting this up step by step.
 
 ## Project and community
 

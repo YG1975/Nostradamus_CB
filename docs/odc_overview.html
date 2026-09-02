@@ -232,13 +232,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1_new_data_into_dc.html" class="sidebar-item-text sidebar-link">
+  <a href="./1_install_odc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to install an Open Data Cube?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2_use_odc.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">How to use an Open Data Cube?</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./3_new_data_into_dc.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">How to index new data into a DC?</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./2_retrieve_data_python_api.html" class="sidebar-item-text sidebar-link">
+  <a href="./4_retrieve_data_python_api.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">How to retrieve data using the Python API?</span></a>
   </div>
 </li>
@@ -430,11 +442,12 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>ODC Explorer</strong>: a web application for browsing what has been indexed: available products, spatial/temporal coverage, and dataset-level metadata.</li>
 <li><strong>Complementary tools</strong>: including <code>datacube-ows</code> (OGC WMS/WMTS/WCS web services), <code>datacube-stats</code> (large-scale statistical summaries), and STAC-related tooling for interoperability with the wider Earth observation ecosystem.</li>
 </ul>
-<p><img src="images/DataCube_concept.png" class="img-fluid" width="700"></p>
 </section>
 <section id="how-the-pieces-fit-together" class="level2">
 <h2 class="anchored" data-anchor-id="how-the-pieces-fit-together">How the pieces fit together</h2>
-<p>A running ODC deployment is essentially the <code>datacube-core</code> software connected to a PostgreSQL/PostGIS database, with data indexed into it via product definitions and dataset documents. Once populated, the cube can be queried through the Python API, browsed through the Explorer, or served via OGC web services, all reading from the same underlying index. The <a href="./dc_installation.html" target="_blank"><strong>Installation</strong></a> and <a href="./dc_quickstart.html" target="_blank"><strong>Quick Start</strong></a> pages walk through setting this up step by step.</p>
+<p>A running ODC deployment is essentially the <code>datacube-core</code> software connected to a PostgreSQL/PostGIS database, with data indexed into it via product definitions and dataset documents. Once populated, the cube can be queried through the Python API, browsed through the Explorer, or served via OGC web services, all reading from the same underlying index.</p>
+<p><img src="images/odc_architecture.svg" class="img-fluid" width="600"></p>
+<p>The <a href="./dc_installation.html" target="_blank"><strong>Installation</strong></a> and <a href="./dc_quickstart.html" target="_blank"><strong>Quick Start</strong></a> pages walk through setting this up step by step.</p>
 </section>
 <section id="project-and-community" class="level2">
 <h2 class="anchored" data-anchor-id="project-and-community">Project and community</h2>

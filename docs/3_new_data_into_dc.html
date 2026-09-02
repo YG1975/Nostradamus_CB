@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Jupyter </title>
+<title>How to index new data into a DC?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./jupyter.html">Tools</a></li><li class="breadcrumb-item"><a href="./jupyter.html">Jupyter</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tutorials.html">Tutorials</a></li><li class="breadcrumb-item"><a href="./3_new_data_into_dc.html">How to index new data into a DC?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -265,11 +265,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="./tutorials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Tutorials</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./1_install_odc.html" class="sidebar-item-text sidebar-link">
@@ -284,7 +284,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./3_new_data_into_dc.html" class="sidebar-item-text sidebar-link">
+  <a href="./3_new_data_into_dc.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">How to index new data into a DC?</span></a>
   </div>
 </li>
@@ -385,16 +385,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
  <span class="menu-text">Tools</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./jupyter.html" class="sidebar-item-text sidebar-link active">
+  <a href="./jupyter.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Jupyter</span></a>
   </div>
 </li>
@@ -440,18 +440,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#jupyter-notebook" id="toc-jupyter-notebook" class="nav-link active" data-scroll-target="#jupyter-notebook">Jupyter notebook</a></li>
-  <li><a href="#jupyterlab" id="toc-jupyterlab" class="nav-link" data-scroll-target="#jupyterlab">Jupyterlab</a></li>
-  <li><a href="#jupyterhub" id="toc-jupyterhub" class="nav-link" data-scroll-target="#jupyterhub">JupyterHub</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#indexing-new-landsat-scenes-step-by-step" id="toc-indexing-new-landsat-scenes-step-by-step" class="nav-link" data-scroll-target="#indexing-new-landsat-scenes-step-by-step">Indexing new Landsat scenes: step-by-step</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./jupyter.html">Tools</a></li><li class="breadcrumb-item"><a href="./jupyter.html">Jupyter</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tutorials.html">Tutorials</a></li><li class="breadcrumb-item"><a href="./3_new_data_into_dc.html">How to index new data into a DC?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Jupyter <img src="images/logo_OpenDataCube.png" class="img-fluid" style="vertical-align:middle; margin-left:10px;" width="70"></h1>
+<h1 class="title">How to index new data into a DC?</h1>
 </div>
 
 
@@ -468,112 +467,53 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><a href="https://jupyter.org/" target="_blank">Jupyter</a> is an open-source project that supports interactive data science and scientific computing across all programming languages. The Jupyter ecosystem is made of several <a href="https://docs.jupyter.org/en/latest/#sub-project-documentation" target="_blank">subprojects</a> that propose many different software.</p>
-<p>Among them, <a href="https://jupyter-notebook.readthedocs.io/en/latest/" target="_blank">Jupyter notebook</a>, <a href="https://github.com/jupyterlab/jupyterlab" target="_blank">JupyterLab</a> and <a href="https://jupyterhub.readthedocs.io/en/latest/" target="_blank">JupyterHub</a> are relevant for the use of the Nostradamus datacube.</p>
-<p><img src="images/clipboard-229328674.png" class="img-fluid"></p>
-<section id="jupyter-notebook" class="level2">
-<h2 class="anchored" data-anchor-id="jupyter-notebook">Jupyter notebook</h2>
-<p>A <a href="https://jupyter-notebook.readthedocs.io/en/latest/" target="_blank">Jupyter notebook</a> is an interactive document with that is run in your web broswer and allows to have in a single <strong>.ipynb</strong> file:</p>
-<ul>
-<li>executable <strong>code</strong> (Python, R, …) that can be run cell by cell</li>
-<li>formatted <strong>text</strong> in MarkDown language</li>
-<li><strong>visualisations</strong> (graphs, maps, tables) that interactively display below the code</li>
-</ul>
-<p><img src="images/Jupyter_notebook_example.png" class="img-fluid"></p>
-<section id="how-to-install-it-on-my-machine" class="level4">
-<h4 class="anchored" data-anchor-id="how-to-install-it-on-my-machine"><strong>How to install it on my machine?</strong></h4>
-<p>Type the following command in your Terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install notebook</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Note: in some cases you might need to write</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>pip3 install notebook</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Once a datacube is deployed, the Earth observation archive keeps growing: new satellite scenes become available over time and need to be added to the existing index so they can be queried and analysed alongside the rest of the archive. Since the Nostradamus datacube uses a <a href="./stac_datastore.html" target="_blank"><strong>STAC datastore</strong></a> (the Planetary Computer catalog) as its data source, new scenes do not need to be prepared or described by hand: they can be indexed directly from the STAC catalog into an existing product.</p>
+<p>In short, the procedure consists of searching the STAC catalog for new scenes matching a product, an area of interest, and a date range, then registering the matching STAC items into the corresponding <a href="./landsat.html" target="_blank"><strong>ODC product</strong></a> already configured in the cube. This is done with the <code>stac-to-dc</code> command-line tool (part of <a href="https://github.com/opendatacube/odc-tools/tree/develop/apps/dc_tools" target="_blank"><strong>odc-apps-dc-tools</strong></a>), which is already installed in the Nostradamus JupyterHub environment. Once indexed, the new scenes are immediately visible in the ODC Explorer and loadable through the Python API, exactly like the rest of the archive.</p>
+<p>The steps below index new Landsat Collection 2 Level-2 scenes into the existing <code>lsX_c2l2_sp</code> product (see the <a href="./landsat.html" target="_blank"><strong>Landsat</strong></a> page) as a concrete example.</p>
 </section>
-<section id="how-to-know-if-it-is-installed-on-my-machine" class="level4">
-<h4 class="anchored" data-anchor-id="how-to-know-if-it-is-installed-on-my-machine"><strong>How to know if it is installed on my machine?</strong></h4>
-<p>Type the following command in your Terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>jupyter --version</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>If it is installed, you should see its version</p>
-<p>If it is not installed, you will see a message like “command not found”.</p>
-</section>
-<section id="how-to-launch-it" class="level4">
-<h4 class="anchored" data-anchor-id="how-to-launch-it"><strong>How to launch it?</strong></h4>
-<p>Type the following command in your Terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>jupyter notebook</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This should open you navigator at http://localhost:8888.</p>
-</section>
-<section id="how-to-use-it" class="level4">
-<h4 class="anchored" data-anchor-id="how-to-use-it"><strong>How to use it?</strong></h4>
-<p>Once you navigator is open at http://localhost:8888, use the top menus to either create new .ipynb file or open an existing one.</p>
-<p><img src="images/clipboard-948493949.png" class="img-fluid"></p>
-</section>
-</section>
-<section id="jupyterlab" class="level2">
-<h2 class="anchored" data-anchor-id="jupyterlab">Jupyterlab</h2>
-<p><img src="images/jupyterlab_logo.png" class="img-fluid" width="70"></p>
-<p><a href="https://github.com/jupyterlab/jupyterlab" target="_blank">JupyterLab</a> is the modern version of Jupyter notebooks. It is a full environment that contains more features than Jupyter notebooks. Here are some additional elements compared to Jupyter notebooks:</p>
-<ul>
-<li>multi-tabs</li>
-<li>Integrated file explorer</li>
-<li>Text and code editor</li>
-<li>Integrated terminal</li>
-<li>Extensions</li>
-</ul>
-<section id="how-to-install-it-on-my-machine-1" class="level4">
-<h4 class="anchored" data-anchor-id="how-to-install-it-on-my-machine-1"><strong>How to install it on my machine?</strong></h4>
-<p>There are 2 main options to have Jupyterlab on your machine: (A) either as a desktop application or (B) using your web browser</p>
-<p><strong>(A) Installation of Jupyterlab Desktop</strong></p>
-<p>Go to <a href="https://github.com/jupyterlab/jupyterlab-desktop" target="_blank">https://github.com/jupyterlab/jupyterlab-desktop</a> and download the application corresponding to your operating system</p>
-<div class="callout callout-style-default callout-caution callout-titled">
+<section id="indexing-new-landsat-scenes-step-by-step" class="level2">
+<h2 class="anchored" data-anchor-id="indexing-new-landsat-scenes-step-by-step">Indexing new Landsat scenes: step-by-step</h2>
+<ol type="1">
+<li><p>Open a <strong>Terminal</strong> in the Nostradamus JupyterHub (File &gt; New &gt; Terminal), where <code>datacube</code> and <code>stac-to-dc</code> are already available.</p></li>
+<li><p>Check that the target product is already registered in the cube:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>datacube product list | grep lsX_c2l2_sp</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+<li><p>Search the Planetary Computer STAC catalog for new scenes and index them directly into that product, specifying the collection, an area of interest (bounding box), and a date range:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>stac-to-dc \</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  --catalog-href="https://planetarycomputer.microsoft.com/api/stac/v1/" \</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  --collections="landsat-c2-l2" \</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  --bbox="5.95,45.81,10.50,47.81" \</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  --datetime="2026-01-01/2026-06-30" \</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  --rename-product="lsX_c2l2_sp" \</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  --update-if-exists</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>--rename-product</code> maps the STAC collection (<code>landsat-c2-l2</code>) to the existing ODC product name (<code>lsX_c2l2_sp</code>), and <code>--bbox</code>/<code>--datetime</code> restrict the search to the area and period you need (adjust them to your own area of interest).</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Caution
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Since August 2025, Jupyter desktop is not actively maintained and does not receive security bug fixes</p>
+<p>Planetary Computer assets are served through short-lived signed URLs. If loading newly indexed scenes later fails with an access error, see the <a href="./stac_datastore.html" target="_blank"><strong>STAC datastore</strong></a> page for how signing is handled, or re-run the indexing step to refresh the references.</p>
 </div>
 </div>
-<p><strong>(B) Installation of Jupyterlab</strong></p>
-<p>Type the following command in your Terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>pip install jupyterlab</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Note: in some cases you might need to write</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>pip3 install jupyterlab</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="how-to-know-if-it-is-installed-on-my-machine-1" class="level4">
-<h4 class="anchored" data-anchor-id="how-to-know-if-it-is-installed-on-my-machine-1"><strong>How to know if it is installed on my machine?</strong></h4>
-<p>Type the following command in your Terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>jupyter lab --version</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>If it is installed, you should see its version</p>
-</section>
-<section id="how-to-launch-it-1" class="level4">
-<h4 class="anchored" data-anchor-id="how-to-launch-it-1"><strong>How to launch it?</strong></h4>
-<p>Type the following command in your Terminal:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>jupyter lab</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>This should open the Jupyterlab environment in your broswer at <a href="http://localhost:8888/lab" class="uri">http://localhost:8888/lab</a></p>
-<p><img src="images/clipboard-3873626420.png" class="img-fluid"></p>
-</section>
-<section id="how-to-use-it-1" class="level4">
-<h4 class="anchored" data-anchor-id="how-to-use-it-1"><strong>How to use it?</strong></h4>
-<p>Once you navigator is open at http://localhost:8888/lab, use the various menus to navigate through your files and folders and to create new ones.</p>
-</section>
-</section>
-<section id="jupyterhub" class="level2">
-<h2 class="anchored" data-anchor-id="jupyterhub">JupyterHub</h2>
-<p><img src="images/jupyterhub_logo.png" class="img-fluid" width="70"></p>
-<p><a href="https://jupyterhub.readthedocs.io/en/latest/" target="_blank">JupyterHub</a> is a <strong>multi-users server</strong>, allowing each member of a team to access his/her own JupyterLab environment</p>
-<section id="how-to-access-a-jupyterhub-instance" class="level4">
-<h4 class="anchored" data-anchor-id="how-to-access-a-jupyterhub-instance"><strong>How to access a JupyterHub instance?</strong></h4>
-<p>There should normally be 2 options:</p>
-<ul>
-<li>Either your sysadmin has installed JupyterHub on a server and you can access it through a url and login</li>
-<li>or a self-hosted JupyterHub Docker image has been created and each user can use it as an isolated environment</li>
-</ul>
-<p>This <strong>Docker solution</strong> is what has been chosen for the <strong>Nostradamus JupyterHub</strong>.</p>
+<ol start="4" type="1">
+<li><p>Check the command’s output: it reports how many datasets were <strong>added</strong>, <strong>failed</strong>, and <strong>skipped</strong> (already-indexed scenes are skipped, not duplicated).</p></li>
+<li><p>Confirm the new scenes are indexed by checking the product’s extent in the ODC Explorer, at <a href="http://localhost/explorer/products/lsX_c2l2_sp" target="_blank">localhost/explorer/products/lsX_c2l2_sp</a>: the temporal coverage should now include your new date range.</p></li>
+<li><p>Alternatively, confirm it directly from a notebook using the Python API:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datacube <span class="im">import</span> Datacube</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>dc <span class="op">=</span> Datacube(app<span class="op">=</span><span class="st">"check-new-data"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> dc.load(product<span class="op">=</span><span class="st">"lsX_c2l2_sp"</span>, time<span class="op">=</span>(<span class="st">"2026-01-01"</span>, <span class="st">"2026-06-30"</span>))</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data.time.values)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div></li>
+</ol>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

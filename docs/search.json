@@ -790,6 +790,7 @@
     "text": "CLC+ Backbone is a land cover product from the Copernicus Land Monitoring Service (CLMS), providing a high-resolution (10 m) classification of Europe’s land surface, produced from Sentinel-1 and Sentinel-2 imagery. It complements the long-running CORINE Land Cover (CLC) inventory — which has a coarser resolution and a slower update cycle — by offering a more frequently refreshed, more spatially detailed backbone layer that CLC and other derived Copernicus land products build upon.\nBeing Europe-specific and higher resolution than global products like ESA WorldCover, CLC+ Backbone is well suited to regional or national-scale agricultural and land-management analyses within the EU, including several of the Nostradamus demonstration sites.",
     "crumbs": [
       "Nostradamus datacube",
+      "Data sources used",
       "CLMS CLC+ Backbone"
     ]
   },
@@ -801,6 +802,7 @@
     "text": "CLC+ Backbone is a land cover product from the Copernicus Land Monitoring Service (CLMS), providing a high-resolution (10 m) classification of Europe’s land surface, produced from Sentinel-1 and Sentinel-2 imagery. It complements the long-running CORINE Land Cover (CLC) inventory — which has a coarser resolution and a slower update cycle — by offering a more frequently refreshed, more spatially detailed backbone layer that CLC and other derived Copernicus land products build upon.\nBeing Europe-specific and higher resolution than global products like ESA WorldCover, CLC+ Backbone is well suited to regional or national-scale agricultural and land-management analyses within the EU, including several of the Nostradamus demonstration sites.",
     "crumbs": [
       "Nostradamus datacube",
+      "Data sources used",
       "CLMS CLC+ Backbone"
     ]
   },
@@ -812,6 +814,7 @@
     "text": "Use in the Nostradamus datacube\nIn the Nostradamus datacube, this dataset is indexed as the product clms_clcplus_europe_100m.\nhttps://land.copernicus.eu/en/products/clc-backbone",
     "crumbs": [
       "Nostradamus datacube",
+      "Data sources used",
       "CLMS CLC+ Backbone"
     ]
   },
@@ -1214,7 +1217,7 @@
     "href": "odc_overview.html#how-the-pieces-fit-together",
     "title": "Open Data Cube (ODC) — Overview",
     "section": "How the pieces fit together",
-    "text": "How the pieces fit together\nA running ODC deployment is essentially the datacube-core software connected to a PostgreSQL/PostGIS database, with data indexed into it via product definitions and dataset documents. Once populated, the cube can be queried through the Python API, browsed through the Explorer, or served via OGC web services, all reading from the same underlying index. The Installation and Quick Start pages walk through setting this up step by step.",
+    "text": "How the pieces fit together\nA running ODC deployment is essentially the datacube-core software connected to a PostgreSQL/PostGIS database, with data indexed into it via product definitions and dataset documents. Once populated, the cube can be queried through the Python API, browsed through the Explorer, or served via OGC web services, all reading from the same underlying index.\n\nThe Installation and Quick Start pages walk through setting this up step by step.",
     "crumbs": [
       "Introduction to datacubes",
       "Open Data Cube (ODC)"
@@ -1229,6 +1232,137 @@
     "crumbs": [
       "Introduction to datacubes",
       "Open Data Cube (ODC)"
+    ]
+  },
+  {
+    "objectID": "3_new_data_into_dc.html",
+    "href": "3_new_data_into_dc.html",
+    "title": "How to index new data into a DC?",
+    "section": "",
+    "text": "Once a datacube is deployed, the Earth observation archive keeps growing: new satellite scenes become available over time and need to be added to the existing index so they can be queried and analysed alongside the rest of the archive. Since the Nostradamus datacube uses a STAC datastore (the Planetary Computer catalog) as its data source, new scenes do not need to be prepared or described by hand: they can be indexed directly from the STAC catalog into an existing product.\nIn short, the procedure consists of searching the STAC catalog for new scenes matching a product, an area of interest, and a date range, then registering the matching STAC items into the corresponding ODC product already configured in the cube. This is done with the stac-to-dc command-line tool (part of odc-apps-dc-tools), which is already installed in the Nostradamus JupyterHub environment. Once indexed, the new scenes are immediately visible in the ODC Explorer and loadable through the Python API, exactly like the rest of the archive.\nThe steps below index new Landsat Collection 2 Level-2 scenes into the existing lsX_c2l2_sp product (see the Landsat page) as a concrete example.",
+    "crumbs": [
+      "Tutorials",
+      "How to index new data into a DC?"
+    ]
+  },
+  {
+    "objectID": "3_new_data_into_dc.html#overview",
+    "href": "3_new_data_into_dc.html#overview",
+    "title": "How to index new data into a DC?",
+    "section": "",
+    "text": "Once a datacube is deployed, the Earth observation archive keeps growing: new satellite scenes become available over time and need to be added to the existing index so they can be queried and analysed alongside the rest of the archive. Since the Nostradamus datacube uses a STAC datastore (the Planetary Computer catalog) as its data source, new scenes do not need to be prepared or described by hand: they can be indexed directly from the STAC catalog into an existing product.\nIn short, the procedure consists of searching the STAC catalog for new scenes matching a product, an area of interest, and a date range, then registering the matching STAC items into the corresponding ODC product already configured in the cube. This is done with the stac-to-dc command-line tool (part of odc-apps-dc-tools), which is already installed in the Nostradamus JupyterHub environment. Once indexed, the new scenes are immediately visible in the ODC Explorer and loadable through the Python API, exactly like the rest of the archive.\nThe steps below index new Landsat Collection 2 Level-2 scenes into the existing lsX_c2l2_sp product (see the Landsat page) as a concrete example.",
+    "crumbs": [
+      "Tutorials",
+      "How to index new data into a DC?"
+    ]
+  },
+  {
+    "objectID": "3_new_data_into_dc.html#indexing-new-landsat-scenes-step-by-step",
+    "href": "3_new_data_into_dc.html#indexing-new-landsat-scenes-step-by-step",
+    "title": "How to index new data into a DC?",
+    "section": "Indexing new Landsat scenes: step-by-step",
+    "text": "Indexing new Landsat scenes: step-by-step\n\nOpen a Terminal in the Nostradamus JupyterHub (File &gt; New &gt; Terminal), where datacube and stac-to-dc are already available.\nCheck that the target product is already registered in the cube:\ndatacube product list | grep lsX_c2l2_sp\nSearch the Planetary Computer STAC catalog for new scenes and index them directly into that product, specifying the collection, an area of interest (bounding box), and a date range:\nstac-to-dc \\\n  --catalog-href=\"https://planetarycomputer.microsoft.com/api/stac/v1/\" \\\n  --collections=\"landsat-c2-l2\" \\\n  --bbox=\"5.95,45.81,10.50,47.81\" \\\n  --datetime=\"2026-01-01/2026-06-30\" \\\n  --rename-product=\"lsX_c2l2_sp\" \\\n  --update-if-exists\n--rename-product maps the STAC collection (landsat-c2-l2) to the existing ODC product name (lsX_c2l2_sp), and --bbox/--datetime restrict the search to the area and period you need (adjust them to your own area of interest).\n\n\n\n\n\n\n\nNote\n\n\n\nPlanetary Computer assets are served through short-lived signed URLs. If loading newly indexed scenes later fails with an access error, see the STAC datastore page for how signing is handled, or re-run the indexing step to refresh the references.\n\n\n\nCheck the command’s output: it reports how many datasets were added, failed, and skipped (already-indexed scenes are skipped, not duplicated).\nConfirm the new scenes are indexed by checking the product’s extent in the ODC Explorer, at localhost/explorer/products/lsX_c2l2_sp: the temporal coverage should now include your new date range.\nAlternatively, confirm it directly from a notebook using the Python API:\nfrom datacube import Datacube\n\ndc = Datacube(app=\"check-new-data\")\ndata = dc.load(product=\"lsX_c2l2_sp\", time=(\"2026-01-01\", \"2026-06-30\"))\nprint(data.time.values)",
+    "crumbs": [
+      "Tutorials",
+      "How to index new data into a DC?"
+    ]
+  },
+  {
+    "objectID": "4_retrieve_data_python_api.html",
+    "href": "4_retrieve_data_python_api.html",
+    "title": "How to retrieve data using the Python API?",
+    "section": "",
+    "text": "Once data has been indexed into a datacube (see How to index new data into a DC?), the standard way to access it is through the Python API provided by datacube-core. This API connects to the datacube’s PostgreSQL/PostGIS index and lets you query, load, and analyse data directly in a Jupyter notebook, without touching the underlying files.\nIn short, the procedure consists of opening a connection to the datacube with the Datacube class, optionally checking what is available for a given product, then calling dc.load() with the product name, an area of interest, a time range, and the measurements (bands) you need. The result is returned as an xarray Dataset, which can then be used directly with the wider Python scientific stack (numpy, xarray, dask, matplotlib, rasterio, etc.).\nThe steps below retrieve Sentinel-2 data from the existing s2_l2a product as a concrete example.",
+    "crumbs": [
+      "Tutorials",
+      "How to retrieve data using the Python API?"
+    ]
+  },
+  {
+    "objectID": "2_use_odc.html",
+    "href": "2_use_odc.html",
+    "title": "How to use an Open Data Cube?",
+    "section": "",
+    "text": "The use of a data cube has been documented for the Nostradamus datacube, which serves as a worked example: see the Nostradamus datacube use page.",
+    "crumbs": [
+      "Tutorials",
+      "How to use an Open Data Cube?"
+    ]
+  },
+  {
+    "objectID": "2_use_odc.html#overview",
+    "href": "2_use_odc.html#overview",
+    "title": "How to use an Open Data Cube?",
+    "section": "",
+    "text": "The use of a data cube has been documented for the Nostradamus datacube, which serves as a worked example: see the Nostradamus datacube use page.",
+    "crumbs": [
+      "Tutorials",
+      "How to use an Open Data Cube?"
+    ]
+  },
+  {
+    "objectID": "1_install_odc.html",
+    "href": "1_install_odc.html",
+    "title": "How to install an Open Data Cube?",
+    "section": "",
+    "text": "Installing a data cube involves a number of steps, described in detail on the Installation page.\nWithin the Nostradamus project, a step-by-step installation procedure for the datacube has been documented and can be used as a reference: see the Nostradamus datacube install page.\nIn addition, a general Cube-in-a-Box installation procedure and an administrator guide are also available:\n\nCube-in-a-Box repository\nLiving Earth Cube-in-a-Box — Admin Guide (PDF)",
+    "crumbs": [
+      "Tutorials",
+      "How to install an Open Data Cube?"
+    ]
+  },
+  {
+    "objectID": "1_install_odc.html#overview",
+    "href": "1_install_odc.html#overview",
+    "title": "How to install an Open Data Cube?",
+    "section": "",
+    "text": "Installing a data cube involves a number of steps, described in detail on the Installation page.\nWithin the Nostradamus project, a step-by-step installation procedure for the datacube has been documented and can be used as a reference: see the Nostradamus datacube install page.\nIn addition, a general Cube-in-a-Box installation procedure and an administrator guide are also available:\n\nCube-in-a-Box repository\nLiving Earth Cube-in-a-Box — Admin Guide (PDF)",
+    "crumbs": [
+      "Tutorials",
+      "How to install an Open Data Cube?"
+    ]
+  },
+  {
+    "objectID": "2_use_odc.html#what-can-a-data-cube-be-used-for",
+    "href": "2_use_odc.html#what-can-a-data-cube-be-used-for",
+    "title": "How to use an Open Data Cube?",
+    "section": "What can a data cube be used for?",
+    "text": "What can a data cube be used for?\nA data cube can support many different applications. The examples below are drawn from publications by Gregory Giuliani and Bruno Chatenoux (University of Geneva / UNEP-GRID Geneva), based on the Swiss Data Cube, an Open Data Cube deployment. For each reference, the indices computed from the datacube are indicated.\n\nChatenoux B., Richard J.-P., Small D., Röösli C., Wingate V., Poussin C., Rodila D., Peduzzi P., Steinmeier C., Ginzler C., Psomas A., Schaepman M., Giuliani G. (2021) — The Swiss Data Cube, Analysis Ready Data archive using Earth Observations of Switzerland, Scientific Data 8:295. Indices produced: NDVI, NDWI, EVI, GCI, LAI, MSI, ARI.\nPoussin C., Massot A., Ginzler C., Weber D., Chatenoux B., Lacroix P., Piller T., Nguyen L., Giuliani G. (2021) — Drying conditions in Switzerland – Indication from a 35-year Landsat trend analysis of vegetation water content estimates to support SDGs, Big Earth Data. Index computed: NDWI (also referred to as NDMI), used as a proxy for vegetation water content and drought monitoring.\nObuchowicz C., Poussin C., Giuliani G. (2023) — Change in observed long-term greening across Switzerland – Evidence from a three decades NDVI time-series and its relationship with climate and land cover factors, Big Earth Data. Index computed: NDVI, used to track long-term vegetation greening trends.\nPoussin C., Timoner P., Chatenoux B., Giuliani G., Peduzzi P. (2023) — Improved Landsat-based snow cover mapping accuracy using a spatiotemporal NDSI and generalised linear mixed model, Science of Remote Sensing 7:100078. Index computed: NDSI, used for snow cover mapping.\nCornut C., Ozainne S., Poussin C., Andenmatten R., Giuliani G. (2022) — Identifying areas of archaeological potential in the Swiss Alps using satellite-derived time-series of snow cover estimates, Remote Sensing Applications: Society and Environment 28:100838. Index computed: NDSI, used to derive snow cover duration/melt-out time-series.\nGiuliani G., Chatenoux B., De Bono A., Rodila D., Richard J.-P., Allenbach K., Dao H., Peduzzi P. (2017) — Building an Earth Observations Data Cube: lessons learned from the Swiss Data Cube (SDC) on generating Analysis Ready Data (ARD), Big Earth Data 1:100–117. Indices discussed: NDVI, NDWI, as part of the ARD generation and validation process.",
+    "crumbs": [
+      "Tutorials",
+      "How to use an Open Data Cube?"
+    ]
+  },
+  {
+    "objectID": "4_retrieve_data_python_api.html#overview",
+    "href": "4_retrieve_data_python_api.html#overview",
+    "title": "How to retrieve data using the Python API?",
+    "section": "",
+    "text": "Once data has been indexed into a datacube (see How to index new data into a DC?), the standard way to access it is through the Python API provided by datacube-core. This API connects to the datacube’s PostgreSQL/PostGIS index and lets you query, load, and analyse data directly in a Jupyter notebook, without touching the underlying files.\nIn short, the procedure consists of opening a connection to the datacube with the Datacube class, optionally checking what is available for a given product, then calling dc.load() with the product name, an area of interest, a time range, and the measurements (bands) you need. The result is returned as an xarray Dataset, which can then be used directly with the wider Python scientific stack (numpy, xarray, dask, matplotlib, rasterio, etc.).\nThe steps below retrieve Sentinel-2 data from the existing s2_l2a product as a concrete example.",
+    "crumbs": [
+      "Tutorials",
+      "How to retrieve data using the Python API?"
+    ]
+  },
+  {
+    "objectID": "4_retrieve_data_python_api.html#retrieving-data-with-the-python-api-step-by-step",
+    "href": "4_retrieve_data_python_api.html#retrieving-data-with-the-python-api-step-by-step",
+    "title": "How to retrieve data using the Python API?",
+    "section": "Retrieving data with the Python API: step-by-step",
+    "text": "Retrieving data with the Python API: step-by-step\n\nOpen a Jupyter notebook in the Nostradamus JupyterHub, where the datacube Python package is already installed and configured.\nConnect to the datacube:\nfrom datacube import Datacube\n\ndc = Datacube(app=\"retrieve-data-example\")\nCheck that the target product is available, and inspect its measurements (bands):\ndc.list_products()\ndc.list_measurements().loc[\"s2_l2a\"]\nOptionally, check what data actually exists for your area and period before loading it, using find_datasets(). This avoids launching a costly load() call over an area with no coverage:\ndatasets = dc.find_datasets(\n    product=\"s2_l2a\",\n    x=(6.1, 6.2),\n    y=(46.2, 46.3),\n    time=(\"2024-01-01\", \"2024-06-30\"),\n)\nprint(len(datasets), \"datasets found\")\nLoad the data for a given product, area, time range, and set of measurements:\ndata = dc.load(\n    product=\"s2_l2a\",\n    x=(6.1, 6.2),\n    y=(46.2, 46.3),\n    time=(\"2024-01-01\", \"2024-06-30\"),\n    measurements=[\"red\", \"nir\"],\n    output_crs=\"EPSG:32631\",\n    resolution=(-10, 10),\n)\ndata\nx/y define the bounding box of your area of interest (longitude/latitude by default), time the date range, and measurements the bands to load. output_crs and resolution control the projection and pixel size of the resulting grid.\n\n\n\n\n\n\n\nNote\n\n\n\nThe first call to dc.load() over a new area or product can take a while, since it triggers reprojection and resampling across every matching scene. Restricting measurements to only the bands you need, and narrowing x/y/time, significantly speeds this up.\n\n\n\nExplore the result: data is returned as an xarray Dataset with x, y, and time dimensions, plus one variable per requested measurement:\nprint(data.dims)\nprint(list(data.data_vars))\nUse the loaded data directly with the Python scientific stack — for example, computing and plotting an NDVI time-series:\nndvi = (data.nir - data.red) / (data.nir + data.red)\nndvi.mean(dim=[\"x\", \"y\"]).plot()\n\nFor the full list of products and measurements available in the Nostradamus datacube, see the Data sources used page.",
+    "crumbs": [
+      "Tutorials",
+      "How to retrieve data using the Python API?"
+    ]
+  },
+  {
+    "objectID": "dc_overview.html#what-can-a-data-cube-be-used-for",
+    "href": "dc_overview.html#what-can-a-data-cube-be-used-for",
+    "title": "What is a data cube?",
+    "section": "What can a data cube be used for?",
+    "text": "What can a data cube be used for?\nA data cube can support many different applications. The examples below are drawn from publications based on the Swiss Data Cube. For each reference, the indices computed from the datacube are indicated.\n\nChatenoux B., Richard J.-P., Small D., Röösli C., Wingate V., Poussin C., Rodila D., Peduzzi P., Steinmeier C., Ginzler C., Psomas A., Schaepman M., Giuliani G. (2021) — The Swiss Data Cube, Analysis Ready Data archive using Earth Observations of Switzerland, Scientific Data 8:295. doi:10.1038/s41597-021-01076-6 Indices produced: NDVI, NDWI, EVI, GCI, LAI, MSI, ARI.\nPoussin C., Massot A., Ginzler C., Weber D., Chatenoux B., Lacroix P., Piller T., Nguyen L., Giuliani G. (2021) — Drying conditions in Switzerland – Indication from a 35-year Landsat trend analysis of vegetation water content estimates to support SDGs, Big Earth Data. doi:10.1080/20964471.2021.1974681 Index computed: NDWI (also referred to as NDMI), used as a proxy for vegetation water content and drought monitoring.\nObuchowicz C., Poussin C., Giuliani G. (2023) — Change in observed long-term greening across Switzerland – Evidence from a three decades NDVI time-series and its relationship with climate and land cover factors, Big Earth Data. doi:10.1080/20964471.2023.2268322 Index computed: NDVI, used to track long-term vegetation greening trends.\nPoussin C., Timoner P., Chatenoux B., Giuliani G., Peduzzi P. (2023) — Improved Landsat-based snow cover mapping accuracy using a spatiotemporal NDSI and generalised linear mixed model, Science of Remote Sensing 7:100078. doi:10.1016/j.srs.2023.100078 Index computed: NDSI, used for snow cover mapping.\nCornut C., Ozainne S., Poussin C., Andenmatten R., Giuliani G. (2022) — Identifying areas of archaeological potential in the Swiss Alps using satellite-derived time-series of snow cover estimates, Remote Sensing Applications: Society and Environment 28:100838. doi:10.1016/j.rsase.2022.100838 Index computed: NDSI, used to derive snow cover duration/melt-out time-series.\nGiuliani G., Chatenoux B., De Bono A., Rodila D., Richard J.-P., Allenbach K., Dao H., Peduzzi P. (2017) — Building an Earth Observations Data Cube: lessons learned from the Swiss Data Cube (SDC) on generating Analysis Ready Data (ARD), Big Earth Data 1:100–117. doi:10.1080/20964471.2017.1398903 Indices discussed: NDVI, NDWI, as part of the ARD generation and validation process.",
+    "crumbs": [
+      "Introduction to datacubes"
     ]
   }
 ]

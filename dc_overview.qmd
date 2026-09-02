@@ -14,10 +14,26 @@ Technically, a data cube is an open-source geospatial data management and analys
 
 ## Setting up a data cube
 
-Setting up a data cube typically follows a few main steps: selecting and deploying the underlying infrastructure (local, HPC, or cloud) and installing the ODC software stack; defining the interfaces and standards used to describe the data, such as [**STAC**](stac_datastore.qmd){target="_blank"} and OGC web services; preparing and indexing the data (usually **Analysis Ready Data (ARD)**) as datasets and products with standardised metadata; and building a catalogue for discovery, along with the tools (explorer, notebooks, APIs) needed to query, process, and exploit the cube.
+Setting up a data cube typically follows a few main steps: selecting and deploying the underlying infrastructure (local, HPC, or cloud) and installing the ODC software stack; defining the interfaces and standards used to describe the data, such as [**STAC**](glossary.qmd#stac){target="_blank"} and OGC web services; preparing and indexing the data (usually [**Analysis Ready Data**](glossary.qmd#analysis-ready-data){target="_blank"} (ARD)) as datasets and products with standardised metadata; and building a catalogue for discovery, along with the tools (explorer, notebooks, APIs) needed to query, process, and exploit the cube.
 
 ## Existing data cube deployments
 
 Several operational data cubes now build on this open-source foundation at different scales, including the [**Swiss Data Cube**](https://www.swissdatacube.org/){target="_blank"}, jointly operated by the University of Geneva, UNEP/GRID-Geneva, the University of Zurich, and the WSL; [**Digital Earth Africa**](https://www.digitalearthafrica.org/){target="_blank"}, delivering continental-scale Earth observation services across Africa; and [**Digital Earth Australia**](https://www.dea.ga.gov.au/){target="_blank"}, run by Geoscience Australia to track more than 30 years of landscape change. The [**Nostradamus datacube**](nostradamus_datacube_intro.qmd){target="_blank"} presented in this site follows the same approach, adapted to the project's agricultural case studies.
 
 Beyond the Open Data Cube itself, other platforms exist for managing and analysing large volumes of Earth observation data (see [**Other datacube platforms**](other_datacube_platforms.qmd){target="_blank"} for an overview).
+
+## What can a data cube be used for?
+
+A data cube can support many different applications. The examples below are drawn from publications based on the Swiss Data Cube. For each reference, the indices computed from the datacube are indicated.
+
+- **Chatenoux B., Richard J.-P., Small D., Röösli C., Wingate V., Poussin C., Rodila D., Peduzzi P., Steinmeier C., Ginzler C., Psomas A., Schaepman M., Giuliani G. (2021)** — *The Swiss Data Cube, Analysis Ready Data archive using Earth Observations of Switzerland*, Scientific Data 8:295. [doi:10.1038/s41597-021-01076-6](https://doi.org/10.1038/s41597-021-01076-6){target="_blank"} Indices produced: **NDVI**, **NDWI**, **EVI**, **GCI**, **LAI**, **MSI**, **ARI**.
+
+- **Poussin C., Massot A., Ginzler C., Weber D., Chatenoux B., Lacroix P., Piller T., Nguyen L., Giuliani G. (2021)** — *Drying conditions in Switzerland – Indication from a 35-year Landsat trend analysis of vegetation water content estimates to support SDGs*, Big Earth Data. [doi:10.1080/20964471.2021.1974681](https://doi.org/10.1080/20964471.2021.1974681){target="_blank"} Index computed: **NDWI** (also referred to as NDMI), used as a proxy for vegetation water content and drought monitoring.
+
+- **Obuchowicz C., Poussin C., Giuliani G. (2023)** — *Change in observed long-term greening across Switzerland – Evidence from a three decades NDVI time-series and its relationship with climate and land cover factors*, Big Earth Data. [doi:10.1080/20964471.2023.2268322](https://doi.org/10.1080/20964471.2023.2268322){target="_blank"} Index computed: **NDVI**, used to track long-term vegetation greening trends.
+
+- **Poussin C., Timoner P., Chatenoux B., Giuliani G., Peduzzi P. (2023)** — *Improved Landsat-based snow cover mapping accuracy using a spatiotemporal NDSI and generalised linear mixed model*, Science of Remote Sensing 7:100078. [doi:10.1016/j.srs.2023.100078](https://doi.org/10.1016/j.srs.2023.100078){target="_blank"} Index computed: **NDSI**, used for snow cover mapping.
+
+- **Cornut C., Ozainne S., Poussin C., Andenmatten R., Giuliani G. (2022)** — *Identifying areas of archaeological potential in the Swiss Alps using satellite-derived time-series of snow cover estimates*, Remote Sensing Applications: Society and Environment 28:100838. [doi:10.1016/j.rsase.2022.100838](https://doi.org/10.1016/j.rsase.2022.100838){target="_blank"} Index computed: **NDSI**, used to derive snow cover duration/melt-out time-series.
+
+- **Giuliani G., Chatenoux B., De Bono A., Rodila D., Richard J.-P., Allenbach K., Dao H., Peduzzi P. (2017)** — *Building an Earth Observations Data Cube: lessons learned from the Swiss Data Cube (SDC) on generating Analysis Ready Data (ARD)*, Big Earth Data 1:100–117. [doi:10.1080/20964471.2017.1398903](https://doi.org/10.1080/20964471.2017.1398903){target="_blank"} Indices discussed: **NDVI**, **NDWI**, as part of the ARD generation and validation process.

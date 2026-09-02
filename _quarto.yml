@@ -42,12 +42,13 @@ website:
             href: nostradamus_datacube_setup.qmd
           - text: Datacube use
             href: nostradamus_datacube_use.qmd
-          - text: Data sources used
+          - section: "Data sources used"
             href: nostradamus_datacube_data_sources.qmd
-          - text: CLMS CLC+ Backbone
-            href: clms_clcplus.qmd
-          - text: AlphaEarth Foundations
-            href: aef_annual.qmd
+            contents:
+              - text: CLMS CLC+ Backbone
+                href: clms_clcplus.qmd
+              - text: AlphaEarth Foundations
+                href: aef_annual.qmd
      # - section: "Monalisa datacube"
        # contents:
        #   - text: Overview
@@ -60,10 +61,14 @@ website:
       - section: Tutorials
         href: tutorials.qmd
         contents: 
+          - text: How to install an Open Data Cube?
+            href: 1_install_odc.qmd
+          - text: How to use an Open Data Cube?
+            href: 2_use_odc.qmd
           - text: How to index new data into a DC?
-            href: 1_new_data_into_dc.qmd
+            href: 3_new_data_into_dc.qmd
           - text: How to retrieve data using the Python API?
-            href: 2_retrieve_data_python_api.qmd
+            href: 4_retrieve_data_python_api.qmd
           #- text:
          #   href: tutorial3.qmd    
       - section: Workshops

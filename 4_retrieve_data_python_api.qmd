@@ -1,0 +1,79 @@
+---
+title: "How to retrieve data using the Python API?"
+---
+
+## Overview
+
+Once data has been indexed into a datacube (see [**How to index new data into a DC?**](3_new_data_into_dc.qmd){target="_blank"}), the standard way to access it is through the **Python API** provided by `datacube-core`. This API connects to the datacube's PostgreSQL/PostGIS index and lets you query, load, and analyse data directly in a Jupyter notebook, without touching the underlying files.
+
+In short, the procedure consists of opening a connection to the datacube with the `Datacube` class, optionally checking what is available for a given product, then calling `dc.load()` with the product name, an area of interest, a time range, and the measurements (bands) you need. The result is returned as an **xarray `Dataset`**, which can then be used directly with the wider Python scientific stack (numpy, xarray, dask, matplotlib, rasterio, etc.).
+
+The steps below retrieve Sentinel-2 data from the existing `s2_l2a` product as a concrete example.
+
+## Retrieving data with the Python API: step-by-step
+
+1.  Open a **Jupyter notebook** in the Nostradamus JupyterHub, where the `datacube` Python package is already installed and configured.
+
+2.  Connect to the datacube:
+
+    ``` python
+    from datacube import Datacube
+
+    dc = Datacube(app="retrieve-data-example")
+    ```
+
+3.  Check that the target product is available, and inspect its measurements (bands):
+
+    ``` python
+    dc.list_products()
+    dc.list_measurements().loc["s2_l2a"]
+    ```
+
+4.  Optionally, check what data actually exists for your area and period before loading it, using `find_datasets()`. This avoids launching a costly `load()` call over an area with no coverage:
+
+    ``` python
+    datasets = dc.find_datasets(
+        product="s2_l2a",
+        x=(6.1, 6.2),
+        y=(46.2, 46.3),
+        time=("2024-01-01", "2024-06-30"),
+    )
+    print(len(datasets), "datasets found")
+    ```
+
+5.  Load the data for a given product, area, time range, and set of measurements:
+
+    ``` python
+    data = dc.load(
+        product="s2_l2a",
+        x=(6.1, 6.2),
+        y=(46.2, 46.3),
+        time=("2024-01-01", "2024-06-30"),
+        measurements=["red", "nir"],
+        output_crs="EPSG:32631",
+        resolution=(-10, 10),
+    )
+    data
+    ```
+
+    `x`/`y` define the bounding box of your area of interest (longitude/latitude by default), `time` the date range, and `measurements` the bands to load. `output_crs` and `resolution` control the projection and pixel size of the resulting grid.
+
+::: callout-note
+The first call to `dc.load()` over a new area or product can take a while, since it triggers reprojection and resampling across every matching scene. Restricting `measurements` to only the bands you need, and narrowing `x`/`y`/`time`, significantly speeds this up.
+:::
+
+6.  Explore the result: `data` is returned as an **xarray `Dataset`** with `x`, `y`, and `time` dimensions, plus one variable per requested measurement:
+
+    ``` python
+    print(data.dims)
+    print(list(data.data_vars))
+    ```
+
+7.  Use the loaded data directly with the Python scientific stack — for example, computing and plotting an NDVI time-series:
+
+    ``` python
+    ndvi = (data.nir - data.red) / (data.nir + data.red)
+    ndvi.mean(dim=["x", "y"]).plot()
+    ```
+
+For the full list of products and measurements available in the Nostradamus datacube, see the [**Data sources used**](nostradamus_datacube_data_sources.qmd){target="_blank"} page.
