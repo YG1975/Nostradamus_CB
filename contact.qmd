@@ -1,0 +1,11 @@
+---
+title: "Contact"
+---
+
+## Contact
+
+For questions about this site or the Nostradamus datacube capacity building material, please contact:
+
+**Dr. Grégory Giuliani**
+University of Geneva / UNEP-GRID Geneva
+📧 [gregory.giuliani@unige.ch](mailto:gregory.giuliani@unige.ch)

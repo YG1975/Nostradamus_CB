@@ -95,6 +95,8 @@ website:
             href: esa_worldcover.qmd
           - text: Impact Observatory Land Cover
             href: io_lulc.qmd
+          - text: Copernicus Land Monitoring Service
+            href: copernicus_land.qmd
       - section: "Tools"
         contents:
           - text: Jupyter
@@ -102,12 +104,16 @@ website:
           - text: LivingEarth
             href: LivingEarth.qmd
      
+      - text: Publications
+        href: publications.qmd
       - text: Acknowledgments
         href: acknowledgments.qmd
       - text: Glossary
         href: glossary.qmd
       - text: FAQ
         href: faq.qmd
+      - text: Contact
+        href: contact.qmd
       - text: "⬇ Download full site (PDF)"
         href: full_site.pdf
       

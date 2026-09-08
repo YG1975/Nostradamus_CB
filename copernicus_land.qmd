@@ -1,0 +1,25 @@
+---
+title: "Copernicus Land Monitoring Service (CLMS)"
+---
+
+## What is CLMS?
+
+The [**Copernicus Land Monitoring Service (CLMS)**](https://land.copernicus.eu/en){target="_blank"} is one of the six thematic services of the EU's Copernicus programme, implemented by the European Environment Agency (EEA) and the Joint Research Centre (JRC). It provides geospatial information on land cover and its changes, land use, vegetation state, the water cycle, ground motion, and land surface energy variables, for both Europe and the globe, informing applications such as forest management, nature conservation, agriculture, and urban planning.
+
+## Portfolio
+
+CLMS data are organised into several product groups:
+
+-   **Land cover and land use mapping** — pan-European (e.g. CORINE Land Cover, CLC+ Backbone) and global land cover classifications, complemented by detailed layers such as imperviousness, forests, grassland, and water/wetness.
+-   **Priority area (Hot Spot) monitoring** — tailored, higher-resolution land cover, land use, and crop type information for areas prone to environmental change.
+-   **Bio-geophysical parameters** — long time-series of global and pan-European variables describing vegetation (leaf area index, vegetation indices, productivity), the water cycle (soil moisture, snow and water bodies), and energy budget.
+-   **Ground motion** — the European Ground Motion Service, derived from Sentinel-1 InSAR data, to detect subsidence, landslides, and other surface deformation.
+-   **High-resolution image mosaics** — satellite image mosaics covering Europe, used as the basis for many other CLMS products.
+
+## Access
+
+CLMS products are freely available, after registration, through the [CLMS portal](https://land.copernicus.eu/en){target="_blank"}, and a growing subset is also directly accessible via the [Copernicus Data Space Ecosystem](https://dataspace.copernicus.eu/){target="_blank"} (S3, OData, Sentinel Hub API, Copernicus Browser).
+
+::: callout-note
+The [**CLMS CLC+ Backbone**](clms_clcplus.qmd){target="_blank"} product, used in the Nostradamus datacube, is one of the pan-European land cover products delivered by this service.
+:::

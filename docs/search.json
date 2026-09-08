@@ -1360,9 +1360,93 @@
     "href": "dc_overview.html#what-can-a-data-cube-be-used-for",
     "title": "What is a data cube?",
     "section": "What can a data cube be used for?",
-    "text": "What can a data cube be used for?\nA data cube can support many different applications. The examples below are drawn from publications based on the Swiss Data Cube. For each reference, the indices computed from the datacube are indicated.\n\nChatenoux B., Richard J.-P., Small D., Röösli C., Wingate V., Poussin C., Rodila D., Peduzzi P., Steinmeier C., Ginzler C., Psomas A., Schaepman M., Giuliani G. (2021) — The Swiss Data Cube, Analysis Ready Data archive using Earth Observations of Switzerland, Scientific Data 8:295. doi:10.1038/s41597-021-01076-6 Indices produced: NDVI, NDWI, EVI, GCI, LAI, MSI, ARI.\nPoussin C., Massot A., Ginzler C., Weber D., Chatenoux B., Lacroix P., Piller T., Nguyen L., Giuliani G. (2021) — Drying conditions in Switzerland – Indication from a 35-year Landsat trend analysis of vegetation water content estimates to support SDGs, Big Earth Data. doi:10.1080/20964471.2021.1974681 Index computed: NDWI (also referred to as NDMI), used as a proxy for vegetation water content and drought monitoring.\nObuchowicz C., Poussin C., Giuliani G. (2023) — Change in observed long-term greening across Switzerland – Evidence from a three decades NDVI time-series and its relationship with climate and land cover factors, Big Earth Data. doi:10.1080/20964471.2023.2268322 Index computed: NDVI, used to track long-term vegetation greening trends.\nPoussin C., Timoner P., Chatenoux B., Giuliani G., Peduzzi P. (2023) — Improved Landsat-based snow cover mapping accuracy using a spatiotemporal NDSI and generalised linear mixed model, Science of Remote Sensing 7:100078. doi:10.1016/j.srs.2023.100078 Index computed: NDSI, used for snow cover mapping.\nCornut C., Ozainne S., Poussin C., Andenmatten R., Giuliani G. (2022) — Identifying areas of archaeological potential in the Swiss Alps using satellite-derived time-series of snow cover estimates, Remote Sensing Applications: Society and Environment 28:100838. doi:10.1016/j.rsase.2022.100838 Index computed: NDSI, used to derive snow cover duration/melt-out time-series.\nGiuliani G., Chatenoux B., De Bono A., Rodila D., Richard J.-P., Allenbach K., Dao H., Peduzzi P. (2017) — Building an Earth Observations Data Cube: lessons learned from the Swiss Data Cube (SDC) on generating Analysis Ready Data (ARD), Big Earth Data 1:100–117. doi:10.1080/20964471.2017.1398903 Indices discussed: NDVI, NDWI, as part of the ARD generation and validation process.",
+    "text": "What can a data cube be used for?\nA data cube can support many different applications, from vegetation and drought monitoring to snow cover mapping and archaeological research. Publications showing concrete applications of the Swiss Data Cube, along with the indices computed from it, are available on the Publications page.",
     "crumbs": [
       "Introduction to datacubes"
+    ]
+  },
+  {
+    "objectID": "copernicus_land.html",
+    "href": "copernicus_land.html",
+    "title": "Copernicus Land Monitoring Service (CLMS)",
+    "section": "",
+    "text": "The Copernicus Land Monitoring Service (CLMS) is one of the six thematic services of the EU’s Copernicus programme, implemented by the European Environment Agency (EEA) and the Joint Research Centre (JRC). It provides geospatial information on land cover and its changes, land use, vegetation state, the water cycle, ground motion, and land surface energy variables, for both Europe and the globe, informing applications such as forest management, nature conservation, agriculture, and urban planning.",
+    "crumbs": [
+      "Data sources",
+      "Copernicus Land Monitoring Service"
+    ]
+  },
+  {
+    "objectID": "copernicus_land.html#what-is-clms",
+    "href": "copernicus_land.html#what-is-clms",
+    "title": "Copernicus Land Monitoring Service (CLMS)",
+    "section": "",
+    "text": "The Copernicus Land Monitoring Service (CLMS) is one of the six thematic services of the EU’s Copernicus programme, implemented by the European Environment Agency (EEA) and the Joint Research Centre (JRC). It provides geospatial information on land cover and its changes, land use, vegetation state, the water cycle, ground motion, and land surface energy variables, for both Europe and the globe, informing applications such as forest management, nature conservation, agriculture, and urban planning.",
+    "crumbs": [
+      "Data sources",
+      "Copernicus Land Monitoring Service"
+    ]
+  },
+  {
+    "objectID": "copernicus_land.html#portfolio",
+    "href": "copernicus_land.html#portfolio",
+    "title": "Copernicus Land Monitoring Service (CLMS)",
+    "section": "Portfolio",
+    "text": "Portfolio\nCLMS data are organised into several product groups:\n\nLand cover and land use mapping — pan-European (e.g. CORINE Land Cover, CLC+ Backbone) and global land cover classifications, complemented by detailed layers such as imperviousness, forests, grassland, and water/wetness.\nPriority area (Hot Spot) monitoring — tailored, higher-resolution land cover, land use, and crop type information for areas prone to environmental change.\nBio-geophysical parameters — long time-series of global and pan-European variables describing vegetation (leaf area index, vegetation indices, productivity), the water cycle (soil moisture, snow and water bodies), and energy budget.\nGround motion — the European Ground Motion Service, derived from Sentinel-1 InSAR data, to detect subsidence, landslides, and other surface deformation.\nHigh-resolution image mosaics — satellite image mosaics covering Europe, used as the basis for many other CLMS products.",
+    "crumbs": [
+      "Data sources",
+      "Copernicus Land Monitoring Service"
+    ]
+  },
+  {
+    "objectID": "copernicus_land.html#access",
+    "href": "copernicus_land.html#access",
+    "title": "Copernicus Land Monitoring Service (CLMS)",
+    "section": "Access",
+    "text": "Access\nCLMS products are freely available, after registration, through the CLMS portal, and a growing subset is also directly accessible via the Copernicus Data Space Ecosystem (S3, OData, Sentinel Hub API, Copernicus Browser).\n\n\n\n\n\n\nNote\n\n\n\nThe CLMS CLC+ Backbone product, used in the Nostradamus datacube, is one of the pan-European land cover products delivered by this service.",
+    "crumbs": [
+      "Data sources",
+      "Copernicus Land Monitoring Service"
+    ]
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "For questions about this site or the Nostradamus datacube capacity building material, please contact:\nDr. Grégory Giuliani University of Geneva / UNEP-GRID Geneva 📧 gregory.giuliani@unige.ch",
+    "crumbs": [
+      "Contact"
+    ]
+  },
+  {
+    "objectID": "contact.html#contact",
+    "href": "contact.html#contact",
+    "title": "Contact",
+    "section": "",
+    "text": "For questions about this site or the Nostradamus datacube capacity building material, please contact:\nDr. Grégory Giuliani University of Geneva / UNEP-GRID Geneva 📧 gregory.giuliani@unige.ch",
+    "crumbs": [
+      "Contact"
+    ]
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "A data cube can support many different applications. The examples below are drawn from publications by Gregory Giuliani and Bruno Chatenoux (University of Geneva / UNEP-GRID Geneva), based on the Swiss Data Cube, an Open Data Cube deployment. For each reference, the indices computed from the datacube are indicated.\n\nChatenoux B., Richard J.-P., Small D., Röösli C., Wingate V., Poussin C., Rodila D., Peduzzi P., Steinmeier C., Ginzler C., Psomas A., Schaepman M., Giuliani G. (2021) — The Swiss Data Cube, Analysis Ready Data archive using Earth Observations of Switzerland, Scientific Data 8:295. doi:10.1038/s41597-021-01076-6 Indices produced: NDVI, NDWI, EVI, GCI, LAI, MSI, ARI.\nPoussin C., Massot A., Ginzler C., Weber D., Chatenoux B., Lacroix P., Piller T., Nguyen L., Giuliani G. (2021) — Drying conditions in Switzerland – Indication from a 35-year Landsat trend analysis of vegetation water content estimates to support SDGs, Big Earth Data. doi:10.1080/20964471.2021.1974681 Index computed: NDWI (also referred to as NDMI), used as a proxy for vegetation water content and drought monitoring.\nObuchowicz C., Poussin C., Giuliani G. (2023) — Change in observed long-term greening across Switzerland – Evidence from a three decades NDVI time-series and its relationship with climate and land cover factors, Big Earth Data. doi:10.1080/20964471.2023.2268322 Index computed: NDVI, used to track long-term vegetation greening trends.\nPoussin C., Timoner P., Chatenoux B., Giuliani G., Peduzzi P. (2023) — Improved Landsat-based snow cover mapping accuracy using a spatiotemporal NDSI and generalised linear mixed model, Science of Remote Sensing 7:100078. doi:10.1016/j.srs.2023.100078 Index computed: NDSI, used for snow cover mapping.\nCornut C., Ozainne S., Poussin C., Andenmatten R., Giuliani G. (2022) — Identifying areas of archaeological potential in the Swiss Alps using satellite-derived time-series of snow cover estimates, Remote Sensing Applications: Society and Environment 28:100838. doi:10.1016/j.rsase.2022.100838 Index computed: NDSI, used to derive snow cover duration/melt-out time-series.\nGiuliani G., Chatenoux B., De Bono A., Rodila D., Richard J.-P., Allenbach K., Dao H., Peduzzi P. (2017) — Building an Earth Observations Data Cube: lessons learned from the Swiss Data Cube (SDC) on generating Analysis Ready Data (ARD), Big Earth Data 1:100–117. doi:10.1080/20964471.2017.1398903 Indices discussed: NDVI, NDWI, as part of the ARD generation and validation process.",
+    "crumbs": [
+      "Publications"
+    ]
+  },
+  {
+    "objectID": "publications.html#what-can-a-data-cube-be-used-for",
+    "href": "publications.html#what-can-a-data-cube-be-used-for",
+    "title": "Publications",
+    "section": "",
+    "text": "A data cube can support many different applications. The examples below are drawn from publications by Gregory Giuliani and Bruno Chatenoux (University of Geneva / UNEP-GRID Geneva), based on the Swiss Data Cube, an Open Data Cube deployment. For each reference, the indices computed from the datacube are indicated.\n\nChatenoux B., Richard J.-P., Small D., Röösli C., Wingate V., Poussin C., Rodila D., Peduzzi P., Steinmeier C., Ginzler C., Psomas A., Schaepman M., Giuliani G. (2021) — The Swiss Data Cube, Analysis Ready Data archive using Earth Observations of Switzerland, Scientific Data 8:295. doi:10.1038/s41597-021-01076-6 Indices produced: NDVI, NDWI, EVI, GCI, LAI, MSI, ARI.\nPoussin C., Massot A., Ginzler C., Weber D., Chatenoux B., Lacroix P., Piller T., Nguyen L., Giuliani G. (2021) — Drying conditions in Switzerland – Indication from a 35-year Landsat trend analysis of vegetation water content estimates to support SDGs, Big Earth Data. doi:10.1080/20964471.2021.1974681 Index computed: NDWI (also referred to as NDMI), used as a proxy for vegetation water content and drought monitoring.\nObuchowicz C., Poussin C., Giuliani G. (2023) — Change in observed long-term greening across Switzerland – Evidence from a three decades NDVI time-series and its relationship with climate and land cover factors, Big Earth Data. doi:10.1080/20964471.2023.2268322 Index computed: NDVI, used to track long-term vegetation greening trends.\nPoussin C., Timoner P., Chatenoux B., Giuliani G., Peduzzi P. (2023) — Improved Landsat-based snow cover mapping accuracy using a spatiotemporal NDSI and generalised linear mixed model, Science of Remote Sensing 7:100078. doi:10.1016/j.srs.2023.100078 Index computed: NDSI, used for snow cover mapping.\nCornut C., Ozainne S., Poussin C., Andenmatten R., Giuliani G. (2022) — Identifying areas of archaeological potential in the Swiss Alps using satellite-derived time-series of snow cover estimates, Remote Sensing Applications: Society and Environment 28:100838. doi:10.1016/j.rsase.2022.100838 Index computed: NDSI, used to derive snow cover duration/melt-out time-series.\nGiuliani G., Chatenoux B., De Bono A., Rodila D., Richard J.-P., Allenbach K., Dao H., Peduzzi P. (2017) — Building an Earth Observations Data Cube: lessons learned from the Swiss Data Cube (SDC) on generating Analysis Ready Data (ARD), Big Earth Data 1:100–117. doi:10.1080/20964471.2017.1398903 Indices discussed: NDVI, NDWI, as part of the ARD generation and validation process.",
+    "crumbs": [
+      "Publications"
     ]
   }
 ]

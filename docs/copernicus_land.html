@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>What is a data cube?</title>
+<title>Copernicus Land Monitoring Service (CLMS)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dc_overview.html">Introduction to datacubes</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_sources.html">Data sources</a></li><li class="breadcrumb-item"><a href="./copernicus_land.html">Copernicus Land Monitoring Service</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -116,16 +116,16 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./dc_overview.html" class="sidebar-item-text sidebar-link active">
+            <a href="./dc_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introduction to datacubes</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dc_overview.html" class="sidebar-item-text sidebar-link active">
+  <a href="./dc_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">What is a data cube?</span></a>
   </div>
 </li>
@@ -299,11 +299,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./data_sources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data sources</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./landsat.html" class="sidebar-item-text sidebar-link">
@@ -348,7 +348,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./copernicus_land.html" class="sidebar-item-text sidebar-link">
+  <a href="./copernicus_land.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Copernicus Land Monitoring Service</span></a>
   </div>
 </li>
@@ -423,20 +423,18 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-problem-data-cubes-solve" id="toc-the-problem-data-cubes-solve" class="nav-link active" data-scroll-target="#the-problem-data-cubes-solve">The problem data cubes solve</a></li>
-  <li><a href="#what-a-data-cube-is" id="toc-what-a-data-cube-is" class="nav-link" data-scroll-target="#what-a-data-cube-is">What a data cube is</a></li>
-  <li><a href="#setting-up-a-data-cube" id="toc-setting-up-a-data-cube" class="nav-link" data-scroll-target="#setting-up-a-data-cube">Setting up a data cube</a></li>
-  <li><a href="#existing-data-cube-deployments" id="toc-existing-data-cube-deployments" class="nav-link" data-scroll-target="#existing-data-cube-deployments">Existing data cube deployments</a></li>
-  <li><a href="#what-can-a-data-cube-be-used-for" id="toc-what-can-a-data-cube-be-used-for" class="nav-link" data-scroll-target="#what-can-a-data-cube-be-used-for">What can a data cube be used for?</a></li>
+  <li><a href="#what-is-clms" id="toc-what-is-clms" class="nav-link active" data-scroll-target="#what-is-clms">What is CLMS?</a></li>
+  <li><a href="#portfolio" id="toc-portfolio" class="nav-link" data-scroll-target="#portfolio">Portfolio</a></li>
+  <li><a href="#access" id="toc-access" class="nav-link" data-scroll-target="#access">Access</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./data_sources.html">Data sources</a></li><li class="breadcrumb-item"><a href="./copernicus_land.html">Copernicus Land Monitoring Service</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">What is a data cube?</h1>
+<h1 class="title">Copernicus Land Monitoring Service (CLMS)</h1>
 </div>
 
 
@@ -453,27 +451,37 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="the-problem-data-cubes-solve" class="level2">
-<h2 class="anchored" data-anchor-id="the-problem-data-cubes-solve">The problem data cubes solve</h2>
-<p>Earth observation missions such as <a href="./landsat.html" target="_blank"><strong>Landsat</strong></a>, <a href="./sentinel.html" target="_blank"><strong>Sentinel</strong></a>, and <a href="https://modis.gsfc.nasa.gov/" target="_blank"><strong>MODIS</strong></a> now provide multi-decade, continuously growing archives of satellite imagery, but this data has traditionally been organised and distributed scene by scene, requiring heavy preprocessing before it can be compared or combined across dates and sensors. A <strong>data cube</strong> addresses this bottleneck: it provides a common framework to catalogue, access, and analyse large volumes of gridded Earth observation data so that routine, reliable, and reproducible analyses, rather than one-off scene processing, can support evidence-based decisions in areas such as environmental monitoring, agriculture, and land management.</p>
+<section id="what-is-clms" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-clms">What is CLMS?</h2>
+<p>The <a href="https://land.copernicus.eu/en" target="_blank"><strong>Copernicus Land Monitoring Service (CLMS)</strong></a> is one of the six thematic services of the EU’s Copernicus programme, implemented by the European Environment Agency (EEA) and the Joint Research Centre (JRC). It provides geospatial information on land cover and its changes, land use, vegetation state, the water cycle, ground motion, and land surface energy variables, for both Europe and the globe, informing applications such as forest management, nature conservation, agriculture, and urban planning.</p>
 </section>
-<section id="what-a-data-cube-is" class="level2">
-<h2 class="anchored" data-anchor-id="what-a-data-cube-is">What a data cube is</h2>
-<p>Technically, a data cube is an open-source geospatial data management and analysis platform (the <strong>Open Data Cube (ODC)</strong> being the most widely adopted implementation) that organises satellite imagery and other gridded data (elevation models, geophysical grids, model outputs) along space, time, and spectral dimensions. Unlike traditional scene-based approaches, every observation is preserved individually, enabling a shift from scene-based to pixel-based analysis. It exposes this data through a Python API, a catalogue of indexed products, and complementary tools such as the Open Data Cube Explorer, Jupyter notebooks, and OGC web services.</p>
-<p><img src="images/DataCube_concept.png" class="img-fluid" width="700"></p>
+<section id="portfolio" class="level2">
+<h2 class="anchored" data-anchor-id="portfolio">Portfolio</h2>
+<p>CLMS data are organised into several product groups:</p>
+<ul>
+<li><strong>Land cover and land use mapping</strong> — pan-European (e.g.&nbsp;CORINE Land Cover, CLC+ Backbone) and global land cover classifications, complemented by detailed layers such as imperviousness, forests, grassland, and water/wetness.</li>
+<li><strong>Priority area (Hot Spot) monitoring</strong> — tailored, higher-resolution land cover, land use, and crop type information for areas prone to environmental change.</li>
+<li><strong>Bio-geophysical parameters</strong> — long time-series of global and pan-European variables describing vegetation (leaf area index, vegetation indices, productivity), the water cycle (soil moisture, snow and water bodies), and energy budget.</li>
+<li><strong>Ground motion</strong> — the European Ground Motion Service, derived from Sentinel-1 InSAR data, to detect subsidence, landslides, and other surface deformation.</li>
+<li><strong>High-resolution image mosaics</strong> — satellite image mosaics covering Europe, used as the basis for many other CLMS products.</li>
+</ul>
 </section>
-<section id="setting-up-a-data-cube" class="level2">
-<h2 class="anchored" data-anchor-id="setting-up-a-data-cube">Setting up a data cube</h2>
-<p>Setting up a data cube typically follows a few main steps: selecting and deploying the underlying infrastructure (local, HPC, or cloud) and installing the ODC software stack; defining the interfaces and standards used to describe the data, such as <a href="./glossary.html#stac" target="_blank"><strong>STAC</strong></a> and OGC web services; preparing and indexing the data (usually <a href="./glossary.html#analysis-ready-data" target="_blank"><strong>Analysis Ready Data</strong></a> (ARD)) as datasets and products with standardised metadata; and building a catalogue for discovery, along with the tools (explorer, notebooks, APIs) needed to query, process, and exploit the cube.</p>
-</section>
-<section id="existing-data-cube-deployments" class="level2">
-<h2 class="anchored" data-anchor-id="existing-data-cube-deployments">Existing data cube deployments</h2>
-<p>Several operational data cubes now build on this open-source foundation at different scales, including the <a href="https://www.swissdatacube.org/" target="_blank"><strong>Swiss Data Cube</strong></a>, jointly operated by the University of Geneva, UNEP/GRID-Geneva, the University of Zurich, and the WSL; <a href="https://www.digitalearthafrica.org/" target="_blank"><strong>Digital Earth Africa</strong></a>, delivering continental-scale Earth observation services across Africa; and <a href="https://www.dea.ga.gov.au/" target="_blank"><strong>Digital Earth Australia</strong></a>, run by Geoscience Australia to track more than 30 years of landscape change. The <a href="./nostradamus_datacube_intro.html" target="_blank"><strong>Nostradamus datacube</strong></a> presented in this site follows the same approach, adapted to the project’s agricultural case studies.</p>
-<p>Beyond the Open Data Cube itself, other platforms exist for managing and analysing large volumes of Earth observation data (see <a href="./other_datacube_platforms.html" target="_blank"><strong>Other datacube platforms</strong></a> for an overview).</p>
-</section>
-<section id="what-can-a-data-cube-be-used-for" class="level2">
-<h2 class="anchored" data-anchor-id="what-can-a-data-cube-be-used-for">What can a data cube be used for?</h2>
-<p>A data cube can support many different applications, from vegetation and drought monitoring to snow cover mapping and archaeological research. Publications showing concrete applications of the Swiss Data Cube, along with the indices computed from it, are available on the <a href="./publications.html" target="_blank"><strong>Publications</strong></a> page.</p>
+<section id="access" class="level2">
+<h2 class="anchored" data-anchor-id="access">Access</h2>
+<p>CLMS products are freely available, after registration, through the <a href="https://land.copernicus.eu/en" target="_blank">CLMS portal</a>, and a growing subset is also directly accessible via the <a href="https://dataspace.copernicus.eu/" target="_blank">Copernicus Data Space Ecosystem</a> (S3, OData, Sentinel Hub API, Copernicus Browser).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <a href="./clms_clcplus.html" target="_blank"><strong>CLMS CLC+ Backbone</strong></a> product, used in the Nostradamus datacube, is one of the pan-European land cover products delivered by this service.</p>
+</div>
+</div>
 
 
 </section>
