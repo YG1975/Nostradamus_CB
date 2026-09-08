@@ -4,7 +4,7 @@ title: "What is a data cube?"
 
 ## The problem data cubes solve
 
-Earth observation missions such as [**Landsat**](landsat.qmd){target="_blank"}, [**Sentinel**](sentinel.qmd){target="_blank"}, and [**MODIS**](https://modis.gsfc.nasa.gov/){target="_blank"} now provide multi-decade, continuously growing archives of satellite imagery, but this data has traditionally been organised and distributed scene by scene, requiring heavy preprocessing before it can be compared or combined across dates and sensors. A **data cube** addresses this bottleneck: it provides a common framework to catalogue, access, and analyse large volumes of gridded Earth observation data so that routine, reliable, and reproducible analyses, rather than one-off scene processing, can support evidence-based decisions in areas such as environmental monitoring, agriculture, and land management.
+Eart observation missions such as [**Landsat**](landsat.qmd){target="_blank"}, [**Sentinel**](sentinel.qmd){target="_blank"}, and [**MODIS**](https://modis.gsfc.nasa.gov/){target="_blank"} now provide multi-decade, continuously growing archives of satellite imagery, but this data has traditionally been organised and distributed scene by scene, requiring heavy preprocessing before it can be compared or combined across dates and sensors. A **data cube** addresses this bottleneck: it provides a common framework to catalogue, access, and analyse large volumes of gridded Earth observation data so that routine, reliable, and reproducible analyses, rather than one-off scene processing, can support evidence-based decisions in areas such as environmental monitoring, agriculture, and land management.
 
 ## What a data cube is
 
