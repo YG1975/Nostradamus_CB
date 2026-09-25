@@ -1354,7 +1354,7 @@
     "href": "nostradamus_datacube_overview.html#nostradamus-datacubes",
     "title": "Nostradamus datacube ",
     "section": "Nostradamus datacubes",
-    "text": "Nostradamus datacubes\nThe Nostradamus datacubes are implementation of the Open Data Cube approach developed within the Nostradamus project, adapted to the project’s agricultural demonstration sites. They are deployed as several customised cube in a boxinstances (one per demonstration site) from the original cube in a box.\nAs of August 2026, five datacube instances have been deployed within the Nostradamus project:\n\nCyprus\nGermany\nSlovenia\nSerbia\nSwitzerland\n\nThey all contain the same elements, but cropped to the concerned case studies examples.",
+    "text": "Nostradamus datacubes\nThe Nostradamus datacubes are implementation of the Open Data Cube approach developed within the Nostradamus project, adapted to the project’s agricultural demonstration sites. They are deployed as several customised cube in a boxinstances (one per demonstration site) from the original cube in a box.\nAs of August 2026, five datacube instances have been deployed within the Nostradamus project:\n\nCyprus\nGermany\nSlovenia\nSerbia\nSwitzerland\n\nThey all contain the same default elements and are cropped to the concerned case studies extents.",
     "crumbs": [
       "Nostradamus datacube",
       "Overview"

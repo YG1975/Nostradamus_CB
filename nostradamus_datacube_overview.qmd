@@ -22,7 +22,7 @@ As of August 2026, five datacube instances have been deployed within the Nostrad
 
 - [Switzerland](https://switzerland-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
 
-They all contain the same elements, but cropped to the concerned case studies examples.
+They all contain the same default elements and are cropped to the concerned case studies extents.
 
 ## Modifications from the original Cube-in-a-Box
 
