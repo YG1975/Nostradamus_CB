@@ -6,11 +6,27 @@ title: "Nostradamus datacube ![](images/NOSTRADAMUS_logo.png){width=150px style=
 
 This work is part of **Work Package 5 (WP5) – Development & Implementation of Data Cubes** of the **Nostradamus** project, led by the University of Geneva. WP5 aims to provide guidance for producing rasterized data from sources such as satellite imagery and existing geospatial databases for effective ingestion into Data Cubes, to develop a dedicated Data Cube for each participating country's agricultural case study area, and to implement an exploitation platform built on these Data Cubes. It integrates satellite sensor, in-situ, and ancillary data, defining entry points for real-time streams, environmental datasets, and spatiotemporal data cubes, building on synergies with related initiatives such as the **LandShift** project to share infrastructure and mutualize development efforts. The resulting platform provides [**demo notebooks**](jupyter.qmd){target="_blank"} by default, lets users download new data and index scenes using [**STAC**](stac_datastore.qmd){target="_blank"}, and makes newly ingested data immediately visible for exploration in the Data Cube explorer.
 
+## Nostradamus datacubes
+
+The **Nostradamus datacubes** are implementation of the Open Data Cube approach developed within the [Nostradamus project](https://cordis.europa.eu/project/id/101135941){target="_blank"}, adapted to the project's agricultural demonstration sites. They are deployed as several customised [**cube in a box**](https://github.com/LivingEarthLab/cube-in-a-box){target="_blank"}instances (one per demonstration site) from the [original cube in a box](https://github.com/opendatacube/cube-in-a-box){target="_blank"}.
+
+As of August 2026, five datacube instances have been deployed within the Nostradamus project:
+
+- [Cyprus](https://cyprus-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+
+- [Germany](https://germany-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+
+- [Slovenia](https://slovenia-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+
+- [Serbia](https://serbia-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+
+- [Switzerland](https://switzerland-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+
+They all contain the same elements, but cropped to the concerned case studies examples.
+
 ## Modifications from the original Cube-in-a-Box
 
-A dedicated [**cube in a box**](https://github.com/LivingEarthLab/cube-in-a-box){target="_blank"} has been deployed for the **Nostradamus** project. It is a **modifed clone** from the [original cube in a box](https://github.com/opendatacube/cube-in-a-box){target="_blank"}.
-
-The following **modifications** have been done on the original cube in a box to become the [Nostradamus data cube](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter){target="_blank"}:
+In each of these instances, the following **modifications** have been done on the original cube in a box to become the [Nostradamus data cube](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter){target="_blank"}:
 
 - the default [**Jupyter notebook**](jupyter.qmd#jupyter-notebook){target="_blank"} has been replaced by a multi-user [**JupyterHub**](jupyter.html#jupyterhub){target="_blank"}
 
@@ -26,7 +42,7 @@ The following **modifications** have been done on the original cube in a box to 
 
 - a [**Dask**](https://www.dask.org/){target="_blank"} python library has been added for performing parallel and distributed processing, which is necessary for large data processing
 
-- The default **ESRI Land Cover source** in Planetary Computer ([https://planetarycomputer.microsoft.com/dataset/io-lulc)](https://planetarycomputer.microsoft.com/dataset/io-lulc)){target="_blank"} that is deprecated has been replaced by [https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02](https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02){target="_blank"}
+- The default **ESRI Land Cover source** in Planetary Computer ([https://planetarycomputer.microsoft.com/dataset/io-lulc)](https://planetarycomputer.microsoft.com/dataset/io-lulc)){target="\_blank"} that is deprecated has been replaced by [https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02](https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02){target="_blank"}
 
 - the [**Landsat Collection 2 Level 2 Science Products**](landsat.qmd){target="_blank"} have been added
 

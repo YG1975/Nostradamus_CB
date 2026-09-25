@@ -164,12 +164,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Other datacube platforms</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./nostradamus_datacube_intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Nostradamus datacube</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -424,6 +418,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#project-context" id="toc-project-context" class="nav-link active" data-scroll-target="#project-context">Project context</a></li>
+  <li><a href="#nostradamus-datacubes" id="toc-nostradamus-datacubes" class="nav-link" data-scroll-target="#nostradamus-datacubes">Nostradamus datacubes</a></li>
   <li><a href="#modifications-from-the-original-cube-in-a-box" id="toc-modifications-from-the-original-cube-in-a-box" class="nav-link" data-scroll-target="#modifications-from-the-original-cube-in-a-box">Modifications from the original Cube-in-a-Box</a></li>
   </ul>
 </nav>
@@ -454,10 +449,22 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="project-context">Project context</h2>
 <p>This work is part of <strong>Work Package 5 (WP5) – Development &amp; Implementation of Data Cubes</strong> of the <strong>Nostradamus</strong> project, led by the University of Geneva. WP5 aims to provide guidance for producing rasterized data from sources such as satellite imagery and existing geospatial databases for effective ingestion into Data Cubes, to develop a dedicated Data Cube for each participating country’s agricultural case study area, and to implement an exploitation platform built on these Data Cubes. It integrates satellite sensor, in-situ, and ancillary data, defining entry points for real-time streams, environmental datasets, and spatiotemporal data cubes, building on synergies with related initiatives such as the <strong>LandShift</strong> project to share infrastructure and mutualize development efforts. The resulting platform provides <a href="./jupyter.html" target="_blank"><strong>demo notebooks</strong></a> by default, lets users download new data and index scenes using <a href="./stac_datastore.html" target="_blank"><strong>STAC</strong></a>, and makes newly ingested data immediately visible for exploration in the Data Cube explorer.</p>
 </section>
+<section id="nostradamus-datacubes" class="level2">
+<h2 class="anchored" data-anchor-id="nostradamus-datacubes">Nostradamus datacubes</h2>
+<p>The <strong>Nostradamus datacubes</strong> are implementation of the Open Data Cube approach developed within the <a href="https://cordis.europa.eu/project/id/101135941" target="_blank">Nostradamus project</a>, adapted to the project’s agricultural demonstration sites. They are deployed as several customised <a href="https://github.com/LivingEarthLab/cube-in-a-box" target="_blank"><strong>cube in a box</strong></a>instances (one per demonstration site) from the <a href="https://github.com/opendatacube/cube-in-a-box" target="_blank">original cube in a box</a>.</p>
+<p>As of August 2026, five datacube instances have been deployed within the Nostradamus project:</p>
+<ul>
+<li><p><a href="https://cyprus-dc.nostradamus-platform.eu/explorer/products" target="_blank">Cyprus</a></p></li>
+<li><p><a href="https://germany-dc.nostradamus-platform.eu/explorer/products" target="_blank">Germany</a></p></li>
+<li><p><a href="https://slovenia-dc.nostradamus-platform.eu/explorer/products" target="_blank">Slovenia</a></p></li>
+<li><p><a href="https://serbia-dc.nostradamus-platform.eu/explorer/products" target="_blank">Serbia</a></p></li>
+<li><p><a href="https://switzerland-dc.nostradamus-platform.eu/explorer/products" target="_blank">Switzerland</a></p></li>
+</ul>
+<p>They all contain the same elements, but cropped to the concerned case studies examples.</p>
+</section>
 <section id="modifications-from-the-original-cube-in-a-box" class="level2">
 <h2 class="anchored" data-anchor-id="modifications-from-the-original-cube-in-a-box">Modifications from the original Cube-in-a-Box</h2>
-<p>A dedicated <a href="https://github.com/LivingEarthLab/cube-in-a-box" target="_blank"><strong>cube in a box</strong></a> has been deployed for the <strong>Nostradamus</strong> project. It is a <strong>modifed clone</strong> from the <a href="https://github.com/opendatacube/cube-in-a-box" target="_blank">original cube in a box</a>.</p>
-<p>The following <strong>modifications</strong> have been done on the original cube in a box to become the <a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter" target="_blank">Nostradamus data cube</a>:</p>
+<p>In each of these instances, the following <strong>modifications</strong> have been done on the original cube in a box to become the <a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter" target="_blank">Nostradamus data cube</a>:</p>
 <ul>
 <li><p>the default <a href="./jupyter.html#jupyter-notebook" target="_blank"><strong>Jupyter notebook</strong></a> has been replaced by a multi-user <a href="jupyter.html#jupyterhub" target="_blank"><strong>JupyterHub</strong></a></p></li>
 <li><p>the <strong>JupyterHub</strong> instance contains shared folders for collaborative work</p></li>

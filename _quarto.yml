@@ -31,8 +31,6 @@ website:
                 href: dc_quickstart.qmd
           - text: Other datacube platforms
             href: other_datacube_platforms.qmd
-          - text: Nostradamus datacube
-            href: nostradamus_datacube_intro.qmd
       - text: "---"
       - section: "Nostradamus datacube"
         contents:

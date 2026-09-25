@@ -749,7 +749,7 @@
     "href": "nostradamus_datacube_overview.html#modifications-from-the-original-cube-in-a-box",
     "title": "Nostradamus datacube ",
     "section": "Modifications from the original Cube-in-a-Box",
-    "text": "Modifications from the original Cube-in-a-Box\nA dedicated cube in a box has been deployed for the Nostradamus project. It is a modifed clone from the original cube in a box.\nThe following modifications have been done on the original cube in a box to become the Nostradamus data cube:\n\nthe default Jupyter notebook has been replaced by a multi-user JupyterHub\nthe JupyterHub instance contains shared folders for collaborative work\nthe Planetary computer data catalog has been included as a STAC datastore instead of the previous default Sentinel-2 source that was slow and unstable\nan Open Datacube explorer has been added and modified to access Planetary Computer data\na Traefik reverse proxy has been added as a unique entry point of the infrastructure that dispatches the requests to the different services\na multi-architecture support for AMD64 and ARM64 has been added\na Dask python library has been added for performing parallel and distributed processing, which is necessary for large data processing\nThe default ESRI Land Cover source in Planetary Computer (https://planetarycomputer.microsoft.com/dataset/io-lulc)){target=“_blank”} that is deprecated has been replaced by https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02\nthe Landsat Collection 2 Level 2 Science Products have been added\na Jupyter notebook has been modified or created for each available Level2 science product (see details)\nDocumentation has been created for administrators and users",
+    "text": "Modifications from the original Cube-in-a-Box\nIn each of these instances, the following modifications have been done on the original cube in a box to become the Nostradamus data cube:\n\nthe default Jupyter notebook has been replaced by a multi-user JupyterHub\nthe JupyterHub instance contains shared folders for collaborative work\nthe Planetary computer data catalog has been included as a STAC datastore instead of the previous default Sentinel-2 source that was slow and unstable\nan Open Datacube explorer has been added and modified to access Planetary Computer data\na Traefik reverse proxy has been added as a unique entry point of the infrastructure that dispatches the requests to the different services\na multi-architecture support for AMD64 and ARM64 has been added\na Dask python library has been added for performing parallel and distributed processing, which is necessary for large data processing\nThe default ESRI Land Cover source in Planetary Computer (https://planetarycomputer.microsoft.com/dataset/io-lulc)){target=“_blank”} that is deprecated has been replaced by https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02\nthe Landsat Collection 2 Level 2 Science Products have been added\na Jupyter notebook has been modified or created for each available Level2 science product (see details)\nDocumentation has been created for administrators and users",
     "crumbs": [
       "Nostradamus datacube",
       "Overview"
@@ -965,22 +965,14 @@
     "href": "nostradamus_datacube_intro.html",
     "title": "Nostradamus datacube",
     "section": "",
-    "text": "The Nostradamus datacube is the implementation of the Open Data Cube approach developed within the Nostradamus project, adapted to the project’s agricultural demonstration sites. It is deployed as a customised Cube-in-a-Box (CiaB), one instance per demonstration site.",
-    "crumbs": [
-      "Introduction to datacubes",
-      "Nostradamus datacube"
-    ]
+    "text": "The Nostradamus datacube is the implementation of the Open Data Cube approach developed within the Nostradamus project, adapted to the project’s agricultural demonstration sites. It is deployed as a customised Cube-in-a-Box (CiaB), one instance per demonstration site, in Cyprus, Germany, Slovenia, Serbia, and Switzerland.\nFor installation instructions, usage guides, and the full list of data sources used in the Nostradamus datacube (and how they relate to the default Open Data Cube catalog), see the dedicated Nostradamus datacube section and its sub-pages."
   },
   {
     "objectID": "nostradamus_datacube_intro.html#the-nostradamus-datacube-an-open-data-cube-implementation",
     "href": "nostradamus_datacube_intro.html#the-nostradamus-datacube-an-open-data-cube-implementation",
     "title": "Nostradamus datacube",
     "section": "",
-    "text": "The Nostradamus datacube is the implementation of the Open Data Cube approach developed within the Nostradamus project, adapted to the project’s agricultural demonstration sites. It is deployed as a customised Cube-in-a-Box (CiaB), one instance per demonstration site.",
-    "crumbs": [
-      "Introduction to datacubes",
-      "Nostradamus datacube"
-    ]
+    "text": "The Nostradamus datacube is the implementation of the Open Data Cube approach developed within the Nostradamus project, adapted to the project’s agricultural demonstration sites. It is deployed as a customised Cube-in-a-Box (CiaB), one instance per demonstration site, in Cyprus, Germany, Slovenia, Serbia, and Switzerland.\nFor installation instructions, usage guides, and the full list of data sources used in the Nostradamus datacube (and how they relate to the default Open Data Cube catalog), see the dedicated Nostradamus datacube section and its sub-pages."
   },
   {
     "objectID": "nostradamus_datacube_intro.html#deployed-instances",
@@ -1311,6 +1303,61 @@
     "crumbs": [
       "Tutorials",
       "How to index new data into a DC?"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_overview.html#the-nostradamus-datacube-an-open-data-cube-implementation",
+    "href": "nostradamus_datacube_overview.html#the-nostradamus-datacube-an-open-data-cube-implementation",
+    "title": "Nostradamus datacube ",
+    "section": "The Nostradamus datacube, an Open Data Cube implementation",
+    "text": "The Nostradamus datacube, an Open Data Cube implementation\nThe Nostradamus datacube is the implementation of the Open Data Cube approach developed within the Nostradamus project, adapted to the project’s agricultural demonstration sites. It is deployed as a customised Cube-in-a-Box (CiaB), one instance per demonstration site.",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_overview.html#deployed-instances",
+    "href": "nostradamus_datacube_overview.html#deployed-instances",
+    "title": "Nostradamus datacube ",
+    "section": "Deployed instances",
+    "text": "Deployed instances\nAs of August 2026, five datacube instances have been deployed within the Nostradamus project:\n\nCyprus\nGermany\nSlovenia\nSerbia\nSwitzerland",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_overview.html#section",
+    "href": "nostradamus_datacube_overview.html#section",
+    "title": "Nostradamus datacube ",
+    "section": "",
+    "text": "In each of these instances, the following modifications have been done on the original cube in a box to become the Nostradamus data cube:\n\nthe default Jupyter notebook has been replaced by a multi-user JupyterHub\nthe JupyterHub instance contains shared folders for collaborative work\nthe Planetary computer data catalog has been included as a STAC datastore instead of the previous default Sentinel-2 source that was slow and unstable\nan Open Datacube explorer has been added and modified to access Planetary Computer data\na Traefik reverse proxy has been added as a unique entry point of the infrastructure that dispatches the requests to the different services\na multi-architecture support for AMD64 and ARM64 has been added\na Dask python library has been added for performing parallel and distributed processing, which is necessary for large data processing\nThe default ESRI Land Cover source in Planetary Computer (https://planetarycomputer.microsoft.com/dataset/io-lulc)){target=“_blank”} that is deprecated has been replaced by https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02\nthe Landsat Collection 2 Level 2 Science Products have been added\na Jupyter notebook has been modified or created for each available Level2 science product (see details)\nDocumentation has been created for administrators and users",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_overview.html#nostradamus-deployed-data-cubes",
+    "href": "nostradamus_datacube_overview.html#nostradamus-deployed-data-cubes",
+    "title": "Nostradamus datacube ",
+    "section": "Nostradamus deployed data cubes",
+    "text": "Nostradamus deployed data cubes\nSeveral cube in a box instances have been deployed in the frame of the Nostradamus project. They consist in modifed clones from the original cube in a box.\nAs of August 2026, five datacube instances have been deployed within the Nostradamus project:\n\nCyprus\nGermany\nSlovenia\nSerbia\nSwitzerland",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "nostradamus_datacube_overview.html#nostradamus-datacubes",
+    "href": "nostradamus_datacube_overview.html#nostradamus-datacubes",
+    "title": "Nostradamus datacube ",
+    "section": "Nostradamus datacubes",
+    "text": "Nostradamus datacubes\nThe Nostradamus datacubes are implementation of the Open Data Cube approach developed within the Nostradamus project, adapted to the project’s agricultural demonstration sites. They are deployed as several customised cube in a boxinstances (one per demonstration site) from the original cube in a box.\nAs of August 2026, five datacube instances have been deployed within the Nostradamus project:\n\nCyprus\nGermany\nSlovenia\nSerbia\nSwitzerland\n\nThey all contain the same elements, but cropped to the concerned case studies examples.",
+    "crumbs": [
+      "Nostradamus datacube",
+      "Overview"
     ]
   }
 ]

@@ -26,4 +26,4 @@ Several operational data cubes now build on this open-source foundation at diffe
 
 Beyond the Open Data Cube itself, other platforms exist for managing and analysing large volumes of Earth observation data (see [**Other datacube platforms**](other_datacube_platforms.qmd){target="_blank"} for an overview).
 
-## 
+![](images/clipboard-3657012464.png)
