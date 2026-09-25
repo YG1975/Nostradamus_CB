@@ -12,6 +12,10 @@ Technically, a data cube is an open-source geospatial data management and analys
 
 ![](images/DataCube_concept.png){width="700"}
 
+## What can a data cube be used for?
+
+A data cube can support many different applications, from vegetation and drought monitoring to snow cover mapping and archaeological research. Publications showing concrete applications of the Swiss Data Cube, along with the indices computed from it, are available on the [**Publications**](publications.qmd){target="_blank"} page.
+
 ## Setting up a data cube
 
 Setting up a data cube typically follows a few main steps: selecting and deploying the underlying infrastructure (local, HPC, or cloud) and installing the ODC software stack; defining the interfaces and standards used to describe the data, such as [**STAC**](glossary.qmd#stac){target="_blank"} and OGC web services; preparing and indexing the data (usually [**Analysis Ready Data**](glossary.qmd#analysis-ready-data){target="_blank"} (ARD)) as datasets and products with standardised metadata; and building a catalogue for discovery, along with the tools (explorer, notebooks, APIs) needed to query, process, and exploit the cube.
@@ -22,6 +26,4 @@ Several operational data cubes now build on this open-source foundation at diffe
 
 Beyond the Open Data Cube itself, other platforms exist for managing and analysing large volumes of Earth observation data (see [**Other datacube platforms**](other_datacube_platforms.qmd){target="_blank"} for an overview).
 
-## What can a data cube be used for?
-
-A data cube can support many different applications, from vegetation and drought monitoring to snow cover mapping and archaeological research. Publications showing concrete applications of the Swiss Data Cube, along with the indices computed from it, are available on the [**Publications**](publications.qmd){target="_blank"} page.
+## 
