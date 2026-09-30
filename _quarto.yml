@@ -36,8 +36,8 @@ website:
         contents:
           - text: Overview
             href: nostradamus_datacube_overview.qmd
-          - text: Datacube install
-            href: nostradamus_datacube_setup.qmd
+          #- text: Datacube install
+           # href: nostradamus_datacube_setup.qmd
           - text: Datacube use
             href: nostradamus_datacube_use.qmd
           - section: "Data sources used"
