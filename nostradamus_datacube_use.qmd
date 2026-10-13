@@ -26,7 +26,7 @@ When clicking on an existing datacube instance (e.g. [Cyprus](https://cyprus-dc.
 
 The explorer part of the datacube is the Graphical User Interface, that allows to see the content and download data.
 
-**Products**
+### **Products**
 
 In the datacube explorer part, the available products ([data sources installed for the Nostradamus project](nostradamus_datacube_data_sources)) are displayed in the default page and correspond to the "Products" menu.
 
@@ -50,7 +50,7 @@ When clicking on one dataset, it opens a new page specific to the dataset in que
 
 ![](images/clipboard-1801483560.png){width="536"}
 
-**Types**
+### **Types**
 
 The "Types" dropdown menu correspond to the **metadata types**, that describe the structure of the YAML/JSON document accompanying each dataset. The following types area available:
 
@@ -62,7 +62,7 @@ The "Types" dropdown menu correspond to the **metadata types**, that describe th
 
 =\> the **eo3 type** should then be preferred
 
-**Explore**
+### **Explore**
 
 The "Explore" dropdown menu gives access to the following functionalities:
 
