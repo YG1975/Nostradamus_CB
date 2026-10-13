@@ -33,6 +33,7 @@ website:
             href: other_datacube_platforms.qmd
       - text: "---"
       - section: "Nostradamus datacube"
+        href: nostradamus_datacube_overview.qmd
         contents:
           - text: Overview
             href: nostradamus_datacube_overview.qmd

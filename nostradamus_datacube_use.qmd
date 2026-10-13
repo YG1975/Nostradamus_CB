@@ -20,65 +20,90 @@ In order to describe how to use one of the installed Nostradamus datacubes, the 
 
 When clicking on an existing datacube instance (e.g. [Cyprus](https://cyprus-dc.nostradamus-platform.eu/explorer/products){target="_blank"}), you will automatically be re-directed to the **explorer** part of this datacube by default (<https://cyprus-dc.nostradamus-platform.eu/explorer>).
 
+![](images/clipboard-3027113721.png){width="572"}
+
 ## The datacube explorer part
 
-## The Jupyter part
+The explorer part of the datacube is the Graphical User Interface, that allows to see the content and download data.
+
+**Products**
+
+In the datacube explorer part, the available products ([data sources installed for the Nostradamus project](nostradamus_datacube_data_sources)) are displayed in the default page and correspond to the "Products" menu.
+
+![](images/clipboard-4074359264.png){width="558"}
+
+Clicking on one of the products (e.g. "esa_worldcover" in the screenshot below) will open a new page containing all relevant information about the dataset:
+
+![](images/clipboard-1006972181.png){width="552"}
+
+- **Years** available in a dropdown list: the years (and months when a year is selected) of data availability for the product selected in the datacube, can be selected. By default it is set on "All"
+
+- **Footprint** or **Datasets** switch:
+
+  - **Footprint**: it shows on the map the total fooprint of the datasets
+
+  - **Datasets**: it shows individually each dataset's footprint; in the case of Cyprus, two footprint extents are available
+
+![](images/clipboard-1303510488.png){width="541"}
+
+When clicking on one dataset, it opens a new page specific to the dataset in question containing a thumbnail, metadata, various links for accessing it. The link "**map**" in the "location" section allows to download the geotiff.
+
+![](images/clipboard-1801483560.png){width="536"}
+
+**Types**
+
+The "Types" dropdown menu correspond to the **metadata types**, that describe the structure of the YAML/JSON document accompanying each dataset. The following types area available:
+
+- **eo**: Legacy Earth Observation metadata format from early ODC versions, with deeply nested fields and full source-dataset lineage embedded in each document. Superseded by eo3 and no longer recommended for new products.
+
+- **eo3**: Current STAC-inspired metadata format with flat properties, an explicit CRS and geometry, and lineage referenced by dataset ID. It is the standard, fully supported format since datacube-core 1.9.
+
+- **telemetry**: Metadata format for raw (level-0) satellite downlink data, describing acquisitions by satellite, sensor, orbit, ground station and pass times. It has no spatial grid for raster loading and is now obsolete.
+
+=\> the **eo3 type** should then be preferred
+
+**Explore**
+
+The "Explore" dropdown menu gives access to the following functionalities:
+
+- **Recently added**: it displays the available products by de-chronological order of addition into the datacube
+
+- **Storage**: it lists the stored products in the datacube and allows to access them directly through hyperlinks
+
+- **Metadata issues**: it is an audit tool that flags products whose dataset metadata Explorer can’t fully use, such as missing or invalid footprints, CRS, dates or summaries, so these can be fixed and re-indexed.
+
+- **Products overview**: it lists every product indexed in the datacube with its key details, such as license type, default CRS and default resolution, giving a quick summary of what the cube contains.
+
+- **Dataset counts**: it is an audit view that shows the raw number of indexed datasets per product, broken down by period (e.g. year and month)
+
+- **About explorer:** it describes the Explorer instance and lists the URLs for downloading its products, metadata types and dataset documents, along with its APIs (footprints, regions, datasets, STAC) and the CSV/text versions of its audit pages.
+
+## The Jupyter notebooks part
+
+The goal for the Nostradamus third parties developers is to use the Jupyter notebooks part of the data cubes to develop their own notebooks.
 
 ### Authorization for using an existing datacube
 
 Only the persons who are whitelisted by the datacube administrator can create an account on the given datacube.
 
 1.  Contact by email the Nostradamus datacube's instance administrator who will give you a username
-2.  Go to the
+2.  Once you have received your username and password, go to <https://cyprus-dc.nostradamus-platform.eu/jupyter>, where you will need to click on "Sign Up" in order to create your password
+3.  Once you have signed up with your password, go back to the login page and sign in; you will reach the following page
 
-## Launching Docker and accessing Jupyter
+![](images/clipboard-990112769.png){width="499"}
 
-1)  Launch Docker Desktop and verify that the containers "cube-in-a-box" and "cube-in-a-box-jupyter" have started (this should be automatic at the launch of Docker Desktop)
+4.  Double-click on the "shared" folder, which will open the structure contained. The "HOW_TO_USE_SHARED_FOLDERS.txt" file describes how to use it. Keep it mind that you can **only write in all_users/YOUR_USERNAME/** but you can read in all folders of the other users
 
-![](images/Docker_Desktop_containers_launched.png)
+    ![](images/clipboard-413704293.png){width="492"}
 
-::: callout-note
-You can also check in your Terminal that both Docker a Docker compose are running, using the following commands:
+### Use of existing notebooks
 
-docker --version
+The existing demo notebooks are all contained in the /shared/notebooks_demo/ folder. For an overview of the way to use the notebooks, look at the section "Exploring the demo notebooks" of the [How to use an Open Data Cube](2_use_odc.qmd) page.
 
-docker compose version
-:::
+In order to develop your own notebook based on an existing one, copy the one of interest to the root directory first (or shared personal directory), which will allow you to edit and save it. To do so, right click on the notebook of interest and its dependencies (folders documentation, figures, utils) in the “notebooks_demo” folder and paste it at the root directory or your own folder.
 
-2.  Go to <http://localhost/jupyter/> and sign in with you credentials =\> Jupyter server will begin to spawn and the homepage should be ready after a few seconds
+![](images/clipboard-1591310229.png){width="420"}
 
-![](images/Jupyter_nostradamus_homepage.png)
+![](images/clipboard-3520321096.png){width="521"}
 
-## Exploring the demo notebooks
-
-3.  By default, this homepage shows in the left sidebar your own folder. If it is the first time you are using the datacube, your folder should be empty (you can double-click on it to check). On the other hand, if you navigate to */shared/**notebooks_demo*** (by clicking on the tree at the top of the left sidebar) you will see the available demo jupyter notebooks.
-
-![](images/jupyter/Jupyter_demo_notebooks.png)
-
-4.  Double-clicking on a notebook will open it (in read only) and give you the following information:
-
-- **Objective** of the notebook
-
-- **Products** used
-
-- **Data source**
-
-- **Background**
-
-- **Description**
-
-::: callout-note
-- You can edit and execute .ipynb files directly in the ./shared/notebooks_demo directory, but not save any changes.
-- To save any changes, copy the notebook and any potential dependent files to your root directory first (or shared personal directory).
-- The content of the root directory is not visible by others while the one of your your folder is, but only you can edit it.
-:::
-
-## Editing and running a notebook
-
-5.  In order to use these demo notebooks and make changes, you need to copy them into the Jupyter root directory. To do so, right clik on the notebook of interest and its dependencies (folders documentation, figures, utils) in the "notebooks_demo" folder and paste it at the root directory. It should then appear at the same level as the "shared" folder. Alternatively, you can also copy the whole "notebooks_demo" folder to the root directory.
-
-![](images/jupyter/Jupyter_notebook_copy_paste.png)
-
-6.  In order to run a notebook, you have pasted in the root directory, double-click on it, which will open a new tab in teh JupyterLab session with specific tools in the menu bar of the tab. The blue bar on the left shows which cell is selected to be run. In order to process the cell in question, click on the play arrow (titled "run this cell and advance") or click on shift+enter of your keyboard.
-
-![](images/jupyter/Jupyter_notebook_interface.png)
+![](images/clipboard-2570640098.png){width="521"}

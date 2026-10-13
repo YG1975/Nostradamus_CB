@@ -169,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+            <a href="./nostradamus_datacube_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nostradamus datacube</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -411,9 +411,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#launching-docker-and-accessing-jupyter" id="toc-launching-docker-and-accessing-jupyter" class="nav-link active" data-scroll-target="#launching-docker-and-accessing-jupyter">Launching Docker and accessing Jupyter</a></li>
-  <li><a href="#exploring-the-demo-notebooks" id="toc-exploring-the-demo-notebooks" class="nav-link" data-scroll-target="#exploring-the-demo-notebooks">Exploring the demo notebooks</a></li>
-  <li><a href="#editing-and-running-a-notebook" id="toc-editing-and-running-a-notebook" class="nav-link" data-scroll-target="#editing-and-running-a-notebook">Editing and running a notebook</a></li>
+  <li><a href="#accessing-an-existing-datacube" id="toc-accessing-an-existing-datacube" class="nav-link active" data-scroll-target="#accessing-an-existing-datacube">Accessing an existing datacube</a></li>
+  <li><a href="#the-datacube-explorer-part" id="toc-the-datacube-explorer-part" class="nav-link" data-scroll-target="#the-datacube-explorer-part">The datacube explorer part</a></li>
+  <li><a href="#the-jupyter-notebooks-part" id="toc-the-jupyter-notebooks-part" class="nav-link" data-scroll-target="#the-jupyter-notebooks-part">The Jupyter notebooks part</a>
+  <ul class="collapse">
+  <li><a href="#authorization-for-using-an-existing-datacube" id="toc-authorization-for-using-an-existing-datacube" class="nav-link" data-scroll-target="#authorization-for-using-an-existing-datacube">Authorization for using an existing datacube</a></li>
+  <li><a href="#use-of-existing-notebooks" id="toc-use-of-existing-notebooks" class="nav-link" data-scroll-target="#use-of-existing-notebooks">Use of existing notebooks</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -439,78 +443,85 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="launching-docker-and-accessing-jupyter" class="level2">
-<h2 class="anchored" data-anchor-id="launching-docker-and-accessing-jupyter">Launching Docker and accessing Jupyter</h2>
+<p>Several instances of cube-in-a-box have been deployed in the frame of the Nostradamus project, following the usual <a href="1_install_odc">cube-in-a-box installation procedure</a> :</p>
+<ul>
+<li><p><a href="https://cyprus-dc.nostradamus-platform.eu/explorer/products" target="_blank">Cyprus</a></p></li>
+<li><p><a href="https://germany-dc.nostradamus-platform.eu/explorer/products" target="_blank">Germany</a></p></li>
+<li><p><a href="https://slovenia-dc.nostradamus-platform.eu/explorer/products" target="_blank">Slovenia</a></p></li>
+<li><p><a href="https://serbia-dc.nostradamus-platform.eu/explorer/products" target="_blank">Serbia</a></p></li>
+<li><p><a href="https://switzerland-dc.nostradamus-platform.eu/explorer/products" target="_blank">Switzerland</a></p></li>
+</ul>
+<p>In order to describe how to use one of the installed Nostradamus datacubes, the example of the Cyprus one will be taken.</p>
+<section id="accessing-an-existing-datacube" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-an-existing-datacube">Accessing an existing datacube</h2>
+<p>When clicking on an existing datacube instance (e.g.&nbsp;<a href="https://cyprus-dc.nostradamus-platform.eu/explorer/products" target="_blank">Cyprus</a>), you will automatically be re-directed to the <strong>explorer</strong> part of this datacube by default (<a href="https://cyprus-dc.nostradamus-platform.eu/explorer" class="uri">https://cyprus-dc.nostradamus-platform.eu/explorer</a>).</p>
+<p><img src="images/clipboard-3027113721.png" class="img-fluid" width="572"></p>
+</section>
+<section id="the-datacube-explorer-part" class="level2">
+<h2 class="anchored" data-anchor-id="the-datacube-explorer-part">The datacube explorer part</h2>
+<p>The explorer part of the datacube is the Graphical User Interface, that allows to see the content and download data.</p>
+<p><strong>Products</strong></p>
+<p>In the datacube explorer part, the available products (<a href="nostradamus_datacube_data_sources">data sources installed for the Nostradamus project</a>) are displayed in the default page and correspond to the “Products” menu.</p>
+<p><img src="images/clipboard-4074359264.png" class="img-fluid" width="558"></p>
+<p>Clicking on one of the products (e.g.&nbsp;“esa_worldcover” in the screenshot below) will open a new page containing all relevant information about the dataset:</p>
+<p><img src="images/clipboard-1006972181.png" class="img-fluid" width="552"></p>
+<ul>
+<li><p><strong>Years</strong> available in a dropdown list: the years (and months when a year is selected) of data availability for the product selected in the datacube, can be selected. By default it is set on “All”</p></li>
+<li><p><strong>Footprint</strong> or <strong>Datasets</strong> switch:</p>
+<ul>
+<li><p><strong>Footprint</strong>: it shows on the map the total fooprint of the datasets</p></li>
+<li><p><strong>Datasets</strong>: it shows individually each dataset’s footprint; in the case of Cyprus, two footprint extents are available</p></li>
+</ul></li>
+</ul>
+<p><img src="images/clipboard-1303510488.png" class="img-fluid" width="541"></p>
+<p>When clicking on one dataset, it opens a new page specific to the dataset in question containing a thumbnail, metadata, various links for accessing it. The link “<strong>map</strong>” in the “location” section allows to download the geotiff.</p>
+<p><img src="images/clipboard-1801483560.png" class="img-fluid" width="536"></p>
+<p><strong>Types</strong></p>
+<p>The “Types” dropdown menu correspond to the <strong>metadata types</strong>, that describe the structure of the YAML/JSON document accompanying each dataset. The following types area available:</p>
+<ul>
+<li><p><strong>eo</strong>: Legacy Earth Observation metadata format from early ODC versions, with deeply nested fields and full source-dataset lineage embedded in each document. Superseded by eo3 and no longer recommended for new products.</p></li>
+<li><p><strong>eo3</strong>: Current STAC-inspired metadata format with flat properties, an explicit CRS and geometry, and lineage referenced by dataset ID. It is the standard, fully supported format since datacube-core 1.9.</p></li>
+<li><p><strong>telemetry</strong>: Metadata format for raw (level-0) satellite downlink data, describing acquisitions by satellite, sensor, orbit, ground station and pass times. It has no spatial grid for raster loading and is now obsolete.</p></li>
+</ul>
+<p>=&gt; the <strong>eo3 type</strong> should then be preferred</p>
+<p><strong>Explore</strong></p>
+<p>The “Explore” dropdown menu gives access to the following functionalities:</p>
+<ul>
+<li><p><strong>Recently added</strong>: it displays the available products by de-chronological order of addition into the datacube</p></li>
+<li><p><strong>Storage</strong>: it lists the stored products in the datacube and allows to access them directly through hyperlinks</p></li>
+<li><p><strong>Metadata issues</strong>: it is an audit tool that flags products whose dataset metadata Explorer can’t fully use, such as missing or invalid footprints, CRS, dates or summaries, so these can be fixed and re-indexed.</p></li>
+<li><p><strong>Products overview</strong>: it lists every product indexed in the datacube with its key details, such as license type, default CRS and default resolution, giving a quick summary of what the cube contains.</p></li>
+<li><p><strong>Dataset counts</strong>: it is an audit view that shows the raw number of indexed datasets per product, broken down by period (e.g.&nbsp;year and month)</p></li>
+<li><p><strong>About explorer:</strong> it describes the Explorer instance and lists the URLs for downloading its products, metadata types and dataset documents, along with its APIs (footprints, regions, datasets, STAC) and the CSV/text versions of its audit pages.</p></li>
+</ul>
+</section>
+<section id="the-jupyter-notebooks-part" class="level2">
+<h2 class="anchored" data-anchor-id="the-jupyter-notebooks-part">The Jupyter notebooks part</h2>
+<p>The goal for the Nostradamus third parties developers is to use the Jupyter notebooks part of the data cubes to develop their own notebooks.</p>
+<section id="authorization-for-using-an-existing-datacube" class="level3">
+<h3 class="anchored" data-anchor-id="authorization-for-using-an-existing-datacube">Authorization for using an existing datacube</h3>
+<p>Only the persons who are whitelisted by the datacube administrator can create an account on the given datacube.</p>
 <ol type="1">
-<li>Launch Docker Desktop and verify that the containers “cube-in-a-box” and “cube-in-a-box-jupyter” have started (this should be automatic at the launch of Docker Desktop)</li>
+<li>Contact by email the Nostradamus datacube’s instance administrator who will give you a username</li>
+<li>Once you have received your username and password, go to <a href="https://cyprus-dc.nostradamus-platform.eu/jupyter" class="uri">https://cyprus-dc.nostradamus-platform.eu/jupyter</a>, where you will need to click on “Sign Up” in order to create your password</li>
+<li>Once you have signed up with your password, go back to the login page and sign in; you will reach the following page</li>
 </ol>
-<p><img src="images/Docker_Desktop_containers_launched.png" class="img-fluid"></p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>You can also check in your Terminal that both Docker a Docker compose are running, using the following commands:</p>
-<p>docker –version</p>
-<p>docker compose version</p>
-</div>
-</div>
-<ol start="2" type="1">
-<li>Go to <a href="http://localhost/jupyter/" class="uri">http://localhost/jupyter/</a> and sign in with you credentials =&gt; Jupyter server will begin to spawn and the homepage should be ready after a few seconds</li>
-</ol>
-<p><img src="images/Jupyter_nostradamus_homepage.png" class="img-fluid"></p>
-</section>
-<section id="exploring-the-demo-notebooks" class="level2">
-<h2 class="anchored" data-anchor-id="exploring-the-demo-notebooks">Exploring the demo notebooks</h2>
-<ol start="3" type="1">
-<li>By default, this homepage shows in the left sidebar your own folder. If it is the first time you are using the datacube, your folder should be empty (you can double-click on it to check). On the other hand, if you navigate to <em>/shared/<strong>notebooks_demo</strong></em> (by clicking on the tree at the top of the left sidebar) you will see the available demo jupyter notebooks.</li>
-</ol>
-<p><img src="images/jupyter/Jupyter_demo_notebooks.png" class="img-fluid"></p>
+<p><img src="images/clipboard-990112769.png" class="img-fluid" width="499"></p>
 <ol start="4" type="1">
-<li>Double-clicking on a notebook will open it (in read only) and give you the following information:</li>
+<li><p>Double-click on the “shared” folder, which will open the structure contained. The “HOW_TO_USE_SHARED_FOLDERS.txt” file describes how to use it. Keep it mind that you can <strong>only write in all_users/YOUR_USERNAME/</strong> but you can read in all folders of the other users</p>
+<p><img src="images/clipboard-413704293.png" class="img-fluid" width="492"></p></li>
 </ol>
-<ul>
-<li><p><strong>Objective</strong> of the notebook</p></li>
-<li><p><strong>Products</strong> used</p></li>
-<li><p><strong>Data source</strong></p></li>
-<li><p><strong>Background</strong></p></li>
-<li><p><strong>Description</strong></p></li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<ul>
-<li>You can edit and execute .ipynb files directly in the ./shared/notebooks_demo directory, but not save any changes.</li>
-<li>To save any changes, copy the notebook and any potential dependent files to your root directory first (or shared personal directory).</li>
-<li>The content of the root directory is not visible by others while the one of your your folder is, but only you can edit it.</li>
-</ul>
-</div>
-</div>
 </section>
-<section id="editing-and-running-a-notebook" class="level2">
-<h2 class="anchored" data-anchor-id="editing-and-running-a-notebook">Editing and running a notebook</h2>
-<ol start="5" type="1">
-<li>In order to use these demo notebooks and make changes, you need to copy them into the Jupyter root directory. To do so, right clik on the notebook of interest and its dependencies (folders documentation, figures, utils) in the “notebooks_demo” folder and paste it at the root directory. It should then appear at the same level as the “shared” folder. Alternatively, you can also copy the whole “notebooks_demo” folder to the root directory.</li>
-</ol>
-<p><img src="images/jupyter/Jupyter_notebook_copy_paste.png" class="img-fluid"></p>
-<ol start="6" type="1">
-<li>In order to run a notebook, you have pasted in the root directory, double-click on it, which will open a new tab in teh JupyterLab session with specific tools in the menu bar of the tab. The blue bar on the left shows which cell is selected to be run. In order to process the cell in question, click on the play arrow (titled “run this cell and advance”) or click on shift+enter of your keyboard.</li>
-</ol>
-<p><img src="images/jupyter/Jupyter_notebook_interface.png" class="img-fluid"></p>
+<section id="use-of-existing-notebooks" class="level3">
+<h3 class="anchored" data-anchor-id="use-of-existing-notebooks">Use of existing notebooks</h3>
+<p>The existing demo notebooks are all contained in the /shared/notebooks_demo/ folder. For an overview of the way to use the notebooks, look at the section “Exploring the demo notebooks” of the <a href="./2_use_odc.html">How to use an Open Data Cube</a> page.</p>
+<p>In order to develop your own notebook based on an existing one, copy the one of interest to the root directory first (or shared personal directory), which will allow you to edit and save it. To do so, right click on the notebook of interest and its dependencies (folders documentation, figures, utils) in the “notebooks_demo” folder and paste it at the root directory or your own folder.</p>
+<p><img src="images/clipboard-1591310229.png" class="img-fluid" width="420"></p>
+<p><img src="images/clipboard-3520321096.png" class="img-fluid" width="521"></p>
+<p><img src="images/clipboard-2570640098.png" class="img-fluid" width="521"></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

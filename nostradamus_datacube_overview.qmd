@@ -8,7 +8,7 @@ This work is part of **Work Package 5 (WP5) – Development & Implementation of 
 
 ## Nostradamus datacubes
 
-The **Nostradamus datacubes** are implementation of the Open Data Cube approach developed within the [Nostradamus project](https://cordis.europa.eu/project/id/101135941){target="_blank"}, adapted to the project's agricultural demonstration sites. They are deployed as several customised [**cube in a box**](https://github.com/LivingEarthLab/cube-in-a-box){target="_blank"}instances (one per demonstration site) from the [original cube in a box](https://github.com/opendatacube/cube-in-a-box){target="_blank"}.
+The **Nostradamus datacubes** are implementation of the Open Data Cube approach developed within the [Nostradamus project](https://cordis.europa.eu/project/id/101135941){target="_blank"}, adapted to the project's agricultural demonstration sites. They are deployed as several customised [**cube in a box**](https://github.com/LivingEarthLab/cube-in-a-box){target="_blank"} instances (one per demonstration site) from the [original cube in a box](https://github.com/opendatacube/cube-in-a-box){target="_blank"}.
 
 As of August 2026, five datacube instances have been deployed within the Nostradamus project:
 

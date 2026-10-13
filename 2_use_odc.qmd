@@ -50,6 +50,6 @@ docker compose version
 
 ![](images/jupyter/Jupyter_notebook_copy_paste.png)
 
-6.  In order to run a notebook, you have pasted in the root directory, double-click on it, which will open a new tab in teh JupyterLab session with specific tools in the menu bar of the tab. The blue bar on the left shows which cell is selected to be run. In order to process the cell in question, click on the play arrow (titled "run this cell and advance") or click on shift+enter of your keyboard.
+6.  In order to run a notebook you have pasted in the root directory, double-click on it, which will open a new tab in the JupyterLab session with specific tools in the menu bar of the tab. The blue bar on the left shows which cell is selected to be run. In order to process the cell in question, click on the play arrow (titled "run this cell and advance") or click on shift+enter of your keyboard.
 
 ![](images/jupyter/Jupyter_notebook_interface.png)
