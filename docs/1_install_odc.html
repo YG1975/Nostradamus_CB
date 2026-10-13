@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>How to install an Open Data Cube?</title>
+<title>Cube-in-a-box installation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -164,12 +199,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Other datacube platforms</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./nostradamus_datacube_intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Nostradamus datacube</span></a>
-  </div>
-</li>
       </ul>
   </li>
         <li class="px-0"><hr class="sidebar-divider hi "></li>
@@ -186,12 +215,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="sidebar-item-container"> 
   <a href="./nostradamus_datacube_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./nostradamus_datacube_setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Datacube install</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -423,7 +446,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#docker" id="toc-docker" class="nav-link active" data-scroll-target="#docker"><strong>Docker</strong></a></li>
+  <li><a href="#terminal" id="toc-terminal" class="nav-link" data-scroll-target="#terminal"><strong>Terminal</strong></a></li>
+  <li><a href="#web-browser" id="toc-web-browser" class="nav-link" data-scroll-target="#web-browser"><strong>Web browser</strong></a></li>
   </ul>
 </nav>
     </div>
@@ -432,7 +457,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./tutorials.html">Tutorials</a></li><li class="breadcrumb-item"><a href="./1_install_odc.html">How to install an Open Data Cube?</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">How to install an Open Data Cube?</h1>
+<h1 class="title">Cube-in-a-box installation</h1>
 </div>
 
 
@@ -449,15 +474,118 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Installing a data cube involves a number of steps, described in detail on the <a href="./dc_installation.html" target="_blank"><strong>Installation</strong></a> page.</p>
-<p>Within the Nostradamus project, a step-by-step installation procedure for the datacube has been documented and can be used as a reference: see the <a href="./nostradamus_datacube_setup.html" target="_blank"><strong>Nostradamus datacube install</strong></a> page.</p>
-<p>In addition, a general Cube-in-a-Box installation procedure and an administrator guide are also available:</p>
-<ul>
-<li><a href="https://github.com/LivingEarthLab/cube-in-a-box" target="_blank"><strong>Cube-in-a-Box repository</strong></a></li>
-<li><a href="https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/admin/Living-Earth-Cube-in-a-Box---Admin-Guide.pdf" target="_blank"><strong>Living Earth Cube-in-a-Box — Admin Guide (PDF)</strong></a></li>
-</ul>
+<p>Installing a data cube involves a number of steps, described in detail on the <a href="./dc_installation.html" target="_blank"><strong>Installation</strong></a> page. The following part is a step-by-step installation procedure for installing a cube-in-a-box.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A <a href="https://github.com/LivingEarthLab/cube-in-a-box" target="_blank">detailed installation procedure</a> and other <a href="https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/admin/Living-Earth-Cube-in-a-Box---Admin-Guide.pdf" target="_blank">admin</a> and <a href="https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/user/Living-Earth-Cube-in-a-Box---User-Guide.pdf" target="_blank">user</a> tutorials exist. The steps below consist in additional help to the links mentioned for a Docker install of an Open Data Cube</p>
+</div>
+</div>
+<section id="docker" class="level1">
+<h1><strong>Docker</strong></h1>
+<ol type="1">
+<li><p>Install <a href="https://www.docker.com/products/docker-desktop" target="_blank">Docker desktop</a> for your operating system and launch it</p></li>
+<li><p>To make sure all works fine, type the following commands in your Terminal (example on Mac OS):</p></li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>docker –-version </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>and</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>docker compose version</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If corresponding information is returned, it means all is working fine for your Docker session and you can proceed to the next steps</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>At this stage, don’t start yet any Docker container</p>
+</div>
+</div>
+</section>
+<section id="terminal" class="level1">
+<h1><strong>Terminal</strong></h1>
+<ol start="3" type="1">
+<li>Clone the Nostradamus jupyter cube into your local Docker application by typing the following command:</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>git clone https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter.git</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This will create a cube-in-a-box-jupyter folder with all the necessary Docker files. In case the folder already exists, use the pull command (more info in the <a href="./faq.html" target="_blank">FAQ</a> page)</p>
+<ol start="4" type="1">
+<li>Once the installation is finalized, go to the newly created folder by typing in your Terminal</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>cd cube-in-a-box-jupyter</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="5" type="1">
+<li>After a first install, you need to setup the environment variables (in the .env file). To do so, you need first to copy the existing default .env file by typing</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>cp .env.default .env</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ol start="6" type="1">
+<li><p>As both the original .env.default and copied .env files are hidden files, you need to activate the hidden files display in your system (e.g.&nbsp;Cmd + Shift + . in Mac finder)</p></li>
+<li><p>Open then the .env file you copied (for example in a text editor) and add a user (for example your first name) with an admin role in the line JUPYTERHUB_ADMINS, adding a comma after “admin”</p></li>
+</ol>
+<p><img src="images/env_file_admin.png" class="img-fluid" width="300"></p>
+<ol start="8" type="1">
+<li>Restart JupyterHub to take these changes into account</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>docker-compose restart jupyterhub</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<!-- -->
+<ol start="9" type="1">
+<li>Use then the <code>make setup</code> command to initiate the datacube before using it. You can either simply type <code>make setup</code>, which will deploy the datacube with all layers available, or you can filter a specific area of interest using the BBOX parameter (e.g.&nbsp;<code>make setup BBOX=5.95,45.81,10.50,47.81</code>) and the DATETIME parameter specifying a particular time range (e.g.&nbsp;<code>make setup BBOX=5.95,45.81,10.50,47.81 DATETIME=2024-01-01/2024-12-31</code>)</li>
+</ol>
+<p>Your Terminal should be showing activity</p>
+</section>
+<section id="web-browser" class="level1">
+<h1><strong>Web browser</strong></h1>
+<ol start="10" type="1">
+<li>Go to <a href="http://localhost/explorer/products" target="_blank">http://localhost/explorer/products</a> to check if all is working fine. If it is the case, you should see an image like the one below</li>
+</ol>
+<p><img src="images/ODC_products.png" class="img-fluid"></p>
+<ol start="11" type="1">
+<li>Go to <a href="http://localhost/jupyter" target="_blank">http://localhost/jupyter</a> and click on signup to create a new user corresponding to the one you have attributed the admin role in point 7.</li>
+</ol>
+<p><img src="images/Jupyter_signup.png" class="img-fluid" width="212"></p>
+<ol start="12" type="1">
+<li>In the next screen, enter this user and give a password. If all works fine, you should see a confirmation message saying that the signup was successful.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Do not forget to write down your username and password as these will be needed for later login for using the data cube</p>
+</div>
+</div>
+<ol start="13" type="1">
+<li>On this same screen, click on the <a href="http://localhost/jupyter/hub/login" target="_blank">login</a> link and log in with the credentials you just created. If all works fine, you should reach in your browser the homepage of the JupyterHub interface of the Nostradamus datacube.</li>
+</ol>
+<p><img src="images/Jupyter_nostradamus_homepage.png" class="img-fluid"></p>
+<p>If you check your Docker desktop instance, a container with a name containing “cube-in-a-box” should be running.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>the url to reach your the homepage of the JupyterHub interface of the Nostradamus datacube should be localhost/jupyter/user/[username]/lab</p>
+</div>
+</div>
 
 
 </section>

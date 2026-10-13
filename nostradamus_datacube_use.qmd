@@ -2,6 +2,35 @@
 title: "Nostradamus datacube use"
 ---
 
+Several instances of cube-in-a-box have been deployed in the frame of the Nostradamus project, following the usual [cube-in-a-box installation procedure](1_install_odc) :
+
+- [Cyprus](https://cyprus-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+
+- [Germany](https://germany-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+
+- [Slovenia](https://slovenia-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+
+- [Serbia](https://serbia-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+
+- [Switzerland](https://switzerland-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+
+In order to describe how to use one of the installed Nostradamus datacubes, the example of the Cyprus one will be taken.
+
+## Accessing an existing datacube
+
+When clicking on an existing datacube instance (e.g. [Cyprus](https://cyprus-dc.nostradamus-platform.eu/explorer/products){target="_blank"}), you will automatically be re-directed to the **explorer** part of this datacube by default (<https://cyprus-dc.nostradamus-platform.eu/explorer>).
+
+## The datacube explorer part
+
+## The Jupyter part
+
+### Authorization for using an existing datacube
+
+Only the persons who are whitelisted by the datacube administrator can create an account on the given datacube.
+
+1.  Contact by email the Nostradamus datacube's instance administrator who will give you a username
+2.  Go to the
+
 ## Launching Docker and accessing Jupyter
 
 1)  Launch Docker Desktop and verify that the containers "cube-in-a-box" and "cube-in-a-box-jupyter" have started (this should be automatic at the launch of Docker Desktop)
@@ -26,23 +55,22 @@ docker compose version
 
 ![](images/jupyter/Jupyter_demo_notebooks.png)
 
-
 4.  Double-clicking on a notebook will open it (in read only) and give you the following information:
 
--   **Objective** of the notebook
+- **Objective** of the notebook
 
--   **Products** used
+- **Products** used
 
--   **Data source**
+- **Data source**
 
--   **Background**
+- **Background**
 
--   **Description**
+- **Description**
 
 ::: callout-note
--   You can edit and execute .ipynb files directly in the ./shared/notebooks_demo directory, but not save any changes.
--   To save any changes, copy the notebook and any potential dependent files to your root directory first (or shared personal directory).
-- The content of the root directory is not visible by others while the one of your your folder is, but only you can edit it. 
+- You can edit and execute .ipynb files directly in the ./shared/notebooks_demo directory, but not save any changes.
+- To save any changes, copy the notebook and any potential dependent files to your root directory first (or shared personal directory).
+- The content of the root directory is not visible by others while the one of your your folder is, but only you can edit it.
 :::
 
 ## Editing and running a notebook
