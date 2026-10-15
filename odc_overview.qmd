@@ -24,4 +24,4 @@ The [**Installation**](dc_installation.qmd){target="_blank"} and [**Quick Start*
 
 ## Project and community
 
-ODC is maintained as a community open-source project, with its source code, issue tracker, and documentation hosted on [**GitHub**](https://github.com/opendatacube){target="_blank"} and [**Read the Docs**](https://opendatacube.readthedocs.io/en/latest/){target="_blank"}. It is governed openly, with contributions from the agencies and research groups that operate the deployments listed above.
+ODC is maintained as a community open-source project, with its source code, issue tracker, and documentation hosted on [**GitHub**](https://github.com/opendatacube){target="_blank"} and [**Read the Docs**](https://opendatacube.readthedocs.io/en/latest/){target="_blank"}. It is governed openly, with contributions from the agencies and research groups that operate the deployments listed in [Existing Data Cube deployments](dc_overview.qmd#existing-data-cube-deployments).

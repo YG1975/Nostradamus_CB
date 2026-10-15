@@ -78,7 +78,7 @@ The "Explore" dropdown menu gives access to the following functionalities:
 
 ## Accessing the Jupyter notebooks part
 
-The goal for the Nostradamus third parties developers is to use the Jupyter notebooks part of the Data Cubes to:
+The goal for the Nostradamus applications developpers is to use the Jupyter notebooks part of the Data Cubes to:
 
 1.  discover available products and learn how to interact with them through demo jupyter notebooks
 2.  develop their own notebooks

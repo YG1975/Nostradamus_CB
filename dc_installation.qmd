@@ -10,9 +10,9 @@ Installing a Data Cube involves two main phases. The first is setting up the und
 
 Once the software stack is running and connected to its database, the second phase consists of populating the cube: describing the data to be added through **product definitions** and **dataset documents**, then indexing it so it becomes searchable and accessible through the ODC API and tools. Indexing only records metadata about the data; it does not copy, move, or transform the underlying files, making the process fast and safe to repeat.
 
-## Nostradamus installation
+## Open Data Cube installation
 
-For the Nostradamus project, this installation is simplified through a pre-packaged Docker deployment (see [**Nostradamus datacube install**](nostradamus_datacube_setup.qmd){target="_blank"}), which already covers these steps automatically.
+As an example, the Nostradamus project, this installation is simplified through a pre-packaged Docker deployment (see [**Nostradamus datacube install**](1_install_odc.qmd){target="_blank"}), which already covers these steps automatically.
 
 The diagram below summarises this workflow; see the [**Quick Start**](dc_quickstart.qmd){target="_blank"} page for the detailed step-by-step instructions.
 

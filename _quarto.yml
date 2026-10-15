@@ -27,8 +27,8 @@ website:
                 href: odc_overview.qmd
               - text: Installation
                 href: dc_installation.qmd
-              - text: Quick Start
-                href: dc_quickstart.qmd
+              # - text: Quick Start
+              #   href: dc_quickstart.qmd
           - text: Other datacube platforms
             href: other_datacube_platforms.qmd
       - text: "---"
@@ -41,13 +41,8 @@ website:
            # href: nostradamus_datacube_setup.qmd
           - text: Datacube use
             href: nostradamus_datacube_use.qmd
-          - section: "Data sources used"
+          - text: "Data sources used"
             href: nostradamus_datacube_data_sources.qmd
-            contents:
-              - text: CLMS CLC+ Backbone
-                href: clms_clcplus.qmd
-              - text: AlphaEarth Foundations
-                href: aef_annual.qmd
      # - section: "Monalisa datacube"
        # contents:
        #   - text: Overview
@@ -96,6 +91,10 @@ website:
             href: io_lulc.qmd
           - text: Copernicus Land Monitoring Service
             href: copernicus_land.qmd
+          - text: CLMS CLC+ Backbone
+            href: clms_clcplus.qmd
+          - text: AlphaEarth Foundations
+            href: aef_annual.qmd
       - section: "Tools"
         contents:
           - text: Jupyter

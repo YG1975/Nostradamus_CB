@@ -4,7 +4,7 @@
     "href": "questions.html",
     "title": "",
     "section": "",
-    "text": "https://yg1975.github.io/Nostradamus_CB/\n\n“and the main steps involved in setting them up” -&gt; Really ? Seems admin task.\n“The site documents how to install” -&gt; Same comment\n\nhttps://yg1975.github.io/Nostradamus_CB/dc_overview.html\n\n“and OGC web services.” 2x -&gt; not implemented\n“The Nostradamus datacube presented in this site” -&gt; singular ?\n“Complementary tools” (datacube-ows, datacuce-stats) -&gt; not implemented\n“Once populated, the cube can be queried through the Python API, browsed through the Explorer, or served via OGC web services,” -&gt; same comment, plus, miss the main component (Jupyter notebooks and STAC)\n“with contributions from the agencies and research groups that operate the deployments listed above.” -&gt; “above” where ?\n\nhttps://yg1975.github.io/Nostradamus_CB/dc_installation.html\n\n“Nostradamus installation” chapter outside of Nostradamus section\n“Nostradamus datacube install” link to https://yg1975.github.io/Nostradamus_CB/nostradamus_datacube_setup.html, when the same link in “Nostrdamus datacube” section link to https://yg1975.github.io/Nostradamus_CB/1_install_odc.html\n\nhttps://yg1975.github.io/Nostradamus_CB/dc_quickstart.html\n\n“Data cubes quickstart” -&gt; admin only and not quick (docker is quick) -&gt; should probably be removed\n\nhttps://yg1975.github.io/Nostradamus_CB/nostradamus_datacube_overview.html\n\n“It integrates … in-situ, and ancillary data, defining entry points for real-time streams,” -&gt; not yet\n\nhttps://yg1975.github.io/Nostradamus_CB/nostradamus_datacube_use.html\n\n“The goal for the Nostradamus third parties developers is…” -&gt; ???\n\nhttps://yg1975.github.io/Nostradamus_CB/nostradamus_datacube_data_sources.html\n\n“Data sources used” chapter -&gt; why two sub chapters (https://yg1975.github.io/Nostradamus_CB/clms_clcplus.html, https://yg1975.github.io/Nostradamus_CB/aef_annual.html)?\nsources mentioned but not in default catalog\n\nhttps://yg1975.github.io/Nostradamus_CB/tutorials.html\n\nhttps://yg1975.github.io/Nostradamus_CB/1_install_odc.html -&gt; Admin and redundant with https://yg1975.github.io/Nostradamus_CB/dc_installation.html -&gt; 2x maintenance\nhttps://yg1975.github.io/Nostradamus_CB/2_use_odc.html -&gt; Redundant with https://yg1975.github.io/Nostradamus_CB/nostradamus_datacube_use.html -&gt; 2x maintenance\nhttps://yg1975.github.io/Nostradamus_CB/3_new_data_into_dc.html -&gt; admin only, probably to be added later based on user needs, chapter mentioned in https://yg1975.github.io/Nostradamus_CB/4_retrieve_data_python_api.html\n\nhttp://127.0.0.1:4321/jupyter.html\n\nInstallation seems to be Linux/Mac oriented (WSL in Windows ?)"
+    "text": "https://yg1975.github.io/Nostradamus_CB/\n\n“and the main steps involved in setting them up” -&gt; Really ? Seems admin task.\n“The site documents how to install” -&gt; Same comment\n\nhttps://yg1975.github.io/Nostradamus_CB/dc_overview.html\n\n“and OGC web services.” 2x -&gt; not implemented\n“The Nostradamus datacube presented in this site” -&gt; singular ?\n“Complementary tools” (datacube-ows, datacuce-stats) -&gt; not implemented\n“Once populated, the cube can be queried through the Python API, browsed through the Explorer, or served via OGC web services,” -&gt; same comment, plus, miss the main component (Jupyter notebooks and STAC)\n“with contributions from the agencies and research groups that operate the deployments listed above.” -&gt; “above” where ?\n\nhttps://yg1975.github.io/Nostradamus_CB/dc_installation.html\n\n“Nostradamus installation” chapter outside of Nostradamus section\n“Nostradamus datacube install” link to https://yg1975.github.io/Nostradamus_CB/nostradamus_datacube_setup.html, when the same link in “Nostrdamus datacube” section link to https://yg1975.github.io/Nostradamus_CB/1_install_odc.html\n\nhttps://yg1975.github.io/Nostradamus_CB/dc_quickstart.html\n\n“Data cubes quickstart” -&gt; admin only and not quick (docker is quick) -&gt; should probably be removed\n\nhttps://yg1975.github.io/Nostradamus_CB/nostradamus_datacube_overview.html\n\n“It integrates … in-situ, and ancillary data, defining entry points for real-time streams,” -&gt; not yet\n\nhttps://yg1975.github.io/Nostradamus_CB/nostradamus_datacube_use.html\n\n“The goal for the Nostradamus third parties developers is…” -&gt; ???\n\nhttps://yg1975.github.io/Nostradamus_CB/nostradamus_datacube_data_sources.html\n\n“Data sources used” chapter -&gt; why two sub chapters (https://yg1975.github.io/Nostradamus_CB/clms_clcplus.html, https://yg1975.github.io/Nostradamus_CB/aef_annual.html)?\n\nhttps://yg1975.github.io/Nostradamus_CB/tutorials.html\n\nhttps://yg1975.github.io/Nostradamus_CB/1_install_odc.html -&gt; Admin and redundant with https://yg1975.github.io/Nostradamus_CB/dc_installation.html -&gt; 2x maintenance\nhttps://yg1975.github.io/Nostradamus_CB/2_use_odc.html -&gt; Redundant with https://yg1975.github.io/Nostradamus_CB/nostradamus_datacube_use.html -&gt; 2x maintenance\nhttps://yg1975.github.io/Nostradamus_CB/3_new_data_into_dc.html -&gt; admin only, probably to be added later based on user needs, chapter mentioned in https://yg1975.github.io/Nostradamus_CB/4_retrieve_data_python_api.html\n\nhttp://127.0.0.1:4321/jupyter.html\n\nInstallation seems to be Linux/Mac oriented (WSL in Windows ?)"
   },
   {
     "objectID": "graft/docs/site_libs/quarto-search/quarto-search.html",
@@ -177,7 +177,7 @@
     "href": "odc_overview.html#project-and-community",
     "title": "Open Data Cube (ODC) — Overview",
     "section": "Project and community",
-    "text": "Project and community\nODC is maintained as a community open-source project, with its source code, issue tracker, and documentation hosted on GitHub and Read the Docs. It is governed openly, with contributions from the agencies and research groups that operate the deployments listed above.",
+    "text": "Project and community\nODC is maintained as a community open-source project, with its source code, issue tracker, and documentation hosted on GitHub and Read the Docs. It is governed openly, with contributions from the agencies and research groups that operate the deployments listed in Existing Data Cube deployments.",
     "crumbs": [
       "Introduction to datacubes",
       "Open Data Cube (ODC)"
@@ -564,8 +564,7 @@
     "section": "",
     "text": "AlphaEarth Foundations is a geospatial AI model developed by Google DeepMind, released in 2025, that produces annual “satellite embeddings”: for each 10 m pixel on Earth’s surface, it condenses information from multiple satellite and geospatial data sources (optical, radar, elevation, climate, and more) into a compact numerical vector. Unlike a conventional dataset that stores a physical measurement (a reflectance value, a temperature), an embedding stores a learned representation designed to be reused across many different downstream mapping and classification tasks (e.g., land cover, ecosystem mapping, change detection) without having to reprocess the original raw sources each time.\nThis is a substantially different kind of “data source” compared to the other products in this list — it is not a physical measurement but a machine-learning representation, distributed as Cloud-Optimized GeoTIFFs and mirrored on Source Cooperative.",
     "crumbs": [
-      "Nostradamus datacube",
-      "Data sources used",
+      "Data sources",
       "AlphaEarth Foundations"
     ]
   },
@@ -576,8 +575,7 @@
     "section": "",
     "text": "AlphaEarth Foundations is a geospatial AI model developed by Google DeepMind, released in 2025, that produces annual “satellite embeddings”: for each 10 m pixel on Earth’s surface, it condenses information from multiple satellite and geospatial data sources (optical, radar, elevation, climate, and more) into a compact numerical vector. Unlike a conventional dataset that stores a physical measurement (a reflectance value, a temperature), an embedding stores a learned representation designed to be reused across many different downstream mapping and classification tasks (e.g., land cover, ecosystem mapping, change detection) without having to reprocess the original raw sources each time.\nThis is a substantially different kind of “data source” compared to the other products in this list — it is not a physical measurement but a machine-learning representation, distributed as Cloud-Optimized GeoTIFFs and mirrored on Source Cooperative.",
     "crumbs": [
-      "Nostradamus datacube",
-      "Data sources used",
+      "Data sources",
       "AlphaEarth Foundations"
     ]
   },
@@ -588,8 +586,7 @@
     "section": "Use in the Nostradamus datacube",
     "text": "Use in the Nostradamus datacube\nIn the Nostradamus datacube, this dataset is indexed as the product aef_annual.\nhttps://deepmind.google/blog/alphaearth-foundations-helps-map-our-planet-in-unprecedented-detail/",
     "crumbs": [
-      "Nostradamus datacube",
-      "Data sources used",
+      "Data sources",
       "AlphaEarth Foundations"
     ]
   },
@@ -789,8 +786,7 @@
     "section": "",
     "text": "CLC+ Backbone is a land cover product from the Copernicus Land Monitoring Service (CLMS), providing a high-resolution (10 m) classification of Europe’s land surface, produced from Sentinel-1 and Sentinel-2 imagery. It complements the long-running CORINE Land Cover (CLC) inventory — which has a coarser resolution and a slower update cycle — by offering a more frequently refreshed, more spatially detailed backbone layer that CLC and other derived Copernicus land products build upon.\nBeing Europe-specific and higher resolution than global products like ESA WorldCover, CLC+ Backbone is well suited to regional or national-scale agricultural and land-management analyses within the EU, including several of the Nostradamus demonstration sites.",
     "crumbs": [
-      "Nostradamus datacube",
-      "Data sources used",
+      "Data sources",
       "CLMS CLC+ Backbone"
     ]
   },
@@ -801,8 +797,7 @@
     "section": "",
     "text": "CLC+ Backbone is a land cover product from the Copernicus Land Monitoring Service (CLMS), providing a high-resolution (10 m) classification of Europe’s land surface, produced from Sentinel-1 and Sentinel-2 imagery. It complements the long-running CORINE Land Cover (CLC) inventory — which has a coarser resolution and a slower update cycle — by offering a more frequently refreshed, more spatially detailed backbone layer that CLC and other derived Copernicus land products build upon.\nBeing Europe-specific and higher resolution than global products like ESA WorldCover, CLC+ Backbone is well suited to regional or national-scale agricultural and land-management analyses within the EU, including several of the Nostradamus demonstration sites.",
     "crumbs": [
-      "Nostradamus datacube",
-      "Data sources used",
+      "Data sources",
       "CLMS CLC+ Backbone"
     ]
   },
@@ -813,8 +808,7 @@
     "section": "Use in the Nostradamus datacube",
     "text": "Use in the Nostradamus datacube\nIn the Nostradamus datacube, this dataset is indexed as the product clms_clcplus_europe_100m.\nhttps://land.copernicus.eu/en/products/clc-backbone",
     "crumbs": [
-      "Nostradamus datacube",
-      "Data sources used",
+      "Data sources",
       "CLMS CLC+ Backbone"
     ]
   },
@@ -919,11 +913,11 @@
     ]
   },
   {
-    "objectID": "dc_installation.html#nostradamus-installation",
-    "href": "dc_installation.html#nostradamus-installation",
+    "objectID": "dc_installation.html#open-data-cube-installation",
+    "href": "dc_installation.html#open-data-cube-installation",
     "title": "Data cubes installation",
-    "section": "Nostradamus installation",
-    "text": "Nostradamus installation\nFor the Nostradamus project, this installation is simplified through a pre-packaged Docker deployment (see Nostradamus datacube install), which already covers these steps automatically.\nThe diagram below summarises this workflow; see the Quick Start page for the detailed step-by-step instructions.",
+    "section": "Open Data Cube installation",
+    "text": "Open Data Cube installation\nAs an example, the Nostradamus project, this installation is simplified through a pre-packaged Docker deployment (see Nostradamus datacube install), which already covers these steps automatically.\nThe diagram below summarises this workflow; see the Quick Start page for the detailed step-by-step instructions.",
     "crumbs": [
       "Introduction to datacubes",
       "Open Data Cube (ODC)",
@@ -935,60 +929,35 @@
     "href": "dc_quickstart.html",
     "title": "Data cubes quickstart",
     "section": "",
-    "text": "Here are the step-by-step instructions for deploying a datacube:",
-    "crumbs": [
-      "Introduction to datacubes",
-      "Open Data Cube (ODC)",
-      "Quick Start"
-    ]
+    "text": "Here are the step-by-step instructions for deploying a datacube:"
   },
   {
     "objectID": "dc_quickstart.html#system-and-environment-setup",
     "href": "dc_quickstart.html#system-and-environment-setup",
     "title": "Data cubes quickstart",
     "section": "System and environment setup",
-    "text": "System and environment setup\n\nInstall the required system libraries (GDAL, HDF5, netCDF) and Python 3.10+, following the guide for your OS: Ubuntu, macOS, or Windows.\nCreate an isolated Python environment (conda/mamba recommended) and install the datacube-core package from the ODC repository. Isolating the environment keeps ODC’s dependencies (GDAL bindings, database drivers, etc.) separate from other Python projects or system packages, avoiding version conflicts and keeping the setup reproducible across deployments.",
-    "crumbs": [
-      "Introduction to datacubes",
-      "Open Data Cube (ODC)",
-      "Quick Start"
-    ]
+    "text": "System and environment setup\n\nInstall the required system libraries (GDAL, HDF5, netCDF) and Python 3.10+, following the guide for your OS: Ubuntu, macOS, or Windows.\nCreate an isolated Python environment (conda/mamba recommended) and install the datacube-core package from the ODC repository. Isolating the environment keeps ODC’s dependencies (GDAL bindings, database drivers, etc.) separate from other Python projects or system packages, avoiding version conflicts and keeping the setup reproducible across deployments."
   },
   {
     "objectID": "dc_quickstart.html#database-setup",
     "href": "dc_quickstart.html#database-setup",
     "title": "Data cubes quickstart",
     "section": "Database setup",
-    "text": "Database setup\n\nInstall PostgreSQL with the PostGIS extension, and create a dedicated database and user for the cube’s index.\nConfigure the ODC to connect to this database — see the Database Setup and ODC Configuration guides.",
-    "crumbs": [
-      "Introduction to datacubes",
-      "Open Data Cube (ODC)",
-      "Quick Start"
-    ]
+    "text": "Database setup\n\nInstall PostgreSQL with the PostGIS extension, and create a dedicated database and user for the cube’s index.\nConfigure the ODC to connect to this database — see the Database Setup and ODC Configuration guides."
   },
   {
     "objectID": "dc_quickstart.html#describing-and-indexing-data",
     "href": "dc_quickstart.html#describing-and-indexing-data",
     "title": "Data cubes quickstart",
     "section": "Describing and indexing data",
-    "text": "Describing and indexing data\n\nInitialise the index (datacube system init) and confirm the installation works as expected.\nDefine metadata types and write Product Definitions (YAML) describing each type of data to be indexed.\nPrepare Dataset Documents for the data to be added, either supplied by the data provider or generated with a preparation script.\nLoad the products and index the data with the datacube command line tool, following the step-by-step indexing guide (datacube product add, then datacube dataset add).",
-    "crumbs": [
-      "Introduction to datacubes",
-      "Open Data Cube (ODC)",
-      "Quick Start"
-    ]
+    "text": "Describing and indexing data\n\nInitialise the index (datacube system init) and confirm the installation works as expected.\nDefine metadata types and write Product Definitions (YAML) describing each type of data to be indexed.\nPrepare Dataset Documents for the data to be added, either supplied by the data provider or generated with a preparation script.\nLoad the products and index the data with the datacube command line tool, following the step-by-step indexing guide (datacube product add, then datacube dataset add)."
   },
   {
     "objectID": "dc_quickstart.html#verification",
     "href": "dc_quickstart.html#verification",
     "title": "Data cubes quickstart",
     "section": "Verification",
-    "text": "Verification\n\nVerify the data is available through the ODC Explorer, the Python API, or a Jupyter notebook.",
-    "crumbs": [
-      "Introduction to datacubes",
-      "Open Data Cube (ODC)",
-      "Quick Start"
-    ]
+    "text": "Verification\n\nVerify the data is available through the ODC Explorer, the Python API, or a Jupyter notebook."
   },
   {
     "objectID": "esa_worldcover.html",
@@ -1049,7 +1018,7 @@
     "href": "jupyter.html#jupyter-notebook",
     "title": "Jupyter ",
     "section": "Jupyter notebook",
-    "text": "Jupyter notebook\nA Jupyter notebook is an interactive document running in your web browser a single .ipynb file:\n\nexecutable code (Python, R, …) that can be run cell by cell\nformatted text in MarkDown language\nvisualisations (graphs, maps, tables) that interactively display below the code\n\n\n\nHow to install it on my machine?\nType the following command in your Terminal:\npip install notebook\nNote: in some cases you might need to write\npip3 install notebook\n\n\nHow to know if it is installed on my machine?\nType the following command in your Terminal:\njupyter --version\nIf it is installed, you should see its version\nIf it is not installed, you will see a message like “command not found”.\n\n\nHow to launch it?\nType the following command in your Terminal:\njupyter notebook\nThis should open you navigator at http://localhost:8888.\n\n\nHow to use it?\nOnce you navigator is open at http://localhost:8888, use the top menus to either create new .ipynb file or open an existing one.",
+    "text": "Jupyter notebook\nA Jupyter notebook is an interactive document running in your web browser a single .ipynb file:\n\nexecutable code (Python, R, …) that can be run cell by cell\nformatted text in MarkDown language\nvisualisations (graphs, maps, tables) that interactively display below the code\n\n\n\nHow to install it on my machine?\n\n\n\n\n\n\nCaution\n\n\n\nThis procedure is Linux/Mac oriented. For Windows, you might need to use WSL.\n\n\nType the following command in your Terminal:\npip install notebook\nNote: in some cases you might need to write\npip3 install notebook\n\n\nHow to know if it is installed on my machine?\nType the following command in your Terminal:\njupyter --version\nIf it is installed, you should see its version\nIf it is not installed, you will see a message like “command not found”.\n\n\nHow to launch it?\nType the following command in your Terminal:\njupyter notebook\nThis should open you navigator at http://localhost:8888.\n\n\nHow to use it?\nOnce you navigator is open at http://localhost:8888, use the top menus to either create new .ipynb file or open an existing one.",
     "crumbs": [
       "Tools",
       "Jupyter"
@@ -1170,7 +1139,7 @@
     "href": "nostradamus_datacube_overview.html",
     "title": "Nostradamus datacube ",
     "section": "",
-    "text": "This work is part of Work Package 5 (WP5) – Development & Implementation of Data Cubes of the Nostradamus project, led by the University of Geneva. WP5 aims to provide guidance for producing rasterized data from sources such as satellite imagery and existing geospatial databases for effective ingestion into Data Cubes, to develop a dedicated Data Cube for each participating country’s agricultural case study area, and to implement an exploitation platform built on these Data Cubes. It integrates satellite sensor, in-situ, and ancillary data, defining entry points for real-time streams, environmental datasets, and spatiotemporal Data Cubes, building on synergies with related initiatives such as the LandShift project to share infrastructure and mutualize development efforts. The resulting platform provides demo notebooks by default, lets users download new data and index scenes, and makes newly ingested data visible for exploration in the Data Cube explorer.",
+    "text": "This work is part of Work Package 5 (WP5) – Development & Implementation of Data Cubes of the Nostradamus project, led by the University of Geneva. WP5 aims to provide guidance for producing rasterized data from sources such as satellite imagery and existing geospatial databases for effective ingestion into Data Cubes, to develop a dedicated Data Cube for each participating country’s agricultural case study area, and to implement an exploitation platform built on these Data Cubes. It integrates satellite sensor, and potentially in-situ, and ancillary data in the future (based on users needs), defining entry points for real-time streams, environmental datasets, and spatiotemporal Data Cubes, building on synergies with related initiatives such as the LandShift project to share infrastructure and mutualize development efforts. The resulting platform provides demo notebooks by default, lets users download new data and index scenes, and makes newly ingested data visible for exploration in the Data Cube explorer.",
     "crumbs": [
       "Nostradamus datacube"
     ]
@@ -1180,7 +1149,7 @@
     "href": "nostradamus_datacube_overview.html#project-context",
     "title": "Nostradamus datacube ",
     "section": "",
-    "text": "This work is part of Work Package 5 (WP5) – Development & Implementation of Data Cubes of the Nostradamus project, led by the University of Geneva. WP5 aims to provide guidance for producing rasterized data from sources such as satellite imagery and existing geospatial databases for effective ingestion into Data Cubes, to develop a dedicated Data Cube for each participating country’s agricultural case study area, and to implement an exploitation platform built on these Data Cubes. It integrates satellite sensor, in-situ, and ancillary data, defining entry points for real-time streams, environmental datasets, and spatiotemporal Data Cubes, building on synergies with related initiatives such as the LandShift project to share infrastructure and mutualize development efforts. The resulting platform provides demo notebooks by default, lets users download new data and index scenes, and makes newly ingested data visible for exploration in the Data Cube explorer.",
+    "text": "This work is part of Work Package 5 (WP5) – Development & Implementation of Data Cubes of the Nostradamus project, led by the University of Geneva. WP5 aims to provide guidance for producing rasterized data from sources such as satellite imagery and existing geospatial databases for effective ingestion into Data Cubes, to develop a dedicated Data Cube for each participating country’s agricultural case study area, and to implement an exploitation platform built on these Data Cubes. It integrates satellite sensor, and potentially in-situ, and ancillary data in the future (based on users needs), defining entry points for real-time streams, environmental datasets, and spatiotemporal Data Cubes, building on synergies with related initiatives such as the LandShift project to share infrastructure and mutualize development efforts. The resulting platform provides demo notebooks by default, lets users download new data and index scenes, and makes newly ingested data visible for exploration in the Data Cube explorer.",
     "crumbs": [
       "Nostradamus datacube"
     ]
@@ -1232,7 +1201,7 @@
     "href": "nostradamus_datacube_use.html#accessing-the-jupyter-notebooks-part",
     "title": "Nostradamus datacube use",
     "section": "Accessing the Jupyter notebooks part",
-    "text": "Accessing the Jupyter notebooks part\nThe goal for the Nostradamus third parties developers is to use the Jupyter notebooks part of the Data Cubes to:\n\ndiscover available products and learn how to interact with them through demo jupyter notebooks\ndevelop their own notebooks\n\n\nAuthorization for using an existing datacube\nOnly the persons who are whitelisted by the datacube administrator can create an account on the given datacube.!\n\nContact by email the Nostradamus datacube’s instance administrator who will give you a username\nOnce you have received your username, go to https://cyprus-dc.nostradamus-platform.eu/jupyter, where you will need to click on “Sign Up” in order to setup your password\nThen, go back to the login page and sign in; you will reach the following page\n\n\n\nDouble-click on the “shared” folder and have a look at the “HOW_TO_USE_SHARED_FOLDERS.txt” file describes how to use it. Keep it mind that you can only write in all_users/YOUR_USERNAME/ but you can read in all folders of the other users\n\n\n\n\nUse of existing notebooks\nThe existing demo notebooks are all contained in the /shared/notebooks_demo/ folder. For an overview of the way to use the notebooks, look at the section “Exploring the demo notebooks” of the How to use an Open Data Cube page.\nBeginners in Jupyter notebook are recommended to copy the whole notebooks_demo folder to their root directory in order to have a local copy of the notebooks and be able to edit them (as they will be read-only in the shared folder).\nIn order to develop your own notebook based on an existing one, copy the one of interest to the root directory first (or shared personal directory), which will allow you to edit and save it. To do so, right click on the notebook of interest and its dependencies (folders documentation, figures, utils) in the “notebooks_demo” folder and paste it at the root directory or your own folder.",
+    "text": "Accessing the Jupyter notebooks part\nThe goal for the Nostradamus applications developpers is to use the Jupyter notebooks part of the Data Cubes to:\n\ndiscover available products and learn how to interact with them through demo jupyter notebooks\ndevelop their own notebooks\n\n\nAuthorization for using an existing datacube\nOnly the persons who are whitelisted by the datacube administrator can create an account on the given datacube.!\n\nContact by email the Nostradamus datacube’s instance administrator who will give you a username\nOnce you have received your username, go to https://cyprus-dc.nostradamus-platform.eu/jupyter, where you will need to click on “Sign Up” in order to setup your password\nThen, go back to the login page and sign in; you will reach the following page\n\n\n\nDouble-click on the “shared” folder and have a look at the “HOW_TO_USE_SHARED_FOLDERS.txt” file describes how to use it. Keep it mind that you can only write in all_users/YOUR_USERNAME/ but you can read in all folders of the other users\n\n\n\n\nUse of existing notebooks\nThe existing demo notebooks are all contained in the /shared/notebooks_demo/ folder. For an overview of the way to use the notebooks, look at the section “Exploring the demo notebooks” of the How to use an Open Data Cube page.\nBeginners in Jupyter notebook are recommended to copy the whole notebooks_demo folder to their root directory in order to have a local copy of the notebooks and be able to edit them (as they will be read-only in the shared folder).\nIn order to develop your own notebook based on an existing one, copy the one of interest to the root directory first (or shared personal directory), which will allow you to edit and save it. To do so, right click on the notebook of interest and its dependencies (folders documentation, figures, utils) in the “notebooks_demo” folder and paste it at the root directory or your own folder.",
     "crumbs": [
       "Nostradamus datacube",
       "Datacube use"

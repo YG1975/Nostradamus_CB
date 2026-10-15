@@ -6,4 +6,4 @@ title: "Frequently Asked Questions"
 
 ### When launching the "make setup" command at the end of the installation process, I have message saying "Error: .env file not found!"
 
-The first time you want to use the datacube after the installation, there is a need to set up a personnal .env file that contains the environment variables. To do so, you need to copy the existing default .env file and modify it for your own environment. Follow the procedure of the [Nostradamus datacube installation](nostradamus_datacube_setup.qmd) page starting from point 5.
+The first time you want to use the datacube after the installation, there is a need to set up a personnal .env file that contains the environment variables. To do so, you need to copy the existing default .env file and modify it for your own environment. Follow the procedure of the [Nostradamus datacube installation](1_install_odc.qmd) page starting from point 5.
