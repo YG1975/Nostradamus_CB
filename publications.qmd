@@ -2,9 +2,9 @@
 title: "Publications"
 ---
 
-## What can a data cube be used for?
+## What can a Data Cube be used for?
 
-A data cube can support many different applications. The examples below are drawn from publications by **Gregory Giuliani** and **Bruno Chatenoux** (University of Geneva / UNEP-GRID Geneva), based on the Swiss Data Cube, an Open Data Cube deployment. For each reference, the indices computed from the datacube are indicated.
+A Data Cube can support many different applications. The examples below are drawn from publications by **Gregory Giuliani** and **Bruno Chatenoux** (University of Geneva / UNEP-GRID Geneva), based on the Swiss Data Cube, an Open Data Cube deployment. For each reference, the indices computed from the datacube are indicated.
 
 - **Chatenoux B., Richard J.-P., Small D., Röösli C., Wingate V., Poussin C., Rodila D., Peduzzi P., Steinmeier C., Ginzler C., Psomas A., Schaepman M., Giuliani G. (2021)** — *The Swiss Data Cube, Analysis Ready Data archive using Earth Observations of Switzerland*, Scientific Data 8:295. [doi:10.1038/s41597-021-01076-6](https://doi.org/10.1038/s41597-021-01076-6){target="_blank"}
   Indices produced: **NDVI**, **NDWI**, **EVI**, **GCI**, **LAI**, **MSI**, **ARI**.

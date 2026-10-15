@@ -6,7 +6,7 @@ title: "How to retrieve data using the Python API?"
 
 Once data has been indexed into a datacube (see [**How to index new data into a DC?**](3_new_data_into_dc.qmd){target="_blank"}), the standard way to access it is through the **Python API** provided by `datacube-core`. This API connects to the datacube's PostgreSQL/PostGIS index and lets you query, load, and analyse data directly in a Jupyter notebook, without touching the underlying files.
 
-In short, the procedure consists of opening a connection to the datacube with the `Datacube` class, optionally checking what is available for a given product, then calling `dc.load()` with the product name, an area of interest, a time range, and the measurements (bands) you need. The result is returned as an **xarray `Dataset`**, which can then be used directly with the wider Python scientific stack (numpy, xarray, dask, matplotlib, rasterio, etc.).
+In short, the procedure consists of opening a connection to the datacube with the `Datacube` class, optionally checking what is available for a given product, then calling `dc.load()` with the product name, an area of interest, a time range, and the measurements (bands) you need. The result is returned as an [**xarray `Dataset`**](https://xarray.dev/){target="_blank"}, which can then be used directly with the wider Python scientific stack (numpy, xarray, dask, matplotlib, rasterio, etc.).
 
 The steps below retrieve Sentinel-2 data from the existing `s2_l2a` product as a concrete example.
 
@@ -40,6 +40,7 @@ The steps below retrieve Sentinel-2 data from the existing `s2_l2a` product as a
     )
     print(len(datasets), "datasets found")
     ```
+`x`/`y` define the bounding box of your area of interest (longitude/latitude by default), `time` the date range.
 
 5.  Load the data for a given product, area, time range, and set of measurements:
 
@@ -55,12 +56,11 @@ The steps below retrieve Sentinel-2 data from the existing `s2_l2a` product as a
     )
     data
     ```
+`measurements` defines the bands to load. `output_crs` and `resolution` control the projection and pixel size of the resulting grid.
 
-    `x`/`y` define the bounding box of your area of interest (longitude/latitude by default), `time` the date range, and `measurements` the bands to load. `output_crs` and `resolution` control the projection and pixel size of the resulting grid.
-
-::: callout-note
-The first call to `dc.load()` over a new area or product can take a while, since it triggers reprojection and resampling across every matching scene. Restricting `measurements` to only the bands you need, and narrowing `x`/`y`/`time`, significantly speeds this up.
-:::
+    ::: callout-note
+    The first call to `dc.load()` over a new area or product can take a while, since it triggers reprojection and resampling across every matching scene. Restricting `measurements` to only the bands you need, and narrowing `x`/`y`/`time`, significantly speeds this up.
+    :::
 
 6.  Explore the result: `data` is returned as an **xarray `Dataset`** with `x`, `y`, and `time` dimensions, plus one variable per requested measurement:
 

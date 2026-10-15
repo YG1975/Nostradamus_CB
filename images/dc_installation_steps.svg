@@ -1,5 +1,5 @@
 <svg viewBox="0 0 640 820" xmlns="http://www.w3.org/2000/svg" role="img" font-family="-apple-system, Helvetica, Arial, sans-serif">
-  <title>Typical data cube installation workflow</title>
+  <title>Typical Data Cube installation workflow</title>
   <desc>Two-phase workflow: setting up software and infrastructure (5 steps), then populating and indexing data (4 steps).</desc>
 
   <rect width="640" height="820" fill="#ffffff"/>

@@ -4,7 +4,7 @@ title: "Other datacube platforms"
 
 ## Beyond the Open Data Cube
 
-The [**Open Data Cube (ODC)**](dc_overview.qmd) is the most widely adopted open-source implementation of the data cube approach, and the one this site focuses on, but it is not the only platform for managing and analysing large volumes of Earth observation data. Depending on needs (self-hosted vs. cloud, open-source vs. commercial, raster-focused vs. general array data), several alternatives exist:
+The [**Open Data Cube (ODC)**](dc_overview.qmd) is the most widely adopted open-source implementation of the Data Cube approach, and the one this site focuses on, but it is not the only platform for managing and analysing large volumes of Earth observation data. Depending on needs (self-hosted vs. cloud, open-source vs. commercial, raster-focused vs. general array data), several alternatives exist:
 
 - [**Google Earth Engine (GEE)**](https://earthengine.google.com/){target="_blank"}: a cloud-based, commercial platform with hundreds of datasets pre-integrated and a free tier for research/non-commercial use. Unlike the ODC, it is a closed, hosted service but it requires no infrastructure setup.
 
@@ -12,11 +12,11 @@ The [**Open Data Cube (ODC)**](dc_overview.qmd) is the most widely adopted open-
 
 - [**rasdaman**](http://www.rasdaman.org/){target="_blank"} (and the related **EarthServer** initiative): an open-source array database management system, following OGC standards, that manages multidimensional data more generally (not only Earth observation imagery).
 
-- [**xcube**](https://xcube.readthedocs.io/){target="_blank"}: an open-source, Python/xarray-based toolkit (developed by Brockmann Consult) for building and analysing spatiotemporal data cubes, with a strong focus on Earth system science and Zarr-based cloud storage.
+- [**xcube**](https://xcube.readthedocs.io/){target="_blank"}: an open-source, Python/xarray-based toolkit (developed by Brockmann Consult) for building and analysing spatiotemporal Data Cubes, with a strong focus on Earth system science and Zarr-based cloud storage.
 
 - [**SEPAL**](https://sepal.io/){target="_blank"}: a cloud platform developed by the FAO for satellite data access, processing, and analysis, oriented towards land monitoring and forestry applications.
 
-- [**openEO**](https://openeo.org/){target="_blank"}: not a platform in itself, but a standardised API that exposes a common "virtual data cube" interface across several of the backends above, allowing the same analysis code to run on different providers.
+- [**openEO**](https://openeo.org/){target="_blank"}: not a platform in itself, but a standardised API that exposes a common "virtual Data Cube" interface across several of the backends above, allowing the same analysis code to run on different providers.
 
 ## ODC-based deployments vs. alternative platforms
 

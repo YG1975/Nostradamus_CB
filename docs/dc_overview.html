@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>What is a data cube?</title>
+<title>What is a Data Cube?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bcb4737e8fbcf1e9dfc00b59f8305558.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-81053bc0b3845b014e2efe7f6b158597.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -126,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dc_overview.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">What is a data cube?</span></a>
+ <span class="menu-text">What is a Data Cube?</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
@@ -169,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="px-0"><hr class="sidebar-divider hi "></li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+            <a href="./nostradamus_datacube_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Nostradamus datacube</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -411,11 +411,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-problem-data-cubes-solve" id="toc-the-problem-data-cubes-solve" class="nav-link active" data-scroll-target="#the-problem-data-cubes-solve">The problem data cubes solve</a></li>
-  <li><a href="#what-a-data-cube-is" id="toc-what-a-data-cube-is" class="nav-link" data-scroll-target="#what-a-data-cube-is">What a data cube is</a></li>
-  <li><a href="#what-can-a-data-cube-be-used-for" id="toc-what-can-a-data-cube-be-used-for" class="nav-link" data-scroll-target="#what-can-a-data-cube-be-used-for">What can a data cube be used for?</a></li>
-  <li><a href="#setting-up-a-data-cube" id="toc-setting-up-a-data-cube" class="nav-link" data-scroll-target="#setting-up-a-data-cube">Setting up a data cube</a></li>
-  <li><a href="#existing-data-cube-deployments" id="toc-existing-data-cube-deployments" class="nav-link" data-scroll-target="#existing-data-cube-deployments">Existing data cube deployments</a></li>
+  <li><a href="#the-problem-data-cubes-solve" id="toc-the-problem-data-cubes-solve" class="nav-link active" data-scroll-target="#the-problem-data-cubes-solve">The problem Data Cubes solve</a></li>
+  <li><a href="#what-a-data-cube-is" id="toc-what-a-data-cube-is" class="nav-link" data-scroll-target="#what-a-data-cube-is">What a Data Cube is</a></li>
+  <li><a href="#what-can-a-data-cube-be-used-for" id="toc-what-can-a-data-cube-be-used-for" class="nav-link" data-scroll-target="#what-can-a-data-cube-be-used-for">What can a Data Cube be used for?</a></li>
+  <li><a href="#setting-up-a-data-cube" id="toc-setting-up-a-data-cube" class="nav-link" data-scroll-target="#setting-up-a-data-cube">Setting up a Data Cube</a></li>
+  <li><a href="#existing-data-cube-deployments" id="toc-existing-data-cube-deployments" class="nav-link" data-scroll-target="#existing-data-cube-deployments">Existing Data Cube deployments</a></li>
   </ul>
 </nav>
     </div>
@@ -424,7 +424,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">What is a data cube?</h1>
+<h1 class="title">What is a Data Cube?</h1>
 </div>
 
 
@@ -442,27 +442,27 @@ ul.task-list li input[type="checkbox"] {
 
 
 <section id="the-problem-data-cubes-solve" class="level2">
-<h2 class="anchored" data-anchor-id="the-problem-data-cubes-solve">The problem data cubes solve</h2>
-<p>Eart observation missions such as <a href="./landsat.html" target="_blank"><strong>Landsat</strong></a>, <a href="./sentinel.html" target="_blank"><strong>Sentinel</strong></a>, and <a href="https://modis.gsfc.nasa.gov/" target="_blank"><strong>MODIS</strong></a> now provide multi-decade, continuously growing archives of satellite imagery, but this data has traditionally been organised and distributed scene by scene, requiring heavy preprocessing before it can be compared or combined across dates and sensors. A <strong>data cube</strong> addresses this bottleneck: it provides a common framework to catalogue, access, and analyse large volumes of gridded Earth observation data so that routine, reliable, and reproducible analyses, rather than one-off scene processing, can support evidence-based decisions in areas such as environmental monitoring, agriculture, and land management.</p>
+<h2 class="anchored" data-anchor-id="the-problem-data-cubes-solve">The problem Data Cubes solve</h2>
+<p>Earth observation missions such as <a href="./landsat.html" target="_blank"><strong>Landsat</strong></a>, <a href="./sentinel.html" target="_blank"><strong>Sentinel</strong></a>, and <a href="https://modis.gsfc.nasa.gov/" target="_blank"><strong>MODIS</strong></a> now provide multi-decade, continuously growing archives of satellite imagery, but this data has traditionally been organised and distributed scene by scene in a raw format, requiring heavy preprocessing before it can be compared or combined across dates and sensors. A <strong>Data Cube</strong> addresses this bottleneck: it provides a common framework to catalogue, access, and analyse large volumes of gridded Earth Observation (EO) <a href="./glossary.html#analysis-ready-data" target="_blank"><strong>Analysis Ready Data</strong></a> (ARD) so that routine, reliable, and reproducible analyses, rather than one-off scene processing, can support evidence-based decisions in areas such as environmental monitoring, agriculture, and land management.</p>
 </section>
 <section id="what-a-data-cube-is" class="level2">
-<h2 class="anchored" data-anchor-id="what-a-data-cube-is">What a data cube is</h2>
-<p>Technically, a data cube is an open-source geospatial data management and analysis platform (the <strong>Open Data Cube (ODC)</strong> being the most widely adopted implementation) that organises satellite imagery and other gridded data (elevation models, geophysical grids, model outputs) along space, time, and spectral dimensions. Unlike traditional scene-based approaches, every observation is preserved individually, enabling a shift from scene-based to pixel-based analysis. It exposes this data through a Python API, a catalogue of indexed products, and complementary tools such as the Open Data Cube Explorer, Jupyter notebooks, and OGC web services.</p>
+<h2 class="anchored" data-anchor-id="what-a-data-cube-is">What a Data Cube is</h2>
+<p>Technically, a Data Cube is an open-source geospatial data management and analysis platform (the <strong>Open Data Cube (ODC)</strong> being the most widely adopted implementation) that organises satellite imagery and other gridded data (elevation models, geophysical grids, model outputs) along space, time, and spectral dimensions. Unlike traditional scene-based approaches, every observation is preserved individually, enabling a shift from scene-based to pixel-based analysis. It exposes this data through a Python API, a catalogue of indexed products, and complementary tools such as the Open Data Cube Explorer, Jupyter notebooks, and OGC web services.</p>
 <p><img src="images/DataCube_concept.png" class="img-fluid" width="700"></p>
 </section>
 <section id="what-can-a-data-cube-be-used-for" class="level2">
-<h2 class="anchored" data-anchor-id="what-can-a-data-cube-be-used-for">What can a data cube be used for?</h2>
-<p>A data cube can support many different applications, from vegetation and drought monitoring to snow cover mapping and archaeological research. Publications showing concrete applications of the Swiss Data Cube, along with the indices computed from it, are available on the <a href="./publications.html" target="_blank"><strong>Publications</strong></a> page.</p>
+<h2 class="anchored" data-anchor-id="what-can-a-data-cube-be-used-for">What can a Data Cube be used for?</h2>
+<p>A Data Cube can support many different applications, from vegetation and drought monitoring to snow cover mapping and archaeological research. Publications showing concrete applications of the Swiss Data Cube, along with the indices computed from it, are available on the <a href="./publications.html" target="_blank"><strong>Publications</strong></a> page.</p>
 </section>
 <section id="setting-up-a-data-cube" class="level2">
-<h2 class="anchored" data-anchor-id="setting-up-a-data-cube">Setting up a data cube</h2>
-<p>Setting up a data cube typically follows a few main steps: selecting and deploying the underlying infrastructure (local, HPC, or cloud) and installing the ODC software stack; defining the interfaces and standards used to describe the data, such as <a href="./glossary.html#stac" target="_blank"><strong>STAC</strong></a> and OGC web services; preparing and indexing the data (usually <a href="./glossary.html#analysis-ready-data" target="_blank"><strong>Analysis Ready Data</strong></a> (ARD)) as datasets and products with standardised metadata; and building a catalogue for discovery, along with the tools (explorer, notebooks, APIs) needed to query, process, and exploit the cube.</p>
+<h2 class="anchored" data-anchor-id="setting-up-a-data-cube">Setting up a Data Cube</h2>
+<p>Setting up a Data Cube typically follows a few main steps: selecting and deploying the underlying infrastructure (local or cloud) and installing the ODC software stack; defining the interfaces and standards used to describe the data, such as <a href="./glossary.html#stac" target="_blank"><strong>STAC</strong></a> and OGC web services; preparing and indexing the data (usually <a href="./glossary.html#analysis-ready-data" target="_blank"><strong>Analysis Ready Data</strong></a> (ARD)) as datasets and products with standardised metadata; and building a catalogue for discovery, along with the tools (explorer, notebooks, APIs) needed to query, process, and exploit the cube.</p>
 </section>
 <section id="existing-data-cube-deployments" class="level2">
-<h2 class="anchored" data-anchor-id="existing-data-cube-deployments">Existing data cube deployments</h2>
-<p>Several operational data cubes now build on this open-source foundation at different scales, including the <a href="https://www.swissdatacube.org/" target="_blank"><strong>Swiss Data Cube</strong></a>, jointly operated by the University of Geneva, UNEP/GRID-Geneva, the University of Zurich, and the WSL; <a href="https://www.digitalearthafrica.org/" target="_blank"><strong>Digital Earth Africa</strong></a>, delivering continental-scale Earth observation services across Africa; and <a href="https://www.dea.ga.gov.au/" target="_blank"><strong>Digital Earth Australia</strong></a>, run by Geoscience Australia to track more than 30 years of landscape change. The <a href="./nostradamus_datacube_intro.html" target="_blank"><strong>Nostradamus datacube</strong></a> presented in this site follows the same approach, adapted to the project’s agricultural case studies.</p>
+<h2 class="anchored" data-anchor-id="existing-data-cube-deployments">Existing Data Cube deployments</h2>
+<p>Several operational Data Cubes now build on this open-source foundation at different scales, including the <a href="https://www.swissdatacube.org/" target="_blank"><strong>Swiss Data Cube</strong></a>, jointly operated by the University of Geneva, UNEP/GRID-Geneva, the University of Zurich, and the WSL; <a href="https://www.digitalearthafrica.org/" target="_blank"><strong>Digital Earth Africa</strong></a>, delivering continental-scale Earth observation services across Africa; and <a href="https://www.dea.ga.gov.au/" target="_blank"><strong>Digital Earth Australia</strong></a>, run by Geoscience Australia to track more than 30 years of landscape change. The <a href="./nostradamus_datacube_intro.html" target="_blank"><strong>Nostradamus datacube</strong></a> presented in this site follows the same approach, adapted to the project’s agricultural case studies.</p>
 <p>Beyond the Open Data Cube itself, other platforms exist for managing and analysing large volumes of Earth observation data (see <a href="./other_datacube_platforms.html" target="_blank"><strong>Other datacube platforms</strong></a> for an overview).</p>
-<p><img src="images/clipboard-3657012464.png" class="img-fluid"></p>
+<p><img src="images/clipboard-3657012464_BC.png" class="img-fluid"></p>
 
 
 </section>

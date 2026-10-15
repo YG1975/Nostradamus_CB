@@ -4,7 +4,7 @@ project:
  
 
 website:
-  #title: "UNIGE and UNEP/GRID-Geneva data cubes capacity building"
+  #title: "UNIGE and UNEP/GRID-Geneva Data Cubes capacity building"
   
   
   sidebar:
@@ -18,7 +18,7 @@ website:
       - section: "Introduction to datacubes"
         href: dc_overview.qmd
         contents:
-          - text: What is a data cube?
+          - text: What is a Data Cube?
             href: dc_overview.qmd
           - section: "Open Data Cube (ODC)"
             href: odc_overview.qmd

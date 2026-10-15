@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bcb4737e8fbcf1e9dfc00b59f8305558.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-81053bc0b3845b014e2efe7f6b158597.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -126,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dc_overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">What is a data cube?</span></a>
+ <span class="menu-text">What is a Data Cube?</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
@@ -411,9 +411,13 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#accessing-an-existing-datacube" id="toc-accessing-an-existing-datacube" class="nav-link active" data-scroll-target="#accessing-an-existing-datacube">Accessing an existing datacube</a></li>
-  <li><a href="#the-datacube-explorer-part" id="toc-the-datacube-explorer-part" class="nav-link" data-scroll-target="#the-datacube-explorer-part">The datacube explorer part</a></li>
-  <li><a href="#the-jupyter-notebooks-part" id="toc-the-jupyter-notebooks-part" class="nav-link" data-scroll-target="#the-jupyter-notebooks-part">The Jupyter notebooks part</a>
+  <li><a href="#accessing-the-datacube-explorer-part" id="toc-accessing-the-datacube-explorer-part" class="nav-link active" data-scroll-target="#accessing-the-datacube-explorer-part">Accessing the datacube explorer part</a>
+  <ul class="collapse">
+  <li><a href="#products" id="toc-products" class="nav-link" data-scroll-target="#products"><strong>Products</strong></a></li>
+  <li><a href="#types" id="toc-types" class="nav-link" data-scroll-target="#types"><strong>Types</strong></a></li>
+  <li><a href="#explore" id="toc-explore" class="nav-link" data-scroll-target="#explore"><strong>Explore</strong></a></li>
+  </ul></li>
+  <li><a href="#accessing-the-jupyter-notebooks-part" id="toc-accessing-the-jupyter-notebooks-part" class="nav-link" data-scroll-target="#accessing-the-jupyter-notebooks-part">Accessing the Jupyter notebooks part</a>
   <ul class="collapse">
   <li><a href="#authorization-for-using-an-existing-datacube" id="toc-authorization-for-using-an-existing-datacube" class="nav-link" data-scroll-target="#authorization-for-using-an-existing-datacube">Authorization for using an existing datacube</a></li>
   <li><a href="#use-of-existing-notebooks" id="toc-use-of-existing-notebooks" class="nav-link" data-scroll-target="#use-of-existing-notebooks">Use of existing notebooks</a></li>
@@ -452,15 +456,11 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://switzerland-dc.nostradamus-platform.eu/explorer/products" target="_blank">Switzerland</a></p></li>
 </ul>
 <p>In order to describe how to use one of the installed Nostradamus datacubes, the example of the Cyprus one will be taken.</p>
-<section id="accessing-an-existing-datacube" class="level2">
-<h2 class="anchored" data-anchor-id="accessing-an-existing-datacube">Accessing an existing datacube</h2>
-<p>When clicking on an existing datacube instance (e.g.&nbsp;<a href="https://cyprus-dc.nostradamus-platform.eu/explorer/products" target="_blank">Cyprus</a>), you will automatically be re-directed to the <strong>explorer</strong> part of this datacube by default (<a href="https://cyprus-dc.nostradamus-platform.eu/explorer" class="uri">https://cyprus-dc.nostradamus-platform.eu/explorer</a>).</p>
-<p><img src="images/clipboard-3027113721.png" class="img-fluid" width="572"></p>
-</section>
-<section id="the-datacube-explorer-part" class="level2">
-<h2 class="anchored" data-anchor-id="the-datacube-explorer-part">The datacube explorer part</h2>
-<p>The explorer part of the datacube is the Graphical User Interface, that allows to see the content and download data.</p>
-<p><strong>Products</strong></p>
+<section id="accessing-the-datacube-explorer-part" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-the-datacube-explorer-part">Accessing the datacube explorer part</h2>
+<p>The explorer part of the datacube is the Graphical User Interface, that allows to see the content and download data. E.g. for Cyprus datacube: <a href="https://cyprus-dc.nostradamus-platform.eu/explorer" class="uri">https://cyprus-dc.nostradamus-platform.eu/explorer</a></p>
+<section id="products" class="level3">
+<h3 class="anchored" data-anchor-id="products"><strong>Products</strong></h3>
 <p>In the datacube explorer part, the available products (<a href="nostradamus_datacube_data_sources">data sources installed for the Nostradamus project</a>) are displayed in the default page and correspond to the “Products” menu.</p>
 <p><img src="images/clipboard-4074359264.png" class="img-fluid" width="558"></p>
 <p>Clicking on one of the products (e.g.&nbsp;“esa_worldcover” in the screenshot below) will open a new page containing all relevant information about the dataset:</p>
@@ -476,7 +476,11 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/clipboard-1303510488.png" class="img-fluid" width="541"></p>
 <p>When clicking on one dataset, it opens a new page specific to the dataset in question containing a thumbnail, metadata, various links for accessing it. The link “<strong>map</strong>” in the “location” section allows to download the geotiff.</p>
 <p><img src="images/clipboard-1801483560.png" class="img-fluid" width="536"></p>
-<p><strong>Types</strong></p>
+<p><strong>Notice</strong>:</p>
+<p>The urls on datasets pages are signed (e.g.&nbsp;they end with <a href="https://cyprus-dc.nostradamus-platform.eu/explorer/api/pc/ai4edataeuwest.blob.core.windows.net/esa-worldcover/v200/2021/map/ESA_WorldCover_10m_2021_v200_N33E033_Map.tif?sig=.eJwVyrEOwiAQANB_YZej4NTNmI66dHC8XMsZSWghcC2D8d8N83tfdZSoRvURyXUEoHBlT0J8NK6il5gWvabCuoXdp1b1zgJc6dJSiX5NJxc4rTFgjR1gowzTfMNXx3tHHMyG3bAvfDo3GefwQVlLeKvfH1LsKzs.as-FkA.swxExQsjSpbCKWbTaSNmfLPaZlY"><code>?sig=.eJwVyrEOwiAQANB_YZej4NTNmI66dHC8XMsZSW</code></a><code>...</code>`). As signature are only valid for a limited period of time (less than 1 hour in Planet Computer). You might need to refresh the page in case a link returns an error, to regenerate a valid signature. Meaning direct urls for files cannot be saved “for later use” or sent by email.</p>
+</section>
+<section id="types" class="level3">
+<h3 class="anchored" data-anchor-id="types"><strong>Types</strong></h3>
 <p>The “Types” dropdown menu correspond to the <strong>metadata types</strong>, that describe the structure of the YAML/JSON document accompanying each dataset. The following types area available:</p>
 <ul>
 <li><p><strong>eo</strong>: Legacy Earth Observation metadata format from early ODC versions, with deeply nested fields and full source-dataset lineage embedded in each document. Superseded by eo3 and no longer recommended for new products.</p></li>
@@ -484,10 +488,12 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>telemetry</strong>: Metadata format for raw (level-0) satellite downlink data, describing acquisitions by satellite, sensor, orbit, ground station and pass times. It has no spatial grid for raster loading and is now obsolete.</p></li>
 </ul>
 <p>=&gt; the <strong>eo3 type</strong> should then be preferred</p>
-<p><strong>Explore</strong></p>
+</section>
+<section id="explore" class="level3">
+<h3 class="anchored" data-anchor-id="explore"><strong>Explore</strong></h3>
 <p>The “Explore” dropdown menu gives access to the following functionalities:</p>
 <ul>
-<li><p><strong>Recently added</strong>: it displays the available products by de-chronological order of addition into the datacube</p></li>
+<li><p><strong>Recently added</strong>: it displays the available products by reverse-chronological order of addition into the datacube</p></li>
 <li><p><strong>Storage</strong>: it lists the stored products in the datacube and allows to access them directly through hyperlinks</p></li>
 <li><p><strong>Metadata issues</strong>: it is an audit tool that flags products whose dataset metadata Explorer can’t fully use, such as missing or invalid footprints, CRS, dates or summaries, so these can be fixed and re-indexed.</p></li>
 <li><p><strong>Products overview</strong>: it lists every product indexed in the datacube with its key details, such as license type, default CRS and default resolution, giving a quick summary of what the cube contains.</p></li>
@@ -495,26 +501,32 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>About explorer:</strong> it describes the Explorer instance and lists the URLs for downloading its products, metadata types and dataset documents, along with its APIs (footprints, regions, datasets, STAC) and the CSV/text versions of its audit pages.</p></li>
 </ul>
 </section>
-<section id="the-jupyter-notebooks-part" class="level2">
-<h2 class="anchored" data-anchor-id="the-jupyter-notebooks-part">The Jupyter notebooks part</h2>
-<p>The goal for the Nostradamus third parties developers is to use the Jupyter notebooks part of the data cubes to develop their own notebooks.</p>
+</section>
+<section id="accessing-the-jupyter-notebooks-part" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-the-jupyter-notebooks-part">Accessing the Jupyter notebooks part</h2>
+<p>The goal for the Nostradamus third parties developers is to use the Jupyter notebooks part of the Data Cubes to:</p>
+<ol type="1">
+<li>discover available products and learn how to interact with them through demo jupyter notebooks</li>
+<li>develop their own notebooks</li>
+</ol>
 <section id="authorization-for-using-an-existing-datacube" class="level3">
 <h3 class="anchored" data-anchor-id="authorization-for-using-an-existing-datacube">Authorization for using an existing datacube</h3>
-<p>Only the persons who are whitelisted by the datacube administrator can create an account on the given datacube.</p>
+<p><strong><em>Only the persons who are whitelisted by the datacube administrator can create an account on the given datacube.!</em></strong></p>
 <ol type="1">
 <li>Contact by email the Nostradamus datacube’s instance administrator who will give you a username</li>
-<li>Once you have received your username and password, go to <a href="https://cyprus-dc.nostradamus-platform.eu/jupyter" class="uri">https://cyprus-dc.nostradamus-platform.eu/jupyter</a>, where you will need to click on “Sign Up” in order to create your password</li>
-<li>Once you have signed up with your password, go back to the login page and sign in; you will reach the following page</li>
+<li>Once you have received your username, go to <a href="https://cyprus-dc.nostradamus-platform.eu/jupyter" class="uri">https://cyprus-dc.nostradamus-platform.eu/jupyter</a>, where you will need to click on “Sign Up” in order to setup your password</li>
+<li>Then, go back to the login page and sign in; you will reach the following page</li>
 </ol>
 <p><img src="images/clipboard-990112769.png" class="img-fluid" width="499"></p>
 <ol start="4" type="1">
-<li><p>Double-click on the “shared” folder, which will open the structure contained. The “HOW_TO_USE_SHARED_FOLDERS.txt” file describes how to use it. Keep it mind that you can <strong>only write in all_users/YOUR_USERNAME/</strong> but you can read in all folders of the other users</p>
+<li><p>Double-click on the “shared” folder and have a look at the “HOW_TO_USE_SHARED_FOLDERS.txt” file describes how to use it. Keep it mind that you can <strong>only write in all_users/YOUR_USERNAME/</strong> but you can read in all folders of the other users</p>
 <p><img src="images/clipboard-413704293.png" class="img-fluid" width="492"></p></li>
 </ol>
 </section>
 <section id="use-of-existing-notebooks" class="level3">
 <h3 class="anchored" data-anchor-id="use-of-existing-notebooks">Use of existing notebooks</h3>
-<p>The existing demo notebooks are all contained in the /shared/notebooks_demo/ folder. For an overview of the way to use the notebooks, look at the section “Exploring the demo notebooks” of the <a href="./2_use_odc.html">How to use an Open Data Cube</a> page.</p>
+<p>The existing demo notebooks are all contained in the <code>/shared/notebooks_demo/</code> folder. For an overview of the way to use the notebooks, look at the section “Exploring the demo notebooks” of the <a href="./2_use_odc.html">How to use an Open Data Cube</a> page.</p>
+<p>Beginners in Jupyter notebook are recommended to copy the whole <code>notebooks_demo</code> folder to their root directory in order to have a local copy of the notebooks and be able to edit them (as they will be read-only in the shared folder).</p>
 <p>In order to develop your own notebook based on an existing one, copy the one of interest to the root directory first (or shared personal directory), which will allow you to edit and save it. To do so, right click on the notebook of interest and its dependencies (folders documentation, figures, utils) in the “notebooks_demo” folder and paste it at the root directory or your own folder.</p>
 <p><img src="images/clipboard-1591310229.png" class="img-fluid" width="420"></p>
 <p><img src="images/clipboard-3520321096.png" class="img-fluid" width="521"></p>

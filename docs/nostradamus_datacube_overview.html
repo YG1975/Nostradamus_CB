@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-bcb4737e8fbcf1e9dfc00b59f8305558.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-81053bc0b3845b014e2efe7f6b158597.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -126,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./dc_overview.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">What is a data cube?</span></a>
+ <span class="menu-text">What is a Data Cube?</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
@@ -441,7 +441,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="project-context" class="level2">
 <h2 class="anchored" data-anchor-id="project-context">Project context</h2>
-<p>This work is part of <strong>Work Package 5 (WP5) – Development &amp; Implementation of Data Cubes</strong> of the <strong>Nostradamus</strong> project, led by the University of Geneva. WP5 aims to provide guidance for producing rasterized data from sources such as satellite imagery and existing geospatial databases for effective ingestion into Data Cubes, to develop a dedicated Data Cube for each participating country’s agricultural case study area, and to implement an exploitation platform built on these Data Cubes. It integrates satellite sensor, in-situ, and ancillary data, defining entry points for real-time streams, environmental datasets, and spatiotemporal data cubes, building on synergies with related initiatives such as the <strong>LandShift</strong> project to share infrastructure and mutualize development efforts. The resulting platform provides <a href="./jupyter.html" target="_blank"><strong>demo notebooks</strong></a> by default, lets users download new data and index scenes using <a href="./stac_datastore.html" target="_blank"><strong>STAC</strong></a>, and makes newly ingested data immediately visible for exploration in the Data Cube explorer.</p>
+<p>This work is part of <strong>Work Package 5 (WP5) – Development &amp; Implementation of Data Cubes</strong> of the <strong>Nostradamus</strong> project, led by the University of Geneva. WP5 aims to provide guidance for producing rasterized data from sources such as satellite imagery and existing geospatial databases for effective ingestion into Data Cubes, to develop a dedicated Data Cube for each participating country’s agricultural case study area, and to implement an exploitation platform built on these Data Cubes. It integrates satellite sensor, in-situ, and ancillary data, defining entry points for real-time streams, environmental datasets, and spatiotemporal Data Cubes, building on synergies with related initiatives such as the <strong>LandShift</strong> project to share infrastructure and mutualize development efforts. The resulting platform provides <a href="./jupyter.html" target="_blank"><strong>demo notebooks</strong></a> by default, lets users download new data and index scenes, and makes newly ingested data visible for exploration in the Data Cube explorer.</p>
 </section>
 <section id="nostradamus-datacubes" class="level2">
 <h2 class="anchored" data-anchor-id="nostradamus-datacubes">Nostradamus datacubes</h2>
@@ -454,20 +454,19 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://serbia-dc.nostradamus-platform.eu/explorer/products" target="_blank">Serbia</a></p></li>
 <li><p><a href="https://switzerland-dc.nostradamus-platform.eu/explorer/products" target="_blank">Switzerland</a></p></li>
 </ul>
-<p>They all contain the same default elements and are cropped to the concerned case studies extents.</p>
+<p>They all contain the same default elements and are cropped to the concerned case studies extents. However, content will be tailored to user needs as projects move forward.</p>
 </section>
 <section id="modifications-from-the-original-cube-in-a-box" class="level2">
 <h2 class="anchored" data-anchor-id="modifications-from-the-original-cube-in-a-box">Modifications from the original Cube-in-a-Box</h2>
-<p>In each of these instances, the following <strong>modifications</strong> have been done on the original cube in a box to become the <a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter" target="_blank">Nostradamus data cube</a>:</p>
+<p>In each of these instances, the following <strong>modifications</strong> have been done on the original cube in a box to become the <a href="https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter" target="_blank">Nostradamus Data Cube</a>:</p>
 <ul>
 <li><p>the default <a href="./jupyter.html#jupyter-notebook" target="_blank"><strong>Jupyter notebook</strong></a> has been replaced by a multi-user <a href="jupyter.html#jupyterhub" target="_blank"><strong>JupyterHub</strong></a></p></li>
 <li><p>the <strong>JupyterHub</strong> instance contains shared folders for collaborative work</p></li>
-<li><p>the <a href="./planetary_computer.html" target="_blank"><strong>Planetary computer</strong></a> data catalog has been included as a <a href="./stac_datastore.html" target="_blank">STAC datastore</a> instead of the previous default <a href="./sentinel.html" target="_blank"><strong>Sentinel-2</strong></a> source that was slow and unstable</p></li>
+<li><p>the <a href="./planetary_computer.html" target="_blank"><strong>Planetary computer</strong></a> data catalog has been used as a <a href="./stac_datastore.html" target="_blank">STAC datastore</a> instead of the previous default <a href="./sentinel.html" target="_blank"><strong>Sentinel-2</strong></a> source that was slow and unstable</p></li>
 <li><p>an <strong>Open Datacube explorer</strong> has been added and modified to access Planetary Computer data</p></li>
 <li><p>a <a href="https://traefik.io/traefik" target="_blank"><strong>Traefik</strong></a> reverse proxy has been added as a unique entry point of the infrastructure that dispatches the requests to the different services</p></li>
 <li><p>a <strong>multi-architecture support</strong> for AMD64 and ARM64 has been added</p></li>
 <li><p>a <a href="https://www.dask.org/" target="_blank"><strong>Dask</strong></a> python library has been added for performing parallel and distributed processing, which is necessary for large data processing</p></li>
-<li><p>The default <strong>ESRI Land Cover source</strong> in Planetary Computer (<a href="https://planetarycomputer.microsoft.com/dataset/io-lulc">https://planetarycomputer.microsoft.com/dataset/io-lulc)</a>){target=“_blank”} that is deprecated has been replaced by <a href="https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02" target="_blank">https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02</a></p></li>
 <li><p>the <a href="./landsat.html" target="_blank"><strong>Landsat Collection 2 Level 2 Science Products</strong></a> have been added</p></li>
 <li><p>a <strong>Jupyter notebook</strong> has been <strong>modified</strong> or <strong>created</strong> for each available Level2 science product (see <a href="./data_sources.html" target="_blank">details</a>)</p></li>
 <li><p>Documentation has been created for <a href="https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/admin/Living-Earth-Cube-in-a-Box---Admin-Guide.pdf" target="_blank">administrators</a> and <a href="https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/user/Living-Earth-Cube-in-a-Box---User-Guide.pdf" target="_blank">users</a></p></li>

@@ -4,7 +4,7 @@ title: "Data cubes installation"
 
 ## Setting up the software and infrastructure
 
-Installing a data cube involves two main phases. The first is setting up the underlying software and infrastructure on the machine that will host the cube, typically a server (on-premises or cloud-based) or, for testing and development, a local computer or virtual machine: installing system libraries for handling geospatial formats (GDAL, HDF5, netCDF), a Python environment with the [**Open Data Cube (ODC)**](https://opendatacube.readthedocs.io/en/latest/installation/index.html){target="_blank"} package, and a PostgreSQL/PostGIS database that will hold the index of all available data.
+Installing a Data Cube involves two main phases. The first is setting up the underlying software and infrastructure on the machine that will host the cube, typically a server (on-premises or cloud-based) or, for testing and development, a local computer or virtual machine: installing system libraries for handling geospatial formats (GDAL, HDF5, netCDF), a Python environment with the [**Open Data Cube (ODC)**](https://opendatacube.readthedocs.io/en/latest/installation/index.html){target="_blank"} package, and a PostgreSQL/PostGIS database that will hold the index of all available data.
 
 ## Populating the cube
 

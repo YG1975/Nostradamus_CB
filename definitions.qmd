@@ -8,7 +8,7 @@ title: "Definitions"
 
 <https://github.com/opendatacube/cube-in-a-box>
 
-## Open data cube (ODC)
+## Open Data Cube (ODC)
 
 "free, open-source software package that simplifies the management and analysis of large amounts of satellite imagery and other Earth observation data"
 

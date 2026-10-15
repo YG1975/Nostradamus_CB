@@ -4,7 +4,7 @@ title: "Sentinel"
 
 ## The Sentinel missions
 
-**Sentinel** is the family of Earth observation satellites operated by the European Union's Copernicus programme. Two of these missions are the most commonly used sources in data cube deployments:
+**Sentinel** is the family of Earth observation satellites operated by the European Union's Copernicus programme. Two of these missions are the most commonly used sources in Data Cube deployments:
 
 -   **Sentinel-1**: a radar (SAR, Synthetic Aperture Radar) mission, which measures the Earth's surface independently of daylight and cloud cover. It is well suited to monitoring soil moisture, flooding, and surface deformation.
 
