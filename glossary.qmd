@@ -10,7 +10,7 @@ A **free, open-source software package that simplifies the management and analys
 
 ## Cube in a Box
 
-A **simple way to run an Open Data Cube**, packaged as a ready-to-deploy environment (typically via Docker) that bundles the ODC software stack, a database, and example notebooks so users can get a working data cube up and running quickly, without a full manual installation.
+A **simple way to run an Open Data Cube**, packaged as a ready-to-deploy environment (typically via Docker) that bundles the ODC software stack, a database, and example notebooks so users can get a working Data Cube up and running quickly, without a full manual installation.
 
 <https://github.com/opendatacube/cube-in-a-box>
 
@@ -40,4 +40,4 @@ A **simple way to run an Open Data Cube**, packaged as a ready-to-deploy environ
 
 ## REST
 
-**Representational State Transfer (REST)** is an architectural style for designing networked, web-based APIs. A REST API exposes resources (e.g., datasets, catalogue entries, processing results) through standard HTTP methods (GET, POST, PUT, DELETE) and uniform, predictable URLs, typically exchanging data in formats such as JSON. REST APIs are widely used to enable interoperable, machine-readable access to data and services, including within data cube and STAC-based infrastructures.
+**Representational State Transfer (REST)** is an architectural style for designing networked, web-based APIs. A REST API exposes resources (e.g., datasets, catalogue entries, processing results) through standard HTTP methods (GET, POST, PUT, DELETE) and uniform, predictable URLs, typically exchanging data in formats such as JSON. REST APIs are widely used to enable interoperable, machine-readable access to data and services, including within Data Cube and STAC-based infrastructures.

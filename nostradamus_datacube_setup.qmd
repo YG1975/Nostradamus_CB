@@ -2,7 +2,7 @@
 title: "Cube-in-a-box installation"
 ---
 
-Installing a data cube involves a number of steps, described in detail on the [**Installation**](dc_installation.qmd){target="_blank"} page. The following part is a step-by-step installation procedure for installing a cube-in-a-box.
+Installing a Data Cube involves a number of steps, described in detail on the [**Installation**](dc_installation.qmd){target="_blank"} page. The following part is a step-by-step installation procedure for installing a cube-in-a-box.
 
 ::: callout-note
 A [detailed installation procedure](https://github.com/LivingEarthLab/cube-in-a-box){target="_blank"} and other [admin](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/admin/Living-Earth-Cube-in-a-Box---Admin-Guide.pdf){target="_blank"} and [user](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/user/Living-Earth-Cube-in-a-Box---User-Guide.pdf){target="_blank"} tutorials exist. The steps below consist in additional help to the links mentioned for a Docker install of an Open Data Cube
@@ -83,7 +83,7 @@ Your Terminal should be showing activity
 12. In the next screen, enter this user and give a password. If all works fine, you should see a confirmation message saying that the signup was successful.
 
 ::: callout-note
-Do not forget to write down your username and password as these will be needed for later login for using the data cube
+Do not forget to write down your username and password as these will be needed for later login for using the Data Cube
 :::
 
 13. On this same screen, click on the [login](http://localhost/jupyter/hub/login){target="_blank"} link and log in with the credentials you just created. If all works fine, you should reach in your browser the homepage of the JupyterHub interface of the Nostradamus datacube.

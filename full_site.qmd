@@ -10,41 +10,33 @@ format:
     keep-md: false
 ---
 
-
-# UNIGE & UNEP/GRID-Geneva data cubes Capacity Building
-
+# UNIGE & UNEP/GRID-Geneva Data Cubes Capacity Building
 
 ![](images/homepage_illustration.svg)
 
-This site is a capacity-building resource on data cubes and Earth observation, developed by UNIGE and UNEP/GRID-Geneva. It introduces the core concepts behind data cubes — what problem they solve, how they organise satellite and geospatial data, and the main steps involved in setting one up — before walking through a concrete, hands-on implementation.
+This site is a capacity-building resource on Data Cubes and Earth observation, developed by UNIGE and UNEP/GRID-Geneva. It introduces the core concepts behind Data Cubes — what problem they solve, how they organise satellite and geospatial data, and the main steps involved in setting one up — before walking through a concrete, hands-on implementation.
 
 At its core is the Nostradamus datacube, a modified Open Data Cube deployment with a multi-user JupyterHub, an integrated STAC datastore, and ready-to-use notebooks. The site documents how to install and use it, complemented by step-by-step tutorials, recorded workshops, and a parallel section on vector datacubes for non-raster geospatial data.
 
-Beyond the datacube itself, the site catalogues the underlying data sources (Landsat, Sentinel, the Planetary Computer STAC catalog) and the tools used to work with them (Jupyter, LivingEarth), along with acknowledgments and a FAQ for troubleshooting. Use the sidebar to navigate by topic, or start with the [**Introduction to datacubes**](dc_overview.qmd){target="_blank"} for a general overview before diving into the Nostradamus-specific material.
-
+Beyond the datacube itself, the site catalogues the underlying data sources (Landsat, Sentinel, ..., generally from the Planetary Computer STAC catalog) and the tools used to work with them (Jupyter, LivingEarth), along with acknowledgments and a FAQ for troubleshooting. Use the sidebar to navigate by topic, or start with the [**Introduction to datacubes**](dc_overview.qmd){target="_blank"} for a general overview before diving into the Nostradamus-specific material.
 
 {{< pagebreak >}}
-
 
 # Introduction to datacubes
 
+Earth observation missions such as [**Landsat**](landsat.qmd){target="_blank"}, [**Sentinel**](sentinel.qmd){target="_blank"}, and [**MODIS**](https://modis.gsfc.nasa.gov/){target="_blank"} now provide multi-decade, continuously growing archives of satellite imagery, but this data has traditionally been organised and distributed scene by scene in a raw format, requiring heavy preprocessing before it can be compared or combined across dates and sensors. A **Data Cube** addresses this bottleneck: it provides a common framework to catalogue, access, and analyse large volumes of gridded Earth Observation (EO) [**Analysis Ready Data**](glossary.qmd#analysis-ready-data){target="_blank"} (ARD) so that routine, reliable, and reproducible analyses, rather than one-off scene processing, can support evidence-based decisions in areas such as environmental monitoring, agriculture, and land management.
 
-Earth observation missions such as [**Landsat**](landsat.qmd){target="_blank"}, [**Sentinel**](sentinel.qmd){target="_blank"}, and [**MODIS**](https://modis.gsfc.nasa.gov/){target="_blank"} now provide multi-decade, continuously growing archives of satellite imagery, but this data has traditionally been organised and distributed scene by scene, requiring heavy preprocessing before it can be compared or combined across dates and sensors. A **data cube** addresses this bottleneck: it provides a common framework to catalogue, access, and analyse large volumes of gridded Earth observation data so that routine, reliable, and reproducible analyses, rather than one-off scene processing, can support evidence-based decisions in areas such as environmental monitoring, agriculture, and land management.
+Technically, a Data Cube is an open-source geospatial data management and analysis platform (the **Open Data Cube (ODC)** being the most widely adopted implementation) that organises satellite imagery and other gridded data (elevation models, geophysical grids, model outputs) along space, time, and spectral dimensions. Unlike traditional scene-based approaches, every observation is preserved individually, enabling a shift from scene-based to pixel-based analysis. It exposes this data through a Python API, a catalogue of indexed products, and complementary tools such as the Open Data Cube Explorer, Jupyter notebooks, and OGC web services.
 
-Technically, a data cube is an open-source geospatial data management and analysis platform (the **Open Data Cube (ODC)** being the most widely adopted implementation) that organises satellite imagery and other gridded data (elevation models, geophysical grids, model outputs) along space, time, and spectral dimensions. Unlike traditional scene-based approaches, every observation is preserved individually, enabling a shift from scene-based to pixel-based analysis. It exposes this data through a Python API, a catalogue of indexed products, and complementary tools such as the Open Data Cube Explorer, Jupyter notebooks, and OGC web services.
+Setting up a Data Cube typically follows a few main steps: selecting and deploying the underlying infrastructure (local or cloud) and installing the ODC software stack; defining the interfaces and standards used to describe the data, such as [**STAC**](stac_datastore.qmd){target="_blank"} and OGC web services; preparing and indexing the data (usually **Analysis Ready Data (ARD)**) as datasets and products with standardised metadata; and building a catalogue for discovery, along with the tools (explorer, notebooks, APIs) needed to query, process, and exploit the cube.
 
-Setting up a data cube typically follows a few main steps: selecting and deploying the underlying infrastructure (local, HPC, or cloud) and installing the ODC software stack; defining the interfaces and standards used to describe the data, such as [**STAC**](stac_datastore.qmd){target="_blank"} and OGC web services; preparing and indexing the data (usually **Analysis Ready Data (ARD)**) as datasets and products with standardised metadata; and building a catalogue for discovery, along with the tools (explorer, notebooks, APIs) needed to query, process, and exploit the cube.
-
-Several operational data cubes now build on this open-source foundation at different scales, including the [**Swiss Data Cube**](https://www.swissdatacube.org/){target="_blank"}, jointly operated by the University of Geneva, UN Environment/GRID-Geneva, the University of Zurich, and the WSL; [**Digital Earth Africa**](https://www.digitalearthafrica.org/){target="_blank"}, delivering continental-scale Earth observation services across Africa; and [**Digital Earth Australia**](https://www.dea.ga.gov.au/){target="_blank"}, run by Geoscience Australia to track more than 30 years of landscape change. The [**Nostradamus datacube**](nostradamus_datacube_overview.qmd){target="_blank"} presented in this site follows the same approach, adapted to the project's agricultural case studies.
-
+Several operational Data Cubes now build on this open-source foundation at different scales, including the [**Swiss Data Cube**](https://www.swissdatacube.org/){target="_blank"}, jointly operated by the University of Geneva, UN Environment/GRID-Geneva, the University of Zurich, and the WSL; [**Digital Earth Africa**](https://www.digitalearthafrica.org/){target="_blank"}, delivering continental-scale Earth observation services across Africa; and [**Digital Earth Australia**](https://www.dea.ga.gov.au/){target="_blank"}, run by Geoscience Australia to track more than 30 years of landscape change. The [**Nostradamus datacube**](nostradamus_datacube_overview.qmd){target="_blank"} presented in this site follows the same approach, adapted to the project's agricultural case studies.
 
 {{< pagebreak >}}
 
-
 # Data cubes installation
 
-
-Installing a data cube involves two main phases. The first is setting up the underlying software and infrastructure on the machine that will host the cube, typically a server (on-premises or cloud-based) or, for testing and development, a local computer or virtual machine: installing system libraries for handling geospatial formats (GDAL, HDF5, netCDF), a Python environment with the [**Open Data Cube (ODC)**](https://opendatacube.readthedocs.io/en/latest/installation/index.html){target="_blank"} package, and a PostgreSQL/PostGIS database that will hold the index of all available data.
+Installing a Data Cube involves two main phases. The first is setting up the underlying software and infrastructure on the machine that will host the cube, typically a server (on-premises or cloud-based) or, for testing and development, a local computer or virtual machine: installing system libraries for handling geospatial formats (GDAL, HDF5, netCDF), a Python environment with the [**Open Data Cube (ODC)**](https://opendatacube.readthedocs.io/en/latest/installation/index.html){target="_blank"} package, and a PostgreSQL/PostGIS database that will hold the index of all available data.
 
 Once the software stack is running and connected to its database, the second phase consists of populating the cube: describing the data to be added through **product definitions** and **dataset documents**, then indexing it so it becomes searchable and accessible through the ODC API and tools. Indexing only records metadata about the data; it does not copy, move, or transform the underlying files, making the process fast and safe to repeat.
 
@@ -54,12 +46,9 @@ The diagram below summarises this workflow; see the [**Quick Start**](dc_quickst
 
 ![](images/dc_installation_steps.svg)
 
-
 {{< pagebreak >}}
 
-
 # Data cubes quickstart
-
 
 Here are the step-by-step instructions for deploying a datacube:
 
@@ -73,50 +62,42 @@ Here are the step-by-step instructions for deploying a datacube:
 8.  Load the products and index the data with the `datacube` command line tool, following the [**step-by-step indexing guide**](https://opendatacube.readthedocs.io/en/latest/installation/indexing-data/step-guide.html){target="_blank"} (`datacube product add`, then `datacube dataset add`).
 9.  Verify the data is available through the ODC Explorer, the Python API, or a Jupyter notebook.
 
-
 {{< pagebreak >}}
-
 
 # Nostradamus datacube
 
-
-This work is part of **Work Package 5 (WP5) – Development & Implementation of Data Cubes** of the **Nostradamus** project, led by the University of Geneva. WP5 aims to provide guidance for producing rasterized data from sources such as satellite imagery and existing geospatial databases for effective ingestion into Data Cubes, to develop a dedicated Data Cube for each participating country's agricultural case study area, and to implement an exploitation platform built on these Data Cubes. It integrates satellite sensor, in-situ, and ancillary data, defining entry points for real-time streams, environmental datasets, and spatiotemporal data cubes, building on synergies with related initiatives such as the **LandShift** project to share infrastructure and mutualize development efforts. The resulting platform provides [**demo notebooks**](jupyter.qmd){target="_blank"} by default, lets users download new data and index scenes using [**STAC**](stac_datastore.qmd){target="_blank"}, and makes newly ingested data immediately visible for exploration in the Data Cube explorer.
+This work is part of **Work Package 5 (WP5) – Development & Implementation of Data Cubes** of the **Nostradamus** project, led by the University of Geneva. WP5 aims to provide guidance for producing rasterized data from sources such as satellite imagery and existing geospatial databases for effective ingestion into Data Cubes, to develop a dedicated Data Cube for each participating country's agricultural case study area, and to implement an exploitation platform built on these Data Cubes. It integrates satellite sensor, in-situ, and ancillary data, defining entry points for real-time streams, environmental datasets, and spatiotemporal Data Cubes, building on synergies with related initiatives such as the **LandShift** project to share infrastructure and mutualize development efforts. The resulting platform provides [**demo notebooks**](jupyter.qmd){target="_blank"} by default, lets users download new data and index scenes, and makes newly ingested data visible for exploration in the Data Cube explorer.
 
 A dedicated [**cube in a box**](https://github.com/LivingEarthLab/cube-in-a-box){target="_blank"} has been deployed for the **Nostradamus** project. It is a **modifed clone** from the [original cube in a box](https://github.com/opendatacube/cube-in-a-box){target="_blank"}.
 
-The following **modifications** have been done on the original cube in a box to become the [Nostradamus data cube](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter){target="_blank"}:
+The following **modifications** have been done on the original cube in a box to become the [Nostradamus Data Cube](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter){target="_blank"}:
 
-- the default [**Jupyter notebook**](jupyter.qmd#jupyter-notebook){target="_blank"} has been replaced by a multi-user [**JupyterHub**](jupyter.html#jupyterhub){target="_blank"}
+-   the default [**Jupyter notebook**](jupyter.qmd#jupyter-notebook){target="_blank"} has been replaced by a multi-user [**JupyterHub**](jupyter.html#jupyterhub){target="_blank"}
 
-- the **JupyterHub** instance contains shared folders for collaborative work
+-   the **JupyterHub** instance contains shared folders for collaborative work
 
-- the [**Planetary computer**](planetary_computer.qmd){target="_blank"} data catalog has been included as a [STAC datastore](stac_datastore.qmd){target="_blank"} instead of the previous default [**Sentinel-2**](sentinel.qmd){target="_blank"} source that was slow and unstable
+-   the [**Planetary computer**](planetary_computer.qmd){target="_blank"} data catalog has been used as a [STAC datastore](stac_datastore.qmd){target="_blank"} instead of the previous default [**Sentinel-2**](sentinel.qmd){target="_blank"} source that was slow and unstable
 
-- an **Open Datacube explorer** has been added and modified to access Planetary Computer data
+-   an **Open Datacube explorer** has been added and modified to access Planetary Computer data
 
-- a [**Traefik**](https://traefik.io/traefik){target="_blank"} reverse proxy has been added as a unique entry point of the infrastructure that dispatches the requests to the different services
+-   a [**Traefik**](https://traefik.io/traefik){target="_blank"} reverse proxy has been added as a unique entry point of the infrastructure that dispatches the requests to the different services
 
-- a **multi-architecture support** for AMD64 and ARM64 has been added
+-   a **multi-architecture support** for AMD64 and ARM64 has been added
 
-- a [**Dask**](https://www.dask.org/){target="_blank"} python library has been added for performing parallel and distributed processing, which is necessary for large data processing
+-   a [**Dask**](https://www.dask.org/){target="_blank"} python library has been added for performing parallel and distributed processing, which is necessary for large data processing
 
-- The default **ESRI Land Cover source** in Planetary Computer ([https://planetarycomputer.microsoft.com/dataset/io-lulc)](https://planetarycomputer.microsoft.com/dataset/io-lulc)){target="_blank"} that is deprecated has been replaced by [https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02](https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02){target="_blank"}
+-   the [**Landsat Collection 2 Level 2 Science Products**](landsat.qmd){target="_blank"} have been added
 
-- the [**Landsat Collection 2 Level 2 Science Products**](landsat.qmd){target="_blank"} have been added
+-   a **Jupyter notebook** has been **modified** or **created** for each available Level2 science product (see [details](data_sources.qmd){target="_blank"})
 
-- a **Jupyter notebook** has been **modified** or **created** for each available Level2 science product (see [details](data_sources.qmd){target="_blank"})
-
-- Documentation has been created for [administrators](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/admin/Living-Earth-Cube-in-a-Box---Admin-Guide.pdf){target="_blank"} and [users](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/user/Living-Earth-Cube-in-a-Box---User-Guide.pdf){target="_blank"}
-
+-   Documentation has been created for [administrators](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/admin/Living-Earth-Cube-in-a-Box---Admin-Guide.pdf){target="_blank"} and [users](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/user/Living-Earth-Cube-in-a-Box---User-Guide.pdf){target="_blank"}
 
 {{< pagebreak >}}
 
-
 # Nostradamus datacube installation
 
-
 ::: callout-note
-A [detailed installation procedure](https://github.com/LivingEarthLab/cube-in-a-box){target="_blank"} and other [admin](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/admin/Living-Earth-Cube-in-a-Box---Admin-Guide.pdf){target="_blank"} and [user](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/user/Living-Earth-Cube-in-a-Box---User-Guide.pdf){target="_blank"} tutorials exist. The steps below consist in additional help to the links mentioned for a Docker install of the Nostradamus data cube
+A [detailed installation procedure](https://github.com/LivingEarthLab/cube-in-a-box){target="_blank"} and other [admin](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/admin/Living-Earth-Cube-in-a-Box---Admin-Guide.pdf){target="_blank"} and [user](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/user/Living-Earth-Cube-in-a-Box---User-Guide.pdf){target="_blank"} tutorials exist. The steps below consist in additional help to the links mentioned for a Docker install of the Nostradamus Data Cube
 :::
 
 # **Docker**
@@ -194,7 +175,7 @@ Your Terminal should be showing activity
 12. In the next screen, enter this user and give a password. If all works fine, you should see a confirmation message saying that the signup was successful.
 
 ::: callout-note
-Do not forget to write down your username and password as these will be needed for later login for using the data cube
+Do not forget to write down your username and password as these will be needed for later login for using the Data Cube
 :::
 
 13. On this same screen, click on the [login](http://localhost/jupyter/hub/login){target="_blank"} link and log in with the credentials you just created. If all works fine, you should reach in your browser the homepage of the JupyterHub interface of the Nostradamus datacube.
@@ -207,12 +188,9 @@ If you check your Docker desktop instance, a container with a name containing "c
 the url to reach your the homepage of the JupyterHub interface of the Nostradamus datacube should be localhost/jupyter/user/\[username\]/lab
 :::
 
-
 {{< pagebreak >}}
 
-
 # Nostradamus datacube use
-
 
 1)  Launch Docker Desktop and verify that the containers "cube-in-a-box" and "cube-in-a-box-jupyter" have started (this should be automatic at the launch of Docker Desktop)
 
@@ -234,7 +212,6 @@ docker compose version
 
 ![](images/jupyter/Jupyter_demo_notebooks.png)
 
-
 4.  Double-clicking on a notebook will open it (in read only) and give you the following information:
 
 -   **Objective** of the notebook
@@ -250,7 +227,7 @@ docker compose version
 ::: callout-note
 -   You can edit and execute .ipynb files directly in the ./shared/notebooks_demo directory, but not save any changes.
 -   To save any changes, copy the notebook and any potential dependent files to your root directory first (or shared personal directory).
-- The content of the root directory is not visible by others while the one of your your folder is, but only you can edit it. 
+-   The content of the root directory is not visible by others while the one of your your folder is, but only you can edit it.
 :::
 
 5.  In order to use these demo notebooks and make changes, you need to copy them into the Jupyter root directory. To do so, right clik on the notebook of interest and its dependencies (folders documentation, figures, utils) in the "notebooks_demo" folder and paste it at the root directory. It should then appear at the same level as the "shared" folder. Alternatively, you can also copy the whole "notebooks_demo" folder to the root directory.
@@ -261,21 +238,15 @@ docker compose version
 
 ![](images/jupyter/Jupyter_notebook_interface.png)
 
-
 {{< pagebreak >}}
-
 
 # Exercices
 
-
 This section contains dedicated exercices to become familiar with the use of Nostradamus datacube.
-
 
 {{< pagebreak >}}
 
-
 # How to index new data into a DC?
-
 
 Once a datacube is deployed, the Earth observation archive keeps growing: new satellite scenes become available over time and need to be added to the existing index so they can be queried and analysed alongside the rest of the archive. Since the Nostradamus datacube uses a [**STAC datastore**](stac_datastore.qmd){target="_blank"} (the Planetary Computer catalog) as its data source, new scenes do not need to be prepared or described by hand: they can be indexed directly from the STAC catalog into an existing product.
 
@@ -311,7 +282,7 @@ Planetary Computer assets are served through short-lived signed URLs. If loading
 
 4.  Check the command's output: it reports how many datasets were **added**, **failed**, and **skipped** (already-indexed scenes are skipped, not duplicated).
 
-5.  Confirm the new scenes are indexed by checking the product's extent in the ODC Explorer, at [localhost/explorer/products/lsX_c2l2\_sp](http://localhost/explorer/products/lsX_c2l2_sp){target="_blank"}: the temporal coverage should now include your new date range.
+5.  Confirm the new scenes are indexed by checking the product's extent in the ODC Explorer, at [localhost/explorer/products/lsX_c2l2_sp](http://localhost/explorer/products/lsX_c2l2_sp){target="_blank"}: the temporal coverage should now include your new date range.
 
 6.  Alternatively, confirm it directly from a notebook using the Python API:
 
@@ -323,59 +294,41 @@ Planetary Computer assets are served through short-lived signed URLs. If loading
     print(data.time.values)
     ```
 
-
 {{< pagebreak >}}
-
 
 # Exercice2
 
-
 Exercice2
 
-
 {{< pagebreak >}}
-
 
 # Workshops
 
-
 This section contains material for all the Nostradamus workshops.
-
 
 {{< pagebreak >}}
 
-
 # Workshop Nostradamus Task 6.3
-
 
 In the frame of the Nostradamus 6.3, it is planned to co-design and implement comprehensive (online) training activities and materials tailored to different target groups to foster the knowledge, skills and capacity of key stakeholders.
 
 This section contains all the Nostradamus related datacube available to this task.
 
-
 {{< pagebreak >}}
-
 
 # Vector datacubes
 
-
 This section is dedicated to vector datacubes material.
 
-
 {{< pagebreak >}}
-
 
 # Vector datacube installation
 
-
-Description of data cube concepts
-
+Description of Data Cube concepts
 
 {{< pagebreak >}}
 
-
 # Data sources
-
 
 The Nostradamus datacube contains analysis ready datasets that allow to perform analyses through [6 distinct notebooks](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products) that use different data sources:
 
@@ -393,12 +346,9 @@ The Nostradamus datacube contains analysis ready datasets that allow to perform 
 
 -   [s2_l2a.odc-product.yaml](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/s2_l2a.odc-product.yaml)
 
-
 {{< pagebreak >}}
 
-
 # Landsat
-
 
 ## Landsat images
 
@@ -428,21 +378,15 @@ The Landsat archive of raw and processed data since 1972 is organized into 3 col
 
 Among the various products available in the Nostradamus datacube, the one called "[**lsX_c2l2_sp.odc-product.yaml**](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter/src/branch/main/products/lsX_c2l2_sp.odc-product.yaml)**"** is the Landsat one, made of USGS Landsat 8 and 9 Collection 2 Level-2 Science Products, consisting of atmospherically corrected surface reflectance and surface temperature image data.
 
-
 {{< pagebreak >}}
-
 
 # Sentinel
 
-
 ## Sentinel
-
 
 {{< pagebreak >}}
 
-
 # Planetary computer
-
 
 It is a data catalog containing environmental monitoring data, in consistent, analysis-ready formats accessible from Azure Blob Storage. [Access it from here](https://planetarycomputer.microsoft.com/catalog) .
 
@@ -452,12 +396,9 @@ To access planetary computer data, there is a need to be registered. In order to
 
 ![](images/planetary_computer.png)
 
-
 {{< pagebreak >}}
 
-
 # Jupyter
-
 
 [Jupyter](https://jupyter.org/){target="_blank"} is an open-source project that supports interactive data science and scientific computing across all programming languages. The Jupyter ecosystem is made of several [subprojects](https://docs.jupyter.org/en/latest/#sub-project-documentation){target="_blank"} that propose many different software.
 
@@ -467,11 +408,11 @@ Among them, [Jupyter notebook](https://jupyter-notebook.readthedocs.io/en/latest
 
 ## Jupyter notebook
 
-A [Jupyter notebook](https://jupyter-notebook.readthedocs.io/en/latest/){target="_blank"} is an interactive document with that is run in your web broswer and allows to have in a single **.ipynb** file:
+A [Jupyter notebook](https://jupyter-notebook.readthedocs.io/en/latest/){target="_blank"} is an interactive document running in your web browser a single **.ipynb** file:
 
-- executable **code** (Python, R, ...) that can be run cell by cell
-- formatted **text** in MarkDown language
-- **visualisations** (graphs, maps, tables) that interactively display below the code
+-   executable **code** (Python, R, ...) that can be run cell by cell
+-   formatted **text** in MarkDown language
+-   **visualisations** (graphs, maps, tables) that interactively display below the code
 
 ![](images/Jupyter_notebook_example.png)
 
@@ -523,11 +464,11 @@ Once you navigator is open at http://localhost:8888, use the top menus to either
 
 [JupyterLab](https://github.com/jupyterlab/jupyterlab){target="_blank"} is the modern version of Jupyter notebooks. It is a full environment that contains more features than Jupyter notebooks. Here are some additional elements compared to Jupyter notebooks:
 
-- multi-tabs
-- Integrated file explorer
-- Text and code editor
-- Integrated terminal
-- Extensions
+-   multi-tabs
+-   Integrated file explorer
+-   Text and code editor
+-   Integrated terminal
+-   Extensions
 
 #### **How to install it on my machine?**
 
@@ -591,28 +532,22 @@ Once you navigator is open at http://localhost:8888/lab, use the various menus t
 
 There should normally be 2 options:
 
-- Either your sysadmin has installed JupyterHub on a server and you can access it through a url and login
-- or a self-hosted JupyterHub Docker image has been created and each user can use it as an isolated environment
+-   Either your sysadmin has installed JupyterHub on a server and you can access it through a url and login
+-   or a self-hosted JupyterHub Docker image has been created and each user can use it as an isolated environment
 
 This **Docker solution** is what has been chosen for the **Nostradamus JupyterHub**.
 
-
 {{< pagebreak >}}
 
-
 # LivingEarth
-
 
 LivingEarth is ...
 
 See <https://livingearthlab.github.io/> for more details
 
-
 {{< pagebreak >}}
 
-
 # Acknowledgments
-
 
 ## Funding sources
 
@@ -624,18 +559,15 @@ Description of the contributions that help building this instance: Nostradamus, 
 
 ## Publications
 
-List of publications linked to the data cubes presented in this capacity building instance
+List of publications linked to the Data Cubes presented in this capacity building instance
 
 ## AI assistance
 
-During the preparation of this site, the authors used AI-based tools (large language models) to help draft and edit some sections of the documentation, including language editing and improving clarity. All AI-assisted content was reviewed, verified, and edited by the authors, who take full responsibility for the accuracy and content of this site. The technical implementation, data cube design, and content structure were directed and validated solely by the authors.
-
+During the preparation of this site, the authors used AI-based tools (large language models) to help draft and edit some sections of the documentation, including language editing and improving clarity. All AI-assisted content was reviewed, verified, and edited by the authors, who take full responsibility for the accuracy and content of this site. The technical implementation, Data Cube design, and content structure were directed and validated solely by the authors.
 
 {{< pagebreak >}}
 
-
 # Frequently Asked Questions
-
 
 ### When I have installed Docker and clicked on `make setup`I have a "404 page not found" in the browser at localhost/lab
 

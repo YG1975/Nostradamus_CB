@@ -2,4 +2,4 @@
 title: "Vector datacube installation"
 ---
 
-Description of data cube concepts
+Description of Data Cube concepts

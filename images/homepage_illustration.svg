@@ -1,6 +1,6 @@
 <svg viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" role="img" font-family="-apple-system, Helvetica, Arial, sans-serif">
   <title>Data cube fed by Earth observation satellites, supporting capacity building</title>
-  <desc>An isometric data cube built from stacked time layers, an orbiting Earth observation satellite feeding data into it, and a capacity-building group of trainees using the resulting knowledge.</desc>
+  <desc>An isometric Data Cube built from stacked time layers, an orbiting Earth observation satellite feeding data into it, and a capacity-building group of trainees using the resulting knowledge.</desc>
 
   <rect width="900" height="380" fill="#ffffff"/>
 
@@ -30,7 +30,7 @@
   <!-- dashed arrow earth -> cube (data flowing down) -->
   <path d="M440,110 Q330,170 245,190" fill="none" stroke="#adb5bd" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow2)"/>
 
-  <!-- Isometric data cube -->
+  <!-- Isometric Data Cube -->
   <g transform="translate(245,260)">
     <!-- front-left face -->
     <polygon points="0,0 -104,-60 -104,-160 0,-100" fill="#f8f9fa" stroke="#c9d2db"/>

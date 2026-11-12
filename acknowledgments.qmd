@@ -12,8 +12,8 @@ Description of the contributions that help building this instance: Nostradamus, 
 
 ## Publications
 
-List of publications linked to the data cubes presented in this capacity building instance
+List of publications linked to the Data Cubes presented in this capacity building instance
 
 ## AI assistance
 
-During the preparation of this site, the authors used AI-based tools (large language models) to help draft and edit some sections of the documentation, including language editing and improving clarity. All AI-assisted content was reviewed, verified, and edited by the authors, who take full responsibility for the accuracy and content of this site. The technical implementation, data cube design, and content structure were directed and validated solely by the authors.
+During the preparation of this site, the authors used AI-based tools (large language models) to help draft and edit some sections of the documentation, including language editing and improving clarity. All AI-assisted content was reviewed, verified, and edited by the authors, who take full responsibility for the accuracy and content of this site. The technical implementation, Data Cube design, and content structure were directed and validated solely by the authors.
