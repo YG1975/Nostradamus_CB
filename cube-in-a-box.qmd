@@ -1,0 +1,8 @@
+---
+title: "Cube-in-a-box "
+jupyter: python3
+---
+
+Cube in a Box (CiaB) is a ready-to-use way of running an [Open Data Cube](https://www.opendatacube.org/) on a single machine, which is available at <https://github.com/opendatacube/cube-in-a-box>. Instead of installing and configuring each component by hand (the PostgreSQL/PostGIS database, `datacube-core`, the Explorer web interface, and Jupyter notebooks), CiaB bundles them together using Docker, so that a complete datacube can be set up and started with a few simple commands. This makes it an easy entry point for anyone who wants to explore, test, or teach Earth observation data cubes without a complex installation.
+
+It can be customized with features suited to collaborative work and larger datasets (e.g.a multi-user JupyterHub with shared folders, Dask for parallel processing, etc. ) and comes with administrator and user documentation.

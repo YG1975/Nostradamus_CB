@@ -48,6 +48,20 @@ website:
                 href: clms_clcplus.qmd
               - text: AlphaEarth Foundations
                 href: aef_annual.qmd
+      - text: "---"
+      - section: "LandShift"
+        href: Landshift_overview.qmd
+        contents:
+          - text: Overview
+            href: Landshift_overview.qmd
+      - text: "---"
+      - section: "Nemesis"
+        href: Nemesis_overview.qmd
+        contents:
+          - text: Overview
+            href: Nemesis_overview.qmd
+    
+        
      # - section: "Monalisa datacube"
        # contents:
        #   - text: Overview
@@ -102,6 +116,8 @@ website:
             href: jupyter.qmd
           - text: LivingEarth
             href: LivingEarth.qmd
+          - text: Cube in a box
+            href: cube-in-a-box.qmd
      
       - text: Publications
         href: publications.qmd
