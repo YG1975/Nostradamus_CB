@@ -50,16 +50,16 @@ website:
                 href: aef_annual.qmd
       - text: "---"
       - section: "LandShift"
-        href: Landshift_overview.qmd
+        href: landshift_overview.qmd
         contents:
           - text: Overview
-            href: Landshift_overview.qmd
+            href: landshift_overview.qmd
       - text: "---"
       - section: "Nemesis"
-        href: Nemesis_overview.qmd
+        href: nemesis_overview.qmd
         contents:
           - text: Overview
-            href: Nemesis_overview.qmd
+            href: nemesis_overview.qmd
     
         
      # - section: "Monalisa datacube"
