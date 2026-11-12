@@ -2,4 +2,4 @@
 title: "Nemesis" 
 ---
 
-## ...
+This is the page for the Nemesis project.
