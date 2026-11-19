@@ -4,4 +4,4 @@ title: "LivingEarth"
 
 LivingEarth is ...
 
-See <https://livingearthlab.github.io/> for more details
+See <https://livingearthlab.github.io/le_handbook/> for more details

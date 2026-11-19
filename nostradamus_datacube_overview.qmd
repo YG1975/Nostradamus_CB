@@ -8,19 +8,19 @@ This work is part of **Work Package 5 (WP5) – Development & Implementation of 
 
 ## Nostradamus datacubes
 
-The **Nostradamus datacubes** are implementation of the Open Data Cube approach developed within the [Nostradamus project](https://cordis.europa.eu/project/id/101135941){target="_blank"}, adapted to the project's agricultural demonstration sites. They are deployed as several customised [**cube in a box**](https://github.com/LivingEarthLab/cube-in-a-box){target="_blank"} instances (one per demonstration site) from the [original cube in a box](https://github.com/opendatacube/cube-in-a-box){target="_blank"}.
+The **Nostradamus datacubes** are implementation of the Open Data Cube approach developed within the [Nostradamus project](https://cordis.europa.eu/project/id/101134888){target="_blank"}, adapted to the project's agricultural demonstration sites. They are deployed as several customised [**cube in a box**](https://github.com/LivingEarthLab/cube-in-a-box){target="_blank"} instances (one per demonstration site) from the [original cube in a box](https://github.com/opendatacube/cube-in-a-box){target="_blank"}.
 
 As of August 2026, five datacube instances have been deployed within the Nostradamus project:
 
--   [Cyprus](https://cyprus-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+- [Cyprus](https://cyprus-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
 
--   [Germany](https://germany-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+- [Germany](https://germany-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
 
--   [Slovenia](https://slovenia-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+- [Slovenia](https://slovenia-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
 
--   [Serbia](https://serbia-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+- [Serbia](https://serbia-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
 
--   [Switzerland](https://switzerland-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
+- [Switzerland](https://switzerland-dc.nostradamus-platform.eu/explorer/products){target="_blank"}
 
 They all contain the same default elements and are cropped to the concerned case studies extents. However, content will be tailored to user needs as projects move forward.
 
@@ -28,22 +28,22 @@ They all contain the same default elements and are cropped to the concerned case
 
 In each of these instances, the following **modifications** have been done on the original cube in a box to become the [Nostradamus Data Cube](https://git.unepgrid.ch/NOSTRADAMUS/cube-in-a-box-jupyter){target="_blank"}:
 
--   the default [**Jupyter notebook**](jupyter.qmd#jupyter-notebook){target="_blank"} has been replaced by a multi-user [**JupyterHub**](jupyter.html#jupyterhub){target="_blank"}
+- the default [**Jupyter notebook**](jupyter.qmd#jupyter-notebook){target="_blank"} has been replaced by a multi-user [**JupyterHub**](jupyter.html#jupyterhub){target="_blank"}
 
--   the **JupyterHub** instance contains shared folders for collaborative work
+- the **JupyterHub** instance contains shared folders for collaborative work
 
--   the [**Planetary computer**](planetary_computer.qmd){target="_blank"} data catalog has been used as a [STAC datastore](stac_datastore.qmd){target="_blank"} instead of the previous default [**Sentinel-2**](sentinel.qmd){target="_blank"} source that was slow and unstable
+- the [**Planetary computer**](planetary_computer.qmd){target="_blank"} data catalog has been used as a [STAC datastore](stac_datastore.qmd){target="_blank"} instead of the previous default [**Sentinel-2**](sentinel.qmd){target="_blank"} source that was slow and unstable
 
--   an **Open Datacube explorer** has been added and modified to access Planetary Computer data
+- an **Open Datacube explorer** has been added and modified to access Planetary Computer data
 
--   a [**Traefik**](https://traefik.io/traefik){target="_blank"} reverse proxy has been added as a unique entry point of the infrastructure that dispatches the requests to the different services
+- a [**Traefik**](https://traefik.io/traefik){target="_blank"} reverse proxy has been added as a unique entry point of the infrastructure that dispatches the requests to the different services
 
--   a **multi-architecture support** for AMD64 and ARM64 has been added
+- a **multi-architecture support** for AMD64 and ARM64 has been added
 
--   a [**Dask**](https://www.dask.org/){target="_blank"} python library has been added for performing parallel and distributed processing, which is necessary for large data processing
+- a [**Dask**](https://www.dask.org/){target="_blank"} python library has been added for performing parallel and distributed processing, which is necessary for large data processing
 
--   the [**Landsat Collection 2 Level 2 Science Products**](landsat.qmd){target="_blank"} have been added
+- the [**Landsat Collection 2 Level 2 Science Products**](landsat.qmd){target="_blank"} have been added
 
--   a **Jupyter notebook** has been **modified** or **created** for each available Level2 science product (see [details](data_sources.qmd){target="_blank"})
+- a **Jupyter notebook** has been **modified** or **created** for each available Level2 science product (see [details](data_sources.qmd){target="_blank"})
 
--   Documentation has been created for [administrators](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/admin/Living-Earth-Cube-in-a-Box---Admin-Guide.pdf){target="_blank"} and [users](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/user/Living-Earth-Cube-in-a-Box---User-Guide.pdf){target="_blank"}
+- Documentation has been created for [administrators](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/admin/Living-Earth-Cube-in-a-Box---Admin-Guide.pdf){target="_blank"} and [users](https://github.com/LivingEarthLab/cube-in-a-box/blob/main/docs/user/Living-Earth-Cube-in-a-Box---User-Guide.pdf){target="_blank"}
